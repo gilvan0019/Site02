@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCR Upload</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <h1>Upload de Arquivos (PDF / Imagem)</h1>
+
+    <!-- UPLOAD -->
+    <label class="upload-box" for="fileInput">
+      <input 
+        type="file"
+        id="fileInput"
+        multiple
+        accept=".pdf,image/jpeg,image/jpg,image/png"
+      />
+      <p>Arraste os arquivos aqui ou clique para selecionar</p>
+      <span>Formatos aceitos: PDF, JPG, JPEG, PNG</span>
+    </label>
+
+    <!-- LISTA DE ARQUIVOS -->
+    <div class="file-list" id="fileList">
+      <!-- arquivos adicionados via JS -->
+    </div>
+
+    <!-- SAÍDA OCR -->
+    <div class="output">
+      <label for="ocrText">Texto extraído</label>
+      <textarea
+        id="ocrText"
+        placeholder="O texto extraído aparecerá aqui..."
+        readonly
+      ></textarea>
+    </div>
+  </div>
+
+</body>
+</html>
