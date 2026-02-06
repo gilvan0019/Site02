@@ -6,6 +6,8 @@ let MODO_PARSE = false;
 document.addEventListener('DOMContentLoaded', async () => {
 
   'use strict';
+    console.log('APP OCR CARREGADO COM SUCESSO');
+
     const arquivosAnexados = new Set();
     /* ========= LOAD LIBS ========= */
     function load(src){
@@ -366,7 +368,7 @@ async function carregarRodoviarias() {
   if (rodoviarias.length) return;
 
   try {
-    const res = await fetch('./rodoviarias.json');
+const res = await fetch('/rodoviarias.json');
 
     if (!res.ok) {
       throw new Error('Erro ao carregar rodoviarias.json');
@@ -452,7 +454,6 @@ modalRod.querySelector('#buscaRod').oninput = e => {
   renderRodoviarias(filtradas);
 };
   
-    closeBtn.onclick=()=>overlay.style.display='none';
 
     /* ========= INPUT ========= */
     const input=document.createElement('input');
@@ -2281,7 +2282,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         const card = document.querySelector('.doc.selecionado');
         if (!card) return false;
 
-        const body = card.querySelector('.doc-body');
+        const body = card.querySelector('.doc-final');
         const id = body?.dataset?.ocrId;
         if (!id) return false;
 
@@ -2667,7 +2668,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
 
         d.querySelector('.remove').onclick = () => {
 
-            const id = d.querySelector('.doc-body')?.dataset?.ocrId;
+            const id = d.querySelector('.doc-final')?.dataset?.ocrId;
 
             // remove do JSON
             if (id) {
