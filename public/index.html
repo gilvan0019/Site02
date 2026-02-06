@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>OCR PIX</title>
 
-  <!-- CSS (RAIZ) -->
-  <link rel="stylesheet" href="./style.css">
-</head>
+  <!-- LIBS -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
+  <!-- ===== LAYOUT COM SIDEBAR ===== -->
   <div class="app-layout">
+
+    <!-- SIDEBAR FIXA -->
     <aside class="app-sidebar">
-      <div class="sidebar-top">
-        <div class="sidebar-title">OCR PIX</div>
+      <div class="sidebar-header">
+        OCR PIX
       </div>
 
-      <nav class="sidebar-nav">
-        <button id="btnCalc" class="sidebar-btn active">
-          🧮 <span>Calculadora</span>
-        </button>
+      <button id="btnCalc" class="sidebar-btn">
+        🧮 Calculadora
+      </button>
 
-        <button id="btnRod" class="sidebar-btn">
-          🚌 <span>Rodoviárias</span>
-        </button>
-      </nav>
+      <button id="btnRod" class="sidebar-btn">
+        🚌 Rodoviárias
+      </button>
     </aside>
 
-    <div class="app-area">
-      <main class="app-content">
-        <div id="app-root"></div>
-      </main>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="app-content">
 
-      <footer class="app-footer">
-        <div class="ocr-actions-bottom">
-          <button id="btnExcel" class="btn-green">Gerar relatório EXCEL</button>
-          <button id="btnFechar" class="btn-green">❌ Fechar</button>
-        </div>
-      </footer>
-    </div>
+      <!-- 🔽 O OCR SERÁ INJETADO AQUI PELO main.js -->
+      <div id="app-root"></div>
+
+    </main>
+
   </div>
 
-  <!-- JS (RAIZ, SEM /js/) -->
-  <script src="./main.js"></script>
-
+  <script src="main.js"></script>
 </body>
 </html>
