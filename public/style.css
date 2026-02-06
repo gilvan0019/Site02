@@ -302,6 +302,79 @@ body {
   color:#fff !important;
   border-color: transparent !important;
 }
+/* 🚌 MODAL RODOVIÁRIAS */
+#listaRod {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rod-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.rod-item:hover {
+  background: #e3f2fd;
+  border-color: #90caf9;
+  transform: translateY(-1px);
+}
+
+.rod-item:active {
+  transform: scale(0.98);
+}
+
+.rod-nome {
+  font-weight: 700;
+  font-size: 15px;
+  color: #0d47a1;
+}
+
+.rod-cidade {
+  font-size: 13px;
+  font-weight: 600;
+  color: #00695c;
+  margin: 2px 0;
+}
+
+.rod-endereco {
+  font-size: 13px;
+  color: #424242;
+}
+
+.rod-copiado {
+  background: #c8e6c9 !important;
+  border-color: #66bb6a !important;
+}
+
+/* 🌙 DARK MODE */
+.ocr-overlay.dark .rod-item {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.ocr-overlay.dark .rod-item:hover {
+  background: #111827;
+  border-color: #2563eb;
+}
+
+.ocr-overlay.dark .rod-nome {
+  color: #93c5fd;
+}
+
+.ocr-overlay.dark .rod-cidade {
+  color: #6ee7b7;
+}
+
+.ocr-overlay.dark .rod-endereco {
+  color: #e5e7eb;
+}
+
 .calc-panel {
   display: none;
   background: #f8fafc;
