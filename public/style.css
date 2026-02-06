@@ -81,57 +81,6 @@
   display: none !important;
 }
 
-.ocr-box {
-  width: 600px;
-  max-height: 85vh;
-  background: #fff;
-  border-radius: 16px;
-  padding: 22px 16px 16px 16px;
-  overflow: hidden;      /* 🔒 certo */
-  box-shadow: 0 15px 40px rgba(0,0,0,.35);
-  cursor: move;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.ocr-list {
-  flex: 1;
-  overflow-y: auto;
-  padding-right: 4px;
-  margin-bottom: 8px;
-}
-
-.ocr-actions-bottom {
-  margin-top: auto;
-  padding-top: 10px;
-  background: #fff;
-}
-
-.ocr-input,
-.ocr-select {
-  box-sizing: border-box;
-  border-radius: 18px !important;
-}
-
-
-.ocr-info {
-  margin: 8px 0 10px 0;
-  padding-left: 2px;
-  font-size: 13px;
-  font-weight: bold;
-  color: #0d47a1;
-  line-height: 1.4;
-}
-
-.ocr-header-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-
 .ocr-overlay.fullscreen .ocr-header-form {
   flex-direction: row;
   gap: 14px;
