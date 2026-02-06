@@ -2236,68 +2236,49 @@ modalRod.querySelector('#buscaRod').oninput = e => {
 
 
 
-    /* ========= NUMERA + APLICA ========= */
-    function aplicarRegras(body){
-        const texto = body.textContent;
+/* ========= NUMERA + APLICA (VERSÃO CORRETA) ========= */
+function aplicarRegras(body) {
+  const textoOriginal = body.textContent;
 
-        // 🖨️ PRINT (CTRL+V) — BLOQUEIO TOTAL
-        if (body.dataset.print === '1') {
-            regraPrint(texto, body);
-            return; // ⛔ PARA TUDO AQUI
-        }
-        const linhas = texto.split('\n');
-        const banco = identificarBanco(texto);
+  // 🖨️ PRINT (CTRL+V) — força regra print SEM destruir contexto
+  if (body.dataset.print === '1') {
+    regraPrint(textoOriginal, body);
+    return;
+  }
 
-        // 🔢 Numera todas as linhas
-        body.innerHTML = linhas.map((l,i)=>
-                                    `<div class="doc-line"><span class="ln">${i+1}</span><span>${l}</span></div>`
-                                   ).join('');
+  const banco = identificarBanco(textoOriginal);
 
-        // 🏦 Regras específicas por banco
-        if (banco === 'BB') {
-            regraBancoBrasil(texto, body);
-        }
-        else if (banco === 'BRADESCO') {
-            regraBradesco(texto, body);
-        }
-        else if (banco === 'NUBANK') {
-            regraNubank(texto, body);
-        }
-        else if (banco === 'INTER') {
-            regraBancoInter(texto, body);
-        }
-        else if (banco === 'MERCADO_PAGO') {
-            regraMercadoPago(texto, body);
-        }
-        else if (banco === 'C6') {
-            regraC6Bank(texto, body);
-        }
-        else if (banco === 'ITAU') {
-            regraItau(texto, body);
-        }
-        else if (banco === 'SANTANDER') {
-            regraSantander(texto, body);
-        }
-        else if (banco === 'PICPAY') {
-            regraPicPay(texto, body);
-        }
-        else if (banco === 'CAIXA') {
-            regraCaixa(texto, body);
-        }else if (banco === 'PASSAGEM') {
-            regraPassagem(texto, body);
-        }else if (banco === 'BNB') {
-            regraBancoNordeste(texto, body);
-        }
+  // 🔢 numera APENAS uma vez, mas preserva o texto original
+  const linhas = textoOriginal.split('\n');
+  body.innerHTML = linhas.map((l, i) =>
+    `<div class="doc-line">
+      <span class="ln">${i + 1}</span>
+      <span>${l}</span>
+    </div>`
+  ).join('');
 
+  // 🏦 regras específicas (PRIMEIRO)
+  switch (banco) {
+    case 'BB':         regraBancoBrasil(textoOriginal, body); break;
+    case 'BRADESCO':   regraBradesco(textoOriginal, body); break;
+    case 'NUBANK':     regraNubank(textoOriginal, body); break;
+    case 'INTER':      regraBancoInter(textoOriginal, body); break;
+    case 'MERCADO_PAGO': regraMercadoPago(textoOriginal, body); break;
+    case 'C6':         regraC6Bank(textoOriginal, body); break;
+    case 'ITAU':       regraItau(textoOriginal, body); break;
+    case 'SANTANDER':  regraSantander(textoOriginal, body); break;
+    case 'PICPAY':     regraPicPay(textoOriginal, body); break;
+    case 'CAIXA':      regraCaixa(textoOriginal, body); break;
+    case 'PASSAGEM':   regraPassagem(textoOriginal, body); break;
+    case 'BNB':        regraBancoNordeste(textoOriginal, body); break;
+  }
 
+  // 🔥 fallback SÓ SE nenhuma regra finalizou
+  if (!jaEstaFinal(body)) {
+    regraPrint(textoOriginal, body);
+  }
+}
 
-
-        // 🔥 FALLBACK UNIVERSAL DEFINITIVO
-        if (!jaEstaFinal(body)) {
-            regraPrint(texto, body);
-        }
-
-    }
     function chaveArquivo(file) {
         return `${file.name}__${file.size}__${file.type}`;
     }
