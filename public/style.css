@@ -62,10 +62,9 @@
 }
 
 .doc{
-  border:1px solid #e0e0e0;
-  border-radius:14px;
-  margin-bottom:12px;
-  background:#fafafa
+  display: flex !important;
+  align-items: center;
+  gap: 14px;
 }
 
 .doc-header{
@@ -77,25 +76,26 @@
 }
 
 .doc-body{
-  display:none;
-  padding:10px;
-  font-size:13px
+  display: flex !important;
+  align-items: center;
+  gap: 14px;
+  padding: 0;
+  flex: 1;
 }
 
 .doc-actions{
-  display:flex;
-  gap:10px;
-  padding:10px
+  display: flex !important;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
 }
 
 .doc-actions button{
-  flex:1;
-  padding:10px;
-  border:0;
-  border-radius:999px;
-  font-weight:bold;
-  cursor:pointer;
-  font-size:13px
+  flex: none !important;
+  padding: 4px 8px;
+  font-size: 11px;
+  height: 26px;
+  border-radius: 6px;
 }
 
 .copy {
