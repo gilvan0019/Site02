@@ -1,15 +1,5 @@
-/* ================= RESET ================= */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-html, body {
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f7fb;
-}
+
 .ocr-overlay{
   position: fixed;
   top: 120px;
@@ -30,8 +20,6 @@ html, body {
 .ocr-overlay.dark .doc.selecionado:hover {
   background-color: rgba(255,255,255,0.04);
 }
-
-
 
 .ocr-drop{
   border: 2px dashed #414345;
@@ -256,7 +244,18 @@ html, body {
   display: none !important;
 }
 
-
+.ocr-box {
+  width: 600px;
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px 16px 16px 16px;
+  overflow: hidden;      /* 🔒 certo */
+  box-shadow: 0 15px 40px rgba(0,0,0,.35);
+  cursor: move;
+  display: flex;
+  flex-direction: column;
+}
 
 
 .ocr-list {
@@ -306,7 +305,7 @@ html, body {
   flex: 1;
 }
 
-.ocr-overlay.dark  {
+.ocr-overlay.dark .ocr-box {
   background: #1e1e1e;
   color: #e0e0e0;
   box-shadow: 0 20px 50px rgba(0,0,0,.6);
@@ -918,6 +917,16 @@ body {
 
 /* ===== CONTAINER PRINCIPAL ===== */
 
+.ocr-box {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
 /* ===== ÁREA DE DROP ===== */
 .ocr-drop {
   min-height: 120px;
@@ -989,7 +998,7 @@ body {
   padding: 0 !important;
   z-index: 9999999 !important;
 }
-.ocr-overlay.fullscreen{
+.ocr-overlay.fullscreen .ocr-box {
   width: 100% !important;
   height: 100% !important;
   max-width: none !important;
