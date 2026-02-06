@@ -2305,7 +2305,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         const card = document.querySelector('.doc.selecionado');
         if (!card) return false;
 
-        const body = card.querySelector('.doc-final');
+        const body = card.querySelector('.doc-body');
         const id = body?.dataset?.ocrId;
         if (!id) return false;
 
@@ -2499,7 +2499,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
 
         d.innerHTML = `
   <div class="doc-header">${titulo}</div>
-  <div class="doc-final"></div>
+  <div class="doc-body"></div>
   <div class="doc-actions">
     <button class="copy">📋 Copiar</button>
     <button class="editar">✏️ Editar</button>
@@ -2513,8 +2513,10 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         if (header && d.dataset.nomeArquivo) {
             header.title = d.dataset.nomeArquivo;
         }
-        const body = d.querySelector('.doc-final');
-       
+        const body=d.querySelector('.doc-body');
+        d.querySelector('.doc-header').onclick=()=>{
+            body.style.display=body.style.display==='none'?'block':'none';
+        };
         d.querySelector('.copy').onclick = function () {
             const texto =
                   body.querySelector('.doc-final')?.innerText || '';
@@ -2691,7 +2693,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
 
         d.querySelector('.remove').onclick = () => {
 
-            const id = d.querySelector('.doc-final')?.dataset?.ocrId;
+            const id = d.querySelector('.doc-body')?.dataset?.ocrId;
 
             // remove do JSON
             if (id) {
@@ -2781,24 +2783,6 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         }
     }
     document.addEventListener('paste', async e => {
-const btnCalc = document.getElementById('btnCalc');
-const btnRod  = document.getElementById('btnRod');
-
-function ativarBotao(botaoAtivo) {
-  btnCalc.classList.remove('active');
-  btnRod.classList.remove('active');
-  botaoAtivo.classList.add('active');
-}
-
-btnCalc.addEventListener('click', () => {
-  ativarBotao(btnCalc);
-  // aqui você mostra a tela da calculadora
-});
-
-btnRod.addEventListener('click', () => {
-  ativarBotao(btnRod);
-  // aqui você mostra a tela das rodoviárias
-});
 
         // 🔓 garante que colar SEMPRE funcione
         MODO_ADICIONAR = false;
