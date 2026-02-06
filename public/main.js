@@ -1,5 +1,4 @@
 
-
 const registrosOCR = [];
 let MODO_ADICIONAR = false;
 let MODO_PARSE = false;
@@ -7,6 +6,32 @@ let MODO_PARSE = false;
 document.addEventListener('DOMContentLoaded', async () => {
 
   'use strict';
+    console.log('APP OCR CARREGADO COM SUCESSO');
+document.addEventListener('DOMContentLoaded', () => {
+
+  const btnCalc = document.getElementById('btnCalc');
+  const btnRod  = document.getElementById('btnRod');
+
+  function ativar(btnAtivo) {
+    document
+      .querySelectorAll('.sidebar-btn')
+      .forEach(b => b.classList.remove('active'));
+
+    btnAtivo.classList.add('active');
+  }
+
+  btnCalc.addEventListener('click', () => {
+    ativar(btnCalc);
+    // aqui você chama a tela da calculadora
+  });
+
+  btnRod.addEventListener('click', () => {
+    ativar(btnRod);
+    // aqui você abre o modal / tela de rodoviárias
+  });
+
+});
+
     const arquivosAnexados = new Set();
     /* ========= LOAD LIBS ========= */
     function load(src){
@@ -91,15 +116,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         body.innerHTML = `
-      <div class="doc-line doc-final">
-        <span class="final-nome">${r.nome || '-'}</span>
-        <span class="final-hora">${r.hora || '-'}</span>
-        <span class="final-pix">R$ ${pixLiquidoTxt}</span>
-        <span class="final-taxa">
-          ${taxa > 0 ? `R$ ${taxa.toFixed(2).replace('.', ',')}` : '-'}
-        </span>
-      </div>
-    `;
+  <span class="final-nome">${r.nome || '-'}</span>
+  <span class="final-hora">${r.hora || '-'}</span>
+  <span class="final-pix">R$ ${pixLiquidoTxt}</span>
+  <span class="final-taxa">
+    ${taxa > 0 ? `R$ ${taxa.toFixed(2).replace('.', ',')}` : '-'}
+  </span>
+`;
+
     }
 
 
@@ -151,11 +175,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     topActions.className = 'ocr-top-actions';
     box.appendChild(topActions);
 
-    const maxBtn = document.createElement('button');
-    maxBtn.textContent = '⤢';
-    maxBtn.title = 'Maximizar / Restaurar';
-    maxBtn.className = 'ocr-max';
-    topActions.appendChild(maxBtn);
+    
 
 
     const darkBtn = document.createElement('button');
@@ -197,14 +217,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     const list = document.createElement('div');
     list.className = 'ocr-list';
 
-    const closeBtn = document.createElement('button');
-    closeBtn.textContent = '❌ Fechar';
-    closeBtn.className = 'close';
 
-    const reportBtn = document.createElement('button');
-    reportBtn.textContent = ' Gerar relatório EXCEL';
-    reportBtn.className = 'close';
-    reportBtn.onclick = gerarRelatorioExcel;
+const btnExcel  = document.getElementById('btnExcel');
+const btnFechar = document.getElementById('btnFechar');
+
+if (btnExcel) {
+  btnExcel.onclick = gerarRelatorioExcel;
+}
+
+if (btnFechar) {
+  btnFechar.onclick = () => {
+    overlay.style.display = 'none';
+  };
+}
 
     // 👤 CAMPO AGENTE
     const agenteInput = document.createElement('input');
@@ -279,22 +304,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   `;
     });
 
-    const actionsBottom = document.createElement('div');
-    actionsBottom.className = 'ocr-actions-bottom';
-
-    actionsBottom.append(reportBtn, closeBtn);
-
     box.append(
         drop,
         headerForm,
         calcPanel,      // 👈 AQUI
         infoWrapper,
         list,
-        actionsBottom
     );
 
-    reportBtn.className = 'btn-green';
-    closeBtn.className  = 'btn-green';
+
     overlay.append(box);
 document.getElementById('app-root').appendChild(overlay);
 overlay.style.display = 'block';
@@ -303,41 +321,6 @@ overlay.style.display = 'block';
     restaurarCardsDaTela();
     atualizarTotalTela();
     atualizarContador();
-
-    /* ========= DRAG ========= */
-    let drag=false,ox=0,oy=0;
-    box.onmousedown = e => {
-        if (fullscreen) return; // 🔒 trava drag em tela cheia
-        if (e.target.tagName === 'BUTTON') return;
-        drag = true;
-        ox = e.clientX - overlay.offsetLeft;
-        oy = e.clientY - overlay.offsetTop;
-    };
-    document.onmousemove=e=>{
-        if(drag){
-            overlay.style.left=e.clientX-ox+'px';
-            overlay.style.top=e.clientY-oy+'px';
-        }
-    };
-    document.onmouseup=()=>drag=false;
-
-    // ========= BOTÃO OCR MÓVEL =========
-    const btn = document.createElement('button');
-    btn.textContent = '📄 OCR';
-    btn.style.cssText = `
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999999;
-  padding: 10px 16px;
-  border-radius: 50px;
-  border: 0;
-  background: #303F9F;
-  color: #fff;
-  font-weight: bold;
-  cursor: grab;
-`;
-    document.body.appendChild(btn);
 
 // 🪟 MODAL RODOVIÁRIAS
 const modalRod = document.createElement('div');
@@ -408,7 +391,7 @@ async function carregarRodoviarias() {
   if (rodoviarias.length) return;
 
   try {
-    const res = await fetch('./rodoviarias.json');
+const res = await fetch('/rodoviarias.json');
 
     if (!res.ok) {
       throw new Error('Erro ao carregar rodoviarias.json');
@@ -493,55 +476,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
 
   renderRodoviarias(filtradas);
 };
-    // 🔁 RESTAURA POSIÇÃO
-    const posSalva = JSON.parse(localStorage.getItem('OCR_BTN_POS') || '{}');
-    if (posSalva.left) {
-        btn.style.left = posSalva.left;
-        btn.style.top  = posSalva.top;
-        btn.style.bottom = 'auto';
-        btn.style.right  = 'auto';
-    }
-
-    // 🖱️ DRAG
-    let dragging = false;
-    let offsetX = 0;
-    let offsetY = 0;
-
-    btn.addEventListener('mousedown', e => {
-        dragging = true;
-        btn.style.cursor = 'grabbing';
-        offsetX = e.clientX - btn.offsetLeft;
-        offsetY = e.clientY - btn.offsetTop;
-        e.preventDefault();
-    });
-
-    document.addEventListener('mousemove', e => {
-        if (!dragging) return;
-        btn.style.left = (e.clientX - offsetX) + 'px';
-        btn.style.top  = (e.clientY - offsetY) + 'px';
-        btn.style.bottom = 'auto';
-        btn.style.right  = 'auto';
-    });
-
-    document.addEventListener('mouseup', () => {
-        if (!dragging) return;
-        dragging = false;
-        btn.style.cursor = 'grab';
-
-        // 💾 salva posição
-        localStorage.setItem('OCR_BTN_POS', JSON.stringify({
-            left: btn.style.left,
-            top: btn.style.top
-        }));
-    });
-
-    // 👆 CLIQUE ABRE OCR (sem arrastar)
-    btn.addEventListener('click', e => {
-        if (dragging) return;
-        overlay.style.display = 'block';
-    });
-
-    closeBtn.onclick=()=>overlay.style.display='none';
+  
 
     /* ========= INPUT ========= */
     const input=document.createElement('input');
@@ -584,49 +519,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         localStorage.setItem('OCR_DARK', darkMode ? '1' : '0');
     };
 
-    maxBtn.onclick = () => {
-        if (!fullscreen) {
-            // salva estado flutuante
-            estadoOriginal = {
-                top: overlay.style.top,
-                left: overlay.style.left,
-                width: box.style.width,
-                height: box.style.height
-            };
-
-            // ativa fullscreen real
-            overlay.classList.add('fullscreen');
-            box.classList.add('fullscreen');
-
-            // 🔥 abre todos os comprovantes (modo informativo)
-            document.querySelectorAll('.doc-body').forEach(b => {
-                b.style.display = 'block';
-            });
-
-            maxBtn.textContent = '⤡'; // recolher
-            fullscreen = true;
-
-        } else {
-            // restaura modo flutuante
-            overlay.classList.remove('fullscreen');
-            box.classList.remove('fullscreen');
-
-            overlay.style.top = estadoOriginal.top || '120px';
-            overlay.style.left = estadoOriginal.left || '120px';
-            box.style.width = estadoOriginal.width || '600px';
-            box.style.height = estadoOriginal.height || '';
-
-            // 🔁 volta comportamento normal (cards fechados)
-            document.querySelectorAll('.doc-body').forEach(b => {
-                b.style.display = 'none';
-            });
-
-            maxBtn.textContent = '⤢'; // expandir
-            fullscreen = false;
-        }
-    };
-
-
+    
     /* ========= SOBRENOMES ========= */
     const SOBRENOMES=new Set([
         'SILVA','SANTOS','OLIVEIRA','PEREIRA','COSTA','RODRIGUES','ALVES','LIMA','GOMES',
@@ -2412,7 +2305,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         const card = document.querySelector('.doc.selecionado');
         if (!card) return false;
 
-        const body = card.querySelector('.doc-body');
+        const body = card.querySelector('.doc-final');
         const id = body?.dataset?.ocrId;
         if (!id) return false;
 
@@ -2606,7 +2499,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
 
         d.innerHTML = `
   <div class="doc-header">${titulo}</div>
-  <div class="doc-body"></div>
+  <div class="doc-final"></div>
   <div class="doc-actions">
     <button class="copy">📋 Copiar</button>
     <button class="editar">✏️ Editar</button>
@@ -2620,10 +2513,8 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         if (header && d.dataset.nomeArquivo) {
             header.title = d.dataset.nomeArquivo;
         }
-        const body=d.querySelector('.doc-body');
-        d.querySelector('.doc-header').onclick=()=>{
-            body.style.display=body.style.display==='none'?'block':'none';
-        };
+        const body = d.querySelector('.doc-final');
+       
         d.querySelector('.copy').onclick = function () {
             const texto =
                   body.querySelector('.doc-final')?.innerText || '';
@@ -2800,7 +2691,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
 
         d.querySelector('.remove').onclick = () => {
 
-            const id = d.querySelector('.doc-body')?.dataset?.ocrId;
+            const id = d.querySelector('.doc-final')?.dataset?.ocrId;
 
             // remove do JSON
             if (id) {
@@ -2890,6 +2781,24 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         }
     }
     document.addEventListener('paste', async e => {
+const btnCalc = document.getElementById('btnCalc');
+const btnRod  = document.getElementById('btnRod');
+
+function ativarBotao(botaoAtivo) {
+  btnCalc.classList.remove('active');
+  btnRod.classList.remove('active');
+  botaoAtivo.classList.add('active');
+}
+
+btnCalc.addEventListener('click', () => {
+  ativarBotao(btnCalc);
+  // aqui você mostra a tela da calculadora
+});
+
+btnRod.addEventListener('click', () => {
+  ativarBotao(btnRod);
+  // aqui você mostra a tela das rodoviárias
+});
 
         // 🔓 garante que colar SEMPRE funcione
         MODO_ADICIONAR = false;
