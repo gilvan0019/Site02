@@ -11,46 +11,55 @@ html, body {
   background: #f5f7fb;
 }
 
-/* ================= LAYOUT BASE ================= */
+/* LAYOUT BASE  */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+}
+
 .app-layout {
   display: flex;
-  width: 100vw;
-  height: 100vh;
   height: 100dvh;
+  width: 100vw;
   overflow: hidden;
 }
 
-/* ================= SIDEBAR ================= */
+/* SIDEBAR */
+/* ===== SIDEBAR ===== */
 .app-sidebar {
   width: 220px;
   min-width: 220px;
-  height: 100%;
+  height: 100dvh;
   background: linear-gradient(180deg, #1e293b, #0f172a);
-  color: #ffffff;
+  color: #fff;
   display: flex;
   flex-direction: column;
   padding: 16px 12px;
+  box-shadow: inset -1px 0 0 rgba(255,255,255,.05);
 }
 
+/* TOPO */
 .sidebar-top {
   margin-bottom: 20px;
 }
 
 .sidebar-title {
-  text-align: center;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: .5px;
+  text-align: center;
 }
 
-/* ================= NAV ================= */
+/* NAV */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* ================= BOTÕES ================= */
+/* BOTÕES */
 .sidebar-btn {
   all: unset;
   cursor: pointer;
@@ -65,10 +74,10 @@ html, body {
   font-size: 14px;
   font-weight: 600;
 
-  background: rgba(255,255,255,.08);
+  background: rgba(255,255,255,.06);
   color: #e5e7eb;
 
-  transition: background .2s ease, transform .1s ease;
+  transition: background .2s, transform .1s;
 }
 
 .sidebar-btn span {
@@ -76,24 +85,26 @@ html, body {
   text-align: left;
 }
 
+/* HOVER */
 .sidebar-btn:hover {
-  background: rgba(255,255,255,.16);
+  background: rgba(255,255,255,.12);
   transform: translateX(2px);
 }
 
+/* ATIVO */
 .sidebar-btn.active {
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 6px 14px rgba(37,99,235,.35);
 }
+/*ÁREA PRINCIPAL (header / main / footer)*/
 
-/* ================= ÁREA PRINCIPAL ================= */
 .app-area {
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  min-height: 0;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 .app-header {
@@ -102,58 +113,263 @@ html, body {
 
 .app-content {
   flex: 1;
-  min-height: 0;
   overflow-y: auto;
-  padding: 20px;
+  padding: 16px;
   background: #f5f7fb;
 }
 
 .app-footer {
   flex-shrink: 0;
+  background: transparent;
+}
+
+/* OCR (container principal)  */
+
+.ocr-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ocr-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/*TOPO / DROP / FORM */
+
+.ocr-top-actions {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.ocr-top-actions button {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  background: #374151;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ocr-drop {
+  margin-bottom: 12px;
+  padding: 18px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 6px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.ocr-header-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ocr-input,
+.ocr-select {
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+  flex: 1;
+}
+
+/* 🔹 LISTA (scroll correto)  */
+
+.ocr-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px;
+}
+
+
+/* 🔹 CARD / LINHA OCR  */
+
+.doc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.doc-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.doc-header {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.doc-final {
+  display: flex;
+  gap: 14px;
+  font-size: 13px;
+}
+
+.final-pix {
+  font-weight: bold;
+}
+
+.doc-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+}
+
+.doc-actions button {
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  border: 1px solid #e5e7eb;
+}
+/* 📋 COPIAR — AZUL */
+.doc-actions .copy:hover{
+  background: linear-gradient(135deg,#1e3a8a,#2563eb);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ✏️ EDITAR — ROXO */
+.doc-actions .editar:hover{
+  background: linear-gradient(135deg,#5b21b6,#7c3aed);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* 💰 TAXA — AMARELO */
+.doc-actions .taxa:hover{
+  background: linear-gradient(135deg,#d97706,#f59e0b);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ➖ REMOVER — VERMELHO */
+.doc-actions .remove:hover{
+  background: linear-gradient(135deg,#991b1b,#dc2626);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ➕ ADICIONAR */
+.doc-actions .add:hover{
+  background: linear-gradient(135deg,#059669,#10b981);
+  color:#fff;
+  border-color: transparent;
+}
+
+/* 📋 COPIAR — AZUL */
+.ocr-overlay.dark .doc-actions .copy:hover{
+  background: linear-gradient(135deg,#1e3a8a,#2563eb) !important;
+  color:#fff !important;
+  border-color: transparent !important;
+}
+
+/* ✏️ EDITAR — ROXO */
+.ocr-overlay.dark .doc-actions .editar:hover{
+  background: linear-gradient(135deg,#5b21b6,#7c3aed) !important;
+  color:#fff !important;
+  border-color: transparent !important;
+}
+
+/* 💰 TAXA — AMARELO */
+.ocr-overlay.dark .doc-actions .taxa:hover{
+  background: linear-gradient(135deg,#d97706,#f59e0b) !important;
+  color:#fff !important;
+  border-color: transparent !important;
+}
+
+/* ➖ REMOVER — VERMELHO */
+.ocr-overlay.dark .doc-actions .remove:hover{
+  background: linear-gradient(135deg,#991b1b,#dc2626) !important;
+  color:#fff !important;
+  border-color: transparent !important;
+}
+.calc-panel {
+  display: none;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 12px 0 18px 0;
+  border: 1px solid #e5e7eb;
+}
+.calc-panel h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+#calcValorInline {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 0 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+#calcValorInline:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,.15);
+}.calc-result {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #475569;
+}
+.calc-panel[style*="block"] {
+  animation: abrirCalc .2s ease-out;
+}
+
+@keyframes abrirCalc {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* footer */
+
+.ocr-actions-bottom {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
   background: #f5f7fb;
   border-top: 1px solid #e5e7eb;
 }
 
-/* ================= CONTEÚDO TESTE ================= */
-#app-root {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid #e5e7eb;
-  min-height: 200px;
-}
-
-/* ================= FOOTER BOTÕES ================= */
-.ocr-actions-bottom {
-  display: flex;
-  gap: 12px;
-  padding: 14px 16px;
-}
-
-.ocr-actions-bottom button {
+.ocr-actions-bottom .btn-green {
   flex: 1;
   height: 44px;
   border-radius: 999px;
-  border: none;
   font-size: 14px;
   font-weight: 600;
-  cursor: pointer;
-}
-
-.btn-green {
   background: #1f2937;
-  color: #ffffff;
+  color: #fff;
+  border: none;
 }
 
-.btn-green:hover {
+.ocr-actions-bottom .btn-green:hover {
   background: #111827;
-}
-
-.btn-close {
-  background: #374151;
-  color: #ffffff;
-}
-
-.btn-close:hover {
-  background: #1f2937;
 }
