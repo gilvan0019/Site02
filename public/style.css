@@ -918,17 +918,6 @@ body {
 
 /* ===== CONTAINER PRINCIPAL ===== */
 
-.ocr-box {
-  width: 98vw !important;
-  height: 95vh !important;
-  max-width: none !important;
-  max-height: none !important;
-  margin: auto !important;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
 /* ===== ÁREA DE DROP ===== */
 .ocr-drop {
   min-height: 120px;
