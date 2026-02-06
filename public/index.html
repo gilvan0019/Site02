@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>OCR PIX</title>
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-top">
+        <div class="sidebar-title">OCR PIX</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button id="btnCalc" class="sidebar-btn active">
+          🧮 <span>Calculadora</span>
+        </button>
+
+        <button id="btnRod" class="sidebar-btn">
+          🚌 <span>Rodoviárias</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- ÁREA PRINCIPAL -->
+    <div class="app-area">
+
+      <!-- TOPO DO APP -->
+      <header class="app-header">
+        <!-- opcional -->
+      </header>
+
+      <!-- CONTEÚDO -->
+      <main class="app-content">
+        <div id="app-root"></div>
+      </main>
+
+      <!-- RODAPÉ -->
+      <footer class="app-footer">
+        <div class="ocr-actions-bottom">
+          <button id="btnExcel" class="btn-green">Gerar relatório EXCEL</button>
+          <button id="btnFechar" class="btn-green">❌ Fechar</button>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
