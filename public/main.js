@@ -909,6 +909,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         });
     }
 
+
     function regraNubank(texto, body) {
         const linhasHTML = body.querySelectorAll('.doc-line');
 
@@ -1209,7 +1210,8 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         renderFinal(body, { nome, hora: removerSegundos(hora), valor });
 
     }
-    function regraBradesco(texto, body) {
+
+ function regraBradesco(texto, body) {
         const linhasHTML = body.querySelectorAll('.doc-line');
 
         let valor = '';
@@ -1364,8 +1366,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
             valor: valor || '-'
         });
     }
-
-    function regraCaixa(texto, body) {
+  function regraCaixa(texto, body) {
         const linhasHTML = body.querySelectorAll('.doc-line');
 
         function txtLinha(i) {
@@ -1735,8 +1736,7 @@ modalRod.querySelector('#buscaRod').oninput = e => {
         renderFinal(body, { nome, hora: removerSegundos(hora), valor });
 
     }
-
-    function regraPassagem(texto, body) {
+function regraPassagem(texto, body) {
         const linhasHTML = body.querySelectorAll('.doc-line');
 
         function txtLinha(i) {
