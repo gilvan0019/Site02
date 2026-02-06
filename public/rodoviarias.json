@@ -1,0 +1,5738 @@
+[
+  {
+    "CIDADE - UF": "APUIARES - CE",
+    "UF": "CE",
+    "Nome": "APUIARES - CE",
+    "Descricao": "Agência Guanabara de Apuiares - R. Francisco Bernando Sobrinho, s/n",
+    "Latitude": "-3.948600",
+    "Longitude": "-39.429800"
+  },
+  {
+    "CIDADE - UF": "RIO DE JANEIRO - RJ",
+    "UF": "RJ",
+    "Nome": "RIO DE JANEIRO (ROCINHA) - RJ",
+    "Descricao": "Agência da Rocinha (RJ) - Rocinha, Via Ápia da Rocinha, 41",
+    "Latitude": "-22.991810",
+    "Longitude": "-43.251580"
+  },
+  {
+    "CIDADE - UF": "ABREU E LIMA - PE",
+    "UF": "PE",
+    "Nome": "ABREU E LIMA - PE",
+    "Descricao": "Agência Guanabara de Abreu e Lima - Av. Brasil, Jardim Caetés, s/n",
+    "Latitude": "-7.906074",
+    "Longitude": -34901916
+  },
+  {
+    "CIDADE - UF": "ALIANCA DO TOCANTINS - TO",
+    "UF": "TO",
+    "Nome": "ALIANCA DO TOCANTINS - TO",
+    "Descricao": "Agência Guanabara de Aliança do Tocantins - Rua David Araujo Rodrigues, s/n",
+    "Latitude": "-11.305390",
+    "Longitude": "-48.940082"
+  },
+  {
+    "CIDADE - UF": "ALTOS - PI",
+    "UF": "PI",
+    "Nome": "ALTOS - PI",
+    "Descricao": "Agência Guanabara de Altos - Centro, Av. Nossa Sra. de Fátima, 2502",
+    "Latitude": "-5.039289",
+    "Longitude": "-42.454420"
+  },
+  {
+    "CIDADE - UF": "AMONTADA - CE",
+    "UF": "CE",
+    "Nome": "AMONTADA - CE",
+    "Descricao": "Agência Guanabara de Amontada - Buenos Aires, Rua Francisca Maria da Conceição, 1070",
+    "Latitude": "-3.368088",
+    "Longitude": "-39.825293"
+  },
+  {
+    "CIDADE - UF": "ANTONINA DO NORTE - CE",
+    "UF": "CE",
+    "Nome": "ANTONINA DO NORTE - CE",
+    "Descricao": "Agência Guanabara de Antonina do Norte - BR-230, 572",
+    "Latitude": "-6.775770",
+    "Longitude": "-39.987060"
+  },
+  {
+    "CIDADE - UF": "APARECIDA - PB",
+    "UF": "PB",
+    "Nome": "APARECIDA - PB",
+    "Descricao": "Agência Guanabara de Aparecida - Centro, Rua Olinto Jose de Almeida, s/n, Aparecida-PB (Em frente ao Supermecado El Shaday)",
+    "Latitude": "-6.786216",
+    "Longitude": "-38.084606"
+  },
+  {
+    "CIDADE - UF": "ACARAU - CE",
+    "UF": "CE",
+    "Nome": "ARANAU - CE",
+    "Descricao": "Agência Guanabara de Aranau - Rua Rafael Pereira Brandão, s/n",
+    "Latitude": "-2.821790",
+    "Longitude": "-40.227070"
+  },
+  {
+    "CIDADE - UF": "ARARIPE - CE",
+    "UF": "CE",
+    "Nome": "ARARIPE - CE",
+    "Descricao": "Agência Guanabara de Araripe - CE-292, 1 (Hotel Municipal de Araripe)",
+    "Latitude": "-7.207210",
+    "Longitude": "-40.137150"
+  },
+  {
+    "CIDADE - UF": "AUGUSTINOPOLIS - TO",
+    "UF": "TO",
+    "Nome": "AUGUSTINOPOLIS - TO",
+    "Descricao": "Agência Guanabara de Augustinopolis - Centro, Avenida Goias, 984",
+    "Latitude": "-5.469136",
+    "Longitude": "-47.887345"
+  },
+  {
+    "CIDADE - UF": "AURORA - CE",
+    "UF": "CE",
+    "Nome": "AURORA - CE",
+    "Descricao": "Agência Guanabara de Aurora - Centro, Rua Boa Vista, 220",
+    "Latitude": "-6.942195",
+    "Longitude": "-38.967288"
+  },
+  {
+    "CIDADE - UF": "AVELINO LOPES - PI",
+    "UF": "PI",
+    "Nome": "AVELINO LOPES - PI",
+    "Descricao": "Agência Guanabara de Avelino Lopes - Av. Sergio Gama, 72",
+    "Latitude": "-10.135636",
+    "Longitude": "-43.951262"
+  },
+  {
+    "CIDADE - UF": "BAIXIO - CE",
+    "UF": "CE",
+    "Nome": "BAIXIO - CE",
+    "Descricao": "Agência Guanabara de Baixio - Centro, Reu Betô Farias, 27",
+    "Latitude": "-6.730447",
+    "Longitude": "-38.717519"
+  },
+  {
+    "CIDADE - UF": "BANABUIU - CE",
+    "UF": "CE",
+    "Nome": "BANABUIU - CE",
+    "Descricao": "Agência Guanabara de Banabuiu - Centro, Av. Adília Cajazeiras, 283",
+    "Latitude": "-5.303470",
+    "Longitude": "-38.920330"
+  },
+  {
+    "CIDADE - UF": "BARAO DE GRAJAU - MA",
+    "UF": "MA",
+    "Nome": "BARAO DE GRAJAU - MA",
+    "Descricao": "Agência Guanabara de Barão de Grajau - Rod. Transamazônica, Rua Eleoterio Rezende, s/n",
+    "Latitude": "-6.754199",
+    "Longitude": "-43.026033"
+  },
+  {
+    "CIDADE - UF": "BARREIRINHAS - MA",
+    "UF": "MA",
+    "Nome": "BARREIRINHAS - MA",
+    "Descricao": "Agência Guanabara de Barreirinhas - Centro, Rua Trinta e Um de Março, 15 (Posto Leal)",
+    "Latitude": "-2.754050",
+    "Longitude": "-42.825350"
+  },
+  {
+    "CIDADE - UF": "BARRO - CE",
+    "UF": "CE",
+    "Nome": "BARRO - CE",
+    "Descricao": "Agência Guanabara de Barro - Centro, Av. Januário Feitosa, 1717-1873 (Churrascaria Dois Irmãos)",
+    "Latitude": "-7.181335",
+    "Longitude": "-38.781404"
+  },
+  {
+    "CIDADE - UF": "TUTOIA - MA",
+    "UF": "MA",
+    "Nome": "BARRO DURO - MA",
+    "Descricao": "Agência Guanabara de Barro Duro - MA-034, 102",
+    "Latitude": "-2.892902",
+    "Longitude": "-42.311728"
+  },
+  {
+    "CIDADE - UF": "BARROQUINHA - CE",
+    "UF": "CE",
+    "Nome": "BARROQUINHA - CE",
+    "Descricao": "Agência Guanabara de Barroquinha - Centro, Rua Praça Matriz, 761A",
+    "Latitude": "-3.019619",
+    "Longitude": "-41.136110"
+  },
+  {
+    "CIDADE - UF": "DEPUTADO IRAPUAN PINHEIRO - CE",
+    "UF": "CE",
+    "Nome": "BETANIA - CE",
+    "Descricao": "Agência Guanabara de Betânia - Rua Joaquim Napoleão Pinheiro, s/n",
+    "Latitude": "-5.807010",
+    "Longitude": "-39.243240"
+  },
+  {
+    "CIDADE - UF": "BOA VENTURA - PB",
+    "UF": "PB",
+    "Nome": "BOA VENTURA - PB",
+    "Descricao": "Agência Guanabara de Boa Ventura - Centro, Rua Angélica Soares, 174-246",
+    "Latitude": "-7.420120",
+    "Longitude": "-38.217100"
+  },
+  {
+    "CIDADE - UF": "BOA VISTA DO GURUPI - MA",
+    "UF": "MA",
+    "Nome": "BOA VISTA DO GURUPI - MA",
+    "Descricao": "Agência Guanabara de Boa Vista do Gurupi - Avenida Roseana Sarney, s/n (Ao lado da Panificadora Ipiranga)",
+    "Latitude": "-1.794020",
+    "Longitude": "-46.305170"
+  },
+  {
+    "CIDADE - UF": "BOQUIRA - BA",
+    "UF": "BA",
+    "Nome": "BOQUIRA - BA",
+    "Descricao": "Agência Guanabara de Boquira - Boquira, Rua Oliveira dos Brejinhos, 105",
+    "Latitude": "-12.821310",
+    "Longitude": "-42.731300"
+  },
+  {
+    "CIDADE - UF": "BRASILEIRA - PI",
+    "UF": "PI",
+    "Nome": "BRASILEIRA - PI",
+    "Descricao": "Agência Guanabara de Brasileira - BR 343, Av. Candido Mendes, s/n",
+    "Latitude": "-4.131120",
+    "Longitude": "-41.781940"
+  },
+  {
+    "CIDADE - UF": "BURITICUPU - MA",
+    "UF": "MA",
+    "Nome": "BURITICUPU - MA",
+    "Descricao": "Agência Guanabara de Buriticupu (Churrascaria Asa Branca) - Av. Davi Alves Silva, 2785",
+    "Latitude": "-4.314930",
+    "Longitude": "-46.463960"
+  },
+  {
+    "CIDADE - UF": "CABO DE SANTO AGOSTINHO - PE",
+    "UF": "PE",
+    "Nome": "CABO DE SANTO AGOSTINHO - PE",
+    "Descricao": "Agência Guanabara de Santo Agostinho - Centro, Av. Pres. Getúlio Vargas, 254",
+    "Latitude": "-8.286753",
+    "Longitude": "-35.038120"
+  },
+  {
+    "CIDADE - UF": "URUOCA - CE",
+    "UF": "CE",
+    "Nome": "CAMPANARIO - CE",
+    "Descricao": "Agência Guanabara de Campanário - Av. Alberto Batista Fonteles, 652",
+    "Latitude": "-3.368150",
+    "Longitude": "-40.728900"
+  },
+  {
+    "CIDADE - UF": "CANARANA - BA",
+    "UF": "BA",
+    "Nome": "CANARANA - BA",
+    "Descricao": "Agência Guanabara de Canarana - BA-432, Rod. Canarana Souto Soares",
+    "Latitude": "-11.688361",
+    "Longitude": "-41.765560"
+  },
+  {
+    "CIDADE - UF": "CAPIM GROSSO - BA",
+    "UF": "BA",
+    "Nome": "CAPIM GROSSO - BA",
+    "Descricao": "Agência Guanabara de Capim Grosso - Rua Bela Vista, 170, São Luiz",
+    "Latitude": "-11.383250",
+    "Longitude": "-40.002770"
+  },
+  {
+    "CIDADE - UF": "CAPITAO DE CAMPOS - PI",
+    "UF": "PI",
+    "Nome": "CAPITAO DE CAMPOS - PI",
+    "Descricao": "Agência Guanabara de Capitão de Campos - Centro, Avenida Santos Dumont, 213",
+    "Latitude": "-4.459294",
+    "Longitude": "-41.942190"
+  },
+  {
+    "CIDADE - UF": "CARAUBAS - RN",
+    "UF": "RN",
+    "Nome": "CARAUBAS - RN",
+    "Descricao": "Agência Guanabara de Caraubas - Rua José de Anchieta Praxedes, 121",
+    "Latitude": "-5.785340",
+    "Longitude": "-37.560310"
+  },
+  {
+    "CIDADE - UF": "CARIRE - CE",
+    "UF": "CE",
+    "Nome": "CARIRE - CE",
+    "Descricao": "Agência Guanabara de Cariré - Centro, Rua Belarmina, 115",
+    "Latitude": "-3.949325",
+    "Longitude": "-40.473400"
+  },
+  {
+    "CIDADE - UF": "CARIUS - CE",
+    "UF": "CE",
+    "Nome": "CARIUS - CE",
+    "Descricao": "Agência Guanabara de Carius - Centro, Rua Sete de Setembro, s/n",
+    "Latitude": "-6.534230",
+    "Longitude": "-39.498590"
+  },
+  {
+    "CIDADE - UF": "CARNAUBAL - CE",
+    "UF": "CE",
+    "Nome": "CARNAUBAL - CE",
+    "Descricao": "Agência Guanabara de Carnaúbal - Centro, Praça do Sol, Av. Paulo Sarazate, 47",
+    "Latitude": "-4.165079",
+    "Longitude": "-40.942100"
+  },
+  {
+    "CIDADE - UF": "CATARINA - CE",
+    "UF": "CE",
+    "Nome": "CATARINA - CE",
+    "Descricao": "Agência Guanabara de Catarina - Rua Antônio Leitão de Mendonça, s/v",
+    "Latitude": "-6.132847",
+    "Longitude": "-39.878636"
+  },
+  {
+    "CIDADE - UF": "CAUCAIA - CE",
+    "UF": "CE",
+    "Nome": "CAUCAIA - CE",
+    "Descricao": "Agência Guanabara de Caucaia - Centro, Av. Edson da Mota Correa, 620",
+    "Latitude": "-3.734000",
+    "Longitude": "-38.655700"
+  },
+  {
+    "CIDADE - UF": "RECIFE - PE",
+    "UF": "PE",
+    "Nome": "RECIFE (CAXANGA) - PE",
+    "Descricao": "Agência Guanabara de Caxangá - Iputinga, Av. Professor Joaquim Cavalcanti, 580",
+    "Latitude": "-8.033350",
+    "Longitude": "-34.941670"
+  },
+  {
+    "CIDADE - UF": "CHAVAL - CE",
+    "UF": "CE",
+    "Nome": "CHAVAL - CE",
+    "Descricao": "Agência Guanabara de Chaval - Centro, Rua Monsenhor José Carneiro, s/n",
+    "Latitude": "-3.037690",
+    "Longitude": "-41.241830"
+  },
+  {
+    "CIDADE - UF": "COCAL - PI",
+    "UF": "PI",
+    "Nome": "COCAL - PI",
+    "Descricao": "Agência Guanabara de Cocal - São Pedro, Av. Raimundo Alves Pereira, 990",
+    "Latitude": "-3.470930",
+    "Longitude": "-41.549130"
+  },
+  {
+    "CIDADE - UF": "COCAL DE TELHA - PI",
+    "UF": "PI",
+    "Nome": "COCAL DA TELHA - PI",
+    "Descricao": "Agência de Cocal de Telha - Av. Getulio Vargas, 193-111",
+    "Latitude": "-4.555900",
+    "Longitude": "-41.972500"
+  },
+  {
+    "CIDADE - UF": "COCAL DE TELHA - PI",
+    "UF": "PI",
+    "Nome": "COCAL DE TELHA - PI",
+    "Descricao": "Agência de Cocal de Telha - Av. Getulio Vargas, 193-111",
+    "Latitude": "-4.555800",
+    "Longitude": "-41.972590"
+  },
+  {
+    "CIDADE - UF": "CODO - MA",
+    "UF": "MA",
+    "Nome": "CODO (DEZESSETE) - MA",
+    "Descricao": "Agência Guanabara de Codo (Dezessete) - BR 136, Avenida Moises Reis, KM 466, Povoado KM 17",
+    "Latitude": "-4.557586",
+    "Longitude": "-43.993850"
+  },
+  {
+    "CIDADE - UF": "CONDADO - PB",
+    "UF": "PB",
+    "Nome": "CONDADO - PB",
+    "Descricao": "Agência Guanabara de Condado - Rua Padre Amâncio Leite, 309",
+    "Latitude": "-6.911172",
+    "Longitude": "-37.604113"
+  },
+  {
+    "CIDADE - UF": "CRISTALANDIA DO PIAUI - PI",
+    "UF": "PI",
+    "Nome": "CRISTALANDIA DO PIAUI - PI",
+    "Descricao": "Agência Guanabara de Cristalandia do Piaui - Gestulio Lustosa, Av. Getulio Lustosa, 242",
+    "Latitude": "-10.651590",
+    "Longitude": "-45.183660"
+  },
+  {
+    "CIDADE - UF": "SAO GONCALO DO AMARANTE - CE",
+    "UF": "CE",
+    "Nome": "SAO GONCALO DO AMARANTE (CROATA) - CE",
+    "Descricao": "Agência Guanabara de Croata (SGLA) - Rua Porfirio Araujo, s/n",
+    "Latitude": "-3.671923",
+    "Longitude": "-39.117563"
+  },
+  {
+    "CIDADE - UF": "CROATA - CE",
+    "UF": "CE",
+    "Nome": "CROATA DA SERRA - CE",
+    "Descricao": "Agência Guanabara de Croata da Serra - Caroba, Rua Santo Expedito, s/n",
+    "Latitude": "-4.413891",
+    "Longitude": "-40.907004"
+  },
+  {
+    "CIDADE - UF": "CURIMATA - PI",
+    "UF": "PI",
+    "Nome": "CURIMATA - PI",
+    "Descricao": "Agência de Curimata - Av. Curimata, 285",
+    "Latitude": "-10.036390",
+    "Longitude": "-44.298660"
+  },
+  {
+    "CIDADE - UF": "DEPUTADO IRAPUAN PINHEIRO - CE",
+    "UF": "CE",
+    "Nome": "DEPUTADO IRAPUAN PINHEIRO - CE",
+    "Descricao": "Agência Guanabara de Deputado Irapuan Pinheiro - São Bernardo, s/n",
+    "Latitude": "-5.915280",
+    "Longitude": "-39.267620"
+  },
+  {
+    "CIDADE - UF": "DIAMANTE - PB",
+    "UF": "PB",
+    "Nome": "DIAMANTE - PB",
+    "Descricao": "Agência Guanabara de Diamante - Av. do Cruzeiro, 521",
+    "Latitude": "-7.426483",
+    "Longitude": "-38.264628"
+  },
+  {
+    "CIDADE - UF": "DOM ELISEU - PA",
+    "UF": "PA",
+    "Nome": "DOM ELISEU - PA",
+    "Descricao": "Agência Guanabara de Dom Elizeu - Av. Juscelino Kubitschek de Oliveira, 362",
+    "Latitude": "-4.305219",
+    "Longitude": "-47.555041"
+  },
+  {
+    "CIDADE - UF": "OROS - CE",
+    "UF": "CE",
+    "Nome": "OROS - CE",
+    "Descricao": "Agência Guanabara de Embarque de Orós - Centro, Rua Epitácio Pessoa, 164",
+    "Latitude": "-6.244200",
+    "Longitude": "-38.914400"
+  },
+  {
+    "CIDADE - UF": "QUIXELO - CE",
+    "UF": "CE",
+    "Nome": "QUIXELO - CE",
+    "Descricao": "Agência Guanabara de Quixelo - Av. Luiz Vicente da Silva, s/n",
+    "Latitude": "-6.251000",
+    "Longitude": "-39.200060"
+  },
+  {
+    "CIDADE - UF": "QUIXERAMOBIM - CE",
+    "UF": "CE",
+    "Nome": "ENCANTADO - CE",
+    "Descricao": "Agência Guanabara de Encantado - CE116, s/n (Prox. Posto São José)",
+    "Latitude": "-5.503140",
+    "Longitude": "-39.308900"
+  },
+  {
+    "CIDADE - UF": "ENTRE RIOS DE MINAS - MG",
+    "UF": "MG",
+    "Nome": "ENTRE RIOS DE MINAS - MG",
+    "Descricao": "Agência Guanabara de Entre Rios de Minas - Centro, Av. Sagrados Corações, 609",
+    "Latitude": "-20.675980",
+    "Longitude": "-44.061540"
+  },
+  {
+    "CIDADE - UF": "ESPERANCA - PB",
+    "UF": "PB",
+    "Nome": "ESPERANCA - PB",
+    "Descricao": "Agência Guanabara de Esperança - Centro, Rua Manoel Rodrigues de Oliveira, 53",
+    "Latitude": "-7.020170",
+    "Longitude": "-35.857700"
+  },
+  {
+    "CIDADE - UF": "FARIAS BRITO - CE",
+    "UF": "CE",
+    "Nome": "FARIAS BRITO - CE",
+    "Descricao": "Agência Guanabara de Farias Brito - Centro, Rua Liberalino Duarte, 289",
+    "Latitude": "-6.926230",
+    "Longitude": "-39.572700"
+  },
+  {
+    "CIDADE - UF": "CORRENTE - PI",
+    "UF": "PI",
+    "Nome": "CORRENTE (FAZENDA DE CIMA) - PI",
+    "Descricao": "Agência Guanabara de Fazenda de Cima( Corrente) - PI 255, S/N (Supermercado Jatobá)",
+    "Latitude": "-10.443100",
+    "Longitude": "-44.833100"
+  },
+  {
+    "CIDADE - UF": "TRAIRI - CE",
+    "UF": "CE",
+    "Nome": "FLECHEIRAS - CE",
+    "Descricao": "Agência Guanabara de Flecheiras - Rua Maria Barros, 1",
+    "Latitude": "-3.222141",
+    "Longitude": "-39.264525"
+  },
+  {
+    "CIDADE - UF": "FLORES - PE",
+    "UF": "PE",
+    "Nome": "FLORES - PE",
+    "Descricao": "Agência Guanabara de Flores - Av. Gov. Paulo Guerra, 205, Terminal Rodoviário de Floresta",
+    "Latitude": -8601754,
+    "Longitude": -38573324
+  },
+  {
+    "CIDADE - UF": "FORQUILHA - CE",
+    "UF": "CE",
+    "Nome": "FORQUILHA - CE",
+    "Descricao": "Agência Guanabara de Forquilha - Centro, Av. Criança Dante Valério, 653",
+    "Latitude": "-3.798796",
+    "Longitude": "-40.263817"
+  },
+  {
+    "CIDADE - UF": "FRECHEIRINHA - CE",
+    "UF": "CE",
+    "Nome": "FRECHEIRINHA - CE",
+    "Descricao": "Agência Guanabara de Frecheirinha - Centro, Rua Cap. Joaquim Francisco, 527",
+    "Latitude": "-3.759497",
+    "Longitude": "-40.818400"
+  },
+  {
+    "CIDADE - UF": "FRONTEIRAS - PI",
+    "UF": "PI",
+    "Nome": "FRONTEIRAS - PI",
+    "Descricao": "Agência Guanabara de Fronteiras - Rod. Transamazônica, Av. Sete de Setembro, s/n",
+    "Latitude": "-7.088700",
+    "Longitude": "-40.616960"
+  },
+  {
+    "CIDADE - UF": "GRACA - CE",
+    "UF": "CE",
+    "Nome": "GRACA - CE",
+    "Descricao": "Agência Guanabara de Graça - Centro, Av. José Cândido de Carvalho, 483",
+    "Latitude": "-4.045480",
+    "Longitude": "-40.752310"
+  },
+  {
+    "CIDADE - UF": "GROAIRAS - CE",
+    "UF": "CE",
+    "Nome": "GROAIRAS - CE",
+    "Descricao": "Agência Guanabara de Groairas - Centro, Av. Manuel Jerônimo, 440",
+    "Latitude": "-3.915130",
+    "Longitude": "-40.383060"
+  },
+  {
+    "CIDADE - UF": "OROS - CE",
+    "UF": "CE",
+    "Nome": "GUASSUSSE - CE",
+    "Descricao": "Agência Guanabara de Guassusse - R. 21 de Abril, s/n",
+    "Latitude": "-6.338110",
+    "Longitude": "-38982590."
+  },
+  {
+    "CIDADE - UF": "IBIAPINA - CE",
+    "UF": "CE",
+    "Nome": "IBIAPINA - CE",
+    "Descricao": "Agência de Ibiapina - Centro, Rua Padre Ibiapina, 11",
+    "Latitude": "-3.920850",
+    "Longitude": "-40.888648"
+  },
+  {
+    "CIDADE - UF": "IBIMIRIM - PE",
+    "UF": "PE",
+    "Nome": "IBIMIRIM - PE",
+    "Descricao": "Agência Guanabara de Ibimirim - Lajes, Av. Getúlio Vargas, 500 (Bar Itapemirim)",
+    "Latitude": "-8.535640",
+    "Longitude": "-37.696300."
+  },
+  {
+    "CIDADE - UF": "IBITITA - BA",
+    "UF": "BA",
+    "Nome": "IBITITA - BA",
+    "Descricao": "Agência Guanabara de Ibitita - Rua José de Antero, 59A (Posto Rochedo)",
+    "Latitude": "-11.545110",
+    "Longitude": "-41.979160"
+  },
+  {
+    "CIDADE - UF": "ILHA GRANDE - PI",
+    "UF": "PI",
+    "Nome": "ILHA GRANDE - PI",
+    "Descricao": "Agência de Ilha Grande - Centro, Av. Martins Ribeiro, 726",
+    "Latitude": "-2.850610",
+    "Longitude": "41.810380"
+  },
+  {
+    "CIDADE - UF": "INDEPENDENCIA - CE",
+    "UF": "CE",
+    "Nome": "INDEPENDENCIA - CE",
+    "Descricao": "Agência Guanabara de Indepedência - Liberdade II, Av. Jorn. Maria Inês Pires de Sabóia, 507",
+    "Latitude": "-5.397500",
+    "Longitude": "-40.310900"
+  },
+  {
+    "CIDADE - UF": "IPAUMIRIM - CE",
+    "UF": "CE",
+    "Nome": "IPAUMIRIM - CE",
+    "Descricao": "Agência Guanabara de Ipaumirim - Rua Pres. Castelo Branco, 121",
+    "Latitude": "-6.789613",
+    "Longitude": "-38.717944"
+  },
+  {
+    "CIDADE - UF": "ITAREMA - CE",
+    "UF": "CE",
+    "Nome": "ITAREMA - CE",
+    "Descricao": "Agência Guanabara de Itarema - Centro, Av. João Batista Rios, 975",
+    "Latitude": "-2.919599",
+    "Longitude": "-39.921081"
+  },
+  {
+    "CIDADE - UF": "ITAUEIRA - PI",
+    "UF": "PI",
+    "Nome": "ITAUEIRA - PI",
+    "Descricao": "Agência Guanabara de Itaueira (Churrascaria Recanto) - Av. Ne Bezerra, 476",
+    "Latitude": "-7.606869",
+    "Longitude": "-43.027094"
+  },
+  {
+    "CIDADE - UF": "ITUVERAVA - SP",
+    "UF": "SP",
+    "Nome": "ITUVERAVA - SP",
+    "Descricao": "Agência de Ituverava - Rua Otaclito Barbosa, 103",
+    "Latitude": "20.317240",
+    "Longitude": "47.783500"
+  },
+  {
+    "CIDADE - UF": "JARDIM - CE",
+    "UF": "CE",
+    "Nome": "JARDIM - CE",
+    "Descricao": "Agência Guanabara de Jardim - Urias Novais, Av. Wilson Roriz, 1822",
+    "Latitude": "-7.588900",
+    "Longitude": "-39.275080"
+  },
+  {
+    "CIDADE - UF": "MUQUEM DE SAO FRANCISCO - BA",
+    "UF": "BA",
+    "Nome": "JAVI - BA",
+    "Descricao": "Agência Guanabara de Javi - Muquém do São Francisco, BR-242, 1827 (Pousada Portal)",
+    "Latitude": "-12.198950",
+    "Longitude": "-43.680140"
+  },
+  {
+    "CIDADE - UF": "JIJOCA DE JERICOACOARA - CE",
+    "UF": "CE",
+    "Nome": "JERICOACOARA - CE",
+    "Descricao": "Agência Guanabara de Jericoacoara - Rua Principal - Praia de Jericoacoara, s/n",
+    "Latitude": "-2.795704",
+    "Longitude": "-40.515500"
+  },
+  {
+    "CIDADE - UF": "JIJOCA DE JERICOACOARA - CE",
+    "UF": "CE",
+    "Nome": "JIJOCA DE JERICOACOARA - CE",
+    "Descricao": "Agência Guanabara de Jijoca - Av. Manoel Marques Albuquerque, 1220 (Posto Br)",
+    "Latitude": "-2.902061",
+    "Longitude": "-40.446764"
+  },
+  {
+    "CIDADE - UF": "JOSE DE FREITAS - PI",
+    "UF": "PI",
+    "Nome": "JOSE DE FREITAS - PI",
+    "Descricao": "Agência Guanabara de José de Freitas - Av. Gov. Petrônio Portela, 680",
+    "Latitude": "-4.759476",
+    "Longitude": "-42.568420"
+  },
+  {
+    "CIDADE - UF": "JUCAS - CE",
+    "UF": "CE",
+    "Nome": "JUCAS - CE",
+    "Descricao": "Agência Guanabara de Jucas - Av. Ormencida Correia Leite, s/n",
+    "Latitude": "-6.516180",
+    "Longitude": "-39.518730"
+  },
+  {
+    "CIDADE - UF": "JUNCO DO SERIDO - PB",
+    "UF": "PB",
+    "Nome": "JUNCO DO SERIDO - PB",
+    "Descricao": "Agência Guanabara de Junco do Serido - Rua João Alves da Nóbrega,s/n",
+    "Latitude": "-6.993970",
+    "Longitude": "-36.712900"
+  },
+  {
+    "CIDADE - UF": "ACARAU - CE",
+    "UF": "CE",
+    "Nome": "JURITIANHA - CE",
+    "Descricao": "Agência Guanabara de Juritianha - CE-085, Estrada Itarema, s/n",
+    "Latitude": "-2.899200",
+    "Longitude": "-40.005900"
+  },
+  {
+    "CIDADE - UF": "JACOBINA - BA",
+    "UF": "BA",
+    "Nome": "LAGES DO BATATA - BA",
+    "Descricao": "Agência Guanabara de Lages do Batata - BA-368, Ladeira Vermelha, s/n",
+    "Latitude": "-11.052390",
+    "Longitude": "-40.780560"
+  },
+  {
+    "CIDADE - UF": "IBOTIRAMA - BA",
+    "UF": "BA",
+    "Nome": "LAGOA DO OSCAR - BA",
+    "Descricao": "Agência de Lagoa do Oscar - Rua BR 242, Trailer 61",
+    "Latitude": "-12.222.160",
+    "Longitude": "-44.064.200"
+  },
+  {
+    "CIDADE - UF": "LAVRAS DA MANGABEIRA - CE",
+    "UF": "CE",
+    "Nome": "LAVRAS DA MANGABEIRA - CE",
+    "Descricao": "Agência Guanabara de Lavras da Mangabeira - Rua Sergio Queiroz, 69",
+    "Latitude": "-6.752122",
+    "Longitude": "-38.963802"
+  },
+  {
+    "CIDADE - UF": "ICO - CE",
+    "UF": "CE",
+    "Nome": "LIMA CAMPOS - CE",
+    "Descricao": "Agência Guanabara de Lima Campos - Rua Ilídio Sampaio, 172",
+    "Latitude": "-6.405200",
+    "Longitude": "-38.952500"
+  },
+  {
+    "CIDADE - UF": "MADALENA - CE",
+    "UF": "CE",
+    "Nome": "MADALENA - CE",
+    "Descricao": "Agência Guanabara de Madalena - Pinhos, Av. Dau Alberto,s/n (Churrsc. Dois Irmãos)",
+    "Latitude": "-4.847506",
+    "Longitude": "-39.570281"
+  },
+  {
+    "CIDADE - UF": "LAVRAS DA MANGABEIRA - CE",
+    "UF": "CE",
+    "Nome": "MANGABEIRA - CE",
+    "Descricao": "Agência de Mangabeira -Rua José Bernardo, 2-56",
+    "Latitude": "-6.7599145",
+    "Longitude": "-39.1228909"
+  },
+  {
+    "CIDADE - UF": "MARACACUME - MA",
+    "UF": "MA",
+    "Nome": "MARACACUME - MA",
+    "Descricao": "Agência Guanabara de Maracacume - Av. Dayse de Souza, 933-825",
+    "Latitude": "-2.048928",
+    "Longitude": "-45.961206"
+  },
+  {
+    "CIDADE - UF": "MARCOLANDIA - PI",
+    "UF": "PI",
+    "Nome": "MARCOLANDIA - PI",
+    "Descricao": "Agência de Marcolândia - Simões, PI-142, 1",
+    "Latitude": "-7.444570",
+    "Longitude": "-40.663224"
+  },
+  {
+    "CIDADE - UF": "MARI - PB",
+    "UF": "PB",
+    "Nome": "MARI - PB",
+    "Descricao": "Agência Guanabara de Mari - Centro, Rua Napoleão Laureano, 499",
+    "Latitude": "-7.054038",
+    "Longitude": "-35.318117"
+  },
+  {
+    "CIDADE - UF": "MARIZOPOLIS - PB",
+    "UF": "PB",
+    "Nome": "MARIZOPOLIS - PB",
+    "Descricao": "Agência Guanabara de Marizopolis - Centro, Rua Dr. Otávio Mariz, 43",
+    "Latitude": "-6.844283",
+    "Longitude": "-38.347300"
+  },
+  {
+    "CIDADE - UF": "MILHA - CE",
+    "UF": "CE",
+    "Nome": "MILHA - CE",
+    "Descricao": "Agência Guanabara de Milha - Centro, Rua Gervázio Moreira, s/n",
+    "Latitude": "-5.683740",
+    "Longitude": "-39.197533"
+  },
+  {
+    "CIDADE - UF": "MIRAIMA - CE",
+    "UF": "CE",
+    "Nome": "MIRAIMA - CE",
+    "Descricao": "Agência Guanabara de Miraíma - Centro, Av. Migueira Barroso Braga, s/n",
+    "Latitude": "-3.570600",
+    "Longitude": "-39.970100"
+  },
+  {
+    "CIDADE - UF": "MONTEIRO - PB",
+    "UF": "PB",
+    "Nome": "MONTEIRO - PB",
+    "Descricao": "Agência Guanabara de Monteiro - Centro, Tv. Consuelo Santa Cruz, 38",
+    "Latitude": "-7.890458",
+    "Longitude": "-37.124420"
+  },
+  {
+    "CIDADE - UF": "MORAUJO - CE",
+    "UF": "CE",
+    "Nome": "MORAUJO - CE",
+    "Descricao": "Agência Guanabara de Moraujo - Av. Prefeito Raimundo Benicio, 565 (Prox. Prefeitura)",
+    "Latitude": "3.467270",
+    "Longitude": "-40.677650"
+  },
+  {
+    "CIDADE - UF": "MUCAMBO - CE",
+    "UF": "CE",
+    "Nome": "MUCAMBO - CE",
+    "Descricao": "Agência Guanabara de Mucambo - Rua Serafim de Aquino, 71",
+    "Latitude": "-3.904424",
+    "Longitude": "-40.745646"
+  },
+  {
+    "CIDADE - UF": "TRAIRI - CE",
+    "UF": "CE",
+    "Nome": "MUNDAU - CE",
+    "Descricao": "Agência Guanabara de Mundaú - Rua do Fogo, 189",
+    "Latitude": "-3.181919",
+    "Longitude": "-39.372071"
+  },
+  {
+    "CIDADE - UF": "MUQUEM DE SAO FRANCISCO - BA",
+    "UF": "BA",
+    "Nome": "MUQUEM DE SAO FRANCISCO - BA",
+    "Descricao": "Agência de Muquem de São Francisco - BR-242, KM 642, 120",
+    "Latitude": "-12.198710",
+    "Longitude": "-43.674300"
+  },
+  {
+    "CIDADE - UF": "NAZARE DO PIAUI - PI",
+    "UF": "PI",
+    "Nome": "NAZARE DO PIAUI - PI",
+    "Descricao": "Agência Guanabara de Nazaré do Piauí - Av. Joaquim Ramos, 1225-1239",
+    "Latitude": "-6.970679",
+    "Longitude": "-42.674270"
+  },
+  {
+    "CIDADE - UF": "NOVA OLINDA - CE",
+    "UF": "CE",
+    "Nome": "NOVA OLINDA - CE",
+    "Descricao": "Agência de Nova Olinda - Centro, Av. Perimetral Sul, 503",
+    "Latitude": "-7.0930173",
+    "Longitude": "-39.679424"
+  },
+  {
+    "CIDADE - UF": "NOVO JARDIM - TO",
+    "UF": "TO",
+    "Nome": "NOVO JARDIM - TO",
+    "Descricao": "Agência de Novo Jardim - Rua Cinco, 259, Novo Jardim",
+    "Latitude": "11.823.490",
+    "Longitude": "-46.622450"
+  },
+  {
+    "CIDADE - UF": "NOVO ORIENTE - CE",
+    "UF": "CE",
+    "Nome": "NOVO ORIENTE - CE",
+    "Descricao": "Agência Guanabara de Novo Oriente - Centro, Rua Antônio Claudino, 426",
+    "Latitude": "-5.537780",
+    "Longitude": "-40.775800"
+  },
+  {
+    "CIDADE - UF": "OLHO D'AGUA DO BORGES - RN",
+    "UF": "RN",
+    "Nome": "OLHO-D'AGUA DO BORGES - RN",
+    "Descricao": "Agência Guanabara de Olho-D'Agua do Borges - Rua Julio Fernandes, 04",
+    "Latitude": "-5.954388",
+    "Longitude": "-37.705117"
+  },
+  {
+    "CIDADE - UF": "OLIVEIRA DOS BREJINHOS - BA",
+    "UF": "BA",
+    "Nome": "OLIVEIRA DOS BREJINHOS - BA",
+    "Descricao": "Agência Guanabara de Oliveira dos Brejinhos - Restaurante Beira Rio, Rodovia BR 242, Km 398, s/n",
+    "Latitude": "-12.254637",
+    "Longitude": "-42.759272"
+  },
+  {
+    "CIDADE - UF": "PACUJA - CE",
+    "UF": "CE",
+    "Nome": "PACUJA - CE",
+    "Descricao": "Agência Guanabara de Pacujá - Centro, Rua Francisco Filizola, 496",
+    "Latitude": "-3.980.700",
+    "Longitude": "-40.696700"
+  },
+  {
+    "CIDADE - UF": "PARACATU - MG",
+    "UF": "MG",
+    "Nome": "PARACATU - MG",
+    "Descricao": "Agência Guanabara de Paracatu - Alvorada, BR-040 KM 46",
+    "Latitude": "-17.233250",
+    "Longitude": "-46.849740"
+  },
+  {
+    "CIDADE - UF": "PARNAGUA - PI",
+    "UF": "PI",
+    "Nome": "PARNAGUA - PI",
+    "Descricao": "Agência Guanabara de Parnagua - Av. Davi Mascarenhas, s/n",
+    "Latitude": "-10.221970",
+    "Longitude": "-44.636890"
+  },
+  {
+    "CIDADE - UF": "PAULINO NEVES - MA",
+    "UF": "MA",
+    "Nome": "PAULINO NEVES - MA",
+    "Descricao": "Agência Guanabara de Paulino Neves - Centro, Av. Dr. Paulo Ramos, 190",
+    "Latitude": "-2.723011",
+    "Longitude": "-42.540513"
+  },
+  {
+    "CIDADE - UF": "PEDRA BRANCA - CE",
+    "UF": "CE",
+    "Nome": "PEDRA BRANCA - CE",
+    "Descricao": "Agência Guanabara de Pedra Branca - Bom Princípio, Av. Doca Belo, 49",
+    "Latitude": "-5.455450",
+    "Longitude": "-39.712830"
+  },
+  {
+    "CIDADE - UF": "PENTECOSTE - CE",
+    "UF": "CE",
+    "Nome": "PENTECOSTE - CE",
+    "Descricao": "Agência Guanabara de Pentecoste - Rua Pref. João Gomes da Silva, 288",
+    "Latitude": -3791711,
+    "Longitude": -39270542
+  },
+  {
+    "CIDADE - UF": "PINDARE MIRIM - MA",
+    "UF": "MA",
+    "Nome": "PINDARE-MIRIM - MA",
+    "Descricao": "Agência de Pindare Mirim - Centro, Av. Pres. Getúlio Vargas, 569",
+    "Latitude": "-3.611600",
+    "Longitude": "-45.342220"
+  },
+  {
+    "CIDADE - UF": "PIRES FERREIRA - CE",
+    "UF": "CE",
+    "Nome": "PIRES FERREIRA - CE",
+    "Descricao": "Agência Guanabara de Pires Ferreira - Centro, Av. Pres. Castelo Branco, s/n",
+    "Latitude": "-4.244960",
+    "Longitude": "-40.644500"
+  },
+  {
+    "CIDADE - UF": "CORRENTINA - BA",
+    "UF": "BA",
+    "Nome": "POSTO ROSARIO - BA",
+    "Descricao": "Agência de Posto Rosário (Correntina) - Rodovia BR 020, s/n, KM 312, Correntina",
+    "Latitude": "-13.953200",
+    "Longitude": "-46.198060"
+  },
+  {
+    "CIDADE - UF": "POTENGI - CE",
+    "UF": "CE",
+    "Nome": "POTENGI - CE",
+    "Descricao": "Agência Guanabara de Potengi - Centro, Av. Monsenhor Rocha, 111",
+    "Latitude": "-7.089821",
+    "Longitude": "-40.025968"
+  },
+  {
+    "CIDADE - UF": "CRUZ - CE",
+    "UF": "CE",
+    "Nome": "PREA - CE",
+    "Descricao": "Agência Guanabara de Préa - Caiçara, Av. Central, 251",
+    "Latitude": "-2.821800",
+    "Longitude": "-40.412680"
+  },
+  {
+    "CIDADE - UF": "VICOSA DO CEARA - CE",
+    "UF": "CE",
+    "Nome": "QUATIGUABA - CE",
+    "Descricao": "Agência Guanabara de Quatiguaba - Rua Joao Candido, 321",
+    "Latitude": "-3.674008",
+    "Longitude": "-41.066707"
+  },
+  {
+    "CIDADE - UF": "QUIXERAMOBIM - CE",
+    "UF": "CE",
+    "Nome": "QUIXERAMOBIM - CE",
+    "Descricao": "Agência Guanabara de Quixeramobim - José Airton Machado, Rua Cel. Teófilo Lessa,135 (Posto Alvorada)",
+    "Latitude": "-5.191920",
+    "Longitude": "-39.295540"
+  },
+  {
+    "CIDADE - UF": "SOBRAL - CE",
+    "UF": "CE",
+    "Nome": "RAFAEL ARRUDA - CE",
+    "Descricao": "Agência Guanabara de Rafael Arruda - Praça São Francisco, s/n",
+    "Latitude": "-3.835800",
+    "Longitude": "-40.666609"
+  },
+  {
+    "CIDADE - UF": "BRASILIA - DF",
+    "UF": "DF",
+    "Nome": "RECANTO DAS EMAS - DF",
+    "Descricao": "Agência Guanabara de Recanto das Emas - Q 101, Conjunto 5",
+    "Latitude": "-15.898866",
+    "Longitude": "-48.055881"
+  },
+  {
+    "CIDADE - UF": "RERIUTABA - CE",
+    "UF": "CE",
+    "Nome": "RERIUTABA - CE",
+    "Descricao": "Agência Guanabara de Reriutaba - Praça Cel. Raimundo Rodrigues, 328",
+    "Latitude": "-4.143130",
+    "Longitude": "-40.580210"
+  },
+  {
+    "CIDADE - UF": "SABOEIRO - CE",
+    "UF": "CE",
+    "Nome": "SABOEIRO - CE",
+    "Descricao": "Agência Guanabara de Saboeiro - Rua Fernandes Bastos, 186",
+    "Latitude": "-6.539.020",
+    "Longitude": "-39.907290"
+  },
+  {
+    "CIDADE - UF": "SANTA RITA - MA",
+    "UF": "MA",
+    "Nome": "SANTA RITA - MA",
+    "Descricao": "Agência Guanabara de Santa Rita - Av. Ivar Saldanha, 285",
+    "Latitude": "-3.144870",
+    "Longitude": "-44.326850"
+  },
+  {
+    "CIDADE - UF": "SANTANA DO ACARAU - CE",
+    "UF": "CE",
+    "Nome": "SANTANA DO ACARAU - CE",
+    "Descricao": "Agência Guanabara de Santana do Acaraú - Centro, Rua José Mendes, 504",
+    "Latitude": "-3.460820",
+    "Longitude": "-40.208730"
+  },
+  {
+    "CIDADE - UF": "SANTO ANTONIO DA PLATINA - PR",
+    "UF": "PR",
+    "Nome": "SANTO ANTONIO DA PLATINA - PR",
+    "Descricao": "Agência Guanabara de Santo Antônio da Platina - Centro, Av. Cel. Oliveira Mota, s/n",
+    "Latitude": "-23.292330",
+    "Longitude": "-50.074380"
+  },
+  {
+    "CIDADE - UF": "SAO BENTO - PB",
+    "UF": "PB",
+    "Nome": "SAO BENTO - PB",
+    "Descricao": "Agência Guanabara de São Bento - Rua João Pedro Pereira, 120, Cicero Dias (Próx. à Câmara Municipal)",
+    "Latitude": "-6.493098",
+    "Longitude": "-37.448737"
+  },
+  {
+    "CIDADE - UF": "SAO FELIX DO CORIBE - BA",
+    "UF": "BA",
+    "Nome": "SAO FELIX DO CORIBE - BA",
+    "Descricao": "Agência Guanabara de São Felix do Coribe - Av. Luís Eduardo Magalhães, 77",
+    "Latitude": "-13.401870",
+    "Longitude": "-44.197550"
+  },
+  {
+    "CIDADE - UF": "SAO JOAO DA FRONTEIRA - PI",
+    "UF": "PI",
+    "Nome": "SAO JOAO DA FRONTEIRA - PI",
+    "Descricao": "Agência Guanabara de São João da Fronteira (Pousada e Restaurante) - BR-222, s/n",
+    "Latitude": "-3.940468",
+    "Longitude": "-41.263780"
+  },
+  {
+    "CIDADE - UF": "SAO JOAO DO CARIRI - PB",
+    "UF": "PB",
+    "Nome": "SAO JOAO DO CARIRI - PB",
+    "Descricao": "Agência Guanabara de São João do Cariri - Rua Pref. Alfredo Gaudêncio, 141",
+    "Latitude": "-7.390324",
+    "Longitude": "-36.529375"
+  },
+  {
+    "CIDADE - UF": "SAO JOAQUIM DA BARRA - SP",
+    "UF": "SP",
+    "Nome": "SAO JOAQUIM DA BARRA - SP",
+    "Descricao": "Agência de São Joaquim da Barra - Rua Maria do Carmo Maciel Possos, 2011",
+    "Latitude": "20.602.790",
+    "Longitude": "47858720"
+  },
+  {
+    "CIDADE - UF": "SAO JOSE DA LAGOA TAPADA - PB",
+    "UF": "PB",
+    "Nome": "SAO JOSE DA LAGOA TAPADA - PB",
+    "Descricao": "Agência Guanabara de São Jose da Lagoa Tapada - Centro, Rua Ananias Sarnento, s/n",
+    "Latitude": "-6.941466",
+    "Longitude": "38.164505"
+  },
+  {
+    "CIDADE - UF": "SAO JOSE DO BELMONTE - PE",
+    "UF": "PE",
+    "Nome": "SAO JOSE DO BELMONTE - PE",
+    "Descricao": "Agência de São José do Belmonte - Centro, Travessa Dionon Alves de Carvalho, 16",
+    "Latitude": "-7.8635789",
+    "Longitude": "-38.7579792"
+  },
+  {
+    "CIDADE - UF": "SAPE - PB",
+    "UF": "PB",
+    "Nome": "SAPE - PB",
+    "Descricao": "Agência Guanabara de Sapé - Centro, Rua Osvaldo Pessoa, 224",
+    "Latitude": "-7.098230",
+    "Longitude": "-35.231200"
+  },
+  {
+    "CIDADE - UF": "SENADOR SA - CE",
+    "UF": "CE",
+    "Nome": "SENADOR SA - CE",
+    "Descricao": "Agência Guanabara de Senador Sá - Av. 23 de Agosto, 293",
+    "Latitude": "-3.351122",
+    "Longitude": "-40.465658"
+  },
+  {
+    "CIDADE - UF": "SERRA BRANCA - PB",
+    "UF": "PB",
+    "Nome": "SERRA BRANCA - PB",
+    "Descricao": "Agência Guanabara de Serra Branca - Av. Dep. Álvaro Gaudêncio de Queirós, 46 - Centro, ( ao lado do banco do Brasil )",
+    "Latitude": "-7.484447",
+    "Longitude": "-36.661799"
+  },
+  {
+    "CIDADE - UF": "FLORES - PE",
+    "UF": "PE",
+    "Nome": "SITIO DOS NUNES - PE",
+    "Descricao": "Agência Guanabara de Sitio dos Nunes - Rua Dr Santana Filho SN, Bar do Renaldo",
+    "Latitude": "8.047.792",
+    "Longitude": "37835340"
+  },
+  {
+    "CIDADE - UF": "TAMBORIL - CE",
+    "UF": "CE",
+    "Nome": "SUCESSO - CE",
+    "Descricao": "Agência Guanabara de Sucesso - CE 060, Bonfim, s/n",
+    "Latitude": "-5.522570",
+    "Longitude": "-39.492700"
+  },
+  {
+    "CIDADE - UF": "SUME - PB",
+    "UF": "PB",
+    "Nome": "SUME - PB",
+    "Descricao": "Agência Guanabara de Sume - Centro, Rua Alice Japiassú de Queiróz, 130",
+    "Latitude": "-7.672300",
+    "Longitude": "-36.878700"
+  },
+  {
+    "CIDADE - UF": "TACIMA - PB",
+    "UF": "PB",
+    "Nome": "TACIMA - PB",
+    "Descricao": "Agência de Tacima - Rua João Barbosa da Silva, 74-108",
+    "Latitude": "-6.486992",
+    "Longitude": " -35.638374"
+  },
+  {
+    "CIDADE - UF": "TAMBORIL - CE",
+    "UF": "CE",
+    "Nome": "TAMBORIL - CE",
+    "Descricao": "Agência Guanabara de Tamboril - Centro, Tv. Floriano Peixoto, s/n",
+    "Latitude": "-4.834022",
+    "Longitude": " -40.319358"
+  },
+  {
+    "CIDADE - UF": "LIMOEIRO DO NORTE - CE",
+    "UF": "CE",
+    "Nome": "TRIANGULO DO LIMOEIRO - CE",
+    "Descricao": "Agência Guanabara de Triângulo do Limoeiro - Cidade Alta, Estr. Manoel Fidélis Maia, 3617",
+    "Latitude": "-5.149973",
+    "Longitude": "-38.153498"
+  },
+  {
+    "CIDADE - UF": "MARCO - CE",
+    "UF": "CE",
+    "Nome": "TRIANGULO DE MARCO - CE",
+    "Descricao": "Agência Guanabara de Triângulo do Marco - BR-402, s/n",
+    "Latitude": "-3.125130",
+    "Longitude": "-40.084000"
+  },
+  {
+    "CIDADE - UF": "TRINDADE - PE",
+    "UF": "PE",
+    "Nome": "TRINDADE - PE",
+    "Descricao": "Agência Guanabara de Trindade - Av. Central Norte, 78",
+    "Latitude": "-7.759710",
+    "Longitude": "-40.264660"
+  },
+  {
+    "CIDADE - UF": "ACOPIARA - CE",
+    "UF": "CE",
+    "Nome": "TRUSSU - CE",
+    "Descricao": "Agência Guanabara de Trussu - Rua Sólon Guedes, 247-291",
+    "Latitude": "-6.096000",
+    "Longitude": "-39.741080"
+  },
+  {
+    "CIDADE - UF": "TURURU - CE",
+    "UF": "CE",
+    "Nome": "TURURU - CE",
+    "Descricao": "Agência Guanabara de Tururu - Rua João Amaro, 479",
+    "Latitude": "-3.599050",
+    "Longitude": "-39.437150"
+  },
+  {
+    "CIDADE - UF": "COREAU - CE",
+    "UF": "CE",
+    "Nome": "COREAU (UBAUNA) - CE",
+    "Descricao": "Agência Guanabara de Ubauna - Av. Vereador Antonio Adriano Neri, s/n",
+    "Latitude": "-3.741000",
+    "Longitude": "-40.689000"
+  },
+  {
+    "CIDADE - UF": "UMARIZAL - RN",
+    "UF": "RN",
+    "Nome": "UMARIZAL - RN",
+    "Descricao": "Agência Guanabara de Umarizal - Av da Integração, N.40 centro, Umarizal-RN ( Bora Bora Conveniência )",
+    "Latitude": "-5.983249",
+    "Longitude": "-37.816109"
+  },
+  {
+    "CIDADE - UF": "UMIRIM - CE",
+    "UF": "CE",
+    "Nome": "UMIRIM - CE",
+    "Descricao": "Agência Guanabara de Umirim - Centro, Av. Presidente Vargas, 254.",
+    "Latitude": "-3.678150",
+    "Longitude": "-39.349450"
+  },
+  {
+    "CIDADE - UF": "URUOCA - CE",
+    "UF": "CE",
+    "Nome": "URUOCA - CE",
+    "Descricao": "Agência Guanabara de Uruoca - Roberto Dourado, Av. Valdemar Rocha, 23",
+    "Latitude": "-3.314351",
+    "Longitude": "-40.555795"
+  },
+  {
+    "CIDADE - UF": "VALPARAISO DE GOIAS - GO",
+    "UF": "GO",
+    "Nome": "VALPARAISO DE GOIAS - GO",
+    "Descricao": "Agência Guanabara de Valparaiso de Goiás - Valparaizo II, s/n",
+    "Latitude": "-16.076000",
+    "Longitude": "-47.986300"
+  },
+  {
+    "CIDADE - UF": "VARJOTA - CE",
+    "UF": "CE",
+    "Nome": "VARJOTA - CE",
+    "Descricao": "Agência Guanabara de Varjota - Av. Sen. Virgílio Távora, 332",
+    "Latitude": "-4.193000",
+    "Longitude": "-40.472650"
+  },
+  {
+    "CIDADE - UF": "VICOSA DO CEARA - CE",
+    "UF": "CE",
+    "Nome": "VICOSA DO CEARA - CE",
+    "Descricao": "Agência Guanabara de Viçosa do Ceará - Rua José Siqueira, s/n",
+    "Latitude": "-3.576460",
+    "Longitude": "-41.094200"
+  },
+  {
+    "CIDADE - UF": "CARAUBAS DO PIAUI - PI",
+    "UF": "PI",
+    "Nome": "VOLTA DA JUREMA - PI",
+    "Descricao": "Agência Guanabara de Volta da Jurema - Rod. 343, PI 213, Caraúbas do Piauí",
+    "Latitude": "-3.472480",
+    "Longitude": "-41.745480"
+  },
+  {
+    "CIDADE - UF": "CAUCAIA - CE",
+    "UF": "CE",
+    "Nome": "CAUCAIA (PST CANINDE II) - CE",
+    "Descricao": "Agência Guanabara do Posto Canindé II - Rua Irapuã Vidal, 1092 - Parque Sao Gerardo",
+    "Latitude": "-3.753503",
+    "Longitude": "-38.639487"
+  },
+  {
+    "CIDADE - UF": "SENADOR POMPEU - CE",
+    "UF": "CE",
+    "Nome": "VINTE - CE",
+    "Descricao": "Agência Guanabara do Vinte - CE060, Bonfim, s/n",
+    "Latitude": "-5.522500",
+    "Longitude": "-39.492700"
+  },
+  {
+    "CIDADE - UF": "TRAIRI - CE",
+    "UF": "CE",
+    "Nome": "BALAO DE TRAIRI - CE",
+    "Descricao": "Agência Guanabara do Dois Irmãos ( Balão do Trairi) - Campestre, CE-085, km 100",
+    "Latitude": "-3.372797",
+    "Longitude": "-39.295147"
+  },
+  {
+    "CIDADE - UF": "CUSTODIA - PE",
+    "UF": "PE",
+    "Nome": "CUSTODIA - PE",
+    "Descricao": "Agência Guanabara de Custodia - Centro, Av. Gerson Gonçalves de Lima, 755b",
+    "Latitude": "-8.084960",
+    "Longitude": "-37.642920"
+  },
+  {
+    "CIDADE - UF": "BREJO - MA",
+    "UF": "MA",
+    "Nome": "BREJO - MA",
+    "Descricao": "Ponto de Embarque Guanabara de Brejo - Rua Duque de Caxias , s/n",
+    "Latitude": "-3.683000",
+    "Longitude": "-42.751460"
+  },
+  {
+    "CIDADE - UF": "GOVERNADOR NUNES FREIRE - MA",
+    "UF": "MA",
+    "Nome": "GOVERNADOR NUNES FREIRE - MA",
+    "Descricao": "Agência Guanabara de Governador Nunes Freire - Av. Comercial, Posto Shell, 1121",
+    "Latitude": "-2.132450",
+    "Longitude": "-45.885920"
+  },
+  {
+    "CIDADE - UF": "JUAZEIRO DO NORTE - CE",
+    "UF": "CE",
+    "Nome": "JUAZEIRO DO NORTE (AV PADRE CICERO) - CE",
+    "Descricao": "Agência Guanabara Juazeiro do Norte (Bairro Triângulo) - Avenida Padre Cícero, 2568 - A, Bairro Triângulo",
+    "Latitude": "-7.224317",
+    "Longitude": "-39.326609"
+  },
+  {
+    "CIDADE - UF": "TRAIRI - CE",
+    "UF": "CE",
+    "Nome": "TRAIRI - CE",
+    "Descricao": "Agência Guanabara de Trevo do Balão do Trairi - Ce 085, s/n",
+    "Latitude": "-3.372882",
+    "Longitude": "-39.295105"
+  },
+  {
+    "CIDADE - UF": "PAULO AFONSO - BA",
+    "UF": "BA",
+    "Nome": "PAULO AFONSO (TANCREDO NEVES III) - BA",
+    "Descricao": "Agência Guanabara de Paulo Afonso - Rod.BA-210, 491 - Tancredo Neves III, Paulo Afonso - BA",
+    "Latitude": "-9.440603",
+    "Longitude": "-38.223705"
+  },
+  {
+    "CIDADE - UF": "HORIZONTE - CE",
+    "UF": "CE",
+    "Nome": "HORIZONTE - CE",
+    "Descricao": "Agência Guanabara de Horizonte - Centro, Av. Pres. Castelo Branco, 5254",
+    "Latitude": "-4.105821",
+    "Longitude": "-38.492845"
+  },
+  {
+    "CIDADE - UF": "TERESINA - PI",
+    "UF": "PI",
+    "Nome": "TERESINA (LAD. DO URUGUAI) - PI",
+    "Descricao": "Agência Guanabara de Ladeira do Uruguai - Uruguai, Av. João XXIII, s/n",
+    "Latitude": "-5.078340",
+    "Longitude": "-42.748500"
+  },
+  {
+    "CIDADE - UF": "PARATINGA - BA",
+    "UF": "BA",
+    "Nome": "PARATINGA - BA",
+    "Descricao": "Agência Guanabara de Paratinga (Restaurante e Pousada Magalhães) - BA-160, s/n",
+    "Latitude": "-12.688700",
+    "Longitude": "-43.172740"
+  },
+  {
+    "CIDADE - UF": "PIQUET CARNEIRO - CE",
+    "UF": "CE",
+    "Nome": "PIQUET CARNEIRO - CE",
+    "Descricao": "Agência Guanabara de Piquet Carneiro - Centro, Rua Antonio Mariano de Sousa, 155",
+    "Latitude": "-5.802770",
+    "Longitude": "-39.417101"
+  },
+  {
+    "CIDADE - UF": "OLIVEIRA DOS BREJINHOS - BA",
+    "UF": "BA",
+    "Nome": "POSTO BEIRA RIO - BA",
+    "Descricao": "Agência Guanabara de Posto Beira Rio - Oliveira dos Brejinhos, Rod. 242 Beira Rio, s/n",
+    "Latitude": "-12.255081",
+    "Longitude": " -42.758086"
+  },
+  {
+    "CIDADE - UF": "QUITERIANOPOLIS - CE",
+    "UF": "CE",
+    "Nome": "QUITERIANOPOLIS - CE",
+    "Descricao": "Agência Guanabara de Quiterianopolis - Centro, Rua Quitéria de Lima, 76",
+    "Latitude": "-5.843220",
+    "Longitude": "-40.701600"
+  },
+  {
+    "CIDADE - UF": "PEDRA BRANCA - CE",
+    "UF": "CE",
+    "Nome": "SANTA CRUZ DO BANABUIU - CE",
+    "Descricao": "Agência Guanabara de Santa Cruz do Banabuiu - BR-020, km 156 ,Distrito de Riachão do Banabuiu,",
+    "Latitude": "-5.440007",
+    "Longitude": "-40.004068"
+  },
+  {
+    "CIDADE - UF": "SAO LUIS DO CURU - CE",
+    "UF": "CE",
+    "Nome": "SAO LUIS DO CURU - CE",
+    "Descricao": "Agência Guanabara de São Luís do Curu - Rua Francisco F da Cunha, 250",
+    "Latitude": "-3.673877",
+    "Longitude": "-39.240961"
+  },
+  {
+    "CIDADE - UF": "SEABRA - BA",
+    "UF": "BA",
+    "Nome": "SEABRA (AG. POUSADA) - BA",
+    "Descricao": "Agência Guanabara de Seabra - Av. José de Aquino, 232 (Pousada Seabra)",
+    "Latitude": "-12.427440",
+    "Longitude": "-41.772950"
+  },
+  {
+    "CIDADE - UF": "#N/D",
+    "UF": "BA",
+    "Nome": "PORTO FELIZ - BA",
+    "Descricao": "Agência Guanabara de Porto Feliz - BA-052, Piritiba, s/n",
+    "Latitude": "-11.755225",
+    "Longitude": "-40.712781"
+  },
+  {
+    "CIDADE - UF": "PORTEIRAS - CE",
+    "UF": "CE",
+    "Nome": "PORTEIRAS - CE",
+    "Descricao": "Ponto de Embarque Guanabara de Porteiras - José Aristarco Cardoso, s/n",
+    "Latitude": "-7.534299",
+    "Longitude": "-39.11657"
+  },
+  {
+    "CIDADE - UF": "BELO HORIZONTE - MG",
+    "UF": "MG",
+    "Nome": "BELO HORIZONTE (GARAGEM CAICARAS) - MG",
+    "Descricao": "Garagem Util - Caiçaras, Rua Tietê, 185",
+    "Latitude": "-19.904100",
+    "Longitude": "-43.969100"
+  },
+  {
+    "CIDADE - UF": "MARCO - CE",
+    "UF": "CE",
+    "Nome": "MARCO - CE",
+    "Descricao": "Agência Guanabara de Marco - centro, Rua Padre Apoliano, s/n",
+    "Latitude": "-3.122759",
+    "Longitude": "-40.150781"
+  },
+  {
+    "CIDADE - UF": "PATOS - PB",
+    "UF": "PB",
+    "Nome": "PATOS (CENTRO) - PB",
+    "Descricao": "Agência Guanabara de Centro (Patos) - Centro, Rua João da Mata, 40",
+    "Latitude": "-7.028815",
+    "Longitude": "-37.277171"
+  },
+  {
+    "CIDADE - UF": "PARNAIBA - PI",
+    "UF": "PI",
+    "Nome": "PARNAIBA (Av. Capitao Claro) - PI",
+    "Descricao": "Agência Guanabara de Nazaré ( Parnaiba) - Centro, Av. Cap. Claro, 9",
+    "Latitude": "-2.908222",
+    "Longitude": "-41.779876"
+  },
+  {
+    "CIDADE - UF": "ARACATI - CE",
+    "UF": "CE",
+    "Nome": "PONTO DE APOIO ARACATI",
+    "Descricao": "Agência Guanabara de Aracati - Nossa Sra. de Lourdes, s/n",
+    "Latitude": "-4.571420",
+    "Longitude": "-37.774232"
+  },
+  {
+    "CIDADE - UF": "CAMPINA GRANDE - PB",
+    "UF": "PB",
+    "Nome": "CAMPINA GRANDE (Posto Mastodonte) - PB",
+    "Descricao": "Agência Guanabara de Campina Grande (Posto Mastodonte) - Posto Lagoão - São José da Mata, Rod. Gov. Antonio Mariz, 2991",
+    "Latitude": "-7.202757",
+    "Longitude": "-35.951830"
+  },
+  {
+    "CIDADE - UF": "MANHUACU - MG",
+    "UF": "MG",
+    "Nome": "MANHUACU - MG",
+    "Descricao": "Ponto de de Manhuacu - Vila Nova, BR-116, 594",
+    "Latitude": "-18.675.830",
+    "Longitude": "-41988070"
+  },
+  {
+    "CIDADE - UF": "FORTALEZA - CE",
+    "UF": "CE",
+    "Nome": "FORTALEZA (AEROPORTO) - CE",
+    "Descricao": "Ponto de Embarque Guanabara do Aeroporto (FOR) - Serrinha,Av. Senador Carlos Jereissati, 3000",
+    "Latitude": "-3.777580",
+    "Longitude": "-38.540500"
+  },
+  {
+    "CIDADE - UF": "FORTALEZA - CE",
+    "UF": "CE",
+    "Nome": "FORTALEZA (BEIRA MAR) - CE",
+    "Descricao": "Ponto de Embarque Guanabara na Beira Mar (Fortaleza) - Meireles, Av. Beira Mar, 2500 (Hotel Atlântico Oasís)",
+    "Latitude": "-3.726010",
+    "Longitude": "-38.496500"
+  },
+  {
+    "CIDADE - UF": "AGUAS BELAS - PE",
+    "UF": "PE",
+    "Nome": "AGUAS BELAS (PONTO DE APOIO) - PE",
+    "Descricao": "Ponto de Embarque de Aguas Belas - BR-423, km 177",
+    "Latitude": -9130340,
+    "Longitude": -37116500
+  },
+  {
+    "CIDADE - UF": "ANGICOS - RN",
+    "UF": "RN",
+    "Nome": "ANGICOS - RN",
+    "Descricao": "Ponto de Embarque Guanabara Angicos - Rua Jose Carlos Machado, Angicos, Praça do primeiro giradouro (Prox. Batalhão de Policia)",
+    "Latitude": "-5.672073",
+    "Longitude": "-36.601227"
+  },
+  {
+    "CIDADE - UF": "BACABEIRA - MA",
+    "UF": "MA",
+    "Nome": "BACABEIRA - MA",
+    "Descricao": "Ponto de Embarque Guanabara Bacabeira - Av. José da Silva Calvet, s/n",
+    "Latitude": "-2.9726",
+    "Longitude": "-44.3172"
+  },
+  {
+    "CIDADE - UF": "BARRA DO GARCAS - MT",
+    "UF": "MT",
+    "Nome": "BARRA DO GARCAS - MT",
+    "Descricao": "Ponto de Embarque de Barra do Garças - COHAB, Rua D, 5",
+    "Latitude": "-15.869.300",
+    "Longitude": "-52274010"
+  },
+  {
+    "CIDADE - UF": "BARRO ALTO - BA",
+    "UF": "BA",
+    "Nome": "BARRO ALTO - BA",
+    "Descricao": "Ponto de Embarque Guanabara Barro Alto - Praça da Bandeira, 18",
+    "Latitude": "-11.763107",
+    "Longitude": "-41.911252"
+  },
+  {
+    "CIDADE - UF": "BARROSO - MG",
+    "UF": "MG",
+    "Nome": "BARROSO - MG",
+    "Descricao": "Agência Guanabara de Barroso - R. Pref. Genesio Graciano, Irmãos Pinto, s/n",
+    "Latitude": "-21.184309",
+    "Longitude": "-43.973920"
+  },
+  {
+    "CIDADE - UF": "CAJAZEIRINHAS - PB",
+    "UF": "PB",
+    "Nome": "CAJAZEIRINHAS - PB",
+    "Descricao": "Ponto de Embarque de Cajazeirinhas - BR 426, Cajazeirinha PB, em frente a Igreja Nossa Senhora da Conceição",
+    "Latitude": "-6.965.216",
+    "Longitude": "-37799347"
+  },
+  {
+    "CIDADE - UF": "CATINGUEIRA - PB",
+    "UF": "PB",
+    "Nome": "CATINGUEIRA - PB",
+    "Descricao": "Ponto de Embarque Guanabara Catingueira - Rua Inácio Félix de Oliveira, 127, Praça Principal",
+    "Latitude": "-7.125737",
+    "Longitude": "-37.608021"
+  },
+  {
+    "CIDADE - UF": "ITAPIPOCA - CE",
+    "UF": "CE",
+    "Nome": "DESERTO (ITAPIPOCA) - CE",
+    "Descricao": "Ponto de Embarque de Deserto (IIP) - Rod. Br Quatrocentos Dois, 23",
+    "Latitude": "-3.514.800",
+    "Longitude": "-39485800"
+  },
+  {
+    "CIDADE - UF": "PALMEIRAS - BA",
+    "UF": "BA",
+    "Nome": "ENT PALMEIRAS - BA",
+    "Descricao": "Ponto de Embarque Guanabara de Ent.Palmeiras - Rua Barão do Rio Branco, 27",
+    "Latitude": "-12.511247",
+    "Longitude": "-41.574420"
+  },
+  {
+    "CIDADE - UF": "LAGOINHA DO PIAUI - PI",
+    "UF": "PI",
+    "Nome": "ESTACA ZERO - PI",
+    "Descricao": "Agência Guanabara de Estaca Zero (Restaurante Padre Cícero) - Zona Rural, Rod BR 343, s/n",
+    "Latitude": "-5.765375",
+    "Longitude": "-42.610700"
+  },
+  {
+    "CIDADE - UF": "ITAGUAI - RJ",
+    "UF": "RJ",
+    "Nome": "ITAGUAI - RJ",
+    "Descricao": "Agência Guanabara de Itaguai - Rodoviária de Itaguai,Parque Independencia, s/n",
+    "Latitude": "-22.870290",
+    "Longitude": "-43.769193"
+  },
+  {
+    "CIDADE - UF": "EXU - PE",
+    "UF": "PE",
+    "Nome": "EXU - PE",
+    "Descricao": "Agência Guanabara de Exú - Rod. Asa Branca, 83",
+    "Latitude": "-7.514546",
+    "Longitude": "-39.724209"
+  },
+  {
+    "CIDADE - UF": "GOVERNADOR VALADARES - MG",
+    "UF": "MG",
+    "Nome": "GOVERNADOR VALADARES (REST. FRONTEIRAS) - MG",
+    "Descricao": "Ponto de Embarque Guanabara de Governador Valadares - Jardim Primavera, Rio-Bahia, km 422 , s/n",
+    "Latitude": "-18.900690",
+    "Longitude": "-41.942600"
+  },
+  {
+    "CIDADE - UF": "UBERABA - MG",
+    "UF": "MG",
+    "Nome": "GRAAL ANTARES UBERABA - MG",
+    "Descricao": "Ponto de Embarque Guanabara de Graal Antares (Uberaba) - Cidade Ozanan, BR-050, s/n",
+    "Latitude": "-19.764553",
+    "Longitude": "-47.974216"
+  },
+  {
+    "CIDADE - UF": "IBIPEBA - BA",
+    "UF": "BA",
+    "Nome": "IBIPEBA - BA",
+    "Descricao": "Agência Guanabara de Ibipeba - Centro, Praça da Liberdade, 7",
+    "Latitude": "-11.641060",
+    "Longitude": "-42.011520"
+  },
+  {
+    "CIDADE - UF": "IGARAPE DO MEIO - MA",
+    "UF": "MA",
+    "Nome": "IGARAPE DO MEIO - MA",
+    "Descricao": "Ponto de Embarque Guanabara de Igarape do Meio - Av. Nagib Haickel, 73",
+    "Latitude": "-3.638780",
+    "Longitude": "-45.182700"
+  },
+  {
+    "CIDADE - UF": "IPAMERI - GO",
+    "UF": "GO",
+    "Nome": "IPAMERI - GO",
+    "Descricao": "Ponto de Embarque Guanabara de Ipameri - Vila Santa Maria, Rua 03, s/n",
+    "Latitude": "-17.716648",
+    "Longitude": " -48.162744"
+  },
+  {
+    "CIDADE - UF": "ITAPECURU MIRIM - MA",
+    "UF": "MA",
+    "Nome": "ENTRONCAMENTO ITAPECURU - MA",
+    "Descricao": "Ponto de Embarque Guanabara de Irapecuru Mirim - BR-135, Entroncamento, s/n",
+    "Latitude": "-3.332856",
+    "Longitude": "-44.445895"
+  },
+  {
+    "CIDADE - UF": "ITAPAJE - CE",
+    "UF": "CE",
+    "Nome": "IRATINGA - CE",
+    "Descricao": "Ponto de Embarque Guanabara de Iratinga - Rod. Dep. Raimundo Viêira Filho, 560 (Igreja Matriz)",
+    "Latitude": "-3.736156",
+    "Longitude": "-39.547856"
+  },
+  {
+    "CIDADE - UF": "ITABERABA - BA",
+    "UF": "BA",
+    "Nome": "PORTAL DO SOL (ITABERABA) - BA",
+    "Descricao": "Ponto de Embarque Guanabara de Itaberaba (Portal do Sol) - BR 242, Rua Francisco Gilardi, s/n",
+    "Latitude": "-12.510557",
+    "Longitude": " -40.310627"
+  },
+  {
+    "CIDADE - UF": "ITABERAI - GO",
+    "UF": "GO",
+    "Nome": "ITABERAI - GO",
+    "Descricao": "Ponto de Embarque de Itaberai - Quadra 23, Rua São Dimas, s/n",
+    "Latitude": "-16.027210",
+    "Longitude": "-49.806980"
+  },
+  {
+    "CIDADE - UF": "ITUMIRIM - MG",
+    "UF": "MG",
+    "Nome": "ITUMIRIM - MG",
+    "Descricao": "Agência Guanabara de Itumirim - Praça Chicre Zakhia, 122",
+    "Latitude": "-21.317.900",
+    "Longitude": "-44.871000"
+  },
+  {
+    "CIDADE - UF": "ITUTINGA - MG",
+    "UF": "MG",
+    "Nome": "ITUTINGA - MG",
+    "Descricao": "Agência Guanabara de Itutinga - Praça Santo Antônio de Pádua, 165",
+    "Latitude": "-21.297300",
+    "Longitude": "-44.658400"
+  },
+  {
+    "CIDADE - UF": "JARAGUA - GO",
+    "UF": "GO",
+    "Nome": "JARAGUA - GO",
+    "Descricao": "Agência Guanabara de Jaragua - Centro, Av. Cel. Diógenes de Castro Ribeiro, 28",
+    "Latitude": "-15.761200",
+    "Longitude": "-49.335500"
+  },
+  {
+    "CIDADE - UF": "JEQUIE - BA",
+    "UF": "BA",
+    "Nome": "JEQUIE - BA",
+    "Descricao": "Agência Jequie - Praça Papa João XXIII - s/n, (Rodoviária de Jequie)",
+    "Latitude": "-13.861070",
+    "Longitude": "-40.089116"
+  },
+  {
+    "CIDADE - UF": "JEQUIE - BA",
+    "UF": "BA",
+    "Nome": "JEQUIE (PONTO DE APOIO) - BA",
+    "Descricao": "Ponto de Embarque Guanabara de Jequie (Ponto de Apoio) - Br 116, s/n ( Ponto de Apoio Rodoviária R S Silva)",
+    "Latitude": "-13.820400",
+    "Longitude": "-40.112300"
+  },
+  {
+    "CIDADE - UF": "LAJES - RN",
+    "UF": "RN",
+    "Nome": "LAJES - RN",
+    "Descricao": "Agência Guanabara de Lajes - BR-304, 9705 (Restaurante - PA Dois Imãos)",
+    "Latitude": "-5.705830",
+    "Longitude": "-36.225590"
+  },
+  {
+    "CIDADE - UF": "LEOPOLDINA - MG",
+    "UF": "MG",
+    "Nome": "LEOPOLDINA (PONTO DE APOIO) - MG",
+    "Descricao": "Ponto de Embarque Guanabara de Leopodina (PA) - Rio-Bahia, 5000",
+    "Latitude": "-21.564115",
+    "Longitude": "-42.678965"
+  },
+  {
+    "CIDADE - UF": "MALTA - PB",
+    "UF": "PB",
+    "Nome": "MALTA - PB",
+    "Descricao": "Agência Guanabara de Malta - Rod. Gov. Antonio Mariz, s/n",
+    "Latitude": "-6.904650",
+    "Longitude": "-37.525970"
+  },
+  {
+    "CIDADE - UF": "BONITO DE SANTA FE - PB",
+    "UF": "PB",
+    "Nome": "MATA GRANDE - PB",
+    "Descricao": "Ponto de Embarque Guanabara de Mata Grande - PB 400, Parada de ônibus próximo a Igreja Matriz",
+    "Latitude": "-7.401979",
+    "Longitude": "-38.479413"
+  },
+  {
+    "CIDADE - UF": "MERCES - MG",
+    "UF": "MG",
+    "Nome": "MERCES - MG",
+    "Descricao": "Ponto de Embarque de Merces - Av. Pres. Tancredo Neves, 15",
+    "Latitude": "-21.197410",
+    "Longitude": "-43.341047"
+  },
+  {
+    "CIDADE - UF": "MIRANORTE - TO",
+    "UF": "TO",
+    "Nome": "MIRANORTE - TO",
+    "Descricao": "Agência Guanabara de Miranorte - Centro, Av. Bernardo Sayão, 908",
+    "Latitude": "-9.529510",
+    "Longitude": "-48.591700"
+  },
+  {
+    "CIDADE - UF": "MONTE ALEGRE DO PIAUI - PI",
+    "UF": "PI",
+    "Nome": "MONTE ALEGRE DO PIAUI - PI",
+    "Descricao": "Agência Guanabara de Monte Alegre do Piauí - Centro, Rua Artur Ribeiro, 801 (Churrascaria Santa Rita)",
+    "Latitude": "-9.756555",
+    "Longitude": "-45.307715"
+  },
+  {
+    "CIDADE - UF": "MORRO DO CHAPEU - BA",
+    "UF": "BA",
+    "Nome": "MORRO DO CHAPEU - BA",
+    "Descricao": "Ponto de Embarque Guanabara de Morro do Chapéu (Ponto de Taxi)- Centro, Av. Joel Modesto Guimarães, 70",
+    "Latitude": "-11.548753",
+    "Longitude": "-41.159193"
+  },
+  {
+    "CIDADE - UF": "JAGUARIBE - CE",
+    "UF": "CE",
+    "Nome": "NOVA FLORESTA - CE",
+    "Descricao": "Agência Guanabara de Nova Floresta - Rua José Lúcio, 176-210",
+    "Latitude": "-5.949429",
+    "Longitude": "-38.904147"
+  },
+  {
+    "CIDADE - UF": "OLHO D'AGUA - PB",
+    "UF": "PB",
+    "Nome": "OLHO D'AGUA - PB",
+    "Descricao": "Ponto de Embarque Guanabara em Olho D'Agua - BR-361, KM-63, Trevo na entrada da cidade",
+    "Latitude": "-7.211541",
+    "Longitude": "-37.755297"
+  },
+  {
+    "CIDADE - UF": "PASTOS BONS - MA",
+    "UF": "MA",
+    "Nome": "OROSIMBO - MA",
+    "Descricao": "Ponto de Embarque Guanabara de Orosimbo - Pastos Bons,s/n",
+    "Latitude": "-6.609109",
+    "Longitude": "-44.095874"
+  },
+  {
+    "CIDADE - UF": "PARNAMIRIM - PE",
+    "UF": "PE",
+    "Nome": "PARNAMIRIM - PE",
+    "Descricao": "Ponto de Embarque Guanabara de Parnamirim - Rua Dr. Dirceu Possídio, 93",
+    "Latitude": "-8.090960",
+    "Longitude": "-39.571130"
+  },
+  {
+    "CIDADE - UF": "SOBRAL - CE",
+    "UF": "CE",
+    "Nome": "SOBRAL (PATOS) - CE",
+    "Descricao": "Ponto de Embarque Guanabara de Patos(Sol) - Rod. Benedito Enoc de Sousa, s/n",
+    "Latitude": "-3.751610",
+    "Longitude": "-40.032710"
+  },
+  {
+    "CIDADE - UF": "PAULISTA - PB",
+    "UF": "PB",
+    "Nome": "PAULISTA - PB",
+    "Descricao": "Ponto de Embarque Guanabara de Paulista -BR-427, Sitio Maravilha, Churrascaria Dois Irmãos, s/n",
+    "Latitude": "-6.668.410",
+    "Longitude": "-37566800"
+  },
+  {
+    "CIDADE - UF": "PEDRO DO ROSARIO - MA",
+    "UF": "MA",
+    "Nome": "PEDRO DO ROSARIO - MA",
+    "Descricao": "Agência Guanabara de Pedro do Rosário - Rua Nossa Senhora da Conceição,32",
+    "Latitude": "-2.965831",
+    "Longitude": "-45.340278"
+  },
+  {
+    "CIDADE - UF": "PENAFORTE - CE",
+    "UF": "CE",
+    "Nome": "PENAFORTE - CE",
+    "Descricao": "Agência Guanabara de Penaforte - Padre Cícero, Rua Antônio Matias Leite, 222",
+    "Latitude": "-7.828472",
+    "Longitude": "-39.087709"
+  },
+  {
+    "CIDADE - UF": "ARAIOSES - MA",
+    "UF": "MA",
+    "Nome": "PLACA DE ARAIOSES - MA",
+    "Descricao": "Agência Guanabara de Placa de Araioses - MA-345, Placa, s/n",
+    "Latitude": "-3.058718",
+    "Longitude": "-42.005581"
+  },
+  {
+    "CIDADE - UF": "PONTE ALTA DO BOM JESUS - TO",
+    "UF": "TO",
+    "Nome": "PONTE ALTA DO BOM JESUS - TO",
+    "Descricao": "Agência Guanabara de Ponte Alta do Bom Jesus - Rua Dep. Freire, 572-666",
+    "Latitude": "-12.09023",
+    "Longitude": "-46.479345"
+  },
+  {
+    "CIDADE - UF": "CATALAO - GO",
+    "UF": "GO",
+    "Nome": "POSTO JK CATALAO - GO",
+    "Descricao": "Agência Guanabara de Posto JK Catalão - Estrela, Av. José Marcelino, 1300 - Qd.74 Lt.07",
+    "Latitude": "-18.181130",
+    "Longitude": "-47.942164"
+  },
+  {
+    "CIDADE - UF": "TRES RIOS - RJ",
+    "UF": "RJ",
+    "Nome": "TRES RIOS (POSTO TREVAO) - RJ",
+    "Descricao": "Ponto de Embarque Guanabara de Posto Trevão (Três Rios) - Moura Brasil, Rodovia Br 040, Km 21,5",
+    "Latitude": "-22.121290",
+    "Longitude": "-43.156500"
+  },
+  {
+    "CIDADE - UF": "PRATA - MG",
+    "UF": "MG",
+    "Nome": "PRATA - MG",
+    "Descricao": "Ponto de Embarque de Prata - Rua Ceará, 351",
+    "Latitude": "19.297.600",
+    "Longitude": "48913360"
+  },
+  {
+    "CIDADE - UF": "PROPRIA - SE",
+    "UF": "SE",
+    "Nome": "PROPRIA - SE",
+    "Descricao": "Ponto de Embarque de Própria (PA 2Irmaos) - Rod. Br 101, km-03, s/n",
+    "Latitude": "-10.228180",
+    "Longitude": "-36.838010"
+  },
+  {
+    "CIDADE - UF": "REGISTRO - SP",
+    "UF": "SP",
+    "Nome": "REGISTRO - SP",
+    "Descricao": "Ponto de Embarque Guanabara de Registro (PA Graal Buenos Aires) - Rod. Régis Bittencourt, Km 449",
+    "Latitude": "-24.529800",
+    "Longitude": "-47.857600"
+  },
+  {
+    "CIDADE - UF": "REMIGIO - PB",
+    "UF": "PB",
+    "Nome": "REMIGIO - PB",
+    "Descricao": "Agência Guanabara de Remigio - Rua José Francisco Medeiros, 41",
+    "Latitude": "-6.965300",
+    "Longitude": "-35.792900"
+  },
+  {
+    "CIDADE - UF": "GOIANIA - GO",
+    "UF": "GO",
+    "Nome": "GOIANIA RESTAURANTE CAPIM DOURADO - GO",
+    "Descricao": "Ponto de Embarque de Restaurante Capim Dourado (GYN) - Jardim Goiás, Rodovia BR-153, Quadra C26, Lote 01-22",
+    "Latitude": "-16.703249",
+    "Longitude": "-49.231526"
+  },
+  {
+    "CIDADE - UF": "RIO DE JANEIRO - RJ",
+    "UF": "RJ",
+    "Nome": "RIO DE JANEIRO (RIO DAS PEDRAS) - RJ",
+    "Descricao": "Ponto de Embarque de Rio das Pedra (RJ) - Jacarepaguá, s/n",
+    "Latitude": "-22.968700",
+    "Longitude": "-43.336100"
+  },
+  {
+    "CIDADE - UF": "RIO MARIA - PA",
+    "UF": "PA",
+    "Nome": "RIO MARIA - PA",
+    "Descricao": "Agência Guanabara de  Rio Maria - Av.Bernardo Sayao n°425 box 21, Silas Freitas",
+    "Latitude": "-2.04532",
+    "Longitude": "-4.755043"
+  },
+  {
+    "CIDADE - UF": "PATOS - PB",
+    "UF": "PB",
+    "Nome": "SANTA GERTRUDES - PB",
+    "Descricao": "Ponto de Embarque Guanabara de Santa Gertrudes - BR-230, 79, Igreja Matriz, Igreja Matriz, em frente a escola Lucia Wanderlei de Freitas",
+    "Latitude": "-6.949727",
+    "Longitude": "-37.392540"
+  },
+  {
+    "CIDADE - UF": "SANTA TERESINHA - PB",
+    "UF": "PB",
+    "Nome": "SANTA TERESINHA - PB",
+    "Descricao": "Ponto de Embarque Guanabara de Santa Teresinha - Praça dos Poetas, Rua Mineo Leite, 335-401",
+    "Latitude": "-7.085230",
+    "Longitude": "-37.442827"
+  },
+  {
+    "CIDADE - UF": "SANTANA DO CARIRI - CE",
+    "UF": "CE",
+    "Nome": "SANTANA DO CARIRI - CE",
+    "Descricao": "Agência Guanabara de Santana do Cariri - Rua Dep. Furtado Leite, 497q",
+    "Latitude": "-7.185250",
+    "Longitude": "-39.737600"
+  },
+  {
+    "CIDADE - UF": "SAO BENTO - PB",
+    "UF": "PB",
+    "Nome": "SAO BENTINHO - PB",
+    "Descricao": "Ponto de Embarque Guanabara de São Bentinho - Rua Ernane Roque de Arruda, s/n",
+    "Latitude": "-6.890228",
+    "Longitude": "-37.726653"
+  },
+  {
+    "CIDADE - UF": "SAO JOAO D'ALIANCA - GO",
+    "UF": "GO",
+    "Nome": "SAO JOAO DA ALIANCA - GO",
+    "Descricao": "Ponto de Embarque de São Jão da Aliança - GO-118, Restaurante Altos, 206",
+    "Latitude": "-14.698.400",
+    "Longitude": "-47522950"
+  },
+  {
+    "CIDADE - UF": "SERTANIA - PE",
+    "UF": "PE",
+    "Nome": "SERTANIA (CRUZ. DO NORDESTE) - PE",
+    "Descricao": "Agência Guanabara de Sertânia (Cruz. do Nordeste) - BR-232, Algodões (Prox. PRF)",
+    "Latitude": "-8.362384",
+    "Longitude": "-37.270073"
+  },
+  {
+    "CIDADE - UF": "PALMAS - TO",
+    "UF": "TO",
+    "Nome": "TAQUARALTO - TO",
+    "Descricao": "Ponto de Embarque de Taquaralto - Jardim Aureny II, Rua Perimetral, 4",
+    "Latitude": "-10.326.840",
+    "Longitude": "-48.297900"
+  },
+  {
+    "CIDADE - UF": "TEIXEIRA - PB",
+    "UF": "PB",
+    "Nome": "TEIXEIRA - PB",
+    "Descricao": "Agência Guanabara de Teixeira - Centro, Praça Cassiano Rodrigues, 28",
+    "Latitude": "-7.221960",
+    "Longitude": "-37.254320"
+  },
+  {
+    "CIDADE - UF": "TRES MARIAS - MG",
+    "UF": "MG",
+    "Nome": "TRES MARIAS (VALE VERDE RESTAURANTE) - MG",
+    "Descricao": "Ponto de Embarque de Tres Marias ( Restaurante Vale Verde) - Zona Rural, Br 040 Km, 279",
+    "Latitude": "-18.233028",
+    "Longitude": "-45.216467"
+  },
+  {
+    "CIDADE - UF": "OLHO D'AGUA - PB",
+    "UF": "PB",
+    "Nome": "TREVO DE OLHO D'AGUA - PB",
+    "Descricao": "Ponto de Embarque Guanabara - BR-361, KM-63,na parada de ônibus que fica no trevo, entrada da cidade",
+    "Latitude": "-7.211541",
+    "Longitude": "-37.755297"
+  },
+  {
+    "CIDADE - UF": "UMARI - CE",
+    "UF": "CE",
+    "Nome": "UMARI - CE",
+    "Descricao": "Agência Guanabara de Umari - Centro, Rua Cel. Antônio Malheiros, Praça Bernardo Alencar, s/n",
+    "Latitude": "-6.64446",
+    "Longitude": "-38.70100"
+  },
+  {
+    "CIDADE - UF": "VARZEA NOVA - BA",
+    "UF": "BA",
+    "Nome": "VARZEA NOVA - BA",
+    "Descricao": "Ponto de Embarque de Varzea Nova - Várzea Nova, Praça Gilberto Miranda, s/n",
+    "Latitude": "-11.253700",
+    "Longitude": "-40.947000"
+  },
+  {
+    "CIDADE - UF": "PARAIBANO - MA",
+    "UF": "MA",
+    "Nome": "PARAIBANO - MA",
+    "Descricao": "Agência Guanabara de Paraibano - BR-135, 792, Paraibano ( Hotel e Churrasscaria Boi na Brasa)",
+    "Latitude": "-6.427120",
+    "Longitude": "-43.989300"
+  },
+  {
+    "CIDADE - UF": "JUIZ DE FORA - MG",
+    "UF": "MG",
+    "Nome": "JUIZ DE FORA (GARAGEM) - MG",
+    "Descricao": "Ponto de Embarque Garagem Juiz de Fora - Distrito Industrial, Av. Antônio Simão Firjam, 620",
+    "Latitude": "-21.682090",
+    "Longitude": "-43.439200"
+  },
+  {
+    "CIDADE - UF": "MILAGRES - BA",
+    "UF": "BA",
+    "Nome": "MILAGRES - BA",
+    "Descricao": "Ponto de Embarque Milagres (Churrascaria e Lanchonete Dois Irmãos) - Av. Lomanto Júnior , s/n",
+    "Latitude": "-12.873580",
+    "Longitude": "-39.856930"
+  },
+  {
+    "CIDADE - UF": "PEDRA BRANCA - CE",
+    "UF": "CE",
+    "Nome": "MINEIROLANDIA - CE",
+    "Descricao": "Agência de Mineirolândia - BR-226, Av. Dom Lustosa, s/n ( Ao Lado da AgroBrantes)",
+    "Latitude": "-5.526614",
+    "Longitude": "-39.596167"
+  },
+  {
+    "CIDADE - UF": "SOLEDADE - PB",
+    "UF": "PB",
+    "Nome": "SOLEDADE - PB",
+    "Descricao": "Agência Guanabara de Soledade - Rua Celeno Cantalice da Nobrega, 100, Soledade - PB ( Restaurante 2 irmãos )",
+    "Latitude": "-7.064906",
+    "Longitude": "-36.351827"
+  },
+  {
+    "CIDADE - UF": "SILVANOPOLIS - TO",
+    "UF": "TO",
+    "Nome": "SILVANOPOLIS - TO",
+    "Descricao": "Ponto de Embarque de Silvanopolís (Rest. Aroeira) - Setor Sul, Rua 46, Qd 81, Lts 11a16",
+    "Latitude": "-11.150735",
+    "Longitude": "-48.181175"
+  },
+  {
+    "CIDADE - UF": "GUARAREMA - SP",
+    "UF": "SP",
+    "Nome": "GRAAL MARKET GUARAREMA - SP",
+    "Descricao": "Ponto de Graal Market - Parque Agrinco, Rodovia Governador Carvalho Pinto, km 67",
+    "Latitude": "-23.360302",
+    "Longitude": "-46.075698"
+  },
+  {
+    "CIDADE - UF": "AMONTADA - CE",
+    "UF": "CE",
+    "Nome": "ICARAI DE AMONTADA - CE",
+    "Descricao": "Ponto de Icaraí de Amontada - CE-176, 54-106",
+    "Latitude": "-33.030.740",
+    "Longitude": "-39653420"
+  },
+  {
+    "CIDADE - UF": "ITAPIPOCA - CE",
+    "UF": "CE",
+    "Nome": "ITAPIPOCA (PRAIA DA BALEIA) - CE",
+    "Descricao": "Ponto de Embarque Guanabara Praia da Baleía - Av. Félix Francisco Nascimento, 454 - 466",
+    "Latitude": "-3.152310",
+    "Longitude": "-39.442000"
+  },
+  {
+    "CIDADE - UF": "TERESINA DE GOIAS - GO",
+    "UF": "GO",
+    "Nome": "TERESINA DE GOIAS - GO",
+    "Descricao": "Ponto de Tresina de Goiás - Av. Pedro Álvares Cabral, 11, Rest.Zero Hora",
+    "Latitude": "-13.772046",
+    "Longitude": "-47.257897"
+  },
+  {
+    "CIDADE - UF": "ITABERABA - BA",
+    "UF": "BA",
+    "Nome": "ZUCA POVOADO - BA",
+    "Descricao": "Ponto de Zuca Povoado - BR-242, s/n - Zuca Amparo, Boa Vista do Tupim (Posto Jagua)",
+    "Latitude": "-12.452584",
+    "Longitude": "-40.625826"
+  },
+  {
+    "CIDADE - UF": "PAULO AFONSO - BA",
+    "UF": "BA",
+    "Nome": "PONTO DE APOIO PAULO AFONSO - BA",
+    "Descricao": "Posto Shell- BR-110 - Tancredo Neves II, Paulo Afonso - BA",
+    "Latitude": "-9.398919",
+    "Longitude": "-38.243129"
+  },
+  {
+    "CIDADE - UF": "PARAIBA DO SUL - RJ",
+    "UF": "RJ",
+    "Nome": "RESTAURANTE NOVA PARAIBA - RJ",
+    "Descricao": "Ponto de Embarque de Paraiba do Sukl - Rua Nova Paraíba, 38",
+    "Latitude": "-22.148107",
+    "Longitude": "-43.294677"
+  },
+  {
+    "CIDADE - UF": "CACAPAVA - SP",
+    "UF": "SP",
+    "Nome": "CACAPAVA - SP",
+    "Descricao": "Rodiviária de Cacapava - Vila Antônio Augusto Luiz, Av. Brasil, 1001",
+    "Latitude": "-23.110137",
+    "Longitude": "-45.708243"
+  },
+  {
+    "CIDADE - UF": "SORRISO - MT",
+    "UF": "MT",
+    "Nome": "SORRISO - MT",
+    "Descricao": "Rodiviária de Sorriso - Lot. Valo, Rua Idemar Riedi, s/n",
+    "Latitude": "-12.571980",
+    "Longitude": "-55.726410"
+  },
+  {
+    "CIDADE - UF": "ABADIANIA - GO",
+    "UF": "GO",
+    "Nome": "ABADIANIA - GO",
+    "Descricao": "Rodovaria de Abadiania - Rua Gontijo, s/n",
+    "Latitude": "-16.194934",
+    "Longitude": "-48.708960"
+  },
+  {
+    "CIDADE - UF": "MURIAE - MG",
+    "UF": "MG",
+    "Nome": "MURIAE - MG",
+    "Descricao": "Rodoviaária de Muriae - Av. Constantino Pinto, 344",
+    "Latitude": "-21.128922",
+    "Longitude": "-42.369821"
+  },
+  {
+    "CIDADE - UF": "ALVORADA DO NORTE - GO",
+    "UF": "GO",
+    "Nome": "ALVORADA DO NORTE - GO",
+    "Descricao": "Rodoviária Alvorada do Norte - GH2, Avenida Gercina R A Miranda, s/n",
+    "Latitude": "-14.488090",
+    "Longitude": "-46.497150"
+  },
+  {
+    "CIDADE - UF": "CALDAS NOVAS - GO",
+    "UF": "GO",
+    "Nome": "CALDAS NOVAS - GO",
+    "Descricao": "Rodoviária Caldas Novas Oscar Santos - Jardim Hanashiro, Av. Cel. Bento de Godoy, 2095",
+    "Latitude": "-17.756699",
+    "Longitude": "-48.630403"
+  },
+  {
+    "CIDADE - UF": "ACAILANDIA - MA",
+    "UF": "MA",
+    "Nome": "ACAILANDIA - MA",
+    "Descricao": "Agência Guanabara de Açailândia - Centro, Rua Bom Jesus, s/n",
+    "Latitude": "-4.951850",
+    "Longitude": "-47.499772"
+  },
+  {
+    "CIDADE - UF": "ACARAU - CE",
+    "UF": "CE",
+    "Nome": "ACARAU - CE",
+    "Descricao": "Agência Guanabara de Acaraú - Centro, Rua Deputado Amadeu Gomes, 220",
+    "Latitude": "-2.886163",
+    "Longitude": "-40.118593"
+  },
+  {
+    "CIDADE - UF": "ACOPIARA - CE",
+    "UF": "CE",
+    "Nome": "ACOPIARA - CE",
+    "Descricao": "Agência Guanabara de Acopiara - Centro, Rua Emilia Lima Pinho, s/n",
+    "Latitude": "-6.090113",
+    "Longitude": "-39.451091"
+  },
+  {
+    "CIDADE - UF": "AGUA BRANCA - PI",
+    "UF": "PI",
+    "Nome": "AGUA BRANCA - PI",
+    "Descricao": "Agência Guanabara de Aguar Branca - Br 343, Km 443 Alto do Açude, s/n",
+    "Latitude": "-5.881452",
+    "Longitude": "-42.639598"
+  },
+  {
+    "CIDADE - UF": "ALEXANIA - GO",
+    "UF": "GO",
+    "Nome": "ALEXANIA - GO",
+    "Descricao": "Rodoviária de Alexânia - Dois, Rua Vinte e Um, s/n",
+    "Latitude": "-16.088281",
+    "Longitude": "-48.501135"
+  },
+  {
+    "CIDADE - UF": "ALFENAS - MG",
+    "UF": "MG",
+    "Nome": "ALFENAS - MG",
+    "Descricao": "Rodoviária de Alfenas - Trevo, Rua Mário Barbosa Vieira, 538",
+    "Latitude": "-21.450441",
+    "Longitude": "-45.948548"
+  },
+  {
+    "CIDADE - UF": "ALTA FLORESTA - MT",
+    "UF": "MT",
+    "Nome": "ALTA FLORESTA - MT",
+    "Descricao": "Rodoviária de Alta Floresta - Av. Ludovico da Riva Neto, 2596-2694",
+    "Latitude": "-9.891974",
+    "Longitude": " -56.086629"
+  },
+  {
+    "CIDADE - UF": "ALTO GARCAS - MT",
+    "UF": "MT",
+    "Nome": "ALTO GARCAS - MT",
+    "Descricao": "Rodoviária de Alto Garças - Rua Cel. Antônio João, 222 - 288",
+    "Latitude": "-16.951694",
+    "Longitude": "-53.526140"
+  },
+  {
+    "CIDADE - UF": "ALTO PARAISO DE GOIAS - GO",
+    "UF": "GO",
+    "Nome": "ALTO PARAISO DE GOIAS - GO",
+    "Descricao": "Rodoviária de Alto Paraíso de Goiás - Rua Pouso Alto, 102",
+    "Latitude": "-14.134794",
+    "Longitude": "-47.519640"
+  },
+  {
+    "CIDADE - UF": "ALVORADA - TO",
+    "UF": "TO",
+    "Nome": "ALVORADA - TO",
+    "Descricao": "Rodoviária de Alvorada - Jorge Figueiras, Av. Tocantins, 404-474",
+    "Latitude": "-12.484270",
+    "Longitude": "-49.118000"
+  },
+  {
+    "CIDADE - UF": "AMARANTE - PI",
+    "UF": "PI",
+    "Nome": "AMARANTE - PI",
+    "Descricao": "Rodoviária de Amarante - Av. Afranio Filho, s/n",
+    "Latitude": "-6.246772",
+    "Longitude": "-42.841025"
+  },
+  {
+    "CIDADE - UF": "AMERICANA - SP",
+    "UF": "SP",
+    "Nome": "AMERICANA - SP",
+    "Descricao": "Rodoviária de Americana - Campo Limpo, Rua Ítalo Boscheiro, 220",
+    "Latitude": "-22.734370",
+    "Longitude": "-47.310560"
+  },
+  {
+    "CIDADE - UF": "ANANINDEUA - PA",
+    "UF": "PA",
+    "Nome": "ANANINDEUA - PA",
+    "Descricao": "Agência Guanabara de Ananindeua - Águas Brancas, Rodovia BR316, s/n",
+    "Latitude": "-1.367340",
+    "Longitude": "-48.37186"
+  },
+  {
+    "CIDADE - UF": "ANAPOLIS - GO",
+    "UF": "GO",
+    "Nome": "ANAPOLIS - GO",
+    "Descricao": "Rodoviária de Anapolis - Vila Santa Maria de Nazareth, Av. Brasil Norte, 740",
+    "Latitude": "-16.322634",
+    "Longitude": "-48.945487"
+  },
+  {
+    "CIDADE - UF": "ANAPURUS - MA",
+    "UF": "MA",
+    "Nome": "ANAPURUS - MA",
+    "Descricao": "Agência Guanabara de Anapurus - Rua Atanasio Monteles, 588( Em Frente a Igreja Catolica)",
+    "Latitude": "-3.679296",
+    "Longitude": "-43.110454"
+  },
+  {
+    "CIDADE - UF": "ANGICAL DO PIAUI - PI",
+    "UF": "PI",
+    "Nome": "ANGICAL DO PIAUI - PI",
+    "Descricao": "Agência Guanabara de Angical do Piaui - Centro, Praça Governado Helvidio Nunes, 311",
+    "Latitude": "-6.087368",
+    "Longitude": "-42.736394"
+  },
+  {
+    "CIDADE - UF": "ANGRA DOS REIS - RJ",
+    "UF": "RJ",
+    "Nome": "ANGRA DOS REIS - RJ",
+    "Descricao": "Rodoviária de Angra do Reis Ver. Milton Barbosa - Balneário, Avenida Almirante Jair Carneiro Toscano de Brito 110",
+    "Latitude": "-23.002850",
+    "Longitude": "-44.304180"
+  },
+  {
+    "CIDADE - UF": "FORTALEZA - CE",
+    "UF": "CE",
+    "Nome": "FORTALEZA (ANT. BEZERRA) - CE",
+    "Descricao": "Agência Guanabara do Antônio Bezerra - Antônio Bezerra, Rua Hipólito Pamplona, 45",
+    "Latitude": "-3.739647",
+    "Longitude": "-38.596555"
+  },
+  {
+    "CIDADE - UF": "APARECIDA - SP",
+    "UF": "SP",
+    "Nome": "APARECIDA - SP",
+    "Descricao": "Rodoviária de Aparecida - Centro, Praça Francisco A Julianelli, 10",
+    "Latitude": "-22.842620",
+    "Longitude": "-45.230890"
+  },
+  {
+    "CIDADE - UF": "APARECIDA DE GOIANIA - GO",
+    "UF": "GO",
+    "Nome": "APARECIDA DE GOIANIA - GO",
+    "Descricao": "Rodoviária de Aparecida de Goiania - Jardim Iracema, s/n",
+    "Latitude": "-16.833700",
+    "Longitude": "-49.246200"
+  },
+  {
+    "CIDADE - UF": "ARACAJU - SE",
+    "UF": "SE",
+    "Nome": "ARACAJU - SE",
+    "Descricao": "Agência Guanabara de Aracaju - Capucho, Av. Presidente Tancredo Neves, s/n",
+    "Latitude": "-10.916300",
+    "Longitude": "-37.088440"
+  },
+  {
+    "CIDADE - UF": "ARACATI - CE",
+    "UF": "CE",
+    "Nome": "ARACATI - CE",
+    "Descricao": "Rodoviária de Aracati Assis Nogueira - Nossa Sra. de Lourdes, Rua Cel. Alexandrino, 1287",
+    "Latitude": "-4.571418",
+    "Longitude": " -37.774230"
+  },
+  {
+    "CIDADE - UF": "ARACI - BA",
+    "UF": "BA",
+    "Nome": "ARACI - BA",
+    "Descricao": "Rodoviária de Araci - Centro Maracujá, Estrada vila fuba, 200",
+    "Latitude": "-11.341600",
+    "Longitude": "-38.960600"
+  },
+  {
+    "CIDADE - UF": "ARAGARCAS - GO",
+    "UF": "GO",
+    "Nome": "ARAGARCAS - GO",
+    "Descricao": "Rodoviária de Aragarças - Bela Vista, Rua 21, 1",
+    "Latitude": "-15.897478",
+    "Longitude": "-52.241393"
+  },
+  {
+    "CIDADE - UF": "ARAGUAINA - TO",
+    "UF": "TO",
+    "Nome": "ARAGUAINA - TO",
+    "Descricao": "Rodoviária de Araguaína - Lot. Manoel Gomes da Cunha, Av. Santos Dumont, 628",
+    "Latitude": "-7.189334",
+    "Longitude": " -48.222204"
+  },
+  {
+    "CIDADE - UF": "ARAGUARI - MG",
+    "UF": "MG",
+    "Nome": "ARAGUARI - MG",
+    "Descricao": "Rodoviária de Araguari Tancredo de Almeida Neves - Sibipuruna, Av. Dr. Oswaldo Pieruccetti, 947",
+    "Latitude": "-18.639532",
+    "Longitude": "-48.174921"
+  },
+  {
+    "CIDADE - UF": "ARAGUATINS - TO",
+    "UF": "TO",
+    "Nome": "ARAGUATINS - TO",
+    "Descricao": "Rodoviária de Araguatins - Centro, Av. Araguaia, s/n",
+    "Latitude": "-18.639532",
+    "Longitude": "-48.174921"
+  },
+  {
+    "CIDADE - UF": "ARAPIRACA - AL",
+    "UF": "AL",
+    "Nome": "ARAPIRACA - AL",
+    "Descricao": "Rodoviária de Arapiraca - Jardim Tropical, Rua Gov. Silvestre Péricles, s/n",
+    "Latitude": "-9.758000",
+    "Longitude": "-36.645900"
+  },
+  {
+    "CIDADE - UF": "ARAPORA - MG",
+    "UF": "MG",
+    "Nome": "ARAPORA - MG",
+    "Descricao": "Rodoviária de Araporã - Alvorada, Rua Sérgio Gomes Martins, 710-764",
+    "Latitude": "-18.430200",
+    "Longitude": "-49.191230"
+  },
+  {
+    "CIDADE - UF": "ARARAQUARA - SP",
+    "UF": "SP",
+    "Nome": "ARARAQUARA - SP",
+    "Descricao": "Rodoviária de Araraquara - Jardim Nova America, Av. Julio Ursulino Pedroso, 100",
+    "Latitude": "-21.806792",
+    "Longitude": "-48.17455"
+  },
+  {
+    "CIDADE - UF": "ARARAS - SP",
+    "UF": "SP",
+    "Nome": "ARARAS - SP",
+    "Descricao": "Rodoviária de Araras - Vila Michelin, Av. Dona Renata, 2914",
+    "Latitude": "-22.359372",
+    "Longitude": "-47.391245"
+  },
+  {
+    "CIDADE - UF": "ARARI - MA",
+    "UF": "MA",
+    "Nome": "ARARI - MA",
+    "Descricao": "Rodoviária de Arari - Centro, Av. Dr. João da Silva Lima, s/n",
+    "Latitude": "-3.462086",
+    "Longitude": "-44.775207"
+  },
+  {
+    "CIDADE - UF": "ARARIPINA - PE",
+    "UF": "PE",
+    "Nome": "ARARIPINA - PE",
+    "Descricao": "Rodoviária de Araripina - Centro, Rua Dionísio de Deus Lima , s/n",
+    "Latitude": "-7.574952",
+    "Longitude": "-40.510500"
+  },
+  {
+    "CIDADE - UF": "ARAXA - MG",
+    "UF": "MG",
+    "Nome": "ARAXA - MG",
+    "Descricao": "Rodoviária de Araxá - Centro, Rua Antônio Alves da Costa, s/n",
+    "Latitude": "-19.584390",
+    "Longitude": "-46.942930"
+  },
+  {
+    "CIDADE - UF": "ARCOVERDE - PE",
+    "UF": "PE",
+    "Nome": "ARCOVERDE - PE",
+    "Descricao": "Agência Guanabara de Arcoverde - São Cristóvão, Av. José Bonifácio, 300",
+    "Latitude": "-8.414426",
+    "Longitude": "-37.072720"
+  },
+  {
+    "CIDADE - UF": "ARRAIAS - TO",
+    "UF": "TO",
+    "Nome": "ARRAIAS - TO",
+    "Descricao": "Rodoviária de Arraias - Centro, Rua Diolino S. Freire, s/n",
+    "Latitude": "-12.934571",
+    "Longitude": "-46.936618"
+  },
+  {
+    "CIDADE - UF": "ASSARE - CE",
+    "UF": "CE",
+    "Nome": "ASSARE - CE",
+    "Descricao": "Rodoviária de Assáre - Av. Perimetral, 392-848",
+    "Latitude": "-6.876759",
+    "Longitude": "-39.874233"
+  },
+  {
+    "CIDADE - UF": "ASSIS - SP",
+    "UF": "SP",
+    "Nome": "ASSIS - SP",
+    "Descricao": "Rodoviária de Assis - Centro, Av. Nove de Julho, 500",
+    "Latitude": "-22.644945",
+    "Longitude": "-50.417987"
+  },
+  {
+    "CIDADE - UF": "ACU - RN",
+    "UF": "RN",
+    "Nome": "ASSU - RN",
+    "Descricao": "Agência Guanabara de Assú - Rua Adalberto Amorim, s/n",
+    "Latitude": "-5.584849",
+    "Longitude": "-36.911490"
+  },
+  {
+    "CIDADE - UF": "ATIBAIA - SP",
+    "UF": "SP",
+    "Nome": "ATIBAIA - SP",
+    "Descricao": "Rodoviária de Atibaia - Centro, Praça Pedro de Toledo, s/n",
+    "Latitude": "-23.114818",
+    "Longitude": "-46.558119"
+  },
+  {
+    "CIDADE - UF": "AURORA DO TOCANTINS - TO",
+    "UF": "TO",
+    "Nome": "AURORA DO TOCANTINS - TO",
+    "Descricao": "Rodoviária de Aurora de Tocantins - Av. Dr. Pedro Ludovício, s/n",
+    "Latitude": "-12.715170",
+    "Longitude": "-46.408070"
+  },
+  {
+    "CIDADE - UF": "BACABAL - MA",
+    "UF": "MA",
+    "Nome": "BACABAL - MA",
+    "Descricao": "Rodoviária de Bacabal - Centro, Travessa Mangueira - s/n",
+    "Latitude": "-4.222990",
+    "Longitude": "-44.779194"
+  },
+  {
+    "CIDADE - UF": "BALNEARIO CAMBORIU - SC",
+    "UF": "SC",
+    "Nome": "BALNEARIO CAMBORIU - SC",
+    "Descricao": "Rodoviária de Balneário Camboriú - Estados, Av. Santa Catarina, 347",
+    "Latitude": "-26.994330",
+    "Longitude": "-48.647250"
+  },
+  {
+    "CIDADE - UF": "BARBACENA - MG",
+    "UF": "MG",
+    "Nome": "BARBACENA - MG",
+    "Descricao": "Rodoviária de Barbacena - Passarinhos Barbacena, Av. Dom Pedro II, 11480",
+    "Latitude": "-21.211550",
+    "Longitude": "-43.751680"
+  },
+  {
+    "CIDADE - UF": "BARBALHA - CE",
+    "UF": "CE",
+    "Nome": "BARBALHA - CE",
+    "Descricao": "Rodoviária de Barbalha - Centro, Rua Doze, 10",
+    "Latitude": "-7.309760",
+    "Longitude": "-39.301800"
+  },
+  {
+    "CIDADE - UF": "BARRA DO MENDES - BA",
+    "UF": "BA",
+    "Nome": "BARRA DO MENDES - BA",
+    "Descricao": "Rodoviária de Barra do Mendes - Vale do Jacaré, Rua Otávio Mangabeira, s/n",
+    "Latitude": "-11.807585",
+    "Longitude": "-42.058121"
+  },
+  {
+    "CIDADE - UF": "CAJUEIRO DA PRAIA - PI",
+    "UF": "PI",
+    "Nome": "BARRA GRANDE - PI",
+    "Descricao": "Rodoviária de Barra Grande - Cajueiro da Praia, Estrada Barra Grande, s/n",
+    "Latitude": "-2.917450",
+    "Longitude": "-41.408010"
+  },
+  {
+    "CIDADE - UF": "CAJUEIRO DA PRAIA - PI",
+    "UF": "PI",
+    "Nome": "CAJUEIRO DA PRAIA - PI",
+    "Descricao": "Rodoviária de Barra Grande - Cajueiro da Praia, Rua Raimundo Correia Silva, 980",
+    "Latitude": "-2.911440",
+    "Longitude": "-41.402635"
+  },
+  {
+    "CIDADE - UF": "BARRA MANSA - RJ",
+    "UF": "RJ",
+    "Nome": "BARRA MANSA - RJ",
+    "Descricao": "Rodoviária de Barra Mansa Comendador Geraldo Ozório - Centro, Av. Joaquim Leite, 94",
+    "Latitude": "-22.545760",
+    "Longitude": "-44.168544"
+  },
+  {
+    "CIDADE - UF": "BARRAS - PI",
+    "UF": "PI",
+    "Nome": "BARRAS - PI",
+    "Descricao": "Rodoviária de Barras - Conj. Min. Petronio Portela, Av. Juscelino Kubitscheck, 122-200",
+    "Latitude": "-4.242409",
+    "Longitude": "-42.291939"
+  },
+  {
+    "CIDADE - UF": "BARREIRAS - BA",
+    "UF": "BA",
+    "Nome": "BARREIRAS - BA",
+    "Descricao": "Rodoviária de Barreiras - Vila Rica, R. São Judas Tadeu, s/n",
+    "Latitude": "-12.127029",
+    "Longitude": "-45.018566"
+  },
+  {
+    "CIDADE - UF": "BARRETOS - SP",
+    "UF": "SP",
+    "Nome": "BARRETOS - SP",
+    "Descricao": "Rodoviária de Barretos - Fortaleza, Rua 32, 355",
+    "Latitude": "-20.554390",
+    "Longitude": "-48.578570"
+  },
+  {
+    "CIDADE - UF": "BATALHA - PI",
+    "UF": "PI",
+    "Nome": "BATALHA - PI",
+    "Descricao": "Rodoviária de Batalha - Centro, Av. Getúlio Vargas, 421-501",
+    "Latitude": "-4.026672",
+    "Longitude": "-42.078857"
+  },
+  {
+    "CIDADE - UF": "BELA CRUZ - CE",
+    "UF": "CE",
+    "Nome": "BELA CRUZ - CE",
+    "Descricao": "Agência Guanabara de Bela Cruz Rota Turistica Serra da Ibiapaba - Rua Santa Cruz 434-506",
+    "Latitude": "-3.054870",
+    "Longitude": "-40.166490"
+  },
+  {
+    "CIDADE - UF": "BELEM - PA",
+    "UF": "PA",
+    "Nome": "BELEM - PA",
+    "Descricao": "Rodoviária de Belém - São Brás, Praça do Operario, s/n",
+    "Latitude": "-1.449038",
+    "Longitude": "-48.466207"
+  },
+  {
+    "CIDADE - UF": "BELO HORIZONTE - MG",
+    "UF": "MG",
+    "Nome": "BELO HORIZONTE - MG",
+    "Descricao": "Rodoviária de Belo Horizonte - Centro, Praça Rio Branco, 100",
+    "Latitude": "-19.913760",
+    "Longitude": "-43.941790"
+  },
+  {
+    "CIDADE - UF": "BELO HORIZONTE - MG",
+    "UF": "MG",
+    "Nome": "BELO HORIZONTE (TERMINAL JK) - MG",
+    "Descricao": "Rodoviária de Belo Horizonte JK - Barro Preto, Rua dos Guajajaras, 1353",
+    "Latitude": "-19.924512",
+    "Longitude": "-43.946281"
+  },
+  {
+    "CIDADE - UF": "BELO JARDIM - PE",
+    "UF": "PE",
+    "Nome": "BELO JARDIM - PE",
+    "Descricao": "Rodoviária de Belo Jardim - Cohab I, Av. Júlia Rodrigues Tôrres, 136",
+    "Latitude": "-8.343150",
+    "Longitude": "-36.417900"
+  },
+  {
+    "CIDADE - UF": "BETIM - MG",
+    "UF": "MG",
+    "Nome": "BETIM - MG (term adicional BH)",
+    "Descricao": "Rodoviária de Betim - São João, Rod. Fernão Dias, 1450 (Term. adc)",
+    "Latitude": "-19.962846",
+    "Longitude": "-44.162302"
+  },
+  {
+    "CIDADE - UF": "BEZERROS - PE",
+    "UF": "PE",
+    "Nome": "BEZERROS - PE",
+    "Descricao": "Agência Guanabara de Bezerros - São Pedro, Rua Laurindo Félix, 11",
+    "Latitude": "-8.236969",
+    "Longitude": "-35.744776"
+  },
+  {
+    "CIDADE - UF": "BICAS - MG",
+    "UF": "MG",
+    "Nome": "BICAS - MG",
+    "Descricao": "Rodoviária de Bicas - Centro, Rod. Alcídes Costa, 27",
+    "Latitude": "-21.717903",
+    "Longitude": "-43.064615"
+  },
+  {
+    "CIDADE - UF": "BIGUACU - SC",
+    "UF": "SC",
+    "Nome": "FLORIANOPOLIS - BIGUACU - SC",
+    "Descricao": "Rodoviária de Biguaçu - Centro, Rua Mal. Deodoro, 104",
+    "Latitude": "-27.491410",
+    "Longitude": "-48.655600"
+  },
+  {
+    "CIDADE - UF": "BOA VIAGEM - CE",
+    "UF": "CE",
+    "Nome": "BOA VIAGEM - CE",
+    "Descricao": "Agência Guanabara de Boa Viagem - Centro, Rua Joaquim Rabêlo, s/n",
+    "Latitude": "-5.124190",
+    "Longitude": "-39.731200"
+  },
+  {
+    "CIDADE - UF": "BOM JARDIM - MA",
+    "UF": "MA",
+    "Nome": "BOM JARDIM - MA",
+    "Descricao": "Agência Guanabara de Bom Jardim - Rua Miguel Meireles, s/n",
+    "Latitude": "-3.541833",
+    "Longitude": "-45.611527"
+  },
+  {
+    "CIDADE - UF": "BOM JESUS - PI",
+    "UF": "PI",
+    "Nome": "BOM JESUS - PI",
+    "Descricao": "Agência Guanabara de Bom Jesus - Av. Adelmar Diógenes, Praça da Rodoviária, 1677",
+    "Latitude": "-9.079221",
+    "Longitude": "-44.360180"
+  },
+  {
+    "CIDADE - UF": "BOM JESUS DA LAPA - BA",
+    "UF": "BA",
+    "Nome": "BOM JESUS DA LAPA - BA",
+    "Descricao": "Rodoviária de Bom Jesus da Lapa - Centro, Av. Agenor Magalhães, s/n",
+    "Latitude": "-13.250149",
+    "Longitude": "-43.373473"
+  },
+  {
+    "CIDADE - UF": "BOM JESUS DAS SELVAS - MA",
+    "UF": "MA",
+    "Nome": "BOM JESUS DAS SELVAS - MA",
+    "Descricao": "Agência Guanabara de Bom Jesus das Selvas - Rua Porto Franco, 749-863",
+    "Latitude": "-4.484420",
+    "Longitude": "-46.855500"
+  },
+  {
+    "CIDADE - UF": "BOM JESUS - GO",
+    "UF": "GO",
+    "Nome": "BOM JESUS DE GOIAS - GO",
+    "Descricao": "Rodoviária de Bom Jesus de Goías - Aníbal Lima, s/n",
+    "Latitude": "-18.212386",
+    "Longitude": "-49.737284"
+  },
+  {
+    "CIDADE - UF": "BONITO DE SANTA FE - PB",
+    "UF": "PB",
+    "Nome": "BONITO DE SANTA FE - PB",
+    "Descricao": "Agência Guanabara de Bonito de Santa Fé - Rua Laurentino de Oliveira, 1955",
+    "Latitude": "-7.315170",
+    "Longitude": "-38.513400"
+  },
+  {
+    "CIDADE - UF": "BRAGANCA PAULISTA - SP",
+    "UF": "SP",
+    "Nome": "BRAGANCA PAULISTA - SP",
+    "Descricao": "Rodoviária de Bragança Paulista - Matadouro, Av. dos Imigrantes, 3700",
+    "Latitude": "-22.940590",
+    "Longitude": "-46.539210"
+  },
+  {
+    "CIDADE - UF": "BRASILIA - DF",
+    "UF": "DF",
+    "Nome": "BRASILIA - DF",
+    "Descricao": "Rodoviária de Brasília - Asa-Sul, Rua SMAS, Trecho 4",
+    "Latitude": "-15.830394",
+    "Longitude": "-47.949567"
+  },
+  {
+    "CIDADE - UF": "BREJO DO CRUZ - PB",
+    "UF": "PB",
+    "Nome": "BREJO DO CRUZ - PB",
+    "Descricao": "Rodoviária de Brejo da Cruz - Rua Padre Aires, 189-309",
+    "Latitude": "-6.350170",
+    "Longitude": "-37.494029"
+  },
+  {
+    "CIDADE - UF": "BREJO SANTO - CE",
+    "UF": "CE",
+    "Nome": "BREJO SANTO - CE",
+    "Descricao": "Rodoviária de Brejo Santo - Cabaceiras, BR116, S/N",
+    "Latitude": "-7.479320",
+    "Longitude": "-38.980970"
+  },
+  {
+    "CIDADE - UF": "BREJOLANDIA - BA",
+    "UF": "BA",
+    "Nome": "BREJOLANDIA - BA",
+    "Descricao": "Rodoviária de Brejolândia - Tv. Rodoviária, s/n",
+    "Latitude": "-12.485800",
+    "Longitude": "43.958860"
+  },
+  {
+    "CIDADE - UF": "BURITI DOS LOPES - PI",
+    "UF": "PI",
+    "Nome": "BURITI DOS LOPES - PI",
+    "Descricao": "Rodoviária de Buriti dos Lopes - Av. Cidade de Parnaiba, 47/203",
+    "Latitude": "-3.173463",
+    "Longitude": "-41.868375"
+  },
+  {
+    "CIDADE - UF": "CABO FRIO - RJ",
+    "UF": "RJ",
+    "Nome": "CABO FRIO - RJ",
+    "Descricao": "Rodoviária de Cabo Frio - Centro, Av. Júlia Kubitschek, 535",
+    "Latitude": "-22.882040",
+    "Longitude": "-42.029800"
+  },
+  {
+    "CIDADE - UF": "CABROBO - PE",
+    "UF": "PE",
+    "Nome": "CABROBO - PE",
+    "Descricao": "Agência Guanabara de Cabrobó - R. Ver. José Gomes de Sá, 92",
+    "Latitude": "-8.508884",
+    "Longitude": "-39.309842"
+  },
+  {
+    "CIDADE - UF": "CACHOEIRA DO PIRIA - PA",
+    "UF": "PA",
+    "Nome": "CACHOEIRA DO PIRIA - PA",
+    "Descricao": "Agência Guanabara de Cachoeira do Piria - Rua Piauí, 487",
+    "Latitude": "-1.761027",
+    "Longitude": "-46.543006"
+  },
+  {
+    "CIDADE - UF": "CACHOEIRA PAULISTA - SP",
+    "UF": "SP",
+    "Nome": "CACHOEIRA PAULISTA - SP",
+    "Descricao": "Rodoviária de Cachoeira Paulista - Parque Primavera, Rua José da Silveira Mendes, 156 - 228",
+    "Latitude": "-22.671633",
+    "Longitude": "-45.004352"
+  },
+  {
+    "CIDADE - UF": "CAICO - RN",
+    "UF": "RN",
+    "Nome": "CAICO - RN",
+    "Descricao": "Agência Guanabara de Caico - Caicó, Rua Dr. Renato Dantas, 3",
+    "Latitude": "-6.459446",
+    "Longitude": "-37.098303"
+  },
+  {
+    "CIDADE - UF": "CAJAZEIRAS - PB",
+    "UF": "PB",
+    "Nome": "CAJAZEIRAS - PB",
+    "Descricao": "Agência Guanabara de Cajazeiras - Jardim Adalgiza II, Av. Cmte. Vital Rolim, s/n",
+    "Latitude": "-6.887356",
+    "Longitude": "-38.553901"
+  },
+  {
+    "CIDADE - UF": "CAMACARI - BA",
+    "UF": "BA",
+    "Nome": "CAMACARI - BA",
+    "Descricao": "Rodoviária de Camacari - Centro, Rua Padre Paulo Maria Tunuci, 30",
+    "Latitude": "-12.701790",
+    "Longitude": "-38.3194080"
+  },
+  {
+    "CIDADE - UF": "CAMBUQUIRA - MG",
+    "UF": "MG",
+    "Nome": "CAMBUQUIRA - MG",
+    "Descricao": "Rodoviária de Cambuquira - Cambuquira, Av. Floriano Peixoto, 354",
+    "Latitude": "-21.849365",
+    "Longitude": "-45.296380"
+  },
+  {
+    "CIDADE - UF": "CAMOCIM - CE",
+    "UF": "CE",
+    "Nome": "CAMOCIM - CE",
+    "Descricao": "Agência Guanabara de Camocim - Rua Paissandú, Rodoviária,s/n",
+    "Latitude": "-2.900300",
+    "Longitude": "-40.846670"
+  },
+  {
+    "CIDADE - UF": "CAMPANHA - MG",
+    "UF": "MG",
+    "Nome": "CAMPANHA - MG",
+    "Descricao": "Rodoviária de Campanha - Rua Moretzshon Luis Oliveira, 60",
+    "Latitude": "-21.830469",
+    "Longitude": "-45.398451"
+  },
+  {
+    "CIDADE - UF": "CAMPINA GRANDE - PB",
+    "UF": "PB",
+    "Nome": "CAMPINA GRANDE - PB",
+    "Descricao": "Rodoviária de Campina Grande - Sandra Cavalcante, R. Basílio Araújo, s/n",
+    "Latitude": "-7.238779",
+    "Longitude": "-35.870856"
+  },
+  {
+    "CIDADE - UF": "CAMPINAS - SP",
+    "UF": "SP",
+    "Nome": "CAMPINAS - SP",
+    "Descricao": "Rodoviária de Campinas - Vila Industrial, Rua Dr. Pereira Lima, 85",
+    "Latitude": "-22.905925",
+    "Longitude": "-47.072604"
+  },
+  {
+    "CIDADE - UF": "CAMPO BELO - MG",
+    "UF": "MG",
+    "Nome": "CAMPO BELO - MG",
+    "Descricao": "Rodoviária de Campo Belo - Vila Matilde, Rua João Pinheiro, 1181",
+    "Latitude": "-20.892400",
+    "Longitude": "-45.265600"
+  },
+  {
+    "CIDADE - UF": "CAMPO MAIOR - PI",
+    "UF": "PI",
+    "Nome": "CAMPO MAIOR - PI",
+    "Descricao": "Agência Guanabara de Campo Maior - Centro, Rua Siqueira Campos, 924-984",
+    "Latitude": "-4.830020",
+    "Longitude": "-42.169860"
+  },
+  {
+    "CIDADE - UF": "CORRENTINA - BA",
+    "UF": "BA",
+    "Nome": "CORRENTINA - BA",
+    "Descricao": "Ponto de Embarque Guanabara Correntina - Rodovia, BR 020, s/n,Km 312",
+    "Latitude": "-13.953270",
+    "Longitude": "-46.198049"
+  },
+  {
+    "CIDADE - UF": "CAMPO VERDE - MT",
+    "UF": "MT",
+    "Nome": "CAMPO VERDE - MT",
+    "Descricao": "Rodoviária de Campo Verde - Centro, Rua Arnaldo Eckert, s/n",
+    "Latitude": "-15.546862",
+    "Longitude": "-55.164512"
+  },
+  {
+    "CIDADE - UF": "CAMPOS BELOS - GO",
+    "UF": "GO",
+    "Nome": "CAMPOS BELOS - GO",
+    "Descricao": "Rodoviaria de Campos Belos - Setor Industrial, Rua Oscár Muniz, 1-93",
+    "Latitude": "-13.034180",
+    "Longitude": "-46.767310"
+  },
+  {
+    "CIDADE - UF": "CAMPOS DO JORDAO - SP",
+    "UF": "SP",
+    "Nome": "CAMPOS DO JORDAO - SP",
+    "Descricao": "Rodoviária de Campos do Jordão - Centro, Rua Benedito Lourenço, 285",
+    "Latitude": "-22.724984",
+    "Longitude": "-45.580255"
+  },
+  {
+    "CIDADE - UF": "CAMPOS SALES - CE",
+    "UF": "CE",
+    "Nome": "CAMPOS SALES - CE",
+    "Descricao": "Agência Guanabara de Campos Sales - Rua Fernandes Vieira, 2",
+    "Latitude": "-7.078953",
+    "Longitude": "-40.378366"
+  },
+  {
+    "CIDADE - UF": "AGUA DOCE DO MARANHAO - MA",
+    "UF": "MA",
+    "Nome": "CANA BRAVA - MA",
+    "Descricao": "Agência Guanabara de Cana Brava - Água Doce do Maranhão, Rua Neide Costa, MA-034, 735",
+    "Latitude": "-3.074590",
+    "Longitude": "-42.236760"
+  },
+  {
+    "CIDADE - UF": "AGUA DOCE DO MARANHAO - MA",
+    "UF": "MA",
+    "Nome": "AGUA DOCE DO MARANHAO - MA",
+    "Descricao": "Rodoviária de Cana Brava - Rua Nonato paiva, Rua João Fontenelle, s/n",
+    "Latitude": "-3.074755",
+    "Longitude": "-42.236654"
+  },
+  {
+    "CIDADE - UF": "CANINDE - CE",
+    "UF": "CE",
+    "Nome": "CANINDE - CE",
+    "Descricao": "Agência Guanabara de Canindé - Bela Vista, Av. Luciano Magalhães, 5339",
+    "Latitude": "-4.346850",
+    "Longitude": "-39.310441"
+  },
+  {
+    "CIDADE - UF": "CAPANEMA - PA",
+    "UF": "PA",
+    "Nome": "CAPANEMA - PA",
+    "Descricao": "Rodoviária de Capanema - BR308, Rua Antônio Adalgízio, 1714",
+    "Latitude": "-1.205509",
+    "Longitude": "-47.176201"
+  },
+  {
+    "CIDADE - UF": "CARAGUATATUBA - SP",
+    "UF": "SP",
+    "Nome": "CARAGUATATUBA - SP",
+    "Descricao": "Rodoviária de Caraguatatuba - Jardim Jaqueira, Av. Brasília, 50",
+    "Latitude": "-23.623700",
+    "Longitude": "-45.426709"
+  },
+  {
+    "CIDADE - UF": "CARANDAI - MG",
+    "UF": "MG",
+    "Nome": "CARANDAI - MG",
+    "Descricao": "Rodoviária de Carandai - MG 275, Alameda p. de Souza, s/n",
+    "Latitude": "-20.950780",
+    "Longitude": "-43.799610"
+  },
+  {
+    "CIDADE - UF": "CARATINGA - MG",
+    "UF": "MG",
+    "Nome": "CARATINGA - MG",
+    "Descricao": "Rodoviária de Caratinga - Centro, Av. Moacir de Matos, 666",
+    "Latitude": "-19.796763",
+    "Longitude": " -42.138314"
+  },
+  {
+    "CIDADE - UF": "CARMO DA CACHOEIRA - MG",
+    "UF": "MG",
+    "Nome": "CARMO DA CACHOEIRA - MG",
+    "Descricao": "Rodoviária de Carmo da Cachoeira - Rua Dom Inocêncio, 129-193",
+    "Latitude": "-21.460281",
+    "Longitude": "-45.222200"
+  },
+  {
+    "CIDADE - UF": "CARUARU - PE",
+    "UF": "PE",
+    "Nome": "CARUARU - PE",
+    "Descricao": "Agência Guanabara de Caruaru - Agamenon Magalhães, Rua Mte. Vitalino, 1",
+    "Latitude": "-8.294310",
+    "Longitude": "-35.988150"
+  },
+  {
+    "CIDADE - UF": "CASTANHAL - PA",
+    "UF": "PA",
+    "Nome": "CASTANHAL - PA",
+    "Descricao": "Agência Guanabara de Castanhal - Centro, Av. Presidente Getúlio Vargas, 2562",
+    "Latitude": "-1.295700",
+    "Longitude": "-47.922110"
+  },
+  {
+    "CIDADE - UF": "CATALAO - GO",
+    "UF": "GO",
+    "Nome": "CATALAO - GO",
+    "Descricao": "Rodoviária de Catalão - Nossa Senhora de Fátima, Rua Juscelino Gmes Pires, 2300",
+    "Latitude": "-18.171887",
+    "Longitude": "-47.926463"
+  },
+  {
+    "CIDADE - UF": "CAXIAS - MA",
+    "UF": "MA",
+    "Nome": "CAXIAS - MA",
+    "Descricao": "Agência Guanabara de Caxias - Nova Caxias, Av. Rodoviária, 226",
+    "Latitude": "-4.881940",
+    "Longitude": "-43.346090"
+  },
+  {
+    "CIDADE - UF": "CEDRO - CE",
+    "UF": "CE",
+    "Nome": "CEDRO - CE",
+    "Descricao": "Agência Guanabara de Cedro - Centro, Tv. Antônio Pereira, 52",
+    "Latitude": "-6.604463",
+    "Longitude": "-39.057600"
+  },
+  {
+    "CIDADE - UF": "CHAPADINHA - MA",
+    "UF": "MA",
+    "Nome": "CHAPADINHA - MA",
+    "Descricao": "Agência Guanabara de Chapadinha - Centro, Rua Benjamin Ferreira, 307-337",
+    "Latitude": "-3.743677",
+    "Longitude": "-43.358434"
+  },
+  {
+    "CIDADE - UF": "CODO - MA",
+    "UF": "MA",
+    "Nome": "CODO - MA",
+    "Descricao": "Agência Guanabara de Codo - Av. Santos Dumont, 2827",
+    "Latitude": "-4.487700",
+    "Longitude": "-43.892490"
+  },
+  {
+    "CIDADE - UF": "COLINAS - MA",
+    "UF": "MA",
+    "Nome": "COLINAS - MA",
+    "Descricao": "Rodoviária de Colinas - Centro, BR-135, 102",
+    "Latitude": "-6.028508",
+    "Longitude": "-44.242767"
+  },
+  {
+    "CIDADE - UF": "COLINAS DO TOCANTINS - TO",
+    "UF": "TO",
+    "Nome": "COLINAS DO TOCANTINS - TO",
+    "Descricao": "Agência Guanabara de Colinas do Tocantins - Rua 07 de Setembro, 240",
+    "Latitude": "-8.06336",
+    "Longitude": "-48.47335"
+  },
+  {
+    "CIDADE - UF": "COMBINADO - TO",
+    "UF": "TO",
+    "Nome": "COMBINADO - TO",
+    "Descricao": "Rodoviária de Combinado - Centro, Av. Juscelino Kubitscheck, 977 - 1101",
+    "Latitude": "-12.813945",
+    "Longitude": "-46.546306"
+  },
+  {
+    "CIDADE - UF": "CONCEICAO - PB",
+    "UF": "PB",
+    "Nome": "CONCEICAO - PB",
+    "Descricao": "Agência Guanabara de Conceição - Centro, Rua Pref. João Fausto de Figueiredo, s/n",
+    "Latitude": "-7.559000",
+    "Longitude": "-38.509100"
+  },
+  {
+    "CIDADE - UF": "CONCEICAO DO ARAGUAIA - PA",
+    "UF": "PA",
+    "Nome": "CONCEICAO DO ARAGUAIA - PA",
+    "Descricao": "Rodoviária de Conceição do Araguaía - Vila Nova, Av. Rio Araguaia, s/n",
+    "Latitude": "-8.275683",
+    "Longitude": "-8.275683"
+  },
+  {
+    "CIDADE - UF": "CONCEICAO DO RIO VERDE - MG",
+    "UF": "MG",
+    "Nome": "CONCEICAO DO RIO VERDE - MG",
+    "Descricao": "Rodoviária de Conceição do Rio Verde - Rua Mons José A Alckmim, 96-310",
+    "Latitude": "-21.882900",
+    "Longitude": "-45.086040"
+  },
+  {
+    "CIDADE - UF": "CONCEICAO DO TOCANTINS - TO",
+    "UF": "TO",
+    "Nome": "CONCEICAO DO TOCANTINS - TO",
+    "Descricao": "Rodoviária de Conceição do Tocantins - Rua Alagoas, 1-95",
+    "Latitude": "-12.222000",
+    "Longitude": "-47.291700"
+  },
+  {
+    "CIDADE - UF": "CONGONHAS - MG",
+    "UF": "MG",
+    "Nome": "CONGONHAS - MG",
+    "Descricao": "Rodoviária de Congonhas - Av. Mauá, 1484-1628",
+    "Latitude": "-20.511200",
+    "Longitude": "-43.843000"
+  },
+  {
+    "CIDADE - UF": "CONSELHEIRO LAFAIETE - MG",
+    "UF": "MG",
+    "Nome": "CONSELHEIRO LAFAIETE - MG",
+    "Descricao": "Rodoviária de Conselheiro Lafaiete - Centro, Av. Prof. Manoel Martins, 60",
+    "Latitude": "-20.658011",
+    "Longitude": "-43.791680"
+  },
+  {
+    "CIDADE - UF": "COREAU - CE",
+    "UF": "CE",
+    "Nome": "COREAU - CE",
+    "Descricao": "Agência Guanabara de Coreaú Alferes Raimundo - Centro, Rua São João Batista, s/n",
+    "Latitude": "-3.550894",
+    "Longitude": "-40.652527"
+  },
+  {
+    "CIDADE - UF": "COREMAS - PB",
+    "UF": "PB",
+    "Nome": "COREMAS - PB",
+    "Descricao": "Rodoviária de Coremas - Centro, Av. Getúlio Vargas, s/n",
+    "Latitude": "-7.018150",
+    "Longitude": "-37.945330"
+  },
+  {
+    "CIDADE - UF": "CORRENTE - PI",
+    "UF": "PI",
+    "Nome": "CORRENTE - PI",
+    "Descricao": "Rodoviária de Corrente Sebastião Barros - Rua Projetada 40, s/n",
+    "Latitude": "-10.432398",
+    "Longitude": "-45.162239"
+  },
+  {
+    "CIDADE - UF": "CUIABA - MT",
+    "UF": "MT",
+    "Nome": "COXIPO - MT (term adicional CGB)",
+    "Descricao": "Rodoviária de Coxipo - Novo Horizonte, Av. Fernando Corrêa da Costa, s/n",
+    "Latitude": "-15.632150",
+    "Longitude": "-56.050641"
+  },
+  {
+    "CIDADE - UF": "CRATEUS - CE",
+    "UF": "CE",
+    "Nome": "CRATEUS - CE",
+    "Descricao": "Agência Guanabara de Crateus - Fatima II, Rua Oscár Lopes, s/n",
+    "Latitude": "-5.188191",
+    "Longitude": "-40.672462"
+  },
+  {
+    "CIDADE - UF": "CRISTALINA - GO",
+    "UF": "GO",
+    "Nome": "CRISTALINA - GO",
+    "Descricao": "Rodoviária de Cristalina - Noroeste, Rua Visc. de Mauá, 82-164",
+    "Latitude": "-16.764566",
+    "Longitude": "-47.613771"
+  },
+  {
+    "CIDADE - UF": "CRISTINO CASTRO - PI",
+    "UF": "PI",
+    "Nome": "CRISTINO CASTRO - PI",
+    "Descricao": "Agência Guanabara de Cristino Castro Teresa Falcão - Centro, Av. David Campos, s/n",
+    "Latitude": "-8.806610",
+    "Longitude": "-44.215900"
+  },
+  {
+    "CIDADE - UF": "CRISTOPOLIS - BA",
+    "UF": "BA",
+    "Nome": "CRISTOPOLIS - BA",
+    "Descricao": "Rodoviária de Cristopolis - Centro, Av. Maj. Claro, 166",
+    "Latitude": "-12.233340",
+    "Longitude": "-44.414709"
+  },
+  {
+    "CIDADE - UF": "CRUZ - CE",
+    "UF": "CE",
+    "Nome": "CRUZ - CE",
+    "Descricao": "Agência Guanabara de Cruz - Rua Vicente Justa, 105",
+    "Latitude": "-2.915.510",
+    "Longitude": "-40.176292"
+  },
+  {
+    "CIDADE - UF": "CRUZEIRO - SP",
+    "UF": "SP",
+    "Nome": "CRUZEIRO - SP",
+    "Descricao": "Rodoviária de Cruzeiro - Vila Paulista, Av. Rotary, 130",
+    "Latitude": "-22.583200",
+    "Longitude": "-44.961900"
+  },
+  {
+    "CIDADE - UF": "CUBATAO - SP",
+    "UF": "SP",
+    "Nome": "SANTOS (TA CUBATAO) - SP",
+    "Descricao": "Rodoviária de Cubatão - Vila Santa Rosa, Av. Henry Borden, s/n",
+    "Latitude": "-23.887900",
+    "Longitude": "-46.428956"
+  },
+  {
+    "CIDADE - UF": "CUBATAO - SP",
+    "UF": "SP",
+    "Nome": "CUBATAO - SP",
+    "Descricao": "Rodoviária de Cubatão - Vila Santa Rosa, Av. Henry Borden, s/n",
+    "Latitude": "-23.887900",
+    "Longitude": "-46.428956"
+  },
+  {
+    "CIDADE - UF": "CUIABA - MT",
+    "UF": "MT",
+    "Nome": "CUIABA - MT",
+    "Descricao": "Rodoviária de Cuiabá - Engenheiro Cássio Veiga de Sá, Rua Jules Rimet, s/n",
+    "Latitude": "-15.580740",
+    "Longitude": "-56.089650"
+  },
+  {
+    "CIDADE - UF": "CURITIBA - PR",
+    "UF": "PR",
+    "Nome": "CURITIBA - PR",
+    "Descricao": "Rodoviária de Curitiba - Jardim Botânico, Av. Presidente Affonso Camargo, 330",
+    "Latitude": "-25.436740",
+    "Longitude": "-49.257320"
+  },
+  {
+    "CIDADE - UF": "CURRAIS NOVOS - RN",
+    "UF": "RN",
+    "Nome": "CURRAIS NOVOS - RN",
+    "Descricao": "Agência Guanabara de Currais Novos - Manoel Salustino, Av. Teotônio Freire, 346-460",
+    "Latitude": "-6.260431",
+    "Longitude": "-36.519384"
+  },
+  {
+    "CIDADE - UF": "DELMIRO GOUVEIA - AL",
+    "UF": "AL",
+    "Nome": "DELMIRO GOUVEIA - AL",
+    "Descricao": "Agência Guanabara de Delmiro Gouveia - Av. Caxangá, 136-160",
+    "Latitude": "-9.388510",
+    "Longitude": "-37.988618"
+  },
+  {
+    "CIDADE - UF": "DIANOPOLIS - TO",
+    "UF": "TO",
+    "Nome": "DIANOPOLIS - TO",
+    "Descricao": "Rodoviária de Dianópolis - Rua do Ouro, s/n",
+    "Latitude": "-11.625460",
+    "Longitude": "-46.817260"
+  },
+  {
+    "CIDADE - UF": "DIVINOPOLIS - MG",
+    "UF": "MG",
+    "Nome": "DIVINOPOLIS - MG",
+    "Descricao": "Rodoviária de Divinopolis de Goias - Av. Trinta e Um de Março, s/n",
+    "Latitude": "-13.292100",
+    "Longitude": "-46.397100"
+  },
+  {
+    "CIDADE - UF": "DOM PEDRO - MA",
+    "UF": "MA",
+    "Nome": "DOM PEDRO - MA",
+    "Descricao": "Rodoviária de Dom Pedro - Av. Gonçalves Dias, 927",
+    "Latitude": "-5.032044",
+    "Longitude": "-44.435750"
+  },
+  {
+    "CIDADE - UF": "DUQUE DE CAXIAS - RJ",
+    "UF": "RJ",
+    "Nome": "DUQUE DE CAXIAS - RJ",
+    "Descricao": "Rodoviaria de Duque de Caxias - Centro, Rua Mariano Sendra dos Santos, s/n",
+    "Latitude": "-22.792223",
+    "Longitude": "-43.310877"
+  },
+  {
+    "CIDADE - UF": "ELDORADO DOS CARAJAS - PA",
+    "UF": "PA",
+    "Nome": "ELDORADO DOS CARAJAS - PA",
+    "Descricao": "Rodoviária de Eldorado dos Carajas - Eldorado do Carajás, Rua Oziel Carneiro, s/n",
+    "Latitude": "-6.104156",
+    "Longitude": "-49.371888"
+  },
+  {
+    "CIDADE - UF": "ELISEU MARTINS - PI",
+    "UF": "PI",
+    "Nome": "ELISEU MARTINS - PI",
+    "Descricao": "Agência Guanabara de Eliseu Martins Dr. João Martins - Centro, Rua José Messias, s/n",
+    "Latitude": "-8.104210",
+    "Longitude": "-43.660176"
+  },
+  {
+    "CIDADE - UF": "SAO PAULO - SP",
+    "UF": "SP",
+    "Nome": "EMBU DAS ARTES - SP",
+    "Descricao": "Rodoviária de Embu das Artes - Centro, Av. Elias Yazbek, 785 -A",
+    "Latitude": "-23.655851",
+    "Longitude": "-46.852007"
+  },
+  {
+    "CIDADE - UF": "ESTANCIA - SE",
+    "UF": "SE",
+    "Nome": "ESTANCIA - SE",
+    "Descricao": "Rodoviária de Estância - Av. Santa Cruz, 23",
+    "Latitude": "-11.273944",
+    "Longitude": "-37.44722"
+  },
+  {
+    "CIDADE - UF": "ESTREITO - MA",
+    "UF": "MA",
+    "Nome": "ESTREITO - MA",
+    "Descricao": "Rodoviaria de Estreito - Centro, Rod. BR Zero Dez, 49, SALA 01",
+    "Latitude": "-6.547690",
+    "Longitude": "-47.427530"
+  },
+  {
+    "CIDADE - UF": "FEIRA DE SANTANA - BA",
+    "UF": "BA",
+    "Nome": "FEIRA DE SANTANA - BA",
+    "Descricao": "Rodoviária de Feira de Santana - Centro, Av. Presidente Dutra, 550",
+    "Latitude": "-12.259640",
+    "Longitude": "-38.958130"
+  },
+  {
+    "CIDADE - UF": "FIGUEIROPOLIS - TO",
+    "UF": "TO",
+    "Nome": "FIGUEIROPOLIS - TO",
+    "Descricao": "Rodoviaria de Figueiropolis - Av. Bernardo Sayão, Rua Onze, s/n",
+    "Latitude": "-12.139028",
+    "Longitude": "-49.170470"
+  },
+  {
+    "CIDADE - UF": "FLORESTA - PE",
+    "UF": "PE",
+    "Nome": "FLORESTA - PE",
+    "Descricao": "Rodoviária de Floresta - Av. Gov. Paulo Guerra, 205",
+    "Latitude": "-8.601824",
+    "Longitude": "-38.573312"
+  },
+  {
+    "CIDADE - UF": "FLORIANO - PI",
+    "UF": "PI",
+    "Nome": "FLORIANO - PI",
+    "Descricao": "Agência Guanabara de Floriano - Bom Lugar, Av. da Integração BR-230, s/n",
+    "Latitude": "-6.786776",
+    "Longitude": "-42.991974"
+  },
+  {
+    "CIDADE - UF": "FLORIANOPOLIS - SC",
+    "UF": "SC",
+    "Nome": "FLORIANOPOLIS - SC",
+    "Descricao": "Rodoviária de Florianopolis - Centro, Av. Paulo Fontes, 1101",
+    "Latitude": "-27.597363",
+    "Longitude": "-48.557210"
+  },
+  {
+    "CIDADE - UF": "FORMOSA - GO",
+    "UF": "GO",
+    "Nome": "FORMOSA - GO",
+    "Descricao": "Rodoviária de Formosa - Av.Bosque, Rua 26, s/n",
+    "Latitude": "-15.550790",
+    "Longitude": "-47.337570"
+  },
+  {
+    "CIDADE - UF": "FORMOSA DO RIO PRETO - BA",
+    "UF": "BA",
+    "Nome": "FORMOSA DO RIO PRETO - BA",
+    "Descricao": "Rodoviária de Formosa do Rio Preto - Vila Projeto, Rua Francisco de Alençar, 121",
+    "Latitude": "-11.048038",
+    "Longitude": "-45.204977"
+  },
+  {
+    "CIDADE - UF": "FORTALEZA - CE",
+    "UF": "CE",
+    "Nome": "FORTALEZA - CE",
+    "Descricao": "Agência Guanabara de Fortaleza Engenheiro João Tomé - Bairro de Fatima, Av. Borges De Melo, 1630",
+    "Latitude": "-3.757645",
+    "Longitude": "-38.530658"
+  },
+  {
+    "CIDADE - UF": "FRANCA - SP",
+    "UF": "SP",
+    "Nome": "FRANCA - SP",
+    "Descricao": "Rodoviária de Franca - Res. Baldassari, Av. Sete de Setembro, 735",
+    "Latitude": "-20.532180",
+    "Longitude": "-47.389780"
+  },
+  {
+    "CIDADE - UF": "FRONTEIRA - MG",
+    "UF": "MG",
+    "Nome": "FRONTEIRA - MG",
+    "Descricao": "Agência Guanabara de Fronteiras - Av. Aurélio Luiz Mistieri, 125-169",
+    "Latitude": "-20.281625",
+    "Longitude": "-49.204157"
+  },
+  {
+    "CIDADE - UF": "FRUTAL - MG",
+    "UF": "MG",
+    "Nome": "FRUTAL - MG",
+    "Descricao": "Rodoviária de Frutal - Alto Boa Vista, Praça Boa Vista, 600",
+    "Latitude": "-20.017500",
+    "Longitude": "-48.931250"
+  },
+  {
+    "CIDADE - UF": "BRASILIA - DF",
+    "UF": "DF",
+    "Nome": "GAMA - DF",
+    "Descricao": "Rodoviária de Gama - St.Central, Sce Q 51, s/n",
+    "Latitude": "-16.020030",
+    "Longitude": "-48.067280"
+  },
+  {
+    "CIDADE - UF": "GARANHUNS - PE",
+    "UF": "PE",
+    "Nome": "GARANHUNS - PE",
+    "Descricao": "Agência Guanabara de Garanhuns - Heliópolis, Av. Caruaru, 1609",
+    "Latitude": "-8.882124",
+    "Longitude": "-36.487321"
+  },
+  {
+    "CIDADE - UF": "GOIANA - PE",
+    "UF": "PE",
+    "Nome": "GOIANA - PE",
+    "Descricao": "Rod Br 101, 10367, Agência de Viagens Realize - Goiana PE",
+    "Latitude": -7561772,
+    "Longitude": -34990198
+  },
+  {
+    "CIDADE - UF": "GOIANIA - GO",
+    "UF": "GO",
+    "Nome": "GOIANIA - GO",
+    "Descricao": "Rodoviária de Goiânia - St. Central, R. 44, 399",
+    "Latitude": "-16.659635",
+    "Longitude": "-49.259202"
+  },
+  {
+    "CIDADE - UF": "GOIANIA - GO",
+    "UF": "GO",
+    "Nome": "GOIANIA (SETOR CAMPINAS) - GO",
+    "Descricao": "Rodoviária de Goiania (Setor Campinas) - St. Aeroporto, Rua 9",
+    "Latitude": "-16.667530",
+    "Longitude": "-49.304046"
+  },
+  {
+    "CIDADE - UF": "GOIAS - GO",
+    "UF": "GO",
+    "Nome": "GOIAS - GO",
+    "Descricao": "Rodoviária de Goiás - Av. Dário de Paiva Sampaio, 733-863",
+    "Latitude": "-15.943442",
+    "Longitude": "-50.140930"
+  },
+  {
+    "CIDADE - UF": "GOVERNADOR VALADARES - MG",
+    "UF": "MG",
+    "Nome": "GOVERNADOR VALADARES - MG",
+    "Descricao": "Rodoviária de Governador Valadares - Centro, Rua Mal. Floriano, 1057",
+    "Latitude": "-18.859330",
+    "Longitude": "-41.945978"
+  },
+  {
+    "CIDADE - UF": "GRANJA - CE",
+    "UF": "CE",
+    "Nome": "GRANJA - CE",
+    "Descricao": "Agência Guanabara de Granja - Centro, Rua Francisco Sousa, 226",
+    "Latitude": "-3.120396",
+    "Longitude": "-40.835450"
+  },
+  {
+    "CIDADE - UF": "GRAVATA - PE",
+    "UF": "PE",
+    "Nome": "GRAVATA - PE",
+    "Descricao": "Rodoviária de Gravata - Norte, Av. Cícero Batista de Oliveira, s/n",
+    "Latitude": "-8.196270",
+    "Longitude": "-35.568985"
+  },
+  {
+    "CIDADE - UF": "GUARA - SP",
+    "UF": "SP",
+    "Nome": "GUARA - SP",
+    "Descricao": "Rodoviária de Guara - Av. Quinze de Setembro, 1-67",
+    "Latitude": "-20.427300",
+    "Longitude": "-47.829553"
+  },
+  {
+    "CIDADE - UF": "GUARABIRA - PB",
+    "UF": "PB",
+    "Nome": "GUARABIRA - PB",
+    "Descricao": "Rodoviária de Guarabira - Av. Rui Barbosa, s/n",
+    "Latitude": "-6.854142",
+    "Longitude": "-35.495583"
+  },
+  {
+    "CIDADE - UF": "GUARACIABA DO NORTE - CE",
+    "UF": "CE",
+    "Nome": "GUARACIABA DO NORTE - CE",
+    "Descricao": "Agência Guanabara de Guaraciaba do Norte - Centro, Av. 12 de Maio, s/n",
+    "Latitude": "-4.161280",
+    "Longitude": "-40.752660"
+  },
+  {
+    "CIDADE - UF": "GUARAI - TO",
+    "UF": "TO",
+    "Nome": "GUARAI - TO",
+    "Descricao": "Rodoviária de Guarai - Av. Pará , Norte Rodoviario, s/n",
+    "Latitude": "-8.828740",
+    "Longitude": "-48.514302"
+  },
+  {
+    "CIDADE - UF": "GUARANI - MG",
+    "UF": "MG",
+    "Nome": "GUARANI - MG",
+    "Descricao": "Rodoviária de Guarani - Nova Guarani, Rua Vereador Jesus Ladeira, 1050",
+    "Latitude": "-21.347940",
+    "Longitude": "-43.047010"
+  },
+  {
+    "CIDADE - UF": "GUARATINGUETA - SP",
+    "UF": "SP",
+    "Nome": "GUARATINGUETA - SP",
+    "Descricao": "Rodoviária de Guaratingueta - Centro Histórico, Av. José Juvenal M. dos Santos, 21",
+    "Latitude": "-22.820215",
+    "Longitude": "-45.195290"
+  },
+  {
+    "CIDADE - UF": "GUARULHOS - SP",
+    "UF": "SP",
+    "Nome": "GUARULHOS - SP",
+    "Descricao": "Rodoviária de Guarulhos - Parque Cecap, Alameda dos Lírios, 145",
+    "Latitude": "-23.448700",
+    "Longitude": "-46.496920"
+  },
+  {
+    "CIDADE - UF": "GURUPI - TO",
+    "UF": "TO",
+    "Nome": "GURUPI - TO",
+    "Descricao": "Rodoviária de Gurupi - Nova Fronteira,Parque Res., Rua 10-A, 2",
+    "Latitude": "-11.736420",
+    "Longitude": "-49.068730"
+  },
+  {
+    "CIDADE - UF": "IACIARA - GO",
+    "UF": "GO",
+    "Nome": "IACIARA - GO",
+    "Descricao": "Rodoviária de Iaciara - Centro, Av. Pedro Alexandre de Oliveira, 115-97",
+    "Latitude": "-14.105200",
+    "Longitude": "-46.632200"
+  },
+  {
+    "CIDADE - UF": "IBIARA - PB",
+    "UF": "PB",
+    "Nome": "IBIARA - PB",
+    "Descricao": "Agência Guanabara de Ibiara - Centro, Rua Osório Pinto Ramalho, 423",
+    "Latitude": "-7.497420",
+    "Longitude": "-38.403800"
+  },
+  {
+    "CIDADE - UF": "IBOTIRAMA - BA",
+    "UF": "BA",
+    "Nome": "IBOTIRAMA - BA",
+    "Descricao": "Rodoviária de Ibotirama - São Francisco, Rua Otávio Mangabeira, 1415-1439",
+    "Latitude": "-12.181231",
+    "Longitude": "-43.207940"
+  },
+  {
+    "CIDADE - UF": "ICO - CE",
+    "UF": "CE",
+    "Nome": "ICO - CE",
+    "Descricao": "Agência Guanabara de Icó - Novo Centro, Rua Francisco Maciel da Silva 2453-2597",
+    "Latitude": "-6.406320",
+    "Longitude": "-38.864030"
+  },
+  {
+    "CIDADE - UF": "IGARAPAVA - SP",
+    "UF": "SP",
+    "Nome": "IGARAPAVA - SP",
+    "Descricao": "Rodoviária de Igarapava - Jardim Sao Francisco, Av. Dr. Wanderley Ribeiro, 1011-1073",
+    "Latitude": "-20.043440",
+    "Longitude": "-47.762600"
+  },
+  {
+    "CIDADE - UF": "IGUATU - CE",
+    "UF": "CE",
+    "Nome": "IGUATU - CE",
+    "Descricao": "Rodoviaria de Iguatu - Centro, Rua Professor João Coelho, 689",
+    "Latitude": "-6.363085",
+    "Longitude": "-39.301901"
+  },
+  {
+    "CIDADE - UF": "IMPERATRIZ - MA",
+    "UF": "MA",
+    "Nome": "IMPERATRIZ - MA",
+    "Descricao": "Agência Guanabara de Imperatriz - Vila Rendenção, Rua São Um, 2",
+    "Latitude": "-5.503678",
+    "Longitude": "-47.468108"
+  },
+  {
+    "CIDADE - UF": "INHUMAS - GO",
+    "UF": "GO",
+    "Nome": "INHUMAS - GO",
+    "Descricao": "Rodoviária de Inhumas - Av. Bernardo Sayão, Rua Bueno, s/n",
+    "Latitude": "-16.373155",
+    "Longitude": "-49.491255"
+  },
+  {
+    "CIDADE - UF": "IPIXUNA DO PARA - PA",
+    "UF": "PA",
+    "Nome": "IPIXUNA DO PARA - PA",
+    "Descricao": "Rodoviária de Ipixuna - Tv. Bernardo Sayão, 318",
+    "Latitude": "-2.562122",
+    "Longitude": "-47.494135"
+  },
+  {
+    "CIDADE - UF": "IPU - CE",
+    "UF": "CE",
+    "Nome": "IPU - CE",
+    "Descricao": "Agência Guanabara de Ipu - Centro, Rua Doná Joana Mimosa, 1151",
+    "Latitude": "-4.318700",
+    "Longitude": "-40.708000"
+  },
+  {
+    "CIDADE - UF": "IPUEIRAS - CE",
+    "UF": "CE",
+    "Nome": "IPUEIRAS - CE",
+    "Descricao": "Agência Guanabara de Ipueiras - CE-187, Rua Sólon Catunda, s/n",
+    "Latitude": "-4.542170",
+    "Longitude": "-40.714421"
+  },
+  {
+    "CIDADE - UF": "IRAQUARA - BA",
+    "UF": "BA",
+    "Nome": "IRAQUARA - BA",
+    "Descricao": "Rodoviária de Iraquara - BR 122, RUA Manoel Félix, S/N",
+    "Latitude": "-12.246993",
+    "Longitude": "-41.611505"
+  },
+  {
+    "CIDADE - UF": "IRAUCUBA - CE",
+    "UF": "CE",
+    "Nome": "IRAUCUBA - CE",
+    "Descricao": "Agência Guanabara de Irauçuba - Av. Elis Batista da Mota, s/n",
+    "Latitude": "-3.744525",
+    "Longitude": "-39.792963"
+  },
+  {
+    "CIDADE - UF": "IRECE - BA",
+    "UF": "BA",
+    "Nome": "IRECE - BA",
+    "Descricao": "Rodoviária de Irecê - Centro, Av. Primeiro de Janeiro, s/n",
+    "Latitude": "-11.302838",
+    "Longitude": "-41.848378"
+  },
+  {
+    "CIDADE - UF": "ITABERABA - BA",
+    "UF": "BA",
+    "Nome": "ITABERABA - BA",
+    "Descricao": "Rodoviária de Itaberaba - Centro, Av. Luís Viana Filho, s/n",
+    "Latitude": "-12.520960",
+    "Longitude": "-40.286310"
+  },
+  {
+    "CIDADE - UF": "ITAPAJE - CE",
+    "UF": "CE",
+    "Nome": "ITAPAJE - CE",
+    "Descricao": "Rodoviária de Itapage - Rua Projetada Sessenta e Sete, 2",
+    "Latitude": "-3.690160",
+    "Longitude": "-39.585500"
+  },
+  {
+    "CIDADE - UF": "ITAPECURU MIRIM - MA",
+    "UF": "MA",
+    "Nome": "ITAPECURU MIRIM - MA",
+    "Descricao": "Rodoviária de Itapecuru - BR 135, 1200",
+    "Latitude": "-3.328819",
+    "Longitude": "-44.442589"
+  },
+  {
+    "CIDADE - UF": "ITAPIPOCA - CE",
+    "UF": "CE",
+    "Nome": "ITAPIPOCA - CE",
+    "Descricao": "Rodoviária de Itapipoca Deputado Danúsio Barroso - Coqueiro, Rua Caio Prado, 1050",
+    "Latitude": "-3.497667",
+    "Longitude": "-39.577547"
+  },
+  {
+    "CIDADE - UF": "ITAPORANGA - PB",
+    "UF": "PB",
+    "Nome": "ITAPORANGA - PB",
+    "Descricao": "Rodoviária de Itaporanga Vereador Lourival Rodrigues - Av. Marcelino Diniz, s/n",
+    "Latitude": "-7.304044",
+    "Longitude": "-38.155610"
+  },
+  {
+    "CIDADE - UF": "ITATIAIA - RJ",
+    "UF": "RJ",
+    "Nome": "ITATIAIA - RJ",
+    "Descricao": "Rodoviária de Itatiaia - Centro, BR-485, 284",
+    "Latitude": "-22.491688",
+    "Longitude": " -44.563618"
+  },
+  {
+    "CIDADE - UF": "ITINGA DO MARANHAO - MA",
+    "UF": "MA",
+    "Nome": "ITINGA DO MARANHAO - MA",
+    "Descricao": "Rodoviária de Itinga do Maranhão - R. das Mangueiras, 2-132",
+    "Latitude": "-4.452695",
+    "Longitude": "-47.530974"
+  },
+  {
+    "CIDADE - UF": "ITU - SP",
+    "UF": "SP",
+    "Nome": "ITU - SP",
+    "Descricao": "Rodoviária de Itu - Liberdade, Av. Dr. Otaviano Pereira Mendes, s/n",
+    "Latitude": "-23.260300",
+    "Longitude": "-47.296040"
+  },
+  {
+    "CIDADE - UF": "ITUMBIARA - GO",
+    "UF": "GO",
+    "Nome": "ITUMBIARA - GO",
+    "Descricao": "Rodoviária de Itumbiara - St.Rodoviaria, Av. Osvaldo Cruz, 120",
+    "Latitude": "-18.403370",
+    "Longitude": "-49.211920"
+  },
+  {
+    "CIDADE - UF": "JACAREI - SP",
+    "UF": "SP",
+    "Nome": "JACAREI - SP",
+    "Descricao": "Rodoviária de Jacarei - Jardim Marcondes, Av. Engenheiro Davi Monteiro Lino, s/n",
+    "Latitude": "-23.27738",
+    "Longitude": "-45.954197"
+  },
+  {
+    "CIDADE - UF": "JACIARA - MT",
+    "UF": "MT",
+    "Nome": "JACIARA - MT",
+    "Descricao": "Rodoviária de Jaciara - Vila Planalto, Av. Antônio Ferreira Sobrinho, 1532-1702",
+    "Latitude": "-15.953039",
+    "Longitude": "-54.976831"
+  },
+  {
+    "CIDADE - UF": "JACOBINA - BA",
+    "UF": "BA",
+    "Nome": "JACOBINA - BA",
+    "Descricao": "Rodoviária de Jacobina - Peru, Rua Reinaldo Jacobina Vieira, s/n",
+    "Latitude": "-11.184529",
+    "Longitude": "-40.521019"
+  },
+  {
+    "CIDADE - UF": "JAGUAQUARA - BA",
+    "UF": "BA",
+    "Nome": "JAGUAQUARA - BA",
+    "Descricao": "Rodoviária de Jaguaquara - Jaguar, Rua Prof. Paulo Freire, 56-84",
+    "Latitude": "-13.526191",
+    "Longitude": "-39.971394"
+  },
+  {
+    "CIDADE - UF": "JAGUARIBE - CE",
+    "UF": "CE",
+    "Nome": "JAGUARIBE - CE",
+    "Descricao": "Agência Guanabara de Jaguaribe - Centro, Av. Oito de Novembro, s/n",
+    "Latitude": "-5.884928",
+    "Longitude": "-38.621250"
+  },
+  {
+    "CIDADE - UF": "JATAI - GO",
+    "UF": "GO",
+    "Nome": "JATAI - GO",
+    "Descricao": "Rodoviária de Jatai - Vila Sofia, Av. Enedino Peres de Assis, 529-643",
+    "Latitude": "-17.912276",
+    "Longitude": "-51.722953"
+  },
+  {
+    "CIDADE - UF": "JATI - CE",
+    "UF": "CE",
+    "Nome": "JATI - CE",
+    "Descricao": "Agência Guanabara de Jati - Rod. Padre Cícero, Bela Vista, s/n",
+    "Latitude": "-7.690538",
+    "Longitude": "-39.009319"
+  },
+  {
+    "CIDADE - UF": "JERICO - PB",
+    "UF": "PB",
+    "Nome": "JERICO - PB",
+    "Descricao": "Agência Guanabara de Jericó - Centro, Rua Nestor Pires De Oliveira, s/n",
+    "Latitude": "-6.553858",
+    "Longitude": "-37.805680"
+  },
+  {
+    "CIDADE - UF": "JOAO PESSOA - PB",
+    "UF": "PB",
+    "Nome": "JOAO PESSOA - PB",
+    "Descricao": "Agência Guanabara de João Pessoa - Varadouro, Rua Francisco Londres, s/n",
+    "Latitude": "-7.118370",
+    "Longitude": "-34.890720"
+  },
+  {
+    "CIDADE - UF": "JOAO PINHEIRO - MG",
+    "UF": "MG",
+    "Nome": "P/ JOAO PINHEIRO - MG",
+    "Descricao": "Rodoviária de João Pinheiro - Picada, Praça Juca Gonçalves Cruzeiro, 152",
+    "Latitude": "-17.740720",
+    "Longitude": "-46.175883"
+  },
+  {
+    "CIDADE - UF": "JOAO PINHEIRO - MG",
+    "UF": "MG",
+    "Nome": "JOAO PINHEIRO - MG",
+    "Descricao": "Rodoviária de João Pinheiro - Picada, Praça Juca Gonçalves Cruzeiro, 152",
+    "Latitude": "-17.740720",
+    "Longitude": "-46.175883"
+  },
+  {
+    "CIDADE - UF": "JOINVILLE - SC",
+    "UF": "SC",
+    "Nome": "JOINVILLE - SC",
+    "Descricao": "Rodoviária de Joinville - Anita Garibaldi, Rua Paraíba, 769",
+    "Latitude": "-26.315100",
+    "Longitude": "-48.857600"
+  },
+  {
+    "CIDADE - UF": "JEREMOABO - BA",
+    "UF": "BA",
+    "Nome": "JEREMOABO - BA",
+    "Descricao": "Agência Guanabara de Jeremoabo - Centro, Avenida Recife, s/n",
+    "Latitude": "-10.076548",
+    "Longitude": "-38.346911"
+  },
+  {
+    "CIDADE - UF": "JUAZEIRINHO - PB",
+    "UF": "PB",
+    "Nome": "JUAZEIRINHO - PB",
+    "Descricao": "Rodoviária de Juazeirinho - BR-230, Rua João Vital Guedes, s/n",
+    "Latitude": "-7.069119",
+    "Longitude": "-36.578847"
+  },
+  {
+    "CIDADE - UF": "JUAZEIRO DO NORTE - CE",
+    "UF": "CE",
+    "Nome": "JUAZEIRO DO NORTE - CE",
+    "Descricao": "Agência Guanabara de Juazeiro do Norte - Triangulo, Rua Raimundo Machado da Silva, s/n",
+    "Latitude": "-7.226480",
+    "Longitude": "-39.322530"
+  },
+  {
+    "CIDADE - UF": "JUIZ DE FORA - MG",
+    "UF": "MG",
+    "Nome": "JUIZ DE FORA - MG",
+    "Descricao": "Rodoviária de Juiz de Fora - São Dimas, Av. Brasil, 9501",
+    "Latitude": "-21.738780",
+    "Longitude": "-43.374940"
+  },
+  {
+    "CIDADE - UF": "JUNDIAI - SP",
+    "UF": "SP",
+    "Nome": "JUNDIAI - SP",
+    "Descricao": "Rodoviária de Jundiaí - Anhangabaú, Av. 9 de Julho, 400",
+    "Latitude": "-23.207384",
+    "Longitude": "-46.895377"
+  },
+  {
+    "CIDADE - UF": "JUSSARA - GO",
+    "UF": "GO",
+    "Nome": "JUSSARA - GO",
+    "Descricao": "Rodoviária de Jussara - Av. B, Rua Três, s/n",
+    "Latitude": "-15.860500",
+    "Longitude": "-50.868400"
+  },
+  {
+    "CIDADE - UF": "LAGOA DOURADA - MG",
+    "UF": "MG",
+    "Nome": "LAGOA DOURADA - MG",
+    "Descricao": "Rodoviária de Lagoa Dourada - Rua Altino José de Resende, s/n",
+    "Latitude": "20.914.200",
+    "Longitude": "44072300"
+  },
+  {
+    "CIDADE - UF": "LAMBARI - MG",
+    "UF": "MG",
+    "Nome": "LAMBARI - MG",
+    "Descricao": "Rodoviária de Lambari - Campinho, Av. Dr. José Nicolau Mileo, 393",
+    "Latitude": "-21.970370",
+    "Longitude": "-45.348820"
+  },
+  {
+    "CIDADE - UF": "LAVRAS - MG",
+    "UF": "MG",
+    "Nome": "LAVRAS - MG",
+    "Descricao": "Rodoviária de Lavras - Ouro Preto, Rua Dr. Paulo Oliveira Lima, s/n",
+    "Latitude": "-21.254070",
+    "Longitude": "-45.005977"
+  },
+  {
+    "CIDADE - UF": "LEME - SP",
+    "UF": "SP",
+    "Nome": "LEME - SP",
+    "Descricao": "Rodoviária de Leme - Centro, Av. Benedito Landgraf, 303",
+    "Latitude": "-22.189756",
+    "Longitude": "-47.396200"
+  },
+  {
+    "CIDADE - UF": "LENCOIS - BA",
+    "UF": "BA",
+    "Nome": "LENCOIS - BA",
+    "Descricao": "Rodoviária de Lençois - Centro, Av. Sr. dos Passos, s/n",
+    "Latitude": "-12.560470",
+    "Longitude": "-41.391740"
+  },
+  {
+    "CIDADE - UF": "LENCOIS - BA",
+    "UF": "BA",
+    "Nome": "ENT LENCOIS - BA",
+    "Descricao": "Rodoviária de Lençois - Centro, Av. Sr. dos Passos, s/n",
+    "Latitude": "-12.560470",
+    "Longitude": "-41.391740"
+  },
+  {
+    "CIDADE - UF": "LIMEIRA - SP",
+    "UF": "SP",
+    "Nome": "LIMEIRA - SP",
+    "Descricao": "Rodoviária de Limeira - Centro, Rua Barão de Campinas, 50",
+    "Latitude": "-22.565020",
+    "Longitude": "-47.398130"
+  },
+  {
+    "CIDADE - UF": "LIMOEIRO DO NORTE - CE",
+    "UF": "CE",
+    "Nome": "LIMOEIRO DO NORTE - CE",
+    "Descricao": "Agência Guanabara de Limoeiro do Norte - João XXIII, Rua Cel. Sindulfo Chaves, 590",
+    "Latitude": "-5.151050",
+    "Longitude": "-38.099200"
+  },
+  {
+    "CIDADE - UF": "LINS - SP",
+    "UF": "SP",
+    "Nome": "LINS - SP",
+    "Descricao": "Rodoviária de Lins - Centro, Av. Tiradentes, 2401",
+    "Latitude": "-21.672803",
+    "Longitude": "-49.747910"
+  },
+  {
+    "CIDADE - UF": "LONDRINA - PR",
+    "UF": "PR",
+    "Nome": "LONDRINA - PR",
+    "Descricao": "Rodoviária de Londrina - Centro, Av. Dez de Dezembro, 1830",
+    "Latitude": "-23.309390",
+    "Longitude": "-51.149755"
+  },
+  {
+    "CIDADE - UF": "LORENA - SP",
+    "UF": "SP",
+    "Nome": "LORENA - SP",
+    "Descricao": "Rodoviária de Lorena - Vila Hepacare, Estr. Mun. Sta Teresinha, 517",
+    "Latitude": "-22.740100",
+    "Longitude": "-45.119740"
+  },
+  {
+    "CIDADE - UF": "LUCAS DO RIO VERDE - MT",
+    "UF": "MT",
+    "Nome": "LUCAS DO RIO VERDE - MT",
+    "Descricao": "Rodoviária de Lucas do Rio Verde - Alvorada, Av. Santa Catarina, s/n",
+    "Latitude": "-13.078369",
+    "Longitude": "-55.918688"
+  },
+  {
+    "CIDADE - UF": "LUIS CORREIA - PI",
+    "UF": "PI",
+    "Nome": "LUIS CORREIA - PI",
+    "Descricao": "Agência Guanabara de Luís Correia - Centro, Av. José Maria de Lima, 1272-1308",
+    "Latitude": "-2.882309",
+    "Longitude": "-41.665933"
+  },
+  {
+    "CIDADE - UF": "LUIS EDUARDO MAGALHAES - BA",
+    "UF": "BA",
+    "Nome": "LUIS EDUARDO MAGALHAES - BA",
+    "Descricao": "Rodoviária de Luis Eduardo Magalhães - Setor Sul, Av. Arnaldo Horacio Ferreira, 468",
+    "Latitude": "-12.096210",
+    "Longitude": "-45.810740"
+  },
+  {
+    "CIDADE - UF": "LUZIANIA - GO",
+    "UF": "GO",
+    "Nome": "LUZIANIA - GO",
+    "Descricao": "Rodoviária de Luziânia - Parque Estrela Dalva I, Rua José Alencar, 536",
+    "Latitude": "-16.252720",
+    "Longitude": "-47.933890"
+  },
+  {
+    "CIDADE - UF": "MACAE - RJ",
+    "UF": "RJ",
+    "Nome": "MACAE - RJ",
+    "Descricao": "Rodoviária de Macae - Centro, Rua Dr. Francisco Portela, 50",
+    "Latitude": "-22.378431",
+    "Longitude": "-41.779678"
+  },
+  {
+    "CIDADE - UF": "MACAUBAS - BA",
+    "UF": "BA",
+    "Nome": "MACAUBAS - BA",
+    "Descricao": "Rodoviária de Macaúbas - Praça Maestro José Preto, Rua da Saudade, s/n",
+    "Latitude": "-13.014041",
+    "Longitude": " -42.687149"
+  },
+  {
+    "CIDADE - UF": "MACEIO - AL",
+    "UF": "AL",
+    "Nome": "MACEIO - AL",
+    "Descricao": "Agência Guanabara de Maceio João Paulo II- Feitosa, Av Governador Lamenha Filho, s/n",
+    "Latitude": "-9.645970",
+    "Longitude": "-35.725550"
+  },
+  {
+    "CIDADE - UF": "MAE DO RIO - PA",
+    "UF": "PA",
+    "Nome": "MAE DO RIO - PA",
+    "Descricao": "Rodoviária de Mãe do Rio - Centro, Av. Bernardo Sayão, s/n",
+    "Latitude": "-2.049100",
+    "Longitude": "-47.550600"
+  },
+  {
+    "CIDADE - UF": "MARABA - PA",
+    "UF": "PA",
+    "Nome": "MARABA - PA",
+    "Descricao": "Agência Guanabara de Marabá - Vila Militar Pres, Castelo Branco, s/n",
+    "Latitude": "-5.349160",
+    "Longitude": "-49.102770"
+  },
+  {
+    "CIDADE - UF": "MARANHAOZINHO - MA",
+    "UF": "MA",
+    "Nome": "MARANHAOZINHO - MA",
+    "Descricao": "Rodoviária de Maranhãozinho Cunha Rodrigues - Rua Gov. Luis Rocha, 2-338 - 2-338",
+    "Latitude": "-2.244111",
+    "Longitude": "-45.855622"
+  },
+  {
+    "CIDADE - UF": "MARILIA - SP",
+    "UF": "SP",
+    "Nome": "MARILIA - SP",
+    "Descricao": "Rodoviária de Marília - Fragata, Av. Carlos Artêncio, 1001",
+    "Latitude": "-22.230630",
+    "Longitude": "-49.922950"
+  },
+  {
+    "CIDADE - UF": "MARIANA - MG",
+    "UF": "MG",
+    "Nome": "MARIANA - MG",
+    "Descricao": "Rodoviária de Mariana - Rod.Inconfidentes,Vila do Carmo, s/n.",
+    "Latitude": "-20.389145",
+    "Longitude": "-43.426805"
+  },
+  {
+    "CIDADE - UF": "MARINGA - PR",
+    "UF": "PR",
+    "Nome": "MARINGA - PR",
+    "Descricao": "Rodoviária de Maringa - Vila Nova, Av. Tuiuti, 180",
+    "Latitude": "-23.425953",
+    "Longitude": "-51.910068"
+  },
+  {
+    "CIDADE - UF": "MARTINOPOLE - CE",
+    "UF": "CE",
+    "Nome": "MARTINOPOLE - CE",
+    "Descricao": "Agência Guanabara de Martinopole - CE-362, Rua Elpídio Carneiro, 42",
+    "Latitude": "-3.226290",
+    "Longitude": "-40.691960"
+  },
+  {
+    "CIDADE - UF": "MAURITI - CE",
+    "UF": "CE",
+    "Nome": "MAURITI - CE",
+    "Descricao": "Agência Guanabara de Mauriti Antônio Mingu - Nossa Sra. de Fátima, Av. Buriti Grande, s/n",
+    "Latitude": "-7.387531",
+    "Longitude": "-38.781248"
+  },
+  {
+    "CIDADE - UF": "MENDES - RJ",
+    "UF": "RJ",
+    "Nome": "MENDES - RJ",
+    "Descricao": "Rodoviária de Mendes - Centro, Av. Júlio Braga, 11",
+    "Latitude": "-22.525910",
+    "Longitude": "-43.731400"
+  },
+  {
+    "CIDADE - UF": "FORTALEZA - CE",
+    "UF": "CE",
+    "Nome": "FORTALEZA (MESSEJANA) - CE",
+    "Descricao": "Agência Guanabara da Messejana (FOR) - Messejana, Rua Granja Castelo, 260",
+    "Latitude": "-3.831106",
+    "Longitude": "-38.500242"
+  },
+  {
+    "CIDADE - UF": "MIGUEL PEREIRA - RJ",
+    "UF": "RJ",
+    "Nome": "MIGUEL PEREIRA - RJ",
+    "Descricao": "Rodoviária de Miguel Pereira - Vila Margarida, Av. Marechal Rondom, s/n",
+    "Latitude": "-22.461460",
+    "Longitude": "-43.482420"
+  },
+  {
+    "CIDADE - UF": "MILAGRES - CE",
+    "UF": "CE",
+    "Nome": "MILAGRES - CE",
+    "Descricao": "Agência Guanabara de Milagres Antônia Valdelice Leite - BR116, KM485, s/n",
+    "Latitude": "-7.311674",
+    "Longitude": "-38.937700"
+  },
+  {
+    "CIDADE - UF": "MINEIROS - GO",
+    "UF": "GO",
+    "Nome": "MINEIROS - GO",
+    "Descricao": "Rodoviária de Mineiros - Lot. Cambauva, Rua Elias Carrijo Machado, Q01 L01, s/n",
+    "Latitude": "-17.565800",
+    "Longitude": "-52.561400"
+  },
+  {
+    "CIDADE - UF": "MIRANDA DO NORTE - MA",
+    "UF": "MA",
+    "Nome": "MIRANDA DO NORTE - MA",
+    "Descricao": "Agência Guanabara de Miranda do Norte - Centro, Av. do Comercio, s/n",
+    "Latitude": "-3.564035",
+    "Longitude": "-44.585464"
+  },
+  {
+    "CIDADE - UF": "MISSAO VELHA - CE",
+    "UF": "CE",
+    "Nome": "MISSAO VELHA - CE",
+    "Descricao": "Agência Guanabara de Missão Velha - Centro, Rua Cel. José Dantas, 1115",
+    "Latitude": "-7.249538",
+    "Longitude": "-39.141539"
+  },
+  {
+    "CIDADE - UF": "MOGI DAS CRUZES - SP",
+    "UF": "SP",
+    "Nome": "MOGI DAS CRUZES - SP",
+    "Descricao": "Rodoviária de Mogi das Cruzes - Vila Mogilar, Av. Francisco Rodrigues Filho, 1500",
+    "Latitude": "-23.514705",
+    "Longitude": "-46.183915"
+  },
+  {
+    "CIDADE - UF": "MOMBACA - CE",
+    "UF": "CE",
+    "Nome": "MOMBACA - CE",
+    "Descricao": "Agência Guanabara de Mombaça - Centro, Rua Vereador Lemos, s/n",
+    "Latitude": "-5.744140",
+    "Longitude": "-39.624900"
+  },
+  {
+    "CIDADE - UF": "MONTE ALEGRE DE GOIAS - GO",
+    "UF": "GO",
+    "Nome": "MONTE ALEGRE DE GOIAS - GO",
+    "Descricao": "Rodoviária de Monte Alegre de Goías - Av. Libanio Regis, s/n",
+    "Latitude": "-13.258900",
+    "Longitude": "-46.889090"
+  },
+  {
+    "CIDADE - UF": "MONTE HOREBE - PB",
+    "UF": "PB",
+    "Nome": "MONTE HOREBE - PB",
+    "Descricao": "Rodoviária de Monte Horebe - Rua Joaquim de Souza, 1",
+    "Latitude": "-7.214080",
+    "Longitude": "-38.583870"
+  },
+  {
+    "CIDADE - UF": "MONTE SIAO - MG",
+    "UF": "MG",
+    "Nome": "MONTE SIAO - MG",
+    "Descricao": "Rodoviária de Monte Sião - Centro, Rua do Mercardo, s/n",
+    "Latitude": "-22.432180",
+    "Longitude": "-46.572426"
+  },
+  {
+    "CIDADE - UF": "MORADA NOVA - CE",
+    "UF": "CE",
+    "Nome": "MORADA NOVA - CE",
+    "Descricao": "Agên cia Guanabara de Morada Nova - Av. Manoel Castro Gomes de Andrade, s/n",
+    "Latitude": "-5.113363",
+    "Longitude": "-38.366140"
+  },
+  {
+    "CIDADE - UF": "MORRINHOS - GO",
+    "UF": "GO",
+    "Nome": "MORRINHOS - GO",
+    "Descricao": "Rodoviaria De Morrinhos - Centro,Praça Rui Barbosa,s/n",
+    "Latitude": "-17.734412",
+    "Longitude": "-49.101487"
+  },
+  {
+    "CIDADE - UF": "MORRINHOS - CE",
+    "UF": "CE",
+    "Nome": "MORRINHOS - CE",
+    "Descricao": "Agência Guanabara de Morrinhos - Centro,Rua Joaquim Teles de Meneses,226",
+    "Latitude": "-3.226578",
+    "Longitude": "-40.126782"
+  },
+  {
+    "CIDADE - UF": "MOSSORO - RN",
+    "UF": "RN",
+    "Nome": "MOSSORO - RN",
+    "Descricao": "Agência Guanabara de Mossoró - Dix Sept Rosado, Av. do Contorno, 1020",
+    "Latitude": "-5.185450",
+    "Longitude": "-37.373950"
+  },
+  {
+    "CIDADE - UF": "NATAL - RN",
+    "UF": "RN",
+    "Nome": "NATAL - RN",
+    "Descricao": "Agência Guanabara de Natal - Nossa Sra. de Nazaré, Av. Capitão-Mor Gouveia, 1597",
+    "Latitude": "-5.819680",
+    "Longitude": "-35.235520"
+  },
+  {
+    "CIDADE - UF": "NEPOMUCENO - MG",
+    "UF": "MG",
+    "Nome": "NEPOMUCENO - MG",
+    "Descricao": "Rodoviária de Nepomuceno - Hipólito, R. Vicente Paula Costa, s/n",
+    "Latitude": "-21.232401",
+    "Longitude": "-45.231637"
+  },
+  {
+    "CIDADE - UF": "NITEROI - RJ",
+    "UF": "RJ",
+    "Nome": "NITEROI - RJ",
+    "Descricao": "Rodoviaria de Niterói - Centro, Rua Feliciano Sodre, s/n",
+    "Latitude": "-22.885163",
+    "Longitude": "-43.121810"
+  },
+  {
+    "CIDADE - UF": "NOVA IGUACU - RJ",
+    "UF": "RJ",
+    "Nome": "NOVA IGUACU - RJ",
+    "Descricao": "Rodoviária de Nova Iguaçu - Chacrinha, Av. Mal. Floriano Peixoto, 2630",
+    "Latitude": "-22.757040",
+    "Longitude": "-43.456140"
+  },
+  {
+    "CIDADE - UF": "NOVA MUTUM - MT",
+    "UF": "MT",
+    "Nome": "NOVA MUTUM - MT",
+    "Descricao": "Rodoviária de Nova Mutum - AV. Perimertal das Samambaias, s/n",
+    "Latitude": "-13.822711",
+    "Longitude": "-56.078747"
+  },
+  {
+    "CIDADE - UF": "NOVA OLINDA DO MARANHAO - MA",
+    "UF": "MA",
+    "Nome": "NOVA OLINDA DO MARANHAO - MA",
+    "Descricao": "Rodoviaria de Nova Olinda do Maranhão RodoCenter - Centro, Rodo Center Center, s/n",
+    "Latitude": "-2.807270",
+    "Longitude": "-45.703956"
+  },
+  {
+    "CIDADE - UF": "NOVA RUSSAS - CE",
+    "UF": "CE",
+    "Nome": "NOVA RUSSAS - CE",
+    "Descricao": "Agência Guanabara de Nova Russas - Av. Joaquim Lopes Pedrosa, s/n",
+    "Latitude": "-4.706700",
+    "Longitude": "-40.555900"
+  },
+  {
+    "CIDADE - UF": "NOVA SERRANA - MG",
+    "UF": "MG",
+    "Nome": "NOVA SERRANA - MG",
+    "Descricao": "Rodoviária de Nova Serrana - Vila Vera Cruz, Rua Cel. Martinho Ferreira do Amaral, 12",
+    "Latitude": "-19.871760",
+    "Longitude": "-44.979365"
+  },
+  {
+    "CIDADE - UF": "OEIRAS - PI",
+    "UF": "PI",
+    "Nome": "OEIRAS - PI",
+    "Descricao": "Agência Guanabara de Oeiras - Rodagem de Picos, Rod. Transamazônica, s/n",
+    "Latitude": "-7.008500",
+    "Longitude": "-42.125420"
+  },
+  {
+    "CIDADE - UF": "ORLANDIA - SP",
+    "UF": "SP",
+    "Nome": "ORLANDIA - SP",
+    "Descricao": "Rodoviária de Orlândia - Centro, Rua Onze, 101",
+    "Latitude": "-20.726816",
+    "Longitude": "-47.884932"
+  },
+  {
+    "CIDADE - UF": "OSASCO - SP",
+    "UF": "SP",
+    "Nome": "OSASCO - SP",
+    "Descricao": "Rodoviária de Osasco - Presidente Altino, Rua Erasmo Braga, 1500",
+    "Latitude": "-23.527020",
+    "Longitude": "-46.776340"
+  },
+  {
+    "CIDADE - UF": "OSORIO - RS",
+    "UF": "RS",
+    "Nome": "OSORIO - RS",
+    "Descricao": "Rodoviária de Osório - Centro, Rua Sete de Setembro, 162",
+    "Latitude": "-29.888581",
+    "Longitude": "-50.273975"
+  },
+  {
+    "CIDADE - UF": "OURICURI - PE",
+    "UF": "PE",
+    "Nome": "OURICURI - PE",
+    "Descricao": "Agência Guanabara de Ouricuri - Centro, Rua Professora Carmélia Cardoso Jaques, 549-679",
+    "Latitude": "-7.880195",
+    "Longitude": "-40.077790"
+  },
+  {
+    "CIDADE - UF": "OURINHOS - SP",
+    "UF": "SP",
+    "Nome": "OURINHOS - SP",
+    "Descricao": "Rodoviária de Ourinhos - Vila Perino, Rua Santa Catarina, 415",
+    "Latitude": "-22.967250",
+    "Longitude": "-49.866740"
+  },
+  {
+    "CIDADE - UF": "OURO BRANCO - MG",
+    "UF": "MG",
+    "Nome": "OURO BRANCO - MG",
+    "Descricao": "Rodoviária de Ouro Branco - Avenida Raymundo Campos, s/n",
+    "Latitude": "-20.521201",
+    "Longitude": "-43.695061"
+  },
+  {
+    "CIDADE - UF": "OURO FINO - MG",
+    "UF": "MG",
+    "Nome": "OURO FINO - MG",
+    "Descricao": "Rodoviária de Ouro Fino - Centro, Rua Antero Simões, 10",
+    "Latitude": "-22.277200",
+    "Longitude": "-46.372060"
+  },
+  {
+    "CIDADE - UF": "OURO PRETO - MG",
+    "UF": "MG",
+    "Nome": "OURO PRETO - MG",
+    "Descricao": "Rodoviária de Ouro Preto 8 de Julho - São Cristóvão, Rua Padre Rolim, 661",
+    "Latitude": "-20.380660",
+    "Longitude": "-43.507590"
+  },
+  {
+    "CIDADE - UF": "PACAJUS - CE",
+    "UF": "CE",
+    "Nome": "PACAJUS - CE",
+    "Descricao": "Agência Guanabara de Pacajus - Av . Conego Eduardo Araripe,3883",
+    "Latitude": "-4.188930",
+    "Longitude": "-38.465100"
+  },
+  {
+    "CIDADE - UF": "PALMAS - TO",
+    "UF": "TO",
+    "Nome": "PALMAS - TO",
+    "Descricao": "Rodoviária de Palmas - Plano Diretor Sul, Av. Hélio, 125",
+    "Latitude": "-10.256780",
+    "Longitude": "-48.312920"
+  },
+  {
+    "CIDADE - UF": "PALMEIRA DOS INDIOS - AL",
+    "UF": "AL",
+    "Nome": "PALMEIRA DOS INDIOS - AL",
+    "Descricao": "Rodoviária de Palmeira dos Indíos - Av. Muniz Falcão, sn",
+    "Latitude": "-9.422000",
+    "Longitude": "-36.623337"
+  },
+  {
+    "CIDADE - UF": "PALMEIRAS - BA",
+    "UF": "BA",
+    "Nome": "PALMEIRAS - BA",
+    "Descricao": "Rodoviária de Palmeiras - Rua Rui Barbosa, 146-172",
+    "Latitude": "-12.512383",
+    "Longitude": "-41.574815"
+  },
+  {
+    "CIDADE - UF": "PARACATU - MG",
+    "UF": "MG",
+    "Nome": "PARACATU - RESTAURANTE E POUSADA - MG",
+    "Descricao": "Rodoviária de Paracatu - BR-040, KM 46, Alvorada, s/n (Restaurante)",
+    "Latitude": "-17.233100",
+    "Longitude": "-46.849680"
+  },
+  {
+    "CIDADE - UF": "PARAGOMINAS - PA",
+    "UF": "PA",
+    "Nome": "PARAGOMINAS - PA",
+    "Descricao": "Rodoviaria de Paragominas Terezinha Scaramussa- Nova Conquista, Av. Pres. Vargas, 3820",
+    "Latitude": "-2.989849",
+    "Longitude": "-47.375521"
+  },
+  {
+    "CIDADE - UF": "PARAIPABA - CE",
+    "UF": "CE",
+    "Nome": "PARAIPABA - CE",
+    "Descricao": "Rodoviária de Paraipaba - Av. Antônio Eusébio, 228",
+    "Latitude": "-3.437028",
+    "Longitude": "-39.145542"
+  },
+  {
+    "CIDADE - UF": "PARAISO DO TOCANTINS - TO",
+    "UF": "TO",
+    "Nome": "PARAISO DO TOCANTINS - TO",
+    "Descricao": "Rodoviária de Paraíso do Tocantins - Centro, Rua Alfredo Nasser, 904-1022",
+    "Latitude": "-10.168870",
+    "Longitude": "-48.884396"
+  },
+  {
+    "CIDADE - UF": "PARAMBU - CE",
+    "UF": "CE",
+    "Nome": "PARAMBU - CE",
+    "Descricao": "Rodoviária de Parambu - Horácio Alves Noronha, s/n",
+    "Latitude": "-6.214400",
+    "Longitude": "-40.686520"
+  },
+  {
+    "CIDADE - UF": "PARATY - RJ",
+    "UF": "RJ",
+    "Nome": "PARATY - RJ",
+    "Descricao": "Rodoviária de Paraty - Parque Imperial, Rua Adoniran Barbosa, 1430-1440",
+    "Latitude": "-23.221353",
+    "Longitude": "-44.719153"
+  },
+  {
+    "CIDADE - UF": "PARAUAPEBAS - PA",
+    "UF": "PA",
+    "Nome": "PARAUAPEBAS - PA",
+    "Descricao": "Rodoviária de Parauapebas - Beira Rio, Rua Rio Dourado, 390",
+    "Latitude": "-6.076310",
+    "Longitude": "-49.884400"
+  },
+  {
+    "CIDADE - UF": "SAO MIGUEL DO GUAMA - PA",
+    "UF": "PA",
+    "Nome": "SAO MIGUEL DO GUAMA - PA",
+    "Descricao": "Rodoviária de Parnagua - Estr. Cipriano Mendes Rodrigues, Rod. Bernardo Sayão, s/n",
+    "Latitude": "-1.622530",
+    "Longitude": "-47.478980"
+  },
+  {
+    "CIDADE - UF": "PARNAIBA - PI",
+    "UF": "PI",
+    "Nome": "PARNAIBA - PI",
+    "Descricao": "Agência Guanabara de Parnaíba - Rodoviária. Av. Dep. Pinheiro Machado, 3069",
+    "Latitude": "-2.928100",
+    "Longitude": "-41.753210"
+  },
+  {
+    "CIDADE - UF": "PATOS - PB",
+    "UF": "PB",
+    "Nome": "PATOS - PB",
+    "Descricao": "Agência Guanabara de Patos - Centro, Ana Leite, 230",
+    "Latitude": "-7.019532",
+    "Longitude": "-37.259290"
+  },
+  {
+    "CIDADE - UF": "PATY DO ALFERES - RJ",
+    "UF": "RJ",
+    "Nome": "PATY DO ALFERES - RJ",
+    "Descricao": "Rodoviária de Paty do Alferes - Lot. Novo Arcozelo, Av. Brasil, s/n",
+    "Latitude": "-22.406126",
+    "Longitude": "-43.422188"
+  },
+  {
+    "CIDADE - UF": "PAU DOS FERROS - RN",
+    "UF": "RN",
+    "Nome": "PAU DOS FERROS - RN",
+    "Descricao": "Agência Guanabara de Pau de Ferros - Rua Dr. José Torquato de Figueirado, Princesinha do Oeste, s/n",
+    "Latitude": "-6.121303",
+    "Longitude": "-38.205524"
+  },
+  {
+    "CIDADE - UF": "PAULO AFONSO - BA",
+    "UF": "BA",
+    "Nome": "PAULO AFONSO - BA",
+    "Descricao": "Rodoviária de Paulo Afonso - Av. Apolônio Sáles, S/N - Centro, Paulo Afonso - BA",
+    "Latitude": "-9.398799",
+    "Longitude": "-38.231932"
+  },
+  {
+    "CIDADE - UF": "PERITORO - MA",
+    "UF": "MA",
+    "Nome": "PERITORO - MA",
+    "Descricao": "Agência Guanabara de Peritoró - Centro, Praça da Amizade, s/n",
+    "Latitude": "-4.372670",
+    "Longitude": "-44.338820"
+  },
+  {
+    "CIDADE - UF": "PESQUEIRA - PE",
+    "UF": "PE",
+    "Nome": "PESQUEIRA - PE",
+    "Descricao": "Agência Guanabara de Pesqueira - Rua Ver. Enedino de Freitas, 28 - Centro",
+    "Latitude": "8.356.450",
+    "Longitude": "36695300"
+  },
+  {
+    "CIDADE - UF": "PETROLINA - PE",
+    "UF": "PE",
+    "Nome": "PETROLINA - PE",
+    "Descricao": "Agência Guanabara de Petrolina - Gercino Coelho, Rua Condé D'eu, 153",
+    "Latitude": "-9.391938",
+    "Longitude": "-40.509133"
+  },
+  {
+    "CIDADE - UF": "PIANCO - PB",
+    "UF": "PB",
+    "Nome": "PIANCO - PB",
+    "Descricao": "Rodoviária de Pianco - Rua Mascarenhas de Morais, 103-203",
+    "Latitude": "-7.199250",
+    "Longitude": "-37.925880"
+  },
+  {
+    "CIDADE - UF": "PICOS - PI",
+    "UF": "PI",
+    "Nome": "PICOS - PI",
+    "Descricao": "Agência Guanabara de Picos - Boa Sorte, Av. Senador Helvídio Nunes, 1256",
+    "Latitude": "-7.078300",
+    "Longitude": "41.461950"
+  },
+  {
+    "CIDADE - UF": "PINDAMONHANGABA - SP",
+    "UF": "SP",
+    "Nome": "PINDAMONHANGABA - SP",
+    "Descricao": "Rodoviária de Pindamonhangaba - Alto do Cardoso, Rua Antonio Rita do Amaral, s/n",
+    "Latitude": "-22.936569",
+    "Longitude": "-45.462803"
+  },
+  {
+    "CIDADE - UF": "PINHEIRO - MA",
+    "UF": "MA",
+    "Nome": "PINHEIRO - MA",
+    "Descricao": "Rodoviária de Pinheiro - Centro, Rua Frederico Peixoto, s/n",
+    "Latitude": "-2.518320",
+    "Longitude": "-45.077840"
+  },
+  {
+    "CIDADE - UF": "PIRACURUCA - PI",
+    "UF": "PI",
+    "Nome": "PIRACURUCA - PI",
+    "Descricao": "Agência Guanabara de Piracuruca - Centro, Av. Aurélio Brito, 1",
+    "Latitude": "-3.935530",
+    "Longitude": "-41.710840"
+  },
+  {
+    "CIDADE - UF": "PIRAI - RJ",
+    "UF": "RJ",
+    "Nome": "PIRAI - RJ",
+    "Descricao": "Rodoviária de Pirai - Centro, Rua Bulhões de Carvalho, s/n",
+    "Latitude": "-22.629500",
+    "Longitude": "-43.897070"
+  },
+  {
+    "CIDADE - UF": "PIRASSUNUNGA - SP",
+    "UF": "SP",
+    "Nome": "PIRASSUNUNGA - SP",
+    "Descricao": "Rodoviária de Pirassununga - Centro, Rua dos Lemes, 971",
+    "Latitude": "-21.996260",
+    "Longitude": "-47.431140"
+  },
+  {
+    "CIDADE - UF": "PIRES DO RIO - GO",
+    "UF": "GO",
+    "Nome": "PIRES DO RIO - GO",
+    "Descricao": "Rodoviária de Pires do Rio - Nova Vila, Av. Egídio Francisco Rodrigues, 108",
+    "Latitude": "-17.308377",
+    "Longitude": "-48.282153"
+  },
+  {
+    "CIDADE - UF": "PIRIPIRI - PI",
+    "UF": "PI",
+    "Nome": "PIRIPIRI - PI",
+    "Descricao": "Agência Guanabara de Piripiri - Garibaldi, Rua Píres Rebelo, 2",
+    "Latitude": "-4.272670",
+    "Longitude": "-41.770810"
+  },
+  {
+    "CIDADE - UF": "BRASILIA - DF",
+    "UF": "DF",
+    "Nome": "PLANALTINA - DF",
+    "Descricao": "Rodoviária de Planaltina - Área Especial, Loja 02, Setor Tradicional.",
+    "Latitude": "-15.618722",
+    "Longitude": "-47.654478"
+  },
+  {
+    "CIDADE - UF": "PLANALTINA - GO",
+    "UF": "GO",
+    "Nome": "PLANALTINA - GO",
+    "Descricao": "Rodoviária de Planaltina - St. de Hoteis e Diversão",
+    "Latitude": "-15.618722",
+    "Longitude": "-47.654478"
+  },
+  {
+    "CIDADE - UF": "POCOES - BA",
+    "UF": "BA",
+    "Nome": "POCOES - BA",
+    "Descricao": "Rodoviária de Poções - Pituba, Av. Juscelino Kubitscheck, s/n",
+    "Latitude": "-14.524454",
+    "Longitude": "-40.376561"
+  },
+  {
+    "CIDADE - UF": "POMBAL - PB",
+    "UF": "PB",
+    "Nome": "POMBAL - PB",
+    "Descricao": "Agência Guanabara de Pombal - Santa Rosa, Rua Odilon Lopes, s/n",
+    "Latitude": "-6.766070",
+    "Longitude": "-37.794400"
+  },
+  {
+    "CIDADE - UF": "PONTA GROSSA - PR",
+    "UF": "PR",
+    "Nome": "PONTA GROSSA - PR",
+    "Descricao": "Rodoviária de Ponta Grossa - Nova Rússia, Av. João Manoel dos Santos Ribas, 120",
+    "Latitude": "-25.095270",
+    "Longitude": "-50.169430"
+  },
+  {
+    "CIDADE - UF": "PORANGATU - GO",
+    "UF": "GO",
+    "Nome": "PORANGATU - GO",
+    "Descricao": "Rodoviária de Porangatu - St. Central, Av. Adélino Américo de Azevedo, 1040",
+    "Latitude": "-13.431969",
+    "Longitude": "-49.142024"
+  },
+  {
+    "CIDADE - UF": "PORTO ALEGRE - RS",
+    "UF": "RS",
+    "Nome": "PORTO ALEGRE - RS",
+    "Descricao": "Rodoviária de Porto Alegre - Centro Histórico, Largo Vespasiano Júlio Veppo, 70",
+    "Latitude": "-30.022930",
+    "Longitude": "-51.219270"
+  },
+  {
+    "CIDADE - UF": "PORTO FRANCO - MA",
+    "UF": "MA",
+    "Nome": "PORTO FRANCO - MA",
+    "Descricao": "Rodoviária de Porto Franco - Rua Osvaldo Cruz, 1",
+    "Latitude": "-6.353060",
+    "Longitude": "-47.377264"
+  },
+  {
+    "CIDADE - UF": "POUSO ALEGRE - MG",
+    "UF": "MG",
+    "Nome": "POUSO ALEGRE - MG",
+    "Descricao": "Rodoviária de Pouso Alegre - Centro, Av. Levindo Ribeiro do Couto, s/n",
+    "Latitude": "-22.236420",
+    "Longitude": "-45.935530"
+  },
+  {
+    "CIDADE - UF": "PRAIA GRANDE - SP",
+    "UF": "SP",
+    "Nome": "PRAIA GRANDE - SP",
+    "Descricao": "Rodoviária de Praia Grande Tube Bastos - Sítio do Campo, Av. dos Trabalhadores, 7940",
+    "Latitude": "-23.998820",
+    "Longitude": "-46.414650"
+  },
+  {
+    "CIDADE - UF": "PRESIDENTE DUTRA - MA",
+    "UF": "MA",
+    "Nome": "PRESIDENTE DUTRA - MA",
+    "Descricao": "Rodoviária de Presidente Dutra - Praça da Rodoviária, Av. Campo Dantas, 07",
+    "Latitude": "-5.300314",
+    "Longitude": "-44.488302"
+  },
+  {
+    "CIDADE - UF": "PETROLANDIA - PE",
+    "UF": "PE",
+    "Nome": "PETROLANDIA - PE",
+    "Descricao": "Rodoviária de Pretolândia - Q. CS, Av. Manoel Borba, s/n",
+    "Latitude": "-8.984650",
+    "Longitude": "-38.217620"
+  },
+  {
+    "CIDADE - UF": "PRIMAVERA DO LESTE - MT",
+    "UF": "MT",
+    "Nome": "PRIMAVERA DO LESTE - MT",
+    "Descricao": "Rodoviária de Primavera do Leste - Parque Castelandia I, Av. Inácio Casteli, s/n",
+    "Latitude": "-15.566406",
+    "Longitude": "-54.300067"
+  },
+  {
+    "CIDADE - UF": "QUELUZ - SP",
+    "UF": "SP",
+    "Nome": "QUELUZ - SP",
+    "Descricao": "Rodoviária de Queluz - Av. Virgilío Camargo da Silva, s/n",
+    "Latitude": "-22.537400",
+    "Longitude": "-44.773000"
+  },
+  {
+    "CIDADE - UF": "QUIXADA - CE",
+    "UF": "CE",
+    "Nome": "QUIXADA - CE",
+    "Descricao": "Agência Guanabara de Quixada - Centro, Rua Presidente Vargas, 2320",
+    "Latitude": "-4.972970",
+    "Longitude": "-39.016345"
+  },
+  {
+    "CIDADE - UF": "MANHUACU - MG",
+    "UF": "MG",
+    "Nome": "REALEZA - MG",
+    "Descricao": "Rodoviária de Realeza - BR-262, 51, Realeza, Manhuaçu",
+    "Latitude": "-20.245876",
+    "Longitude": "-42.142062"
+  },
+  {
+    "CIDADE - UF": "RECIFE - PE",
+    "UF": "PE",
+    "Nome": "RECIFE - PE",
+    "Descricao": "Agência Guanabara de Recife,(TIP) - Varzea, Av. Prefeito Antonio Pereira, s/n",
+    "Latitude": "-8.064997",
+    "Longitude": "-34.981256"
+  },
+  {
+    "CIDADE - UF": "REDENCAO - PA",
+    "UF": "PA",
+    "Nome": "REDENCAO - PA",
+    "Descricao": "Rodoviária de Redenção - Av. Alceu Veronese, Alto Paraná, s/n",
+    "Latitude": "-8.040480",
+    "Longitude": "-50.022140"
+  },
+  {
+    "CIDADE - UF": "REDENCAO DO GURGUEIA - PI",
+    "UF": "PI",
+    "Nome": "REDENCAO DO GURGUEIA - PI",
+    "Descricao": "Rodoviária de Redenção do Gurgueia - Rua José Dario dos Santos, s/n",
+    "Latitude": "-9.490105",
+    "Longitude": "-44.585747"
+  },
+  {
+    "CIDADE - UF": "RESENDE - RJ",
+    "UF": "RJ",
+    "Nome": "RESENDE - RJ",
+    "Descricao": "Rodoviária de Resende - Montese, Rua Pedro Nunes de Souza, 95-341",
+    "Latitude": "-22.458730",
+    "Longitude": "-44.440150"
+  },
+  {
+    "CIDADE - UF": "RIALMA - GO",
+    "UF": "GO",
+    "Nome": "RIALMA - GO",
+    "Descricao": "Rodoviária de Rialma - St. Rodoviario, Rua 23, 154-166",
+    "Latitude": "-15.316100",
+    "Longitude": "-49.581190"
+  },
+  {
+    "CIDADE - UF": "RIBEIRA DO POMBAL - BA",
+    "UF": "BA",
+    "Nome": "RIBEIRA DO POMBAL - BA",
+    "Descricao": "Rodoviária de Ribeira do Pombal - Centro, Avenida Evência Brito, s/n",
+    "Latitude": "-10.842000",
+    "Longitude": "-38.531900"
+  },
+  {
+    "CIDADE - UF": "RIBEIRAO PRETO - SP",
+    "UF": "SP",
+    "Nome": "RIBEIRAO PRETO - SP",
+    "Descricao": "Rodoviária de Ribeirão Preto - Centro, Avenida Jerônimo Gonçalves, 640",
+    "Latitude": "-21.174.050",
+    "Longitude": "-47814550"
+  },
+  {
+    "CIDADE - UF": "RIO CLARO - SP",
+    "UF": "SP",
+    "Nome": "RIO CLARO - SP",
+    "Descricao": "Rodoviária de Rio Claro - Jardim Claret, Av. Pres. Tancredo de Almeida Neves, 700",
+    "Latitude": "-22.416770",
+    "Longitude": "-47.575810"
+  },
+  {
+    "CIDADE - UF": "RIO DAS FLORES - RJ",
+    "UF": "RJ",
+    "Nome": "RIO DAS FLORES - RJ",
+    "Descricao": "Rodoviária de Rio das Flores - Centro, Rua Leoni Ramos, 19",
+    "Latitude": "-22.168597",
+    "Longitude": " -43.583392"
+  },
+  {
+    "CIDADE - UF": "RIO POMBA - MG",
+    "UF": "MG",
+    "Nome": "RIO POMBA - MG",
+    "Descricao": "Rodoviária de Rio Pomba - Rua Gerardo Marini, 416",
+    "Latitude": "-21.278693",
+    "Longitude": "-43.175720"
+  },
+  {
+    "CIDADE - UF": "SAO DESIDERIO - BA",
+    "UF": "BA",
+    "Nome": "SAO DESIDERIO (RODA VELHA) - BA",
+    "Descricao": "Rodoviária de Roda Velha (Apoio)- Rodovia BR 020, Km 132,Anexo a Rodoviaria, São Desidério",
+    "Latitude": "-12.754659",
+    "Longitude": "-45.942939"
+  },
+  {
+    "CIDADE - UF": "RONDONOPOLIS - MT",
+    "UF": "MT",
+    "Nome": "RONDONOPOLIS - MT",
+    "Descricao": "Rodoviária de Rondonópolis - Jardim Belo Horizonte, Rua trinta e um de Dezembro, 236",
+    "Latitude": "-16.452950",
+    "Longitude": "-54.66094"
+  },
+  {
+    "CIDADE - UF": "ROSARIO OESTE - MT",
+    "UF": "MT",
+    "Nome": "ROSARIO OESTE - MT",
+    "Descricao": "Rodoviária de Rosário Oeste - Rua Dom Aquino Corrêa, s/n",
+    "Latitude": "-14.840394",
+    "Longitude": "-56.435126"
+  },
+  {
+    "CIDADE - UF": "RUSSAS - CE",
+    "UF": "CE",
+    "Nome": "RUSSAS - CE",
+    "Descricao": "Agência Guanabara de Russas - Planalto da Catumbela, Av. Irmã Maria da Graça, 1631",
+    "Latitude": "-4.949351",
+    "Longitude": "-37.989380"
+  },
+  {
+    "CIDADE - UF": "SALGUEIRO - PE",
+    "UF": "PE",
+    "Nome": "SALGUEIRO - PE",
+    "Descricao": "Agência Guanabara de Salgueiro - Rua João Veras de Siqueira, 1821",
+    "Latitude": "-8.071629",
+    "Longitude": "-39.135066"
+  },
+  {
+    "CIDADE - UF": "SANTA CRUZ - RN",
+    "UF": "RN",
+    "Nome": "SANTA CRUZ - RN",
+    "Descricao": "Rodoviária de Santa Cruz - Barro Vermelho, Rua Cel. Júlio Pinheiro, 61",
+    "Latitude": "-6.223170",
+    "Longitude": "-36.019850"
+  },
+  {
+    "CIDADE - UF": "SANTA HELENA - MA",
+    "UF": "MA",
+    "Nome": "SANTA HELENA - MA",
+    "Descricao": "Rodoviária de Santa Helena - Av. Duque de Caxias, 1491-1567",
+    "Latitude": "-2.237991",
+    "Longitude": "-45.298542"
+  },
+  {
+    "CIDADE - UF": "SANTA INES - MA",
+    "UF": "MA",
+    "Nome": "SANTA INES - MA",
+    "Descricao": "Agência Guanabara de Santa Ines - Sabbak, Rua Evaristo da Veiga, 01",
+    "Latitude": "-3.664110",
+    "Longitude": "-45.390000"
+  },
+  {
+    "CIDADE - UF": "SANTA LUZIA - MA",
+    "UF": "MA",
+    "Nome": "SANTA LUZIA - MA",
+    "Descricao": "Agência Guanabara  de Santa Luzia - Centro, Av. Tabajaras, 500-532",
+    "Latitude": "-3.962430",
+    "Longitude": "-45.666500"
+  },
+  {
+    "CIDADE - UF": "SANTA LUZIA - PB",
+    "UF": "PB",
+    "Nome": "SANTA LUZIA - PB",
+    "Descricao": "Agência Guanabara  de Santa Luzia - Centro, Rua Brandão Cavalcante, 29",
+    "Latitude": "-6.870173",
+    "Longitude": "-36.924953"
+  },
+  {
+    "CIDADE - UF": "SANTA MARIA DA BOA VISTA - PE",
+    "UF": "PE",
+    "Nome": "SANTA MARIA DA BOA VISTA - PE",
+    "Descricao": "Rodoviária de Santa Maria da Boa Vista - Av. Nilo Coelho, Rotatória da BR, 428",
+    "Latitude": "-8.799329",
+    "Longitude": "-39.827755"
+  },
+  {
+    "CIDADE - UF": "SANTA MARIA DA VITORIA - BA",
+    "UF": "BA",
+    "Nome": "SANTA MARIA DA VITORIA - BA",
+    "Descricao": "Rodoviária de Santa Maria da Vitoría - Av. Perimetral, St. Dr. Roberto, s/n",
+    "Latitude": "-13.387397",
+    "Longitude": "-44.205797"
+  },
+  {
+    "CIDADE - UF": "SANTA MARIA DO PARA - PA",
+    "UF": "PA",
+    "Nome": "SANTA MARIA DO PARA - PA",
+    "Descricao": "Rodoviária de Santa Maria do Pará - Rod. Bernardo Sayão, Rua Sérgio Dias, s/n",
+    "Latitude": "-1.343576",
+    "Longitude": "-47.578254"
+  },
+  {
+    "CIDADE - UF": "SANTA QUITERIA - CE",
+    "UF": "CE",
+    "Nome": "SANTA QUITERIA - CE",
+    "Descricao": "Agência Guanabara de Santa Quitéria - Av. José Emidio Sales, 16",
+    "Latitude": "-4.324330",
+    "Longitude": "-40.149100"
+  },
+  {
+    "CIDADE - UF": "SANTA QUITERIA DO MARANHAO - MA",
+    "UF": "MA",
+    "Nome": "SANTA QUITERIA DO MARANHAO - MA",
+    "Descricao": "Agência Guanabara de Santa Quiteria do Maranhão - Av. Santos Dumont, s/n",
+    "Latitude": "-3.496340",
+    "Longitude": "-42.562300"
+  },
+  {
+    "CIDADE - UF": "SANTA RITA DE CASSIA - BA",
+    "UF": "BA",
+    "Nome": "SANTA RITA DE CASSIA - BA",
+    "Descricao": "Rodoviária de Santa Rita de Cassia - Centro, Rua Pedro Caldeira, s/n",
+    "Latitude": "-11.004599",
+    "Longitude": "-44.521600"
+  },
+  {
+    "CIDADE - UF": "SANTA RITA DE CASSIA - BA",
+    "UF": "BA",
+    "Nome": "ENT SANTA RITA DE CASSIA - BA",
+    "Descricao": "Rodoviária de Santa Rita de Cassia - Centro, Rua Pedro Caldeira, s/n",
+    "Latitude": "11.004.670",
+    "Longitude": "44521530"
+  },
+  {
+    "CIDADE - UF": "SANTA RITA DO ARAGUAIA - GO",
+    "UF": "GO",
+    "Nome": "SANTA RITA DO ARAGUAIA - GO",
+    "Descricao": "Rodoviária de Santa Rita do Araguaia - Aeroporto, Rua Dr. José Morbeck, s/n",
+    "Latitude": "-17.330234",
+    "Longitude": "-53.200917"
+  },
+  {
+    "CIDADE - UF": "SANTA RITA DO SAPUCAI - MG",
+    "UF": "MG",
+    "Nome": "SANTA RITA DO SAPUCAI - MG",
+    "Descricao": "Rodoviária de Santa Rita do Sapucai - Centro, R. Custódio Rosa, 17",
+    "Latitude": "-22.254395",
+    "Longitude": "-45.704580"
+  },
+  {
+    "CIDADE - UF": "SANTO ANDRE - SP",
+    "UF": "SP",
+    "Nome": "SAO PAULO (TA SANTO ANDRE) - SP",
+    "Descricao": "Rodoviária de Santo André - Tamanduateí 1, Av. Industrial, 1850",
+    "Latitude": "-23.639077",
+    "Longitude": "-46.537419"
+  },
+  {
+    "CIDADE - UF": "SANTO ANDRE - SP",
+    "UF": "SP",
+    "Nome": "SANTO ANDRE - SP",
+    "Descricao": "Rodoviária de Santo André - Tamanduateí 1, Av. Industrial, 1850",
+    "Latitude": "-23.639077",
+    "Longitude": "-46.537419"
+  },
+  {
+    "CIDADE - UF": "SANTO ANTONIO DO AMPARO - MG",
+    "UF": "MG",
+    "Nome": "SANTO ANTONIO DO AMPARO E/S (E)",
+    "Descricao": "Rodoviária de Santo Antônio do Amparo - Praça Ananias Paiva, s/n",
+    "Latitude": "-20.947191",
+    "Longitude": "-44.913854"
+  },
+  {
+    "CIDADE - UF": "SANTO ESTEVAO - BA",
+    "UF": "BA",
+    "Nome": "SANTO ESTEVAO - BA",
+    "Descricao": "Rodoviária de Santo Estevão - Av. Getúlio Vargas, 689-731",
+    "Latitude": "-12.443650",
+    "Longitude": "-39.243550"
+  },
+  {
+    "CIDADE - UF": "SANTOS - SP",
+    "UF": "SP",
+    "Nome": "SANTOS - SP",
+    "Descricao": "Rodoviária de Santos - Centro, Praça dos Andradas, 41",
+    "Latitude": "-23.935267",
+    "Longitude": "-46.333031"
+  },
+  {
+    "CIDADE - UF": "SANTOS DUMONT - MG",
+    "UF": "MG",
+    "Nome": "SANTOS DUMONT - MG",
+    "Descricao": "Rodoviária de Santos Dumont - Centro, Av. Pres. Getúlio Vargas, s/n",
+    "Latitude": "-21.454163",
+    "Longitude": "-43.552972"
+  },
+  {
+    "CIDADE - UF": "SAO BENEDITO - CE",
+    "UF": "CE",
+    "Nome": "SAO BENEDITO - CE",
+    "Descricao": "Agência Guanabara de São Benedito Lima Botelho - Centro, Rua Professor Lima Botelho, 188",
+    "Latitude": "-4.046520",
+    "Longitude": "-40.863367"
+  },
+  {
+    "CIDADE - UF": "SAO BERNARDO - MA",
+    "UF": "MA",
+    "Nome": "SAO BERNARDO - MA",
+    "Descricao": "Rodoviária de São Bernardo - Centro, Rua Bernardo Lima, s/n",
+    "Latitude": "-3.362528",
+    "Longitude": "-42.422732"
+  },
+  {
+    "CIDADE - UF": "SAO BERNARDO DO CAMPO - SP",
+    "UF": "SP",
+    "Nome": "SAO BERNARDO DO CAMPO - SP",
+    "Descricao": "Rodoviária de São Bernardo do Campo - Assunção, Estr. dos Alvarengas, s/n",
+    "Latitude": "-23.727520",
+    "Longitude": "-46.574820"
+  },
+  {
+    "CIDADE - UF": "SAO BERNARDO DO CAMPO - SP",
+    "UF": "SP",
+    "Nome": "SAO PAULO (TA S. BERNARDO DO CAMPO) - SP",
+    "Descricao": "Rodoviária de São Bernardo do Campo - Assunção, Estr. dos Alvarengas, s/n",
+    "Latitude": "-23.727520",
+    "Longitude": "-46.574820"
+  },
+  {
+    "CIDADE - UF": "SAO CAETANO DO SUL - SP",
+    "UF": "SP",
+    "Nome": "SAO CAETANO DO SUL - SP",
+    "Descricao": "Rodoviária de São Caetano do Sul - Centro, Av. Conselheiro Antonio Prado, 307-487",
+    "Latitude": "-23.609560",
+    "Longitude": "-23.609560"
+  },
+  {
+    "CIDADE - UF": "SAO CAETANO DO SUL - SP",
+    "UF": "SP",
+    "Nome": "SAO PAULO (TA SAO CAETANO DO SUL) - SP",
+    "Descricao": "Rodoviária de São Caetano do Sul - Centro, Av. Conselheiro Antonio Prado,  307-487",
+    "Latitude": "-23.609560",
+    "Longitude": "-23.609560"
+  },
+  {
+    "CIDADE - UF": "SAO CARLOS - SP",
+    "UF": "SP",
+    "Nome": "SAO CARLOS - SP",
+    "Descricao": "Rodoviária de São Carlos - Jardim Lutfalla, Rua Jacinto Favoreto, 777",
+    "Latitude": "-22.005517",
+    "Longitude": "-47.889441"
+  },
+  {
+    "CIDADE - UF": "SAO DOMINGOS - GO",
+    "UF": "GO",
+    "Nome": "SAO DOMINGOS - GO",
+    "Descricao": "Rodoviária de São Domingos - Rua Abraão, 503-571",
+    "Latitude": "13.400990",
+    "Longitude": "-46.312320"
+  },
+  {
+    "CIDADE - UF": "SAO DOMINGOS DO MARANHAO - MA",
+    "UF": "MA",
+    "Nome": "SAO DOMINGOS DO MARANHAO - MA",
+    "Descricao": "Rodoviária de São Domingos do Maranhão - BR-135, Centro, Rua Alto do Cruz, s/n",
+    "Latitude": "-5.588815",
+    "Longitude": "-44.375460"
+  },
+  {
+    "CIDADE - UF": "SAO JOAO DEL REI - MG",
+    "UF": "MG",
+    "Nome": "SAO JOAO DEL REI - MG",
+    "Descricao": "Rodoviária de São João Del Rei - Fábricas, Rua Cel. Antônio Maria Clarete da Silva, 337",
+    "Latitude": "-21.126351",
+    "Longitude": "-44.246820"
+  },
+  {
+    "CIDADE - UF": "SAO JOAO DO RIO DO PEIXE - PB",
+    "UF": "PB",
+    "Nome": "SAO JOAO DO RIO DO PEIXE - PB",
+    "Descricao": "Agência Guanabara de São João do Rio do Peixe - Rua Líbio Brasileiro, 101",
+    "Latitude": "-6.731710",
+    "Longitude": "-38.448250"
+  },
+  {
+    "CIDADE - UF": "SAO JOAO NEPOMUCENO - MG",
+    "UF": "MG",
+    "Nome": "SAO JOAO NEPOMUCENO - MG",
+    "Descricao": "Rodoviária de São João Nepomuceno - Praça Barão do Rio Branco, s/n",
+    "Latitude": "-21.535188",
+    "Longitude": "-43.014298"
+  },
+  {
+    "CIDADE - UF": "SAO JOSE DE PIRANHAS - PB",
+    "UF": "PB",
+    "Nome": "SAO JOSE DE PIRANHAS - PB",
+    "Descricao": "Agência Guanabara de São José de Piranhas - PB-400 - São José de Piranhas, s/n",
+    "Latitude": "-7.120269",
+    "Longitude": "-38.509454"
+  },
+  {
+    "CIDADE - UF": "SAO JOSE DO EGITO - PE",
+    "UF": "PE",
+    "Nome": "SAO JOSE DO EGITO - PE",
+    "Descricao": "Agência Guanabara de São José do Egito - Rua 25 de Agosto, 405-413",
+    "Latitude": "-7.471570",
+    "Longitude": "-37.274540"
+  },
+  {
+    "CIDADE - UF": "SAO JOSE DO RIO PRETO - SP",
+    "UF": "SP",
+    "Nome": "SAO JOSE DO RIO PRETO - SP",
+    "Descricao": "Rodoviária de São José do Rio Preto Governador Laudo Natel - Centro, Rua Pedro Amaral, s/n",
+    "Latitude": "-20.809307",
+    "Longitude": "-49.377176"
+  },
+  {
+    "CIDADE - UF": "SAO JOSE DOS CAMPOS - SP",
+    "UF": "SP",
+    "Nome": "SAO JOSE DOS CAMPOS - SP",
+    "Descricao": "Rodoviária de São Jose dos Campos Frederico Ozanam - Vila Piratininga, Rua Itororó, 221",
+    "Latitude": "-23.193110",
+    "Longitude": "-45.878150"
+  },
+  {
+    "CIDADE - UF": "SAO LOURENCO - MG",
+    "UF": "MG",
+    "Nome": "SAO LOURENCO - MG",
+    "Descricao": "Rodoviária de São Lourenço - Rua Manoel Carlos, 130",
+    "Latitude": "-22.126015",
+    "Longitude": "-45.038385"
+  },
+  {
+    "CIDADE - UF": "SAO LUIS - MA",
+    "UF": "MA",
+    "Nome": "SAO LUIS - MA",
+    "Descricao": "Agência Guanabara de São Luís - Tirirical, Avenida dos Franceses, 300",
+    "Latitude": "-2.563595",
+    "Longitude": "-44.245179"
+  },
+  {
+    "CIDADE - UF": "SAO MAMEDE - PB",
+    "UF": "PB",
+    "Nome": "SAO MAMEDE - PB",
+    "Descricao": "Agência Guanabara de São Mamede - Conj. Jardim Planalto, Rua Luís Gomes da Silva, s/n",
+    "Latitude": "-6.937135",
+    "Longitude": "-37.096125"
+  },
+  {
+    "CIDADE - UF": "SAO MATEUS DO MARANHAO - MA",
+    "UF": "MA",
+    "Nome": "SAO MATEUS DO MARANHAO - MA",
+    "Descricao": "Agência Guanabara de São Mateus do Maranhão - Centro, Av. Antonio Pereira Aragão, 2798",
+    "Latitude": "-4.030969",
+    "Longitude": "-44.465370"
+  },
+  {
+    "CIDADE - UF": "SAO SEBASTIAO - SP",
+    "UF": "SP",
+    "Nome": "SAO SEBASTIAO - SP",
+    "Descricao": "Rodoviária de São Sebastião - Centro, Rua Minas Gerais, 221",
+    "Latitude": "-23.804198",
+    "Longitude": "-45.404999"
+  },
+  {
+    "CIDADE - UF": "SAO VICENTE - SP",
+    "UF": "SP",
+    "Nome": "SAO VICENTE - SP",
+    "Descricao": "Rodoviária de São Vicente - Parque Bitaru, Av. Cap. Luiz Antônio Pimenta, 130",
+    "Latitude": "-23.972520",
+    "Longitude": "-46.400540"
+  },
+  {
+    "CIDADE - UF": "SEABRA - BA",
+    "UF": "BA",
+    "Nome": "SEABRA - BA",
+    "Descricao": "Rodoviária de Seabra - Rua Dolores Duran, s/n",
+    "Latitude": "-12.429685",
+    "Longitude": "-41.771238"
+  },
+  {
+    "CIDADE - UF": "SENADOR POMPEU - CE",
+    "UF": "CE",
+    "Nome": "SENADOR POMPEU - CE",
+    "Descricao": "Agência Guanabara de Senador Pompeu - Rua Audízio Viêira do Nascimento, 84",
+    "Latitude": "-5.578432",
+    "Longitude": "-39.367240"
+  },
+  {
+    "CIDADE - UF": "SENHOR DO BONFIM - BA",
+    "UF": "BA",
+    "Nome": "SENHOR DO BONFIM - BA",
+    "Descricao": "Agência Guanabara de Senhor do Bonfim - São Jorge, Rodovia Lomanto Júnior, s/n",
+    "Latitude": "-10.448606",
+    "Longitude": "-40.185634"
+  },
+  {
+    "CIDADE - UF": "SERRA TALHADA - PE",
+    "UF": "PE",
+    "Nome": "SERRA TALHADA - PE",
+    "Descricao": "Agência Guanabara de Serra Talhada - São Cristovão, Rua Monsenhor Pinto Campos, s/n",
+    "Latitude": "-7.983968",
+    "Longitude": "-38.292494"
+  },
+  {
+    "CIDADE - UF": "SERRINHA - BA",
+    "UF": "BA",
+    "Nome": "SERRINHA - BA",
+    "Descricao": "Rodoviária de Serrinha - Rodoviária, Rua A, 712-798",
+    "Latitude": "-11.669686",
+    "Longitude": "-39.004597"
+  },
+  {
+    "CIDADE - UF": "SERTANIA - PE",
+    "UF": "PE",
+    "Nome": "SERTANIA - PE",
+    "Descricao": "Agência Guanabara de Sertânia - Rua Agamenon Magalhães, 38",
+    "Latitude": "-8.066474",
+    "Longitude": "-37.265044"
+  },
+  {
+    "CIDADE - UF": "SINOP - MT",
+    "UF": "MT",
+    "Nome": "SINOP - MT",
+    "Descricao": "Rodoviária de Sinop - St. Industrial Norte, Av. das Palmeiras, 142",
+    "Latitude": "-11.849459",
+    "Longitude": "-55.494281"
+  },
+  {
+    "CIDADE - UF": "BRASILIA - DF",
+    "UF": "DF",
+    "Nome": "SOBRADINHO - DF",
+    "Descricao": "Rodoviária de Sobradinho - Quadra Central, s/n",
+    "Latitude": "-15.650022",
+    "Longitude": "-47.786205"
+  },
+  {
+    "CIDADE - UF": "SOBRAL - CE",
+    "UF": "CE",
+    "Nome": "SOBRAL - CE",
+    "Descricao": "Agência Guanabara de Sobral - Centro, Rua Deputado João Adeodato, 179",
+    "Latitude": "-3.693270",
+    "Longitude": "-40.351110"
+  },
+  {
+    "CIDADE - UF": "SOLANEA - PB",
+    "UF": "PB",
+    "Nome": "SOLANEA - PB",
+    "Descricao": "Agência Guanabara de Solânea Anisío Rodrigues da Costa - Centro, Av. Gov. João Fernandes de Lima, s/n",
+    "Latitude": "-6.757814",
+    "Longitude": "-35.662554"
+  },
+  {
+    "CIDADE - UF": "SOLONOPOLE - CE",
+    "UF": "CE",
+    "Nome": "SOLONOPOLE - CE",
+    "Descricao": "Agência Guanabara de Solonopole - R. José Carlos Freire Machado, s/n",
+    "Latitude": "-5.734500",
+    "Longitude": "-39.007000"
+  },
+  {
+    "CIDADE - UF": "SOUSA - PB",
+    "UF": "PB",
+    "Nome": "SOUSA - PB",
+    "Descricao": "Agência Guanabara de Souza - Gato Preto, Rua José Fagundes de Líra, 300",
+    "Latitude": "-6.765420",
+    "Longitude": "-38.220920"
+  },
+  {
+    "CIDADE - UF": "TAGUATINGA - TO",
+    "UF": "TO",
+    "Nome": "TAGUATINGA - TO",
+    "Descricao": "Rodoviária de Taguatinga - Av Sete, s/n",
+    "Latitude": "-12.400210",
+    "Longitude": "-46.437713"
+  },
+  {
+    "CIDADE - UF": "BRASILIA - DF",
+    "UF": "DF",
+    "Nome": "TAGUATINGA - DF",
+    "Descricao": "Rodoviária de Taguatinga - Quadra 3, Avenida Elmo Serejo, 2871",
+    "Latitude": "-15.835516",
+    "Longitude": "-48.082658"
+  },
+  {
+    "CIDADE - UF": "TANGARA - RN",
+    "UF": "RN",
+    "Nome": "TANGARA - RN",
+    "Descricao": "Rodoviária de Tangara - Centro, Av. Miguel Barbosa, 146",
+    "Latitude": "-6.199260",
+    "Longitude": "-35.801400"
+  },
+  {
+    "CIDADE - UF": "TAUA - CE",
+    "UF": "CE",
+    "Nome": "TAUA - CE",
+    "Descricao": "Rodoviária de Taua - Conj. Hab. Joel Marques, Av. Cel. Vicente Alexandrino Souza, 1234",
+    "Latitude": "-6.012670",
+    "Longitude": "-40.293862"
+  },
+  {
+    "CIDADE - UF": "TAUBATE - SP",
+    "UF": "SP",
+    "Nome": "TAUBATE - SP",
+    "Descricao": "Rodoviária de Taubaté - Jardim Ana Emilia, Rua Benedito da Silveira Morães, 60",
+    "Latitude": "-23.020090",
+    "Longitude": "-45.536040"
+  },
+  {
+    "CIDADE - UF": "TEOFILO OTONI - MG",
+    "UF": "MG",
+    "Nome": "TEOFILO OTONI - MG",
+    "Descricao": "Rodoviária de Teofilo Otoni - Centro, Av. Dr. Luís Boali Pôrto Salman, 6086",
+    "Latitude": "-17.868007",
+    "Longitude": "-41.512620"
+  },
+  {
+    "CIDADE - UF": "TERESINA - PI",
+    "UF": "PI",
+    "Nome": "TERESINA - PI",
+    "Descricao": "Agência Guanabara de Teresina - Catarina, Av. Pres. Getúlio Vargas, 2620",
+    "Latitude": "-5.119230",
+    "Longitude": "-42.784630"
+  },
+  {
+    "CIDADE - UF": "TIANGUA - CE",
+    "UF": "CE",
+    "Nome": "TIANGUA - CE",
+    "Descricao": "Agência Guanabara de Tiangua - Lions Club, Av. Prefeito Jacques Nunes, s/n",
+    "Latitude": "-3.71553",
+    "Longitude": "-40.98849"
+  },
+  {
+    "CIDADE - UF": "TIMBIRAS - MA",
+    "UF": "MA",
+    "Nome": "TIMBIRAS - MA",
+    "Descricao": "Agência Guanabara de Timbiras - Rua Primeiro de Maio, 413-487",
+    "Latitude": "-4.253840",
+    "Longitude": "-43.939360"
+  },
+  {
+    "CIDADE - UF": "TIMON - MA",
+    "UF": "MA",
+    "Nome": "TIMON - MA",
+    "Descricao": "Agência Guanabara de Timon - Parque Piaui, Av. Francisco Carlos Jansen, s/n",
+    "Latitude": "-5.090217",
+    "Longitude": "-42.834463"
+  },
+  {
+    "CIDADE - UF": "TRES CORACOES - MG",
+    "UF": "MG",
+    "Nome": "TRES CORACOES - MG",
+    "Descricao": "Rodoviária de Três Corações - Praça dos Ferroviários, Rua Cabo Benedito Alves, s/n",
+    "Latitude": "-21.700090",
+    "Longitude": "-45.259580"
+  },
+  {
+    "CIDADE - UF": "TRES RIOS - RJ",
+    "UF": "RJ",
+    "Nome": "TRES RIOS - RJ",
+    "Descricao": "Rodoviária de Três Rios - Vila Isabel, Av. Zoello Sola, 2643",
+    "Latitude": "-22.115720",
+    "Longitude": "-43.198295"
+  },
+  {
+    "CIDADE - UF": "TUCANO - BA",
+    "UF": "BA",
+    "Nome": "TUCANO - BA",
+    "Descricao": "Agência Guanabara de Tucano - Terminal Rodoviária, BA-395",
+    "Latitude": "-10.961504",
+    "Longitude": "-38.788493"
+  },
+  {
+    "CIDADE - UF": "TUPACIGUARA - MG",
+    "UF": "MG",
+    "Nome": "TUPACIGUARA - MG",
+    "Descricao": "Rodoviária de Tupaciguara - Tiradentes, Rua Luís Gomes de Campos, s/n",
+    "Latitude": "-18.604111",
+    "Longitude": "-48.686930"
+  },
+  {
+    "CIDADE - UF": "TUTOIA - MA",
+    "UF": "MA",
+    "Nome": "TUTOIA - MA",
+    "Descricao": "Agência Guanabara de Tutoia - Av. Paulino Neves, s/n",
+    "Latitude": "-2.764990",
+    "Longitude": "-42.278500"
+  },
+  {
+    "CIDADE - UF": "UBAJARA - CE",
+    "UF": "CE",
+    "Nome": "UBAJARA - CE",
+    "Descricao": "Agência Guanabara de Ubajara - Av. Constituintes, Praça Elpídio L Pereira, 681-761",
+    "Latitude": "-3.852850",
+    "Longitude": "-40.925300"
+  },
+  {
+    "CIDADE - UF": "UBATUBA - SP",
+    "UF": "SP",
+    "Nome": "UBATUBA - SP",
+    "Descricao": "Rodoviária de Ubatuba - Centro, Rua Professor Thomaz Galhardo, 513",
+    "Latitude": "-23.435800",
+    "Longitude": "-45.075130"
+  },
+  {
+    "CIDADE - UF": "UBERABA - MG",
+    "UF": "MG",
+    "Nome": "UBERABA - MG",
+    "Descricao": "Rodoviária de Uberaba - São Benedito, Praça Dr. Carlos Terra, 291",
+    "Latitude": "-19.762870",
+    "Longitude": "-47.945450"
+  },
+  {
+    "CIDADE - UF": "UBERLANDIA - MG",
+    "UF": "MG",
+    "Nome": "UBERLANDIA - MG",
+    "Descricao": "Rodoviária de Uberlândia - Martins, Praça da Bíblia, 200",
+    "Latitude": "-18.905200",
+    "Longitude": "-48.284844"
+  },
+  {
+    "CIDADE - UF": "UIRAUNA - PB",
+    "UF": "PB",
+    "Nome": "UIRAUNA - PB",
+    "Descricao": "Agência Guanabara de Uirauna - Centro, Rua Floriano Peixoto, s/n",
+    "Latitude": "-6.516570",
+    "Longitude": "-38.406500"
+  },
+  {
+    "CIDADE - UF": "UNAI - MG",
+    "UF": "MG",
+    "Nome": "UNAI - MG",
+    "Descricao": "Rodoviária de Unai - Centro, Rua Pref. João Costa, 283",
+    "Latitude": "-16.360418",
+    "Longitude": "-46.905019"
+  },
+  {
+    "CIDADE - UF": "URUACU - GO",
+    "UF": "GO",
+    "Nome": "URUACU - GO",
+    "Descricao": "Rodoviária de Uruaçu - Vila Santana, Rua Carlos Oliveira Silva, 110",
+    "Latitude": "-14.533130",
+    "Longitude": "-49.150693"
+  },
+  {
+    "CIDADE - UF": "VALENCA - RJ",
+    "UF": "RJ",
+    "Nome": "VALENCA - RJ",
+    "Descricao": "Rodoviária de Valença - Esplanada do Cruzeiro, Praça Dr. Paulo de Frontin, 498",
+    "Latitude": "-22.247548",
+    "Longitude": "-43.707790"
+  },
+  {
+    "CIDADE - UF": "VALENCA DO PIAUI - PI",
+    "UF": "PI",
+    "Nome": "VALENCA DO PIAUI - PI",
+    "Descricao": "Agência Guanabara de Valencia do Piauí Governador Freitas Neto - Centro, Rua Euripedes Martins, 670",
+    "Latitude": "-6.405159",
+    "Longitude": "-41.737810"
+  },
+  {
+    "CIDADE - UF": "VARGEM GRANDE - MA",
+    "UF": "MA",
+    "Nome": "VARGEM GRANDE - MA",
+    "Descricao": "Agência Guanabara de Vargem Grande - Rua Agemiro Mota, 42",
+    "Latitude": "-3.545413",
+    "Longitude": "-43.921632"
+  },
+  {
+    "CIDADE - UF": "VARGINHA - MG",
+    "UF": "MG",
+    "Nome": "VARGINHA - MG",
+    "Descricao": "Rodoviária de Varginha - Jardim Petropolis, Av. Benjamin Constant, 1000",
+    "Latitude": "-21.564056",
+    "Longitude": "-45.447481"
+  },
+  {
+    "CIDADE - UF": "VARZEA ALEGRE - CE",
+    "UF": "CE",
+    "Nome": "VARZEA ALEGRE - CE",
+    "Descricao": "Agência Guanabara de Várzea Alegre Dr. José Iran Costa - Zezinho Costa, Rua Jão Alves de Menezes, s/n",
+    "Latitude": "-6.795812",
+    "Longitude": "-39.297555"
+  },
+  {
+    "CIDADE - UF": "VASSOURAS - RJ",
+    "UF": "RJ",
+    "Nome": "VASSOURAS - RJ",
+    "Descricao": "Rodoviária de Vassouras - Praça Juiz, Rua Luís Machado Júnior, 10",
+    "Latitude": "-22.407162",
+    "Longitude": "-43.660627"
+  },
+  {
+    "CIDADE - UF": "VIANOPOLIS - GO",
+    "UF": "GO",
+    "Nome": "VIANOPOLIS - GO",
+    "Descricao": "Rodoviária de Vianopolis - Centro, Rua Tales Pompéu de Pina, s/n",
+    "Latitude": "-16.745388",
+    "Longitude": "-48.514211"
+  },
+  {
+    "CIDADE - UF": "VITORIA DA CONQUISTA - BA",
+    "UF": "BA",
+    "Nome": "VITORIA DA CONQUISTA - BA",
+    "Descricao": "Agência Guanabara de Vitoria da Conquista - Vila Ibirapitanga, Av. Dep. Ulisses, 405",
+    "Latitude": "-14.879690",
+    "Longitude": "-40.854510"
+  },
+  {
+    "CIDADE - UF": "VITORIA DE SANTO ANTAO - PE",
+    "UF": "PE",
+    "Nome": "VITORIA DE SANTO ANTAO - PE",
+    "Descricao": "Agência Guanabara de Vitoria de Santo Antão - Bela Vista, Rua Pedro Nunes Cavalcante, 268",
+    "Latitude": "-8.114215",
+    "Longitude": "-35.296822"
+  },
+  {
+    "CIDADE - UF": "VITORIA DO MEARIM - MA",
+    "UF": "MA",
+    "Nome": "VITORIA DO MEARIM - MA",
+    "Descricao": "Agência Guanabara de Vitoria do Mearim - Rua da Campina, s/n",
+    "Latitude": "-3.465307",
+    "Longitude": "-44.872385"
+  },
+  {
+    "CIDADE - UF": "VOLTA REDONDA - RJ",
+    "UF": "RJ",
+    "Nome": "VOLTA REDONDA - RJ",
+    "Descricao": "Rodoviária de Volta Redonda Prefeito Francisco Torres - Laranjal, Av. dos Trabalhadores, 333",
+    "Latitude": "-22.513850",
+    "Longitude": "-44.098700"
+  },
+  {
+    "CIDADE - UF": "XINGUARA - PA",
+    "UF": "PA",
+    "Nome": "XINGUARA - PA",
+    "Descricao": "Rodoviária de Xinguara - Itamarati, Rua Quatro, 227-331",
+    "Latitude": "-7.090478",
+    "Longitude": "-49.937110"
+  },
+  {
+    "CIDADE - UF": "ZE DOCA - MA",
+    "UF": "MA",
+    "Nome": "ZE DOCA - MA",
+    "Descricao": "Agência Guanabara de Zé Doca - Rua Brastemp, 21",
+    "Latitude": "-3.262984",
+    "Longitude": "-45.654760"
+  },
+  {
+    "CIDADE - UF": "ALTO ARAGUAIA - MT",
+    "UF": "MT",
+    "Nome": "ALTO ARAGUAIA - MT",
+    "Descricao": "Rodoviaria do Alto Araguaia - Aeroporto, Rua Dr. José Morbeck, s/n",
+    "Latitude": "-17.321306",
+    "Longitude": " -53.224485"
+  },
+  {
+    "CIDADE - UF": "BARRA DO PIRAI - RJ",
+    "UF": "RJ",
+    "Nome": "BARRA DO PIRAI - RJ",
+    "Descricao": "Rodoviária do Barra do Piraí - Centro, Praça Nilo Peçanha, s/n",
+    "Latitude": "-22.470816",
+    "Longitude": "-43.824667"
+  },
+  {
+    "CIDADE - UF": "CANTO DO BURITI - PI",
+    "UF": "PI",
+    "Nome": "CANTO DO BURITI - PI",
+    "Descricao": "Agência Guanabara do Canto do Buriti - Nossa Sra. de Fátima, Rua João Píres, 233",
+    "Latitude": "-8.110823",
+    "Longitude": "-42.941307"
+  },
+  {
+    "CIDADE - UF": "CATOLE DO ROCHA - PB",
+    "UF": "PB",
+    "Nome": "CATOLE DO ROCHA - PB",
+    "Descricao": "Agência Guanabara do Catole do Rocha -Lot. João Serafim, Av. Dep. Américo Maia, s/n",
+    "Latitude": "-6.355910",
+    "Longitude": "-37.746130"
+  },
+  {
+    "CIDADE - UF": "CRATO - CE",
+    "UF": "CE",
+    "Nome": "CRATO - CE",
+    "Descricao": "Agência Guanabara do Crato - Santa Luzia, Rua Farias Brito, s/n",
+    "Latitude": "-7.229169",
+    "Longitude": "-39.397596"
+  },
+  {
+    "CIDADE - UF": "RIO VERDE - GO",
+    "UF": "GO",
+    "Nome": "RIO VERDE - GO",
+    "Descricao": "Rodoviária do Rio Verde - Jardim Pres, Av. Presidente Vargas, s/n",
+    "Latitude": "-17.799920",
+    "Longitude": "-50.943100"
+  },
+  {
+    "CIDADE - UF": "SAO PAULO - SP",
+    "UF": "SP",
+    "Nome": "SAO PAULO - SP",
+    "Descricao": "Rodoviária do Tietê - Vila Guilherme, Av. Cruzeiro Do Sul, 1800",
+    "Latitude": "-23.516323",
+    "Longitude": "-46.623763"
+  },
+  {
+    "CIDADE - UF": "RIO DE JANEIRO - RJ",
+    "UF": "RJ",
+    "Nome": "RIO DE JANEIRO - RJ",
+    "Descricao": "Rodoviária Novo Rio - Santo Cristo, Av. Francisco Bicalho, 1",
+    "Latitude": "-22.899322",
+    "Longitude": "-43.208727"
+  },
+  {
+    "CIDADE - UF": "RIACHAO DAS NEVES - BA",
+    "UF": "BA",
+    "Nome": "RIACHAO DAS NEVES - BA",
+    "Descricao": "Rodoviária Riachão das Neves - Rua da Rodoviária, Estação Rodoviária, s/n",
+    "Latitude": "-11.753010",
+    "Longitude": "-44.913830"
+  },
+  {
+    "CIDADE - UF": "SOROCABA - SP",
+    "UF": "SP",
+    "Nome": "SOROCABA - SP",
+    "Descricao": "Rodoviária Rodo Center - Centro, Av. Pres. Juscelino Kubitscheck de Oliveira, 100",
+    "Latitude": "-23.506573",
+    "Longitude": "-47.456598"
+  },
+  {
+    "CIDADE - UF": "SANTA LUZIA DO PARUA - MA",
+    "UF": "MA",
+    "Nome": "SANTA LUZIA DO PARUA - MA",
+    "Descricao": "Rodoviária Santa Luzia do Parua - Centro, Av. Prof. João Morais de Sousa, s/n",
+    "Latitude": "-2.547300",
+    "Longitude": "-45.774200"
+  },
+  {
+    "CIDADE - UF": "SAO JOAO DOS PATOS - MA",
+    "UF": "MA",
+    "Nome": "SAO JOAO DOS PATOS - MA",
+    "Descricao": "Agência Guanabara de São João dos Patos - Açudinho II, Av. Pres. Médici, 1962",
+    "Latitude": "-6.496460",
+    "Longitude": "-43.695360"
+  },
+  {
+    "CIDADE - UF": "CICERO DANTAS - BA",
+    "UF": "BA",
+    "Nome": "CICERO DANTAS - BA",
+    "Descricao": "Agência Guanabara de Cícero Dantas - Centro,, Avenida Antônio Carlos Magalhães, s/n",
+    "Latitude": "-10.586748",
+    "Longitude": "-38.379661"
+  },
+  {
+    "CIDADE - UF": "BOM SUCESSO - MG",
+    "UF": "MG",
+    "Nome": "BOM SUCESSO - MG",
+    "Descricao": "Rodviária de Bom Sucesso - Rua Antônio Carlos de Carvalho, 965",
+    "Latitude": "-21.030200",
+    "Longitude": "-44.751800"
+  },
+  {
+    "CIDADE - UF": "COLONIA DO GURGUEIA - PI",
+    "UF": "PI",
+    "Nome": "COLONIA DO GURGUEIA - PI",
+    "Descricao": "Agência Guanabara de Col. do Gurgueia - Av. Dom Avelar Brandao Vilela, 2772-2838",
+    "Latitude": "-8.183227",
+    "Longitude": "-43.791600"
+  },
+  {
+    "CIDADE - UF": "GILBUES - PI",
+    "UF": "PI",
+    "Nome": "GILBUES - PI",
+    "Descricao": "Agência Guanabara de Gilbues - R. Anisio de Abreu, 994",
+    "Latitude": "-9.841980",
+    "Longitude": "-45.347090"
+  },
+  {
+    "CIDADE - UF": "POSSE - GO",
+    "UF": "GO",
+    "Nome": "POSSE - GO",
+    "Descricao": "Rodviária de Posse - Augusto José Valente I, Rua Robson Ricardo, s/n",
+    "Latitude": "-14.086216",
+    "Longitude": "-46.366489"
+  },
+  {
+    "CIDADE - UF": "RIO DAS OSTRAS - RJ",
+    "UF": "RJ",
+    "Nome": "RIO DAS OSTRAS - RJ ( Prox. Secretaria de Turismo )",
+    "Descricao": "Ponto de Embarque Rio das Ostras - Rua Uruguai, 47, Balneário Remanso, Rio das Ostras - RJ, 28893-328",
+    "Latitude": "-22.548825",
+    "Longitude": "-41.974369"
+  },
+  {
+    "CIDADE - UF": "JUIZ DE FORA - MG",
+    "UF": "MG",
+    "Nome": "SHOPPING INDEPENDENCIA - MG (term adicional de JUIZ DE FORA)",
+    "Descricao": "Ponto de Embarque Shop. Independência - Cascatinha, Av. Presidente Itamar Franco, 3600",
+    "Latitude": "-21.781430",
+    "Longitude": "-43.359834"
+  },
+  {
+    "CIDADE - UF": "SALVADOR - BA",
+    "UF": "BA",
+    "Nome": "SALVADOR - BA",
+    "Descricao": "Terminal Rodoviária de Salvador - Bairro Aguas Claras, as margens da BR-324, plataformas 7, 8 e 9.",
+    "Latitude": "-12.978277",
+    "Longitude": "-38.465735"
+  },
+  {
+    "CIDADE - UF": "DIVINOPOLIS DE GOIAS - GO",
+    "UF": "GO",
+    "Nome": "DIVINOPOLIS DE GOIAS - GO",
+    "Descricao": "Terminal Rodoviário",
+    "Latitude": "-20.127843",
+    "Longitude": "-44.884697"
+  },
+  {
+    "CIDADE - UF": "MASSAPE - CE",
+    "UF": "CE",
+    "Nome": "MASSAPE - CE",
+    "Descricao": "Agência Guanabara de Massapê - RUA Rodoviária de Massapê - Centro, Rua Amadeu Albuquerque, s/nALBUQUERQUE,162 - TERMINAL RODOVIÁRIO MASSAPÊ",
+    "Latitude": "-3.526060",
+    "Longitude": "-40.342063"
+  },
+  {
+    "CIDADE - UF": "TIETE - SP",
+    "UF": "SP",
+    "Nome": "TIETE - SP",
+    "Descricao": "Rodoviária do Tietê - Vila Guilherme, Av. Cruzeiro Do Sul, 1800",
+    "Latitude": "-23.516323",
+    "Longitude": "-46.623763"
+  },
+  {
+    "CIDADE - UF": "PETROPOLIS - RJ",
+    "UF": "RJ",
+    "Nome": "PETROPOLIS - RJ",
+    "Descricao": "Terminal Rodoviário Governador Leonel Brizola - Terminal Bingen, 1118 - Bingen, Petrópolis - RJ",
+    "Latitude": "-22.516486",
+    "Longitude": "-43.229207"
+  },
+  {
+    "CIDADE - UF": "RIO DE JANEIRO - RJ",
+    "UF": "RJ",
+    "Nome": "RIO DE JANEIRO (BARRA DA TIJUCA - VILA PARQUE) - RJ",
+    "Descricao": "Avenida Ayrton Senna, n°. 3.000, Barra da Tijuca, CEP 22.775-904",
+    "Latitude": "-23.516324",
+    "Longitude": "-46.623764"
+  },
+  {
+    "CIDADE - UF": "RIO DE JANEIRO - RJ",
+    "UF": "RJ",
+    "Nome": "RIO DE JANEIRO (RIO 2 - BARRA OLIMPICA) - RJ",
+    "Descricao": "Rua Bruno Giorgi, S/N, Barra OlImpica, Rio de Janeiro – RJ, CEP 2775-054",
+    "Latitude": "-23.516324",
+    "Longitude": "-46.623764"
+  },
+  {
+    "CIDADE - UF": "RIO DE JANEIRO - RJ",
+    "UF": "RJ",
+    "Nome": "RIO DE JANEIRO (SHOPPING RIO SUL - BOTAFOTO) - RJ",
+    "Descricao": "Rua Lauro Muller, 116 - Botafogo, Rio de Janeiro - RJ, 22290-070",
+    "Latitude": "-23.516324",
+    "Longitude": "-46.623764"
+   },
+  {
+    "CIDADE - UF": "SANTOS - SP",
+    "UF": "SP",
+    "Nome": "SANTOS CRUZEIRO NAVIO - SP",
+    "Descricao": "Porto de Santos - Avenida Guilherme Weinschenck, 21",
+    "Latitude": "-23.516324",
+    "Longitude": "-46.623764"
+  },
+  {
+    "CIDADE - UF": "PIRASSUNUNGA - SP",
+    "UF": "SP",
+    "Nome": "PIRASSUNUNGA - SP - (REAL EXPRESSO - UTIL) ",
+    "Descricao": "Posto coral Pirassununga - Rod. Anhangüera, km 210 - Vila Belmiro, Pirassununga - SP, 13633-480",
+    "Latitude": "-23.516324",
+    "Longitude": "-46.623764"
+  }
+]
