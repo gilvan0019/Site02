@@ -284,8 +284,8 @@ function criarItemOCR({ nomeArquivo, banco, resumo, texto }) {
       <button class="pill primary btn-copy">📋 Copiar</button>
       <button class="pill btn-edit">✏️ Editar</button>
       <button class="pill btn-taxa">💰 Taxa</button>
-      <button class="pill btn-add">➕ Add</button>
-      <button class="pill danger btn-remove">🗑 Rem</button>
+      <button class="pill btn-add">➕ Adicionar</button>
+      <button class="pill danger btn-remove">🗑 Remover</button>
     </span>
   `;
 const nomeArquivoEl = linha.querySelector('.col.arquivo');
