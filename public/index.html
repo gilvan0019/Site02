@@ -30,7 +30,7 @@
     <main class="content">
       <div class="app">
 <button id="btnClear" class="btn-clear">
-  ? Limpar histórico
+  LIMPAR
 </button>
         <h1>OCR de Imagens (em Lista)</h1>
 
@@ -40,6 +40,37 @@
           <span>JPG, JPEG, PNG</span>
         </label>
 
+<div class="filtros-topo">
+  <input
+    type="text"
+    id="nome-agente"
+    placeholder="Nome do agente"
+  >
+
+  <select id="nome-agencia">
+    <option value="AGENCIA">AGENCIA</option>
+    <option value="TOP VIAGENS">TOP VIAGENS</option>
+    <option value="VALE VIAGENS">VALE VIAGENS</option>
+    <option value="SUPORTE ONLINE">SUPORTE ONLINE</option>
+    <option value="CANOA">CANOA</option>
+  </select>
+</div>
+
+
+
+
+<!-- 👇 RESUMO / CONTADOR -->
+<div id="resumo-arquivo" class="resumo-arquivo">
+  <div class="resumo-titulo">
+    ARQUIVO <span id="contador-arquivos">0</span>
+  </div>
+
+  <div class="resumo-total">
+    TOTAL <span id="soma-total">R$ 0,00</span>
+  </div>
+</div>
+
+<!-- 👇 LISTA -->
         <div class="file-list" id="fileList"></div>
 
       </div>
