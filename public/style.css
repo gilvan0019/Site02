@@ -166,9 +166,11 @@ h1 {
   color: #9ca3af;
 }
 .col.taxa {
-  font-size: 12px;
-  color: #9333ea;
-  font-weight: bold;
+  order: 4;              /* mesma coluna lógica do valor */
+  margin-left: 8px;      /* espaço entre valor e taxa */
+  font-size: 15px;
+  color: #6c0384;
+  white-space: nowrap;
 }
 
 .row-actions {
@@ -291,4 +293,47 @@ button:active,
 /* ===== EXPANDIDO ===== */
 .file-item.expanded .ocr-detalhe {
   display: block;
+}.resumo-arquivo {
+  margin-bottom: 14px;
+}
+
+.filtros-topo {
+  display: flex;
+  gap: 16px;
+  margin: 12px 0 8px 0;
+}
+
+.filtros-topo input,
+.filtros-topo select {
+  flex: 1;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+}
+
+.filtros-topo input:focus,
+.filtros-topo select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+}
+
+.resumo-arquivo {
+  margin: 8px 0 16px 0;
+}
+
+.resumo-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d47a1;
+  letter-spacing: 0.5px;
+}
+
+.resumo-total {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d47a1;
 }
