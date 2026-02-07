@@ -6,29 +6,87 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   background: #f3f4f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #020617, #111827);
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar button {
+  background: #1f2937;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+}
+
+.sidebar button:hover {
+  background: #374151;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #111827;
+}
+
+/* ===== APP (LARGURA TOTAL) ===== */
 .app {
   width: 100%;
-  max-width: 900px;
+  max-width: none;
+  margin: 0;
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+/* ===== BOTÃO LIMPAR HISTÓRICO ===== */
+.btn-clear {
+  align-self: flex-start;
+  background: #15007d;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
 
-/* ===== TÍTULO ===== */
-.app h1 {
+.btn-clear:hover {
+  background: #b91c1c;
+}
+
+h1 {
   font-size: 20px;
   color: #111827;
 }
@@ -40,79 +98,161 @@ body {
   padding: 30px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .upload-box:hover {
   background: #f9fafb;
-  border-color: #2563eb;
 }
 
 .upload-box input {
   display: none;
 }
 
-.upload-box p {
-  font-size: 14px;
-  color: #374151;
-}
-
-.upload-box span {
-  display: block;
-  margin-top: 6px;
-  font-size: 12px;
-  color: #6b7280;
-}
-
-/* ===== LISTA DE ARQUIVOS ===== */
+/* ===== LISTA OCR ===== */
 .file-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .file-item {
-  padding: 10px 12px;
   background: #f3f4f6;
-  border-radius: 6px;
-  font-size: 13px;
-  color: #111827;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-radius: 8px;
+  padding: 10px 12px;
 }
 
-.file-item span {
+/* ===== LINHA ÚNICA ===== */
+
+.ocr-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 80px 90px 90px auto;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+}
+/* colunas */
+.ocr-row .col {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* arquivo */
+.col.arquivo {
+  font-weight: bold;
+  min-width: 90px;
+  cursor: pointer;
+  color: #2563eb;
+}
+
+.col.arquivo:hover {
+  text-decoration: underline;
+}
+
+/* nome */
+.col.nome {
+  max-width: 260px;
+}
+
+/* hora */
+.col.hora {
   font-size: 12px;
   color: #6b7280;
 }
 
-/* ===== TEXTO OCR ===== */
-.output {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.output label {
-  font-size: 13px;
+/* valor */
+.col.valor {
   font-weight: bold;
-  color: #374151;
+  color: #2563eb; /* azul tipo print */
 }
 
-.output textarea {
-  width: 100%;
-  min-height: 220px;
-  resize: vertical;
-  padding: 12px;
-  font-size: 13px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  background: #f9fafb;
-  outline: none;
+/* banco ou status (se quiser manter) */
+.col.banco {
+  font-size: 12px;
+  color: #9ca3af;
+}
+.col.taxa {
+  font-size: 12px;
+  color: #9333ea;
+  font-weight: bold;
 }
 
-.output textarea:focus {
-  border-color: #2563eb;
+.row-actions {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.pill {
   background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pill:hover {
+  background: #f3f4f6;
+}
+
+.pill.primary {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #111827;
+}
+.pill.primary.copied {
+  background: #16a34a;
+  border-color: #15803d;
+  color: #ffffff;
+}
+.pill.danger {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #111827;
+}
+
+.btn-copy:hover {
+  background: #2563eb;
+  border-color: #1d4ed8;
+  color: #ffffff;
+}
+.btn-edit:hover {
+  background: #7c3aed;
+  border-color: #6d28d9;
+  color: #ffffff;
+}
+.btn-taxa:hover {
+  background: #f59e0b;
+  border-color: #d97706;
+  color: #ffffff;
+}
+.btn-add:hover {
+  background: #22c55e;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+.btn-remove:hover {
+  background: #dc2626;
+  border-color: #b91c1c;
+  color: #ffffff;
+}
+
+
+/* ===== TEXTO COMPLETO (COLAPSADO) ===== */
+.ocr-detalhe {
+  display: none;
+  margin-top: 6px;
+  padding: 8px;
+  font-size: 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+/* ===== EXPANDIDO ===== */
+.file-item.expanded .ocr-detalhe {
+  display: block;
 }
