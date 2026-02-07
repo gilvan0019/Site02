@@ -116,7 +116,7 @@ h1 {
 }
 
 .file-item {
-  background: #f3f4f6;
+  background: #fafafa;
   border-radius: 8px;
   padding: 10px 12px;
 }
@@ -124,46 +124,40 @@ h1 {
 /* ===== LINHA ÚNICA ===== */
 
 .ocr-row {
-  display: grid;
-  grid-template-columns: 110px 1fr 80px 90px 90px auto;
-  gap: 10px;
+  display: flex;
   align-items: center;
-  font-size: 13px;
+  gap: 8px;
 }
-/* colunas */
-.ocr-row .col {
+
+.col.arquivo { order: 1; }
+.col.nome    { order: 2; }
+.col.hora    { order: 3; }
+.col.valor   { order: 4; }
+.row-actions { order: 5; margin-left: auto; }
+
+.col.nome,
+.col.hora,
+.col.valor {
+  display: inline;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* arquivo */
-.col.arquivo {
-  font-weight: bold;
-  min-width: 90px;
-  cursor: pointer;
-  color: #2563eb;
-}
-
-.col.arquivo:hover {
-  text-decoration: underline;
-}
-
-/* nome */
 .col.nome {
-  max-width: 260px;
+  display: inline-flex;
+  align-items: center;
 }
 
-/* hora */
 .col.hora {
-  font-size: 12px;
+  margin-left: 12px;
+  font-size: 14px;
   color: #6b7280;
 }
 
-/* valor */
 .col.valor {
+  margin-left: 12px;
   font-weight: bold;
-  color: #2563eb; /* azul tipo print */
+  font-size: 15px;
+  color: #2563eb;
 }
 
 /* banco ou status (se quiser manter) */
@@ -179,24 +173,38 @@ h1 {
 
 .row-actions {
   display: flex;
-  gap: 6px;
+  gap: 8px;              /* um pouco mais de espaço */
   margin-left: auto;
 }
 
 .pill {
   background: #ffffff;
-  border: 1px solid #e5e7eb;
-  color: #111827;
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 6px;
-  cursor: pointer;
+  font-size: 12px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
 }
-
+button,
+.pill {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+button:hover,
 .pill:hover {
-  background: #f3f4f6;
+  transform: translateY(-1px);
 }
 
+button:active,
+.pill:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
 .pill.primary {
   background: #ffffff;
   border-color: #e5e7eb;
@@ -214,31 +222,59 @@ h1 {
 }
 
 .btn-copy:hover {
-  background: #2563eb;
+  background: linear-gradient(135deg,#1e3a8a,#2563eb);
   border-color: #1d4ed8;
   color: #ffffff;
 }
 .btn-edit:hover {
-  background: #7c3aed;
+  background: linear-gradient(135deg,#5b21b6,#7c3aed);
   border-color: #6d28d9;
   color: #ffffff;
 }
 .btn-taxa:hover {
-  background: #f59e0b;
+  background: linear-gradient(135deg,#d97706,#f59e0b);
   border-color: #d97706;
   color: #ffffff;
 }
 .btn-add:hover {
-  background: #22c55e;
+  background: linear-gradient(135deg,#059669,#10b981);
   border-color: #16a34a;
   color: #ffffff;
 }
 .btn-remove:hover {
-  background: #dc2626;
+  background: linear-gradient(135deg,#991b1b,#dc2626);
   border-color: #b91c1c;
   color: #ffffff;
 }
 
+.btn-copy:hover {
+  animation: pulse 0.6s ease-out;
+}
+.sidebar button {
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #2563eb;
+  transform: scaleY(0);
+  transition: transform 0.25s ease;
+}
+
+.sidebar button:hover::before {
+  transform: scaleY(1);
+}
+
+.sidebar button:hover {
+  background: #374151;
+  padding-left: 14px;
+}
 
 /* ===== TEXTO COMPLETO (COLAPSADO) ===== */
 .ocr-detalhe {
