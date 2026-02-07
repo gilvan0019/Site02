@@ -1,6 +1,15 @@
 
 let CARREGANDO_ESTADO = false;
 
+let ocrWorker = null;
+
+async function getOCRWorker() {
+  if (!ocrWorker) {
+    ocrWorker = await Tesseract.createWorker('por');
+  }
+  return ocrWorker;
+}
+
 const NOMES_PROIBIDOS = [
   'ANTONIO CLERVES OLIVEIRA',
   'VALE VIAGENS'
@@ -527,10 +536,8 @@ atualizarResumo();
 
 for (const file of files) {
   try {
-    const worker = await Tesseract.createWorker('por');
-    const res = await worker.recognize(file);
-    await worker.terminate();
-
+    const worker = await getOCRWorker();
+const res = await worker.recognize(file);
     const textoExtraido = res.data.text.trim() || '';
 
     const banco = identificarBanco(textoExtraido);
@@ -556,4 +563,11 @@ atualizarResumo();
 }
 
   });
+});
+// 🧹 Finaliza o worker OCR ao sair da página
+window.addEventListener('beforeunload', async () => {
+  if (ocrWorker) {
+    await ocrWorker.terminate();
+    ocrWorker = null;
+  }
 });
