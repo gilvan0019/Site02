@@ -1,4 +1,5 @@
 
+
 const NOMES_PROIBIDOS = [
   'ANTONIO CLERVES OLIVEIRA',
   'VALE VIAGENS'
@@ -357,11 +358,6 @@ function carregarRegistros() {
   }
 }
 
-function salvarRegistro(registro) {
-  const registros = carregarRegistros();
-  registros.push(registro);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(registros));
-}
 function criarItemOCR({ nomeArquivo, banco, resumo, texto }) {
   const item = document.createElement('div');
   item.className = 'file-item';
@@ -518,14 +514,7 @@ for (const file of files) {
     });
 
     list.appendChild(novoItem);
-
-    salvarRegistro({
-      nomeArquivo: file.name,
-      banco,
-      resumo,
-      texto: textoExtraido
-    });
-
+salvarEstado();
 atualizarResumo();
 
   } catch (err) {
