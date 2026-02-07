@@ -1,4 +1,5 @@
 
+let CARREGANDO_ESTADO = false;
 
 const NOMES_PROIBIDOS = [
   'ANTONIO CLERVES OLIVEIRA',
@@ -326,11 +327,14 @@ function extrairResumoPorBanco(texto, banco) {
 
 // ================= STORAGE =================
 function salvarEstado() {
+  if (CARREGANDO_ESTADO) return;
+
   const itens = document.querySelectorAll('.file-item');
   const registros = [];
 
   itens.forEach(item => {
     const linha = item.querySelector('.ocr-row');
+    if (!linha) return;
 
     registros.push({
       nomeArquivo: linha.querySelector('.col.arquivo')?.getAttribute('title') || '',
@@ -347,7 +351,8 @@ function salvarEstado() {
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(registros));
 }
-
+const STORAGE_AGENTE  = 'ocr_nome_agente';
+const STORAGE_AGENCIA = 'ocr_nome_agencia';
 const STORAGE_KEY = 'ocr_registros';
 
 function carregarRegistros() {
@@ -474,12 +479,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnClear = document.getElementById('btnClear');
 
   if (!input || !list) return;
+  /* ===== CAMPOS AGENTE / AGENCIA (STORAGE) ===== */
+  const inputAgente   = document.getElementById('nome-agente');
+  const selectAgencia = document.getElementById('nome-agencia');
 
-  // 🔄 Carregar histórico ao dar F5
-  const registrosSalvos = carregarRegistros();
-  registrosSalvos.forEach(r => {
-    list.appendChild(criarItemOCR(r));
+  // 🔁 RESTAURA AO CARREGAR
+  if (inputAgente) {
+    inputAgente.value = localStorage.getItem(STORAGE_AGENTE) || '';
+  }
+
+  if (selectAgencia) {
+    selectAgencia.value =
+      localStorage.getItem(STORAGE_AGENCIA) || selectAgencia.value;
+  }
+
+  // 💾 SALVA EM TEMPO REAL
+  inputAgente?.addEventListener('input', () => {
+    localStorage.setItem(STORAGE_AGENTE, inputAgente.value.trim());
   });
+
+  selectAgencia?.addEventListener('change', () => {
+    localStorage.setItem(STORAGE_AGENCIA, selectAgencia.value);
+  });
+
+CARREGANDO_ESTADO = true;
+
+const registrosSalvos = carregarRegistros();
+registrosSalvos.forEach(r => {
+  list.appendChild(criarItemOCR(r));
+});
+
+CARREGANDO_ESTADO = false;
 
 atualizarResumo(); 
 
