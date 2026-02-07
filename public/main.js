@@ -21,6 +21,66 @@ function formatBRL(v) {
     currency: 'BRL'
   });
 }
+let taxaContexto = null;
+
+const modal = document.getElementById('modal-taxa');
+const inputTaxa = document.getElementById('input-taxa');
+const btnAplicar = document.getElementById('btn-aplicar');
+const btnCancelar = document.getElementById('btn-cancelar');
+inputTaxa.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    btnAplicar.click();
+  }
+
+  if (e.key === 'Escape') {
+    e.preventDefault();
+    fecharModalTaxa();
+  }
+});
+
+function abrirModalTaxa(contexto) {
+  taxaContexto = contexto;
+  inputTaxa.value = '';
+  modal.classList.remove('hidden');
+  setTimeout(() => inputTaxa.focus(), 50);
+}
+
+function fecharModalTaxa() {
+  modal.classList.add('hidden');
+  taxaContexto = null;
+}
+
+btnCancelar.addEventListener('click', fecharModalTaxa);
+
+btnAplicar.addEventListener('click', () => {
+  if (!taxaContexto) return;
+
+  const { valorEl, taxaEl, resumo } = taxaContexto;
+  const taxaValor = parseBRL(inputTaxa.value);
+
+  if (taxaValor < 0) return alert('Taxa inválida');
+
+  const valorOriginal = parseFloat(valorEl.dataset.original) || 0;
+
+  if (taxaValor > valorOriginal) {
+    return alert('Taxa maior que o valor');
+  }
+
+  const novoValor = taxaValor === 0
+    ? valorOriginal
+    : valorOriginal - taxaValor;
+
+  valorEl.textContent = formatBRL(novoValor);
+  taxaEl.textContent  = taxaValor === 0 ? '' : formatBRL(taxaValor);
+
+  resumo.valor = formatBRL(novoValor);
+  resumo.taxa  = taxaValor === 0 ? '' : formatBRL(taxaValor);
+
+  atualizarResumo();
+  salvarEstado();
+  fecharModalTaxa();
+});
 
 function copiarResumo({ nome, hora, valor }) {
   const texto = `${nome} | ${hora} | ${valor}`;
@@ -392,31 +452,7 @@ btnCopy.addEventListener('click', e => {
 /* 💰 TAXA */
 linha.querySelector('.btn-taxa').addEventListener('click', e => {
   e.stopPropagation();
-
-  const entrada = prompt('Digite o valor da taxa (0 para remover)');
-  if (entrada === null) return;
-
-  const taxaValor = parseBRL(entrada);
-  if (taxaValor < 0) return alert('Taxa inválida');
-
-  const valorOriginal = parseFloat(valorEl.dataset.original) || 0;
-
-  if (taxaValor > valorOriginal) {
-    return alert('A taxa não pode ser maior que o valor original');
-  }
-
-  const novoValor = taxaValor === 0
-    ? valorOriginal
-    : valorOriginal - taxaValor;
-
-  valorEl.textContent = formatBRL(novoValor);
-  taxaEl.textContent  = taxaValor === 0 ? '' : formatBRL(taxaValor);
-
-  resumo.valor = formatBRL(novoValor);
-  resumo.taxa  = taxaValor === 0 ? '' : formatBRL(taxaValor);
-
-  atualizarResumo();
-  salvarEstado();
+  abrirModalTaxa({ valorEl, taxaEl, resumo });
 });
 
 
