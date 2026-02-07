@@ -5,6 +5,23 @@ const NOMES_PROIBIDOS = [
 ];
 
 // ================= FUNÇÕES =================
+function parseBRL(v) {
+  if (!v) return 0;
+  return parseFloat(
+    v.replace('R$', '')
+     .replace(/\./g, '')
+     .replace(',', '.')
+     .trim()
+  ) || 0;
+}
+
+function formatBRL(v) {
+  return v.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  });
+}
+
 function copiarResumo({ nome, hora, valor }) {
   const texto = `${nome} | ${hora} | ${valor}`;
 
@@ -16,6 +33,29 @@ function limitarTexto(texto, limite = 10) {
   return texto.length > limite
     ? texto.slice(0, limite) + '...'
     : texto;
+}
+function atualizarResumo() {
+  const linhas = document.querySelectorAll('.file-item');
+
+  let total = 0;
+
+  linhas.forEach(linha => {
+    const valorEl = linha.querySelector('.col.valor');
+    if (!valorEl) return;
+
+    // pega "R$ 215,75" → 215.75
+    const valor = valorEl.textContent
+      .replace('R$', '')
+      .replace('.', '')
+      .replace(',', '.')
+      .trim();
+
+    total += parseFloat(valor) || 0;
+  });
+
+  document.getElementById('contador-arquivos').textContent = linhas.length;
+  document.getElementById('soma-total').textContent =
+    total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
 function identificarBanco(textoOCR) {
@@ -304,6 +344,16 @@ nomeArquivoEl.addEventListener('click', e => {
   const nomeEl  = linha.querySelector('.col.nome');
   const horaEl  = linha.querySelector('.col.hora');
   const valorEl = linha.querySelector('.col.valor');
+
+// 🔒 salva o valor original apenas uma vez
+if (!valorEl.dataset.original) {
+  valorEl.dataset.original = parseBRL(valorEl.textContent);
+}
+
+valorEl.addEventListener('blur', () => {
+  atualizarResumo();
+  salvarEstado();
+});
   const taxaEl  = linha.querySelector('.col.taxa');
 
   /* 📋 COPIAR */
@@ -339,24 +389,43 @@ btnCopy.addEventListener('click', e => {
   });
 
   /* 💰 TAXA */
-  linha.querySelector('.btn-taxa').addEventListener('click', e => {
-    e.stopPropagation();
+/* 💰 TAXA */
+linha.querySelector('.btn-taxa').addEventListener('click', e => {
+  e.stopPropagation();
 
-    const v = prompt('Digite o valor da taxa (ex: 5,00)');
-    if (!v) return;
+  const entrada = prompt('Digite o valor da taxa (0 para remover)');
+  if (entrada === null) return;
 
-    const taxaFormatada = v.includes('R$') ? v : `R$ ${v}`;
-    taxaEl.textContent = taxaFormatada;
-    resumo.taxa = taxaFormatada;
+  const taxaValor = parseBRL(entrada);
+  if (taxaValor < 0) return alert('Taxa inválida');
 
-    salvarEstado();
-  });
+  const valorOriginal = parseFloat(valorEl.dataset.original) || 0;
+
+  if (taxaValor > valorOriginal) {
+    return alert('A taxa não pode ser maior que o valor original');
+  }
+
+  const novoValor = taxaValor === 0
+    ? valorOriginal
+    : valorOriginal - taxaValor;
+
+  valorEl.textContent = formatBRL(novoValor);
+  taxaEl.textContent  = taxaValor === 0 ? '' : formatBRL(taxaValor);
+
+  resumo.valor = formatBRL(novoValor);
+  resumo.taxa  = taxaValor === 0 ? '' : formatBRL(taxaValor);
+
+  atualizarResumo();
+  salvarEstado();
+});
+
 
   /* 🗑 REMOVER */
 linha.querySelector('.btn-remove').addEventListener('click', e => {
   e.stopPropagation();
   item.remove();
   salvarEstado();
+  atualizarResumo(); 
 });
 
   
@@ -380,11 +449,14 @@ document.addEventListener('DOMContentLoaded', () => {
     list.appendChild(criarItemOCR(r));
   });
 
+atualizarResumo(); 
+
   // 🗑 Limpar histórico
   btnClear?.addEventListener('click', () => {
     if (!confirm('Deseja apagar todo o histórico de OCR?')) return;
     localStorage.removeItem(STORAGE_KEY);
     list.innerHTML = '';
+     atualizarResumo();
   });
 
   // 📂 OCR
@@ -417,6 +489,8 @@ for (const file of files) {
       resumo,
       texto: textoExtraido
     });
+
+atualizarResumo();
 
   } catch (err) {
     const erroItem = document.createElement('div');
