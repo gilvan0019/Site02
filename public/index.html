@@ -8,7 +8,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./style.css">
 
-  <!-- Tesseract.js -->
+  <!-- 📄 PDF.js (OBRIGATÓRIO para ler PDF) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <!-- 🔍 Tesseract.js -->
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 
   <!-- JS PRINCIPAL -->
@@ -35,7 +38,12 @@
         <h1>OCR de Imagens (em Lista)</h1>
 
         <label class="upload-box">
-          <input type="file" id="fileInput" multiple accept="image/*">
+         <input
+  type="file"
+  id="fileInput"
+  multiple
+  accept="image/*,application/pdf"
+/>
           <p>Arraste imagens ou clique para selecionar</p>
           <span>JPG, JPEG, PNG</span>
         </label>
