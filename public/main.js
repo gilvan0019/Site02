@@ -1025,8 +1025,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('fileInput');
   const list  = document.getElementById('fileList');
   const btnClear = document.getElementById('btnClear');
+  const uploadBox = document.getElementById('uploadBox');
 
-  if (!input || !list) return;
+  if (!input || !list || !uploadBox) return;
+
+  // ===== DRAG & DROP =====
+  ['dragenter','dragover','dragleave','drop'].forEach(event => {
+    uploadBox.addEventListener(event, e => e.preventDefault());
+  });
+
+  uploadBox.addEventListener('dragover', () => {
+    uploadBox.classList.add('dragover');
+  });
+
+  uploadBox.addEventListener('dragleave', () => {
+    uploadBox.classList.remove('dragover');
+  });
+
+  uploadBox.addEventListener('drop', e => {
+    uploadBox.classList.remove('dragover');
+
+    const files = e.dataTransfer.files;
+    if (!files.length) return;
+
+    input.files = files;
+    input.dispatchEvent(new Event('change'));
+  });
+
   /* ===== CAMPOS AGENTE / AGENCIA (STORAGE) ===== */
   const inputAgente   = document.getElementById('nome-agente');
   const selectAgencia = document.getElementById('nome-agencia');
@@ -1108,6 +1133,7 @@ atualizarResumo();
 
   });
 });
+
 // 🧹 Finaliza o worker OCR ao sair da página
 window.addEventListener('beforeunload', async () => {
   if (ocrWorker) {
