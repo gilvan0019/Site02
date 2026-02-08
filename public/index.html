@@ -24,65 +24,93 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <h2>OCR APP</h2>
-      <button>CALCULADORA</button>
-      <button>RODOVIARIAS</button>
-      <button>⚙️ Configurações</button>
+<button data-page="page-ocr">OCR</button>
+<button data-page="page-calculadora">CALCULADORA</button>
+<button data-page="page-rodoviarias">RODOVIARIAS</button>
     </aside>
 
     <!-- CONTEÚDO -->
     <main class="content">
-      <div class="app">
-<button id="btnClear" class="btn-clear">
-  LIMPAR
-</button>
-        <h1>OCR de Imagens (em Lista)</h1>
 
-        <label class="upload-box">
-         <input
-  type="file"
-  id="fileInput"
-  multiple
-  accept="image/*,application/pdf"
-/>
-          <p>Arraste imagens ou clique para selecionar</p>
-          <span>JPG, JPEG, PNG</span>
-        </label>
+  <!-- ===== OCR ===== -->
+  <section class="page active" id="page-ocr">
+    <div class="app">
 
-<div class="filtros-topo">
-  <input
-    type="text"
-    id="nome-agente"
-    placeholder="Nome do agente"
-  >
+      <button id="btnClear" class="btn-clear">LIMPAR</button>
 
-  <select id="nome-agencia">
-    <option value="AGENCIA">AGENCIA</option>
-    <option value="TOP VIAGENS">TOP VIAGENS</option>
-    <option value="VALE VIAGENS">VALE VIAGENS</option>
-    <option value="SUPORTE ONLINE">SUPORTE ONLINE</option>
-    <option value="CANOA">CANOA</option>
-  </select>
-</div>
+      <h1>OCR de Imagens (em Lista)</h1>
 
+      <label class="upload-box" id="uploadBox">
+        <input
+          type="file"
+          id="fileInput"
+          multiple
+          accept="image/*,application/pdf"
+        />
+        <p>Arraste imagens ou clique para selecionar</p>
+        <span>JPG, JPEG, PNG</span>
+      </label>
 
-
-
-<!-- 👇 RESUMO / CONTADOR -->
-<div id="resumo-arquivo" class="resumo-arquivo">
-  <div class="resumo-titulo">
-    ARQUIVO <span id="contador-arquivos">0</span>
-  </div>
-
-  <div class="resumo-total">
-    TOTAL <span id="soma-total">R$ 0,00</span>
-  </div>
-</div>
-
-<!-- 👇 LISTA -->
-        <div class="file-list" id="fileList"></div>
-
+      <div class="filtros-topo">
+        <input type="text" id="nome-agente" placeholder="Nome do agente">
+        <select id="nome-agencia">
+          <option value="AGENCIA">AGENCIA</option>
+          <option value="TOP VIAGENS">TOP VIAGENS</option>
+          <option value="VALE VIAGENS">VALE VIAGENS</option>
+          <option value="SUPORTE ONLINE">SUPORTE ONLINE</option>
+          <option value="CANOA">CANOA</option>
+        </select>
       </div>
-    </main>
+
+      <div id="resumo-arquivo" class="resumo-arquivo">
+        <div class="resumo-titulo">
+          ARQUIVO <span id="contador-arquivos">0</span>
+        </div>
+        <div class="resumo-total">
+          TOTAL <span id="soma-total">R$ 0,00</span>
+        </div>
+      </div>
+
+      <div class="file-list" id="fileList"></div>
+
+    </div>
+  </section>
+
+  <!-- ===== RODOVIARIAS ===== -->
+  <section class="page" id="page-rodoviarias">
+    <div class="app">
+      <h1>Rodoviárias</h1>
+      <p>Conteúdo das rodoviárias aqui</p>
+    </div>
+  </section>
+
+  <!-- ===== CONFIGURAÇÕES ===== -->
+  <section class="page" id="page-config">
+    <div class="app">
+      <h1>Configurações</h1>
+      <p>Configurações do sistema</p>
+    </div>
+  </section>
+
+<!-- ===== CALCULADORA ===== -->
+<section class="page" id="page-calculadora">
+  <div class="calc-wrapper">
+    <div class="calc-card">
+      <h1>🧮 Calculadora de Taxa</h1>
+
+      <input
+        id="calc-valor"
+        type="text"
+        placeholder="Digite o valor (ex: 250,00)"
+        inputmode="decimal"
+      />
+
+      <div id="calc-resultado"></div>
+    </div>
+  </div>
+</section>
+</main>
+
 
   </div>
 
@@ -104,6 +132,24 @@
       </div>
     </div>
   </div>
+<div id="modal-calculadora" class="modal hidden">
+  <div class="modal-box">
+    <h3>🧮 Calculadora de Taxa</h3>
+
+    <input
+      id="calc-valor"
+      type="text"
+      placeholder="Digite o valor (ex: 250,00)"
+      inputmode="decimal"
+    />
+
+    <div id="calc-resultado" style="margin-top:10px; font-size:14px;"></div>
+
+    <div class="modal-actions">
+  <button id="calc-fechar" class="pill primary">Fechar</button>
+</div>
+  </div>
+</div>
 
 </body>
 </html>
