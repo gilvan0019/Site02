@@ -1029,6 +1029,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!input || !list || !uploadBox) return;
 
+  /* ================= CALCULADORA ================= */
+
+const inputCalc = document.getElementById('calc-valor');
+const resultadoCalc = document.getElementById('calc-resultado');
+
+function calcularAutomatico() {
+  const valor = parseBRL(inputCalc.value);
+
+  if (!valor || valor <= 0) {
+    resultadoCalc.innerHTML = '';
+    return;
+  }
+
+  let percentual = 0;
+  if (valor <= 150) percentual = 18;
+  else if (valor <= 300) percentual = 12;
+  else if (valor <= 450) percentual = 10;
+  else percentual = 6;
+
+  const taxa = valor * (percentual / 100);
+  const liquido = valor - taxa;
+
+  resultadoCalc.innerHTML = `
+    <div>🪙 Valor: <b>${formatBRL(valor)}</b></div>
+    <div>⚙️ Taxa: ${percentual}%</div>
+    <div>💰 Taxa de serviço: <b>${formatBRL(taxa)}</b></div>
+  `;
+}
+
+inputCalc?.addEventListener('input', calcularAutomatico);
+  
+
+  /* ============== FIM CALCULADORA ============== */
+
+
   // ===== DRAG & DROP =====
   ['dragenter','dragover','dragleave','drop'].forEach(event => {
     uploadBox.addEventListener(event, e => e.preventDefault());
@@ -1093,6 +1128,24 @@ atualizarResumo();
     list.innerHTML = '';
      atualizarResumo();
   });
+
+
+const sidebarButtons = document.querySelectorAll('.sidebar button[data-page]');
+const pages = document.querySelectorAll('.page');
+
+sidebarButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.page;
+
+    sidebarButtons.forEach(b => b.classList.remove('active'));
+    pages.forEach(p => p.classList.remove('active'));
+
+    btn.classList.add('active');
+
+    const page = document.getElementById(target);
+    if (page) page.classList.add('active');
+  });
+});
 
   // 📂 OCR
   input.addEventListener('change', async () => {
