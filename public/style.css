@@ -427,3 +427,7 @@ button:active,
 .upload-box input[type="file"] {
   display: none;
 }
+.upload-box.dragover {
+  border-color: #4f46e5;
+  background: rgba(79, 70, 229, 0.05);
+}
