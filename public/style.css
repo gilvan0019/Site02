@@ -689,3 +689,47 @@ button:active,
   color: #374151;
   line-height: 1.4;
 }
+/* ===== BARRA DE PESQUISA RODOVIÁRIAS ===== */
+
+.rod-search {
+  position: relative;
+  max-width: 520px;
+  margin-bottom: 18px;
+}
+
+.rod-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#rod-pesquisa {
+  width: 100%;
+  height: 44px;
+  padding: 0 16px 0 42px;
+
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+
+  font-size: 14px;
+  background: #ffffff;
+  color: #111827;
+
+  outline: none;
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+#rod-pesquisa::placeholder {
+  color: #9ca3af;
+}
+
+#rod-pesquisa:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.2);
+}
