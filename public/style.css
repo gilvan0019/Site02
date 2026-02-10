@@ -572,11 +572,20 @@ button:active,
 /* ===== RODOVIÁRIAS (TELA CHEIA) ===== */
 
 #page-rodoviarias {
-  inset: 0; /* remove o inset da regra geral */
+  position: relative;
+  inset: auto;
+  padding: 0;
+}
+
+#page-rodoviarias.active {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
 }
 
 #page-rodoviarias .app {
-  margin: 30px;   /* aplica o mesmo respiro visual das outras páginas */
+  margin: 0;
+  border-radius: 10px;
 }
 
 /* remove visual de modal */
