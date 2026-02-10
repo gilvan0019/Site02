@@ -499,7 +499,7 @@ button:active,
 
 .page {
   position: absolute;
-  inset: 0;
+  inset: 30px; /* respeita o padding da content */
   opacity: 0;
   transform: translateY(10px);
   pointer-events: none;
@@ -519,114 +519,64 @@ button:active,
   overflow-y: auto;   /* scroll vertical */
   overflow-x: hidden; /* evita scroll horizontal */
 }
-/* ===== PÁGINA CALCULADORA ===== */
 
-/* ===== CALCULADORA (PÁGINA) ===== */
+/* ===== CALCULADORA (DO ZERO, PADRÃO RODOVIÁRIAS) ===== */
 
-#page-calculadora {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff; /* 👈 igual às outras páginas */
-  margin: -30px; 
+#page-calculadora .app {
+  min-height: calc(100vh - 60px);
 }
 
-
-.calc-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* header */
+.calc-header {
+  margin-bottom: 20px;
 }
 
-/* card (igual modal) */
-.calc-card {
-  width: 360px;
-  padding: 24px;
-  border-radius: 22px;
-
-  background: radial-gradient(
-    circle at top,
-    #0b4a6f,
-    #020617 70%
-  );
-
-  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
-  color: #e5e7eb;
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-/* título */
-.calc-card h1 {
+.calc-header h2 {
   font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  color: #ffffff;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.calc-subtitle {
+  font-size: 13px;
+  color: #6b7280;
 }
 
 /* input */
 #page-calculadora #calc-valor {
-  width: 100%;
-  padding: 14px 18px;
-  font-size: 16px;
-  text-align: center;
-
+  max-width: 360px;
+  height: 44px;
+  padding: 0 16px;
   border-radius: 999px;
-  border: none;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
   outline: none;
-
-  background: #ffffff;
-  color: #0f172a;
-}
-
-#page-calculadora #calc-valor::placeholder {
-  color: #64748b;
 }
 
 #page-calculadora #calc-valor:focus {
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.4);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.2);
 }
 
 /* resultado */
 #page-calculadora #calc-resultado {
-  margin-top: 10px;
+  max-width: 360px;
+  margin-top: 18px;
   padding: 14px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  background: #f9fafb;
   font-size: 14px;
-}
-
-/* linhas */
-#page-calculadora #calc-resultado div {
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 0;
-}
-
-/* líquido em destaque */
-#page-calculadora #calc-resultado div:last-child {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #22c55e;
 }
 
 /* ===== RODOVIÁRIAS (TELA CHEIA) ===== */
 
 #page-rodoviarias {
-  position: relative;
+  inset: 0; /* remove o inset da regra geral */
 }
 
 #page-rodoviarias .app {
-  width: 100%;
-  max-width: none;
-  min-height: calc(100vh - 60px);
-  padding: 24px;
-  background: #ffffff;
+  margin: 30px;   /* aplica o mesmo respiro visual das outras páginas */
 }
 
 /* remove visual de modal */
@@ -665,7 +615,7 @@ button:active,
 .rod-item {
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  padding: 8px 10px;
+  padding: 12px;
   background: #ffffff;
 }
 
@@ -703,16 +653,18 @@ button:active,
 .rod-search-icon {
   position: absolute;
   left: 14px;
-  top: 50%;
+  top: calc(50% + -7px);
   transform: translateY(-50%);
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1;
   opacity: 0.6;
-  pointer-events: none;
+  
 }
 
 #rod-pesquisa {
   width: 100%;
   height: 44px;
+  line-height: 44px;
   padding: 0 16px 0 42px;
 
   border-radius: 999px;
@@ -736,7 +688,6 @@ button:active,
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37,99,235,.2);
 }
-/* ===== PREVIEW GOOGLE MAPS ===== */
 
 .rod-map {
   margin-top: 12px;
