@@ -1018,6 +1018,37 @@ linha.querySelector('.btn-remove').addEventListener('click', e => {
   item.append(linha, detalhe);
   return item;
 }
+function bindCalculadora(input, resultado) {
+  if (!input || !resultado) return;
+
+  function calcular() {
+    const valor = parseBRL(input.value);
+
+    if (!valor || valor <= 0) {
+      resultado.innerHTML = '';
+      return;
+    }
+
+    let percentual = 0;
+    if (valor <= 150) percentual = 18;
+    else if (valor <= 300) percentual = 12;
+    else if (valor <= 450) percentual = 10;
+    else percentual = 6;
+
+    const taxa = valor * (percentual / 100);
+
+    resultado.innerHTML = `
+      <div>🪙 Valor: <b>${formatBRL(valor)}</b></div>
+      <div>⚙️ Taxa: ${percentual}%</div>
+      <div>💰 Taxa de serviço: <b>${formatBRL(taxa)}</b></div>
+    `;
+  }
+
+  input.addEventListener('input', calcular);
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') calcular();
+  });
+}
 
 // ================= DOM =================
 
@@ -1031,37 +1062,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ================= CALCULADORA ================= */
 
-const inputCalc = document.getElementById('calc-valor');
-const resultadoCalc = document.getElementById('calc-resultado');
+bindCalculadora(
+  document.getElementById('calc-valor'),
+  document.getElementById('calc-resultado')
+);
 
-function calcularAutomatico() {
-  const valor = parseBRL(inputCalc.value);
-
-  if (!valor || valor <= 0) {
-    resultadoCalc.innerHTML = '';
-    return;
-  }
-
-  let percentual = 0;
-  if (valor <= 150) percentual = 18;
-  else if (valor <= 300) percentual = 12;
-  else if (valor <= 450) percentual = 10;
-  else percentual = 6;
-
-  const taxa = valor * (percentual / 100);
-  const liquido = valor - taxa;
-
-  resultadoCalc.innerHTML = `
-    <div>🪙 Valor: <b>${formatBRL(valor)}</b></div>
-    <div>⚙️ Taxa: ${percentual}%</div>
-    <div>💰 Taxa de serviço: <b>${formatBRL(taxa)}</b></div>
-  `;
-}
-
-inputCalc?.addEventListener('input', calcularAutomatico);
+bindCalculadora(
+  document.getElementById('calc-valor-modal'),
+  document.getElementById('calc-resultado-modal')
+);
   
 
   /* ============== FIM CALCULADORA ============== */
+let rodoviarias = [];
+
+async function carregarRodoviarias() {
+  try {
+    const res = await fetch('./rodoviarias.json');
+    rodoviarias = await res.json();
+    renderizarRodoviarias(rodoviarias);
+  } catch (e) {
+    console.error('Erro ao carregar rodoviarias.json', e);
+  }
+}
+
+function renderizarRodoviarias(lista) {
+  const container = document.getElementById('rod-lista');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  lista.forEach(r => {
+    const horario = r.Horario
+      ? `
+        <div class="horario">
+          🕒 <b>Seg–Sex:</b> ${r.Horario.SegSex || '-'}
+          ${r.Horario.Sab ? `<br>🕒 <b>Sáb:</b> ${r.Horario.Sab}` : ''}
+          ${r.Horario.Dom ? `<br>🕒 <b>Dom:</b> ${r.Horario.Dom}` : ''}
+        </div>
+      `
+      : '';
+
+    const div = document.createElement('div');
+    div.className = 'rod-item';
+
+    div.innerHTML = `
+      <div class="titulo">${r.Nome}</div>
+      <div class="cidade">${r['CIDADE - UF']}</div>
+      <div class="desc">${r.Descricao}</div>
+      ${horario}
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+
+document.getElementById('rod-pesquisa')?.addEventListener('input', e => {
+  const termo = e.target.value.toLowerCase();
+
+  const filtrado = rodoviarias.filter(r =>
+    r.Nome?.toLowerCase().includes(termo) ||
+    r['CIDADE - UF']?.toLowerCase().includes(termo) ||
+    r.Descricao?.toLowerCase().includes(termo)
+  );
+
+  renderizarRodoviarias(filtrado);
+});
+
+/* carrega quando a página abre */
+carregarRodoviarias();
 
 
   // ===== DRAG & DROP =====
