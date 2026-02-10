@@ -522,9 +522,6 @@ button:active,
 
 /* ===== CALCULADORA (DO ZERO, PADRÃO RODOVIÁRIAS) ===== */
 
-#page-calculadora .app {
-  min-height: calc(100vh - 60px);
-}
 
 /* header */
 .calc-header {
@@ -586,6 +583,7 @@ button:active,
 #page-rodoviarias .app {
   margin: 0;
   border-radius: 10px;
+  min-height: calc(100vh - 60px);
 }
 
 /* remove visual de modal */
@@ -717,7 +715,9 @@ button:active,
 .rod-map.hidden {
   display: none;
 }
-
+#page-ocr .app {
+  min-height: calc(100vh - 60px);
+}
 @keyframes fadeMap {
   from {
     opacity: 0;
