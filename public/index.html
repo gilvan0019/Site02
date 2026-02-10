@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -76,13 +77,27 @@
     </div>
   </section>
 
-  <!-- ===== RODOVIARIAS ===== -->
-  <section class="page" id="page-rodoviarias">
-    <div class="app">
-      <h1>Rodoviárias</h1>
-      <p>Conteúdo das rodoviárias aqui</p>
+ <!-- ===== RODOVIARIAS ===== -->
+<section class="page" id="page-rodoviarias">
+  <div class="app">
+
+    <div class="rodoviarias-box">
+      <div class="rodoviarias-header">
+        <h2>🚌 Rodoviárias</h2>
+        <button id="rod-fechar">✕</button>
+      </div>
+
+      <input
+        type="text"
+        id="rod-pesquisa"
+        placeholder="Digite cidade ou rodoviária"
+      />
+
+      <div id="rod-lista" class="rod-lista"></div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- ===== CONFIGURAÇÕES ===== -->
   <section class="page" id="page-config">
@@ -137,17 +152,17 @@
     <h3>🧮 Calculadora de Taxa</h3>
 
     <input
-      id="calc-valor"
+      id="calc-valor-modal"   <!-- ✅ ID ÚNICO -->
       type="text"
       placeholder="Digite o valor (ex: 250,00)"
       inputmode="decimal"
     />
 
-    <div id="calc-resultado" style="margin-top:10px; font-size:14px;"></div>
+    <div id="calc-resultado-modal"></div> <!-- ✅ ID ÚNICO -->
 
     <div class="modal-actions">
-  <button id="calc-fechar" class="pill primary">Fechar</button>
-</div>
+      <button id="calc-fechar" class="pill primary">Fechar</button>
+    </div>
   </div>
 </div>
 
