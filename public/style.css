@@ -46,6 +46,8 @@ body {
 
 /* ===== APP (LARGURA TOTAL) ===== */
 .app {
+  width: 100%;
+  max-width: auto;
   margin: 0;
   background: #ffffff;
   border-radius: 10px;
@@ -496,20 +498,16 @@ button:active,
 /* ===== TRANSIÇÃO ENTRE SEÇÕES ===== */
 
 .page {
-  position: absolute;
-  inset: 30px; /* respeita o padding da content */
+  display: none;
   opacity: 0;
   transform: translateY(10px);
-  pointer-events: none;
-  transition:
-    opacity 0.35s ease,
-    transform 0.35s ease;
+  transition: opacity .25s ease, transform .25s ease;
 }
 
 .page.active {
+  display: block;
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
 }
 
 .content {
