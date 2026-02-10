@@ -1322,32 +1322,37 @@ sidebarButtons.forEach(btn => {
     const novaPagina = document.getElementById(targetId);
     if (!novaPagina) return;
 
+    // botão ativo
     sidebarButtons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
     const atual = document.querySelector('.page.active');
+
     let direction = 'enter-down';
 
     if (atual) {
       const atualIndex = getPageIndex(atual.id);
       const novaIndex  = getPageIndex(targetId);
 
-      if (novaIndex < atualIndex) direction = 'enter-up';
+      // se voltou na ordem → sobe
+      if (novaIndex < atualIndex) {
+        direction = 'enter-up';
+      }
 
       atual.classList.remove('active');
-
-      setTimeout(() => {
-        atual.style.display = 'none';
-      }, 250);
     }
 
+    // limpa estados anteriores
     pages.forEach(p => {
       p.classList.remove('enter-up', 'enter-down');
+      p.style.display = 'none';
     });
 
+    // prepara nova página
     novaPagina.style.display = 'block';
     novaPagina.classList.add(direction);
 
+    // força repaint antes de ativar
     requestAnimationFrame(() => {
       novaPagina.classList.add('active');
       novaPagina.classList.remove('enter-up', 'enter-down');
