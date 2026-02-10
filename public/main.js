@@ -1049,6 +1049,100 @@ function bindCalculadora(input, resultado) {
     if (e.key === 'Enter') calcular();
   });
 }
+function horaParaMinutos(hora) {
+  if (!hora || hora === '-') return 9999;
+  const [h, m] = hora.split(':').map(Number);
+  return h * 60 + m;
+}
+
+function gerarRelatorioExcel() {
+  const dados = [];
+
+  const agente  = document.getElementById('nome-agente')?.value || 'SEM NOME';
+  const agencia = document.getElementById('nome-agencia')?.value || '';
+
+  // ===== LINHA 1 =====
+  dados.push([
+    `AGENTE: ${agente.toUpperCase()}`,
+    new Date().toLocaleDateString('pt-BR'),
+    '',
+    '',
+    agencia
+  ]);
+
+  // ===== CABEÇALHO =====
+  dados.push(['NOME', 'HORA', 'PIX', 'TAXA', 'PIX TOTAL']);
+
+  // ===== COLETA =====
+  const itens = Array.from(document.querySelectorAll('.file-item'));
+
+  const registros = itens.map(item => ({
+    nome:  item.querySelector('.col.nome')?.textContent || '',
+    hora:  item.querySelector('.col.hora')?.textContent || '',
+    valor: item.querySelector('.col.valor')?.textContent || '',
+    taxa:  item.querySelector('.col.taxa')?.textContent || ''
+  }));
+
+  // ===== ORDENA =====
+  registros.sort((a, b) =>
+    horaParaMinutos(a.hora) - horaParaMinutos(b.hora)
+  );
+
+  // ===== LINHAS =====
+  registros.forEach(item => {
+    if (!item.nome && !item.valor) return;
+
+    const pix  = parseBRL(item.valor);
+    const taxa = parseBRL(item.taxa);
+
+    const linhaExcel = dados.length + 1;
+
+    dados.push([
+      item.nome.toUpperCase(),
+      item.hora || '',
+      pix || 0,
+      taxa || 0,
+      { f: `C${linhaExcel}+D${linhaExcel}` }
+    ]);
+  });
+
+  // 🚫 validação vem DEPOIS
+  if (dados.length <= 2) {
+    alert('Nenhum dado válido para gerar Excel.');
+    return;
+  }
+
+  // ===== TOTAIS =====
+  const primeiraLinhaDados = 3;
+  const ultimaLinhaDados   = dados.length;
+
+  dados.push(['', '', '', '', '']);
+
+  dados.push([
+  'TOTAL PIX',
+  '',
+  { f: `SUM(C${primeiraLinhaDados}:C${ultimaLinhaDados})` },
+  '',
+  { f: `SUM(E${primeiraLinhaDados}:E${ultimaLinhaDados})` }
+]);
+
+  // ===== PLANILHA =====
+  const ws = XLSX.utils.aoa_to_sheet(dados);
+
+  ws['!cols'] = [
+    { wch: 40 },
+    { wch: 10 },
+    { wch: 18 },
+    { wch: 10 },
+    { wch: 15 }
+  ];
+
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Relatório OCR');
+
+  XLSX.writeFile(wb, 'relatorio_ocr.xlsx');
+}
+
 
 // ================= DOM =================
 
@@ -1209,21 +1303,59 @@ atualizarResumo();
 
 
 const sidebarButtons = document.querySelectorAll('.sidebar button[data-page]');
-const pages = document.querySelectorAll('.page');
+const pages = Array.from(document.querySelectorAll('.page'));
+
+/* ordem lógica das páginas */
+const pageOrder = [
+  'page-ocr',
+  'page-calculadora',
+  'page-rodoviarias'
+];
+
+function getPageIndex(id) {
+  return pageOrder.indexOf(id);
+}
 
 sidebarButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    const target = btn.dataset.page;
+    const targetId = btn.dataset.page;
+    const novaPagina = document.getElementById(targetId);
+    if (!novaPagina) return;
 
     sidebarButtons.forEach(b => b.classList.remove('active'));
-    pages.forEach(p => p.classList.remove('active'));
-
     btn.classList.add('active');
 
-    const page = document.getElementById(target);
-    if (page) page.classList.add('active');
+    const atual = document.querySelector('.page.active');
+    let direction = 'enter-down';
+
+    if (atual) {
+      const atualIndex = getPageIndex(atual.id);
+      const novaIndex  = getPageIndex(targetId);
+
+      if (novaIndex < atualIndex) direction = 'enter-up';
+
+      atual.classList.remove('active');
+
+      setTimeout(() => {
+        atual.style.display = 'none';
+      }, 250);
+    }
+
+    pages.forEach(p => {
+      p.classList.remove('enter-up', 'enter-down');
+    });
+
+    novaPagina.style.display = 'block';
+    novaPagina.classList.add(direction);
+
+    requestAnimationFrame(() => {
+      novaPagina.classList.add('active');
+      novaPagina.classList.remove('enter-up', 'enter-down');
+    });
   });
 });
+
+
 
   // 📂 OCR
   input.addEventListener('change', async () => {
