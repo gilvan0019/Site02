@@ -46,8 +46,6 @@ body {
 
 /* ===== APP (LARGURA TOTAL) ===== */
 .app {
-  width: 100%;
-  max-width: none;
   margin: 0;
   background: #ffffff;
   border-radius: 10px;
