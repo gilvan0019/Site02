@@ -527,13 +527,16 @@ button:active,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff; /* igual às outras páginas */
+  background: #ffffff; /* 👈 igual às outras páginas */
+  margin: -30px; 
 }
 
-/* wrapper central */
+
 .calc-wrapper {
   width: 100%;
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -732,4 +735,36 @@ button:active,
 #rod-pesquisa:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37,99,235,.2);
+}
+/* ===== PREVIEW GOOGLE MAPS ===== */
+
+.rod-map {
+  margin-top: 12px;
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  animation: fadeMap .25s ease;
+}
+
+.rod-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.rod-map.hidden {
+  display: none;
+}
+
+@keyframes fadeMap {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
