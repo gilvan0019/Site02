@@ -1106,11 +1106,19 @@ function renderizarRodoviarias(lista) {
     const div = document.createElement('div');
     div.className = 'rod-item';
 
+    // 🔑 endereço completo para o Maps
+    const endereco = `${r.Descricao}, ${r['CIDADE - UF']}`;
+
+    div.dataset.endereco = endereco;
+
     div.innerHTML = `
       <div class="titulo">${r.Nome}</div>
       <div class="cidade">${r['CIDADE - UF']}</div>
       <div class="desc">${r.Descricao}</div>
       ${horario}
+
+      <!-- preview do mapa -->
+      <div class="rod-map hidden"></div>
     `;
 
     container.appendChild(div);
@@ -1255,6 +1263,41 @@ atualizarResumo();
 }
 
   });
+});
+document.addEventListener('click', e => {
+const item = e.target.closest('.rod-item');
+if (!item || e.target.closest('iframe')) return;
+
+  const mapBox = item.querySelector('.rod-map');
+  const endereco = item.dataset.endereco;
+  if (!mapBox || !endereco) return;
+
+  // fecha outros mapas
+  document.querySelectorAll('.rod-map').forEach(m => {
+    if (m !== mapBox) {
+      m.classList.add('hidden');
+      m.innerHTML = '';
+    }
+  });
+
+  // toggle
+  if (!mapBox.classList.contains('hidden')) {
+    mapBox.classList.add('hidden');
+    mapBox.innerHTML = '';
+    return;
+  }
+
+  const url = `https://www.google.com/maps?q=${encodeURIComponent(endereco)}&output=embed`;
+
+  mapBox.innerHTML = `
+    <iframe
+      loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"
+      src="${url}">
+    </iframe>
+  `;
+
+  mapBox.classList.remove('hidden');
 });
 
 // 🧹 Finaliza o worker OCR ao sair da página
