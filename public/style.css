@@ -516,7 +516,8 @@ button:active,
 
 .content {
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;   /* scroll vertical */
+  overflow-x: hidden; /* evita scroll horizontal */
 }
 /* ===== PÁGINA CALCULADORA ===== */
 
@@ -526,6 +527,7 @@ button:active,
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff; /* igual às outras páginas */
 }
 
 /* wrapper central */
@@ -608,4 +610,84 @@ button:active,
   font-size: 15px;
   font-weight: 600;
   color: #22c55e;
+}
+
+/* ===== RODOVIÁRIAS ===== */
+
+.rodoviarias-box {
+  max-width: 720px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.rodoviarias-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rodoviarias-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#rod-fechar {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#rod-pesquisa {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 12px;
+}
+
+.rod-lista {
+  max-height: 380px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rod-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.rod-item:hover {
+  background: #f1f5f9;
+}
+
+.rod-item .titulo {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.rod-item .cidade {
+  font-size: 12px;
+  color: #0f766e;
+}
+
+.rod-item .desc {
+  font-size: 12px;
+  color: #374151;
+}
+.rod-item .horario {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #374151;
+  line-height: 1.4;
 }
