@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,6 +7,9 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./style.css">
+
+  <!-- 📦 JSZip (ZIP download) -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 
   <!-- 📄 PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -23,158 +25,161 @@
 </head>
 <body>
 
-  <div class="layout">
+<div class="layout">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <h2>OCR APP</h2>
-<button data-page="page-ocr">OCR</button>
-<button data-page="page-calculadora">CALCULADORA</button>
-<button data-page="page-rodoviarias">RODOVIARIAS</button>
-    </aside>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>OCR APP</h2>
+    <button data-page="page-ocr">OCR</button>
+    <button data-page="page-calculadora">CALCULADORA</button>
+    <button data-page="page-rodoviarias">RODOVIARIAS</button>
+  </aside>
 
-    <!-- CONTEÚDO -->
-    <main class="content">
+  <!-- CONTEÚDO -->
+  <main class="content">
 
-  <!-- ===== OCR ===== -->
-  <section class="page active" id="page-ocr">
-    <div class="app">
+    <!-- ===== OCR ===== -->
+    <section class="page active" id="page-ocr">
+      <div class="app">
 
-<div style="display:flex; gap:12px; align-items:center;">
+        <!-- BOTÕES TOPO -->
+        <div style="display:flex; gap:12px; align-items:center;">
 
-  <button
-    id="btnExcel"
-    class="pill primary"
-    onclick="gerarRelatorioExcel()"
-  >
-    📊 Gerar Excel
-  </button>
-</div>
-      <h1>OCR de Imagens (em Lista)</h1>
+          <button
+            id="btnExcel"
+            class="pill primary"
+            onclick="gerarRelatorioExcel()"
+          >
+            📊 Gerar Excel
+          </button>
 
-      <label class="upload-box" id="uploadBox">
-        <input
-          type="file"
-          id="fileInput"
-          multiple
-          accept="image/*,application/pdf"
-        />
-        <p>Arraste imagens ou clique para selecionar</p>
-        <span>JPG, JPEG, PNG</span>
-      </label>
+         <button
+  id="btnZip"
+  onclick="baixarTodosArquivosZip()"
+>
+  📦 Baixar ZIP
+</button>
 
-      <div class="filtros-topo">
-        <input type="text" id="nome-agente" placeholder="Nome do agente">
-        <select id="nome-agencia">
-          <option value="AGENCIA">AGENCIA</option>
-          <option value="TOP VIAGENS">TOP VIAGENS</option>
-          <option value="VALE VIAGENS">VALE VIAGENS</option>
-          <option value="SUPORTE ONLINE">SUPORTE ONLINE</option>
-          <option value="CANOA">CANOA</option>
-        </select>
-      </div>
-
-      <div id="resumo-arquivo" class="resumo-arquivo">
-        <div class="resumo-titulo">
-          ARQUIVO <span id="contador-arquivos">0</span>
         </div>
-        <div class="resumo-total">
-          TOTAL <span id="soma-total">R$ 0,00</span>
+
+        <h1>OCR de Imagens (em Lista)</h1>
+
+        <label class="upload-box" id="uploadBox">
+          <input
+            type="file"
+            id="fileInput"
+            multiple
+            accept="image/*,application/pdf"
+          />
+          <p>Arraste imagens ou clique para selecionar</p>
+          <span>JPG, JPEG, PNG</span>
+        </label>
+
+        <div class="filtros-topo">
+          <input type="text" id="nome-agente" placeholder="Nome do agente">
+          <select id="nome-agencia">
+            <option value="AGENCIA">AGENCIA</option>
+            <option value="TOP VIAGENS">TOP VIAGENS</option>
+            <option value="VALE VIAGENS">VALE VIAGENS</option>
+            <option value="SUPORTE ONLINE">SUPORTE ONLINE</option>
+            <option value="CANOA">CANOA</option>
+          </select>
         </div>
+
+        <div id="resumo-arquivo" class="resumo-arquivo">
+          <div class="resumo-titulo">
+            ARQUIVO <span id="contador-arquivos">0</span>
+          </div>
+          <div class="resumo-total">
+            TOTAL <span id="soma-total">R$ 0,00</span>
+          </div>
+        </div>
+
+        <div class="file-list" id="fileList"></div>
+
       </div>
+    </section>
 
-      <div class="file-list" id="fileList"></div>
+    <!-- ===== RODOVIARIAS ===== -->
+    <section class="page" id="page-rodoviarias">
+      <div class="app">
 
-    </div>
-  </section>
+        <div class="rodoviarias-box">
+          <div class="rodoviarias-header">
+            <h2>🚌 Rodoviárias</h2>
+            <button id="rod-fechar">✕</button>
+          </div>
 
- <!-- ===== RODOVIARIAS ===== -->
-<section class="page" id="page-rodoviarias">
-  <div class="app">
+          <div class="rod-search">
+            <span class="rod-search-icon">🔍</span>
+            <input
+              type="text"
+              id="rod-pesquisa"
+              placeholder="Digite cidade ou rodoviária"
+            />
+          </div>
 
-    <div class="rodoviarias-box">
-      <div class="rodoviarias-header">
-        <h2>🚌 Rodoviárias</h2>
-        <button id="rod-fechar">✕</button>
+          <div id="rod-lista" class="rod-lista"></div>
+        </div>
+
       </div>
+    </section>
 
-  <div class="rod-search">
-  <span class="rod-search-icon">🔍</span>
-  <input
-    type="text"
-    id="rod-pesquisa"
-    placeholder="Digite cidade ou rodoviária"
-  />
+    <!-- ===== CALCULADORA ===== -->
+    <section class="page" id="page-calculadora">
+      <div class="app">
+
+        <div class="taxa-layout">
+          <h3>🧮 Calculadora de Taxa</h3>
+
+          <input
+            id="calc-valor"
+            type="text"
+            placeholder="Digite o valor (ex: 250,00)"
+            inputmode="decimal"
+          />
+
+          <div id="calc-resultado"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 </div>
 
-      <div id="rod-lista" class="rod-lista"></div>
-    </div>
+<!-- 💰 MODAL TAXA -->
+<div id="modal-taxa" class="modal hidden">
+  <div class="modal-box">
+    <h3>💰 Aplicar taxa</h3>
 
-  </div>
-</section>
+    <input
+      id="input-taxa"
+      type="text"
+      placeholder="0,00"
+      inputmode="decimal"
+    />
 
-  <!-- ===== CONFIGURAÇÕES ===== -->
-  <section class="page" id="page-config">
-    <div class="app">
-      <h1>Configurações</h1>
-      <p>Configurações do sistema</p>
-    </div>
-  </section>
-
-<!-- ===== CALCULADORA ===== -->
-<section class="page" id="page-calculadora">
-  <div class="app">
-
-    <div class="taxa-layout">
-      <h3>🧮 Calculadora de Taxa</h3>
-
-      <input
-        id="calc-valor"
-        type="text"
-        placeholder="Digite o valor (ex: 250,00)"
-        inputmode="decimal"
-      />
-
-      <div id="calc-resultado"></div>
-    </div>
-
-  </div>
-</section>
-</main>
-
-
-  </div>
-
-  <!-- 💰 MODAL TAXA -->
-  <div id="modal-taxa" class="modal hidden">
-    <div class="modal-box">
-      <h3>💰 Aplicar taxa</h3>
-
-      <input
-        id="input-taxa"
-        type="text"
-        placeholder="0,00"
-        inputmode="decimal"
-      />
-
-      <div class="modal-actions">
-        <button id="btn-cancelar" class="pill">Cancelar</button>
-        <button id="btn-aplicar" class="pill primary">Aplicar</button>
-      </div>
+    <div class="modal-actions">
+      <button id="btn-cancelar" class="pill">Cancelar</button>
+      <button id="btn-aplicar" class="pill primary">Aplicar</button>
     </div>
   </div>
+</div>
+
+<!-- 🧮 MODAL CALCULADORA -->
 <div id="modal-calculadora" class="modal hidden">
   <div class="modal-box">
     <h3>🧮 Calculadora de Taxa</h3>
 
     <input
-      id="calc-valor-modal"   <!-- ✅ ID ÚNICO -->
+      id="calc-valor-modal"
       type="text"
       placeholder="Digite o valor (ex: 250,00)"
       inputmode="decimal"
     />
 
-    <div id="calc-resultado-modal"></div> <!-- ✅ ID ÚNICO -->
+    <div id="calc-resultado-modal"></div>
 
     <div class="modal-actions">
       <button id="calc-fechar" class="pill primary">Fechar</button>
