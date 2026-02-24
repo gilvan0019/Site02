@@ -1,3 +1,68 @@
+const DB_NAME = 'ocr_app_db';
+const DB_STORE = 'files';
+
+function openDB() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(DB_NAME, 1);
+
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains(DB_STORE)) {
+        db.createObjectStore(DB_STORE, { keyPath: 'id' });
+      }
+    };
+
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function salvarArquivoNoDB(file) {
+  const db = await openDB();
+
+  const id = `${Date.now()}_${Math.random().toString(16).slice(2)}`;
+  const registro = {
+    id,
+    name: file.name,
+    type: file.type || '',
+    file // ✅ guarda o File/Blob
+  };
+
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction(DB_STORE, 'readwrite');
+    tx.objectStore(DB_STORE).put(registro);
+    tx.oncomplete = resolve;
+    tx.onerror = () => reject(tx.error);
+  });
+
+  db.close();
+  return { id, name: file.name, type: file.type };
+}
+
+async function lerArquivoDoDB(id) {
+  const db = await openDB();
+
+  const registro = await new Promise((resolve, reject) => {
+    const tx = db.transaction(DB_STORE, 'readonly');
+    const req = tx.objectStore(DB_STORE).get(id);
+    req.onsuccess = () => resolve(req.result || null);
+    req.onerror = () => reject(req.error);
+  });
+
+  db.close();
+  return registro; // {id,name,type,file}
+}
+
+async function deletarArquivoDoDB(id) {
+  const db = await openDB();
+  await new Promise((resolve, reject) => {
+    const tx = db.transaction(DB_STORE, 'readwrite');
+    tx.objectStore(DB_STORE).delete(id);
+    tx.oncomplete = resolve;
+    tx.onerror = () => reject(tx.error);
+  });
+  db.close();
+}
 if (window.pdfjsLib) {
   pdfjsLib.GlobalWorkerOptions.workerSrc =
     'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
@@ -887,6 +952,8 @@ function salvarEstado() {
     registros.push({
       nomeArquivo: linha.querySelector('.col.arquivo')?.getAttribute('title') || '',
       banco: '',
+      arquivoId: item.dataset.arquivoId || '',
+      arquivoTipo: item.dataset.arquivoTipo || '',
       resumo: {
         nome: linha.querySelector('.col.nome')?.textContent || '-',
         hora: linha.querySelector('.col.hora')?.textContent || '-',
@@ -911,12 +978,12 @@ function carregarRegistros() {
   }
 }
 
-function criarItemOCR({ nomeArquivo, banco, resumo, texto }) {
+function criarItemOCR({ nomeArquivo, banco, resumo, texto, arquivoId, arquivoTipo }) {
   const item = document.createElement('div');
   item.className = 'file-item';
 
-  // garante taxa
-  resumo.taxa = resumo.taxa || '';
+  item.dataset.arquivoId = arquivoId || '';
+  item.dataset.arquivoTipo = arquivoTipo || '';
 
   const linha = document.createElement('div');
   linha.className = 'ocr-row';
@@ -930,12 +997,13 @@ function criarItemOCR({ nomeArquivo, banco, resumo, texto }) {
     <span class="col taxa">${resumo.taxa || ''}</span>
 
     <span class="row-actions">
-      <button class="pill primary btn-copy">📋 Copiar</button>
-      <button class="pill btn-edit">✏️ Editar</button>
-      <button class="pill btn-taxa">💰 Taxa</button>
-      <button class="pill btn-add">➕ Adicionar</button>
-      <button class="pill danger btn-remove">🗑 Remover</button>
-    </span>
+  <button class="pill primary btn-copy">📋 Copiar</button>
+  <button class="pill btn-ver">👁 Ver</button>
+  <button class="pill btn-edit">✏️ Editar</button>
+  <button class="pill btn-taxa">💰 Taxa</button>
+  <button class="pill btn-add">➕ Adicionar</button>
+  <button class="pill danger btn-remove">🗑 Remover</button>
+</span>
   `;
 const nomeArquivoEl = linha.querySelector('.col.arquivo');
 
@@ -1004,6 +1072,20 @@ linha.querySelector('.btn-taxa').addEventListener('click', e => {
   abrirModalTaxa({ valorEl, taxaEl, resumo });
 });
 
+/* 👁 VER ARQUIVO */
+linha.querySelector('.btn-ver')?.addEventListener('click', async e => {
+  e.stopPropagation();
+
+  const id = item.dataset.arquivoId;
+  if (!id) return alert('Arquivo não salvo.');
+
+  const reg = await lerArquivoDoDB(id);
+  if (!reg?.file) return alert('Arquivo não encontrado.');
+
+  const url = URL.createObjectURL(reg.file);
+  window.open(url, '_blank');
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+});
 
   /* 🗑 REMOVER */
 linha.querySelector('.btn-remove').addEventListener('click', e => {
@@ -1142,8 +1224,39 @@ function gerarRelatorioExcel() {
 
   XLSX.writeFile(wb, 'relatorio_ocr.xlsx');
 }
+async function baixarTodosArquivosZip() {
+  const zip = new JSZip();
+  const pasta = zip.folder("COMPROVANTES");
 
+  const itensVisiveis = document.querySelectorAll('.file-item');
 
+  if (!itensVisiveis.length) {
+    alert('Nenhum arquivo visível para baixar.');
+    return;
+  }
+
+  for (const item of itensVisiveis) {
+    const id = item.dataset.arquivoId;
+    if (!id) continue;
+
+    const reg = await lerArquivoDoDB(id);
+    if (reg?.file) {
+      pasta.file(reg.name, reg.file);
+    }
+  }
+
+  const blob = await zip.generateAsync({ type: 'blob' });
+
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'arquivos_ocr.zip';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+
+  URL.revokeObjectURL(url);
+}
 // ================= DOM =================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1363,43 +1476,49 @@ sidebarButtons.forEach(btn => {
 
 
   // 📂 OCR
-  input.addEventListener('change', async () => {
-    const files = Array.from(input.files);
+// 📂 OCR
+input.addEventListener('change', async () => {
+  const files = Array.from(input.files);
 
-for (const file of files) {
-  try {
-    const worker = await getOCRWorker();
-let imagemOCR = file;
+  for (const file of files) {
+    try {
+      // ✅ salva o arquivo no IndexedDB
+      const saved = await salvarArquivoNoDB(file);
 
-if (file.type === 'application/pdf') {
-  imagemOCR = await pdfParaImagem(file);
-}
+      // ✅ OCR
+      const worker = await getOCRWorker();
+      let imagemOCR = file;
 
-const res = await worker.recognize(imagemOCR);    const textoExtraido = res.data.text.trim() || '';
+      if (file.type === 'application/pdf') {
+        imagemOCR = await pdfParaImagem(file);
+      }
 
-    const banco = identificarBanco(textoExtraido);
-    const resumo = extrairResumoPorBanco(textoExtraido, banco);
+      const res = await worker.recognize(imagemOCR);
+      const textoExtraido = res.data.text.trim() || '';
 
-    const novoItem = criarItemOCR({
-      nomeArquivo: file.name,
-      banco,
-      resumo,
-      texto: textoExtraido
-    });
+      const banco = identificarBanco(textoExtraido);
+      const resumo = extrairResumoPorBanco(textoExtraido, banco);
 
-    list.appendChild(novoItem);
-salvarEstado();
-atualizarResumo();
+      const novoItem = criarItemOCR({
+        nomeArquivo: file.name,
+        banco,
+        resumo,
+        texto: textoExtraido,
+        arquivoId: saved.id,
+        arquivoTipo: file.type
+      });
 
-  } catch (err) {
-    const erroItem = document.createElement('div');
-    erroItem.className = 'file-item';
-    erroItem.textContent = `Erro ao processar ${file.name}`;
-    list.appendChild(erroItem);
+      list.appendChild(novoItem);
+      salvarEstado();
+      atualizarResumo();
+    } catch (err) {
+      console.error(err);
+      const erroItem = document.createElement('div');
+      erroItem.className = 'file-item';
+      erroItem.textContent = `Erro ao processar ${file.name}`;
+      list.appendChild(erroItem);
+    }
   }
-}
-
-  });
 });
 document.addEventListener('click', e => {
 const item = e.target.closest('.rod-item');
@@ -1443,4 +1562,5 @@ window.addEventListener('beforeunload', async () => {
     await ocrWorker.terminate();
     ocrWorker = null;
   }
+});
 });
