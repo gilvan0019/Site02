@@ -1021,7 +1021,38 @@ nomeArquivoEl.addEventListener('click', e => {
   const nomeEl  = linha.querySelector('.col.nome');
   const horaEl  = linha.querySelector('.col.hora');
   const valorEl = linha.querySelector('.col.valor');
+function bindSalvarAoEditar(el, tipo = 'text') {
+  if (!el) return;
 
+  // salva quando sair do campo
+  el.addEventListener('blur', () => {
+    if (tipo === 'valor') {
+  const v = parseBRL(el.textContent);
+  el.textContent = formatBRL(v);
+  el.dataset.original = v;
+}
+    atualizarResumo();
+    salvarEstado();
+  });
+
+  // salva enquanto digita (captura antes do F5)
+  el.addEventListener('input', () => {
+    atualizarResumo();
+    salvarEstado();
+  });
+
+  // Enter = finaliza edição e salva
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      el.blur();
+    }
+  });
+}
+
+bindSalvarAoEditar(nomeEl);
+bindSalvarAoEditar(horaEl);
+bindSalvarAoEditar(valorEl, 'valor');
 // 🔒 salva o valor original apenas uma vez
 if (!valorEl.dataset.original) {
   valorEl.dataset.original = parseBRL(valorEl.textContent);
