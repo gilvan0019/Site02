@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -43,24 +44,39 @@
       <div class="app">
 
         <!-- BOTÕES TOPO -->
-        <div style="display:flex; gap:12px; align-items:center;">
+<div style="display:flex; gap:12px; align-items:center;">
 
-          <button
-            id="btnExcel"
-            class="pill primary"
-            onclick="gerarRelatorioExcel()"
-          >
-            📊 Gerar Excel
-          </button>
+  <button
+    id="btnExcel"
+    class="pill primary"
+    onclick="gerarRelatorioExcel()"
+  >
+    📊 Gerar Excel
+  </button>
 
-         <button
-  id="btnZip"
-  onclick="baixarTodosArquivosZip()"
->
-  📦 Baixar ZIP
-</button>
+  <button
+    id="btnZip"
+    onclick="baixarTodosArquivosZip()"
+  >
+    📦 Baixar ZIP
+  </button>
 
-        </div>
+  <!-- 🔎 FILTRO (dropdown) -->
+  <div class="filter-wrap">
+    <button id="btnFiltro" class="pill">🔎 Filtro</button>
+
+    <div id="menuFiltro" class="filter-menu hidden">
+      <button type="button" class="filter-item" data-sort="added-desc">📌 Adicionado (novo → antigo)</button>
+      <button type="button" class="filter-item" data-sort="added-asc">📌 Adicionado (antigo → novo)</button>
+
+      <div class="filter-sep"></div>
+
+      <button type="button" class="filter-item" data-sort="hora-asc">⏰ Horário (crescente)</button>
+      <button type="button" class="filter-item" data-sort="hora-desc">⏰ Horário (decrescente)</button>
+    </div>
+  </div>
+
+</div>
 
         <h1>OCR de Imagens (em Lista)</h1>
 
@@ -186,6 +202,20 @@
     </div>
   </div>
 </div>
+<!-- 🔎 MODAL FILTRO -->
+<div id="modal-filtro" class="modal hidden">
+  <div class="modal-box filtro-box">
+    <h3>🔎 Filtrar Registros</h3>
 
+    <input id="filtro-nome" type="text" placeholder="Filtrar por nome" />
+    <input id="filtro-valor" type="text" placeholder="Valor mínimo (ex: 50,00)" />
+    <input id="filtro-hora" type="text" placeholder="Hora (ex: 15:30)" />
+
+    <div class="modal-actions">
+      <button id="btn-limpar-filtro" class="pill">Limpar</button>
+      <button id="btn-aplicar-filtro" class="pill primary">Aplicar</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
