@@ -1,5 +1,6 @@
 
 
+
 /* ===== RESET ===== */
 * {
   box-sizing: border-box;
@@ -828,4 +829,114 @@ button:active,
   background: linear-gradient(135deg, #4b5563, #1f2937);
   border-color: #111827;
   color: #ffffff;
+}
+/* ===== BOTÃO FILTRO ===== */
+#btnFiltro {
+  background: linear-gradient(135deg, #374151, #1f2937);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+}
+
+#btnFiltro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.4);
+}
+
+/* ===== DROPDOWN FILTRO ===== */
+.filter-wrap{
+  position: relative;
+  display: inline-block;
+}
+
+#btnFiltro {
+  background: linear-gradient(135deg, #12005f, #16005f);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+}
+
+#btnFiltro:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+  filter: brightness(1.05);
+}
+
+#btnFiltro:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+.filter-menu{
+  position:absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 260px;
+  background: #0b1220;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.45);
+  z-index: 9999;
+}
+
+.filter-menu.hidden{ display:none; }
+
+.filter-item{
+  width:100%;
+  text-align:left;
+  border:none;
+  background: transparent;
+  color:#e5e7eb;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor:pointer;
+  font-size: 13px;
+}
+
+.filter-item:hover{
+  background: rgba(37,99,235,.18);
+}
+
+.filter-sep{
+  height:1px;
+  background: rgba(255,255,255,.08);
+  margin: 6px 2px;
+}
+/* ===== CAMPOS EDITÁVEIS ===== */
+
+.col.nome[contenteditable="true"],
+.col.hora[contenteditable="true"],
+.col.valor[contenteditable="true"] {
+  background: rgba(37, 99, 235, 0.08);
+  border-radius: 6px;
+  padding: 4px 8px;
+  outline: none;
+  min-width: 60px;
+  box-shadow: 0 0 0 1px rgba(37,99,235,.35);
+}
+
+/* quando estiver vazio não mostrar traço estranho */
+.col.nome:empty::before,
+.col.hora:empty::before,
+.col.valor:empty::before {
+  content: "";
+}
+
+/* cursor mais bonito */
+.col.nome,
+.col.hora,
+.col.valor {
+  transition: background .2s ease, box-shadow .2s ease;
 }
