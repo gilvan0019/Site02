@@ -1,3 +1,4 @@
+
 const DB_NAME = 'ocr_app_db';
 const DB_STORE = 'files';
 
@@ -1007,6 +1008,23 @@ function criarItemOCR({ nomeArquivo, banco, resumo, texto, arquivoId, arquivoTip
   `;
 const nomeArquivoEl = linha.querySelector('.col.arquivo');
 
+function setEditMode(on) {
+  nomeEl.contentEditable  = on;
+  horaEl.contentEditable  = on;
+  valorEl.contentEditable = on;
+
+  if (on) nomeEl.focus();
+}
+
+function sairEdicao() {
+  // força blur nos 3 e desativa edição
+  [nomeEl, horaEl, valorEl].forEach(el => {
+    el.contentEditable = false;
+    el.blur();
+  });
+}
+
+
 nomeArquivoEl.addEventListener('click', e => {
   e.stopPropagation();
   item.classList.toggle('expanded');
@@ -1024,28 +1042,25 @@ nomeArquivoEl.addEventListener('click', e => {
 function bindSalvarAoEditar(el, tipo = 'text') {
   if (!el) return;
 
-  // salva quando sair do campo
   el.addEventListener('blur', () => {
     if (tipo === 'valor') {
-  const v = parseBRL(el.textContent);
-  el.textContent = formatBRL(v);
-  el.dataset.original = v;
-}
+      const v = parseBRL(el.textContent);
+      el.textContent = formatBRL(v);
+      el.dataset.original = v;
+    }
     atualizarResumo();
     salvarEstado();
   });
 
-  // salva enquanto digita (captura antes do F5)
-  el.addEventListener('input', () => {
-    atualizarResumo();
-    salvarEstado();
-  });
-
-  // Enter = finaliza edição e salva
   el.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      el.blur();
+      sairEdicao();        // ✅ fecha TUDO
+    }
+
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      sairEdicao();        // ✅ fecha TUDO
     }
   });
 }
@@ -1084,17 +1099,12 @@ btnCopy.addEventListener('click', e => {
 });
 
   /* ✏️ EDITAR */
-  linha.querySelector('.btn-edit').addEventListener('click', e => {
-    e.stopPropagation();
+linha.querySelector('.btn-edit').addEventListener('click', e => {
+  e.stopPropagation();
 
-    const editando = nomeEl.isContentEditable;
-
-    nomeEl.contentEditable  = !editando;
-    horaEl.contentEditable  = !editando;
-    valorEl.contentEditable = !editando;
-
-    nomeEl.focus();
-  });
+  const editando = nomeEl.isContentEditable;
+  setEditMode(!editando);
+});
 
   /* 💰 TAXA */
 /* 💰 TAXA */
@@ -1538,8 +1548,8 @@ input.addEventListener('change', async () => {
         arquivoId: saved.id,
         arquivoTipo: file.type
       });
-
-      list.appendChild(novoItem);
+novoItem.dataset.addedIndex = String(document.querySelectorAll('#fileList .file-item').length);
+list.appendChild(novoItem);
       salvarEstado();
       atualizarResumo();
     } catch (err) {
@@ -1586,7 +1596,66 @@ referrerpolicy="no-referrer-when-downgrade"
 
   mapBox.classList.remove('hidden');
 });
+/* ================= ORDENAÇÃO (FILTRO) ================= */
 
+const btnFiltro = document.getElementById('btnFiltro');
+const menuFiltro = document.getElementById('menuFiltro');
+const fileListEl = document.getElementById('fileList');
+
+btnFiltro?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (!menuFiltro) return;
+  menuFiltro.classList.toggle('hidden');
+});
+
+document.addEventListener('click', () => {
+  if (!menuFiltro) return;
+  menuFiltro.classList.add('hidden');
+});
+
+menuFiltro?.addEventListener('click', (e) => e.stopPropagation());
+
+menuFiltro?.querySelectorAll('.filter-item').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const modo = btn.dataset.sort;
+    ordenarLista(modo);
+    menuFiltro.classList.add('hidden');
+  });
+});
+
+function ordenarLista(modo) {
+  if (!fileListEl) return;
+
+  const items = Array.from(fileListEl.querySelectorAll('.file-item'));
+
+  const getHoraMin = (el) => {
+    const txt = el.querySelector('.col.hora')?.textContent?.trim() || '-';
+    if (!txt || txt === '-') return 999999;
+    const [h, m] = txt.split(':').map(Number);
+    if (Number.isNaN(h) || Number.isNaN(m)) return 999999;
+    return h * 60 + m;
+  };
+
+  items.forEach((el, idx) => {
+    if (!el.dataset.addedIndex) el.dataset.addedIndex = String(idx);
+  });
+
+  items.sort((a, b) => {
+    if (modo === 'hora-asc')  return getHoraMin(a) - getHoraMin(b);
+    if (modo === 'hora-desc') return getHoraMin(b) - getHoraMin(a);
+
+    const ia = parseInt(a.dataset.addedIndex || '0', 10);
+    const ib = parseInt(b.dataset.addedIndex || '0', 10);
+
+    if (modo === 'added-asc')  return ia - ib;
+    if (modo === 'added-desc') return ib - ia;
+
+    return 0;
+  });
+
+  items.forEach(el => fileListEl.appendChild(el));
+  atualizarResumo();
+}
 // 🧹 Finaliza o worker OCR ao sair da página
 window.addEventListener('beforeunload', async () => {
   if (ocrWorker) {
