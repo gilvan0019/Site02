@@ -1,15 +1,90 @@
+let auth, db;
 
-const DB_NAME = 'ocr_app_db';
+// ================= FIREBASE READY =================
+async function waitFirebaseReady(timeoutMs = 8000) {
+  const start = Date.now();
+  while (Date.now() - start < timeoutMs) {
+    const fb = window.firebaseApp;
+    const fns = window.firebaseFns;
+    if (fb?.auth && fb?.db && fns?.onAuthStateChanged) {
+      return { fb, fns };
+    }
+    await new Promise(r => setTimeout(r, 50));
+  }
+  return null;
+}
+
+function getUid() {
+  return auth?.currentUser?.uid || 'anon';
+}
+
+function uidOrThrow() {
+  const uid = auth?.currentUser?.uid;
+  if (!uid) throw new Error("Usuário não autenticado");
+  return uid;
+}
+
+function registrosColRef() {
+  const { collection } = window.firebaseFns;
+  return collection(db, "users", uidOrThrow(), "registros");
+}
+
+function profileDocRef() {
+  const { doc } = window.firebaseFns;
+  return doc(db, "users", uidOrThrow());
+}
+
+async function salvarProfileNoCloud({ agente, agencia }) {
+  const { setDoc, serverTimestamp } = window.firebaseFns;
+  await setDoc(profileDocRef(), {
+    agente: agente || "",
+    agencia: agencia || "",
+    updatedAt: serverTimestamp()
+  }, { merge: true });
+}
+
+async function carregarProfileDoCloud() {
+  const { getDoc } = window.firebaseFns;
+  const snap = await getDoc(profileDocRef());
+  return snap.exists() ? snap.data() : { agente: "", agencia: "" };
+}
+
+async function salvarRegistroNoFirestore(payload) {
+  const { addDoc, serverTimestamp } = window.firebaseFns;
+  const docRef = await addDoc(registrosColRef(), {
+    ...payload,
+    createdAt: serverTimestamp(),
+    updatedAt: serverTimestamp()
+  });
+  return docRef.id;
+}
+
+async function atualizarRegistroNoFirestore(docId, patch) {
+  const { doc, updateDoc, serverTimestamp } = window.firebaseFns;
+  const uid = uidOrThrow();
+  const refDoc = doc(db, "users", uid, "registros", docId);
+  await updateDoc(refDoc, { ...patch, updatedAt: serverTimestamp() });
+}
+
+async function deletarRegistroNoFirestore(docId) {
+  const { doc, deleteDoc } = window.firebaseFns;
+  const uid = uidOrThrow();
+  await deleteDoc(doc(db, "users", uid, "registros", docId));
+}
+
+// ================= INDEXEDDB (ARQUIVOS LOCAIS) =================
 const DB_STORE = 'files';
+
+const DB_NAME = 'ocr_app_db_v1';
 
 function openDB() {
   return new Promise((resolve, reject) => {
     const req = indexedDB.open(DB_NAME, 1);
 
     req.onupgradeneeded = () => {
-      const db = req.result;
-      if (!db.objectStoreNames.contains(DB_STORE)) {
-        db.createObjectStore(DB_STORE, { keyPath: 'id' });
+      const dbi = req.result;
+      if (!dbi.objectStoreNames.contains(DB_STORE)) {
+        dbi.createObjectStore(DB_STORE, { keyPath: 'id' });
       }
     };
 
@@ -18,52 +93,56 @@ function openDB() {
   });
 }
 
-async function salvarArquivoNoDB(file) {
-  const db = await openDB();
-
-  const id = `${Date.now()}_${Math.random().toString(16).slice(2)}`;
+async function salvarArquivoNoDB(file, id) {
+  const dbi = await openDB();
   const registro = {
     id,
     name: file.name,
     type: file.type || '',
-    file // ✅ guarda o File/Blob
+    file // Blob/File
   };
 
   await new Promise((resolve, reject) => {
-    const tx = db.transaction(DB_STORE, 'readwrite');
+    const tx = dbi.transaction(DB_STORE, 'readwrite');
     tx.objectStore(DB_STORE).put(registro);
     tx.oncomplete = resolve;
     tx.onerror = () => reject(tx.error);
   });
 
-  db.close();
-  return { id, name: file.name, type: file.type };
+  return id;
 }
 
-async function lerArquivoDoDB(id) {
-  const db = await openDB();
-
-  const registro = await new Promise((resolve, reject) => {
-    const tx = db.transaction(DB_STORE, 'readonly');
+async function obterArquivoDoDB(id) {
+  const dbi = await openDB();
+  return await new Promise((resolve, reject) => {
+    const tx = dbi.transaction(DB_STORE, 'readonly');
     const req = tx.objectStore(DB_STORE).get(id);
     req.onsuccess = () => resolve(req.result || null);
     req.onerror = () => reject(req.error);
   });
-
-  db.close();
-  return registro; // {id,name,type,file}
 }
 
 async function deletarArquivoDoDB(id) {
-  const db = await openDB();
+  const dbi = await openDB();
   await new Promise((resolve, reject) => {
-    const tx = db.transaction(DB_STORE, 'readwrite');
+    const tx = dbi.transaction(DB_STORE, 'readwrite');
     tx.objectStore(DB_STORE).delete(id);
     tx.oncomplete = resolve;
     tx.onerror = () => reject(tx.error);
   });
-  db.close();
 }
+
+async function limparTodosArquivosDoDB() {
+  const dbi = await openDB();
+  await new Promise((resolve, reject) => {
+    const tx = dbi.transaction(DB_STORE, 'readwrite');
+    tx.objectStore(DB_STORE).clear();
+    tx.oncomplete = resolve;
+    tx.onerror = () => reject(tx.error);
+  });
+}
+
+// ================= PDF.JS =================
 if (window.pdfjsLib) {
   pdfjsLib.GlobalWorkerOptions.workerSrc =
     'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
@@ -72,20 +151,18 @@ if (window.pdfjsLib) {
 let CARREGANDO_ESTADO = false;
 
 let ocrWorker = null;
-
 async function getOCRWorker() {
   if (!ocrWorker) {
     ocrWorker = await Tesseract.createWorker('por');
   }
   return ocrWorker;
 }
+
 async function pdfParaImagem(file) {
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
 
-  // pega só a PRIMEIRA página (90% dos comprovantes)
   const page = await pdf.getPage(1);
-
   const viewport = page.getViewport({ scale: 2 });
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
@@ -97,51 +174,53 @@ async function pdfParaImagem(file) {
 
   return canvas;
 }
+
+// ================= TEXTO/FORMATAÇÃO =================
 function limparNomePagadorCaixa(nome) {
   if (!nome) return '';
-
   return nome
     .replace(/[,.;:-]/g, ' ')
     .replace(/\s{2,}/g, ' ')
     .trim()
     .split(' ')
-    .slice(0, 8) // Caixa costuma ter nomes maiores
+    .slice(0, 8)
     .join(' ');
 }
+
 const NOMES_PROIBIDOS = [
   'ANTONIO CLERVES OLIVEIRA',
   'VALE VIAGENS'
 ];
 
-// ================= FUNÇÕES =================
 function parseBRL(v) {
   if (!v) return 0;
   return parseFloat(
     v.replace('R$', '')
-     .replace(/\./g, '')
-     .replace(',', '.')
-     .trim()
+      .replace(/\./g, '')
+      .replace(',', '.')
+      .trim()
   ) || 0;
 }
 
 function formatBRL(v) {
-  return v.toLocaleString('pt-BR', {
+  return (v || 0).toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
   });
 }
+
 let taxaContexto = null;
 
 const modal = document.getElementById('modal-taxa');
 const inputTaxa = document.getElementById('input-taxa');
 const btnAplicar = document.getElementById('btn-aplicar');
 const btnCancelar = document.getElementById('btn-cancelar');
-inputTaxa.addEventListener('keydown', e => {
+
+inputTaxa?.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
     e.preventDefault();
-    btnAplicar.click();
+    btnAplicar?.click();
   }
-
   if (e.key === 'Escape') {
     e.preventDefault();
     fecharModalTaxa();
@@ -149,6 +228,7 @@ inputTaxa.addEventListener('keydown', e => {
 });
 
 function abrirModalTaxa(contexto) {
+  if (!modal || !inputTaxa) return;
   taxaContexto = contexto;
   inputTaxa.value = '';
   modal.classList.remove('hidden');
@@ -156,64 +236,60 @@ function abrirModalTaxa(contexto) {
 }
 
 function fecharModalTaxa() {
-  modal.classList.add('hidden');
+  modal?.classList.add('hidden');
   taxaContexto = null;
 }
 
-btnCancelar.addEventListener('click', fecharModalTaxa);
+btnCancelar?.addEventListener('click', fecharModalTaxa);
 
-btnAplicar.addEventListener('click', () => {
+btnAplicar?.addEventListener('click', async () => {
   if (!taxaContexto) return;
 
   const { valorEl, taxaEl, resumo } = taxaContexto;
   const taxaValor = parseBRL(inputTaxa.value);
-
   if (taxaValor < 0) return alert('Taxa inválida');
 
   const valorOriginal = parseFloat(valorEl.dataset.original) || 0;
+  if (taxaValor > valorOriginal) return alert('Taxa maior que o valor');
 
-  if (taxaValor > valorOriginal) {
-    return alert('Taxa maior que o valor');
-  }
-
-  const novoValor = taxaValor === 0
-    ? valorOriginal
-    : valorOriginal - taxaValor;
+  const novoValor = taxaValor === 0 ? valorOriginal : valorOriginal - taxaValor;
 
   valorEl.textContent = formatBRL(novoValor);
-  taxaEl.textContent  = taxaValor === 0 ? '' : formatBRL(taxaValor);
+  taxaEl.textContent = taxaValor === 0 ? '' : formatBRL(taxaValor);
 
   resumo.valor = formatBRL(novoValor);
-  resumo.taxa  = taxaValor === 0 ? '' : formatBRL(taxaValor);
+  resumo.taxa = taxaValor === 0 ? '' : formatBRL(taxaValor);
 
   atualizarResumo();
-  salvarEstado();
+
+  // 🔥 SALVA A TAXA NO FIRESTORE
+  if (docId) {
+    await atualizarRegistroNoFirestore(docId, {
+      resumo: {
+        nome: resumo.nome || '-',
+        hora: resumo.hora || '-',
+        valor: resumo.valor || '-',
+        taxa: resumo.taxa || ''
+      }
+    });
+  }
   fecharModalTaxa();
 });
 
-function copiarResumo({ nome, hora, valor }) {
-  const texto = `${nome} | ${hora} | ${valor}`;
-
-  navigator.clipboard.writeText(texto).catch(() => {});
-}
-
 function limitarTexto(texto, limite = 10) {
   if (!texto) return '';
-  return texto.length > limite
-    ? texto.slice(0, limite) + '...'
-    : texto;
+  return texto.length > limite ? texto.slice(0, limite) + '...' : texto;
 }
+
 function atualizarResumo() {
   const linhas = document.querySelectorAll('.file-item');
-
   let total = 0;
 
   linhas.forEach(linha => {
     const valorEl = linha.querySelector('.col.valor');
     if (!valorEl) return;
 
-    // pega "R$ 215,75" → 215.75
-    const valor = valorEl.textContent
+    const valor = (valorEl.textContent || '')
       .replace('R$', '')
       .replace('.', '')
       .replace(',', '.')
@@ -222,17 +298,22 @@ function atualizarResumo() {
     total += parseFloat(valor) || 0;
   });
 
-  document.getElementById('contador-arquivos').textContent = linhas.length;
-  document.getElementById('soma-total').textContent =
-    total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  const contadorEl = document.getElementById('contador-arquivos');
+  if (contadorEl) contadorEl.textContent = String(linhas.length);
+
+  const somaEl = document.getElementById('soma-total');
+  if (somaEl) {
+    somaEl.textContent = total.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+  }
 }
 
 function identificarBanco(textoOCR) {
   if (!textoOCR) return 'Banco não identificado';
-
   const texto = textoOCR.toLowerCase();
 
-  // 🟢 PRIORIDADE ABSOLUTA — CAIXA
   if (
     texto.includes('dados do pagador') &&
     (
@@ -250,7 +331,7 @@ function identificarBanco(textoOCR) {
     { nome: 'Bradesco', chaves: ['bradesco', 'banco bradesco', 'bradesco s.a'] },
     { nome: 'Itaú', chaves: ['itau', 'itaú', 'banco itau', 'itaú unibanco'] },
     { nome: 'Santander', chaves: ['santander', 'banco santander'] },
-    { nome: 'Banco do Nordeste', chaves:['banco do nordeste','bnb'] },
+    { nome: 'Banco do Nordeste', chaves: ['banco do nordeste', 'bnb'] },
     { nome: 'Banco do Brasil', chaves: ['banco do brasil', 'bb '] },
     { nome: 'PicPay', chaves: ['picpay'] },
     { nome: 'Mercado Pago', chaves: ['mercado pago'] },
@@ -265,18 +346,11 @@ function identificarBanco(textoOCR) {
       if (texto.includes(chave)) return banco.nome;
     }
   }
-
   return 'Banco não identificado';
 }
 
 function extrairResumoComprovante(texto) {
-if (!texto) {
-  return {
-    nome: '-',
-    hora: '-',
-    valor: '-'
-  };
-}
+  if (!texto) return { nome: '-', hora: '-', valor: '-' };
 
   const linhas = texto
     .split('\n')
@@ -288,113 +362,56 @@ if (!texto) {
   let valor = '';
 
   const BLOQUEADAS = [
-    'BANCO','PIX','TRANSFERENCIA','TRANSFERÊNCIA',
-    'CPF','CNPJ','VALOR','DATA','HORA',
-    'COMPROVANTE','PAGAMENTO','REALIZADO',
-    'RECEBEDOR','RECEBIDO','CONTA'
+    'BANCO', 'PIX', 'TRANSFERENCIA', 'TRANSFERÊNCIA',
+    'CPF', 'CNPJ', 'VALOR', 'DATA', 'HORA',
+    'COMPROVANTE', 'PAGAMENTO', 'REALIZADO',
+    'RECEBEDOR', 'RECEBIDO', 'CONTA'
   ];
 
-  /* ===== 💰 VALOR ===== */
   for (const l of linhas) {
     const m = l.match(/R\$\s*\d{1,3}(\.\d{3})*,\d{2}/);
-    if (m) {
-      valor = m[0];
-      break;
-    }
+    if (m) { valor = m[0]; break; }
   }
 
-  /* ===== ⏰ HORA ===== */
   for (const l of linhas) {
     const m = l.match(/\b\d{2}:\d{2}(:\d{2})?\b/);
-    if (m) {
-      hora = m[0].slice(0, 5); // remove segundos
-      break;
-    }
+    if (m) { hora = m[0].slice(0, 5); break; }
   }
 
-  /* ===== 👤 NOME DO PAGADOR ===== */
   for (const l of linhas) {
     const limpa = l
       .replace(/[^A-Za-zÀ-ÿ\s]/g, ' ')
       .replace(/\s{2,}/g, ' ')
       .trim();
-
     if (!limpa) continue;
 
     const up = limpa.toUpperCase();
     if (BLOQUEADAS.some(b => up.includes(b))) continue;
 
     const partes = limpa.split(' ').filter(p => p.length >= 3);
-
-    // nome humano típico
     if (partes.length >= 2 && partes.length <= 6) {
       nome = limpa;
       break;
     }
   }
-return {
-  nome: limparNomePagador(nome) || '-',
-  hora: hora || '-',
-  valor: valor || '-'
-};
+
+  return {
+    nome: limparNomePagador(nome) || '-',
+    hora: hora || '-',
+    valor: valor || '-'
+  };
 }
+
 function numerarLinhasTexto(texto) {
   if (!texto) return '';
-
   return texto
     .split('\n')
     .map(l => l.trim())
     .filter(Boolean)
-    // remove QUALQUER repetição de "n. " no início (7. 7. 7. Texto)
     .map(l => l.replace(/^(\d+\.\s*)+/g, ''))
     .map((linha, i) => `${i + 1}. ${linha}`)
     .join('\n');
 }
-
-
-function limparNomePagador(nome) {
-  if (!nome) return '';
-
-  const nomeLimpo = nome
-    .replace(/[,.;:-]/g, ' ')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
-
-  const nomeNormalizado = normalizarTexto(nomeLimpo);
-
-  // 🚫 frases técnicas (linha inteira)
-  const FRASES_INVALIDAS = [
-    'DADOS DO PAGADOR',
-    'DADOS DO RECEBEDOR',
-    'DADOS DE QUEM RECEBEU',
-    'DADOS DE QUEM FEZ A TRANSACAO',
-    'PAGADOR',
-    'RECEBEDOR',
-    'NOME'
-  ];
-
-  if (FRASES_INVALIDAS.includes(nomeNormalizado)) {
-    return '';
-  }
-
-  // 🚫 bloqueio específico (ex: sua própria empresa)
-  for (const proibido of NOMES_PROIBIDOS) {
-    if (nomeNormalizado.includes(proibido)) {
-      return '';
-    }
-  }
-
-  // ✅ validação mínima realista
-  if (nomeLimpo.split(' ').length < 2) {
-    return '';
-  }
-
-  return nomeLimpo
-    .split(' ')
-    .slice(0, 6)
-    .join(' ');
-}
-
 
 function normalizarTexto(txt) {
   return txt
@@ -406,8 +423,43 @@ function normalizarTexto(txt) {
     .trim();
 }
 
+function limparNomePagador(nome) {
+  if (!nome) return '';
 
+  const nomeLimpo = nome
+    .replace(/[,.;:-]/g, ' ')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
 
+  const nomeNormalizado = normalizarTexto(nomeLimpo);
+
+  const FRASES_INVALIDAS = [
+    'DADOS DO PAGADOR',
+    'DADOS DO RECEBEDOR',
+    'DADOS DE QUEM RECEBEU',
+    'DADOS DE QUEM FEZ A TRANSACAO',
+    'PAGADOR',
+    'RECEBEDOR',
+    'NOME'
+  ];
+
+  if (FRASES_INVALIDAS.includes(nomeNormalizado)) return '';
+
+  for (const proibido of NOMES_PROIBIDOS) {
+    if (nomeNormalizado.includes(proibido)) return '';
+  }
+
+  if (nomeLimpo.split(' ').length < 2) return '';
+
+  return nomeLimpo.split(' ').slice(0, 6).join(' ');
+}
+
+// ===== Regras banco (mantive as suas mesmas funções) =====
+// (copiei só as chamadas principais; seu código já tinha todas)
+// --- COLE AQUI as funções regraBancoDoBrasil, regraNubank, regraBancoInter,
+// regraBancoDoNordeste, regraSantander, regraBradesco, regraCaixa, regraPicPay,
+// regraC6Bank, regraMercadoPago (as suas já estão acima no seu arquivo)
+// Como você me mandou elas completas, mantenha exatamente como estavam.
 function regraBancoDoBrasil(texto) {
   const linhas = texto
     .split('\n')
@@ -864,21 +916,18 @@ function regraMercadoPago(texto) {
   return { nome, hora, valor };
 }
 
-
-//função principal
 function extrairResumoPorBanco(texto, banco) {
-  // 🔥 PRIORIDADE ABSOLUTA PARA BLOCO "Dados do pagador"
-if (texto.toLowerCase().includes('dados do pagador')) {
-  const tentativaCaixa = regraCaixa(texto);
-  if (tentativaCaixa.nome && tentativaCaixa.nome !== '-') {
-    const universal = extrairResumoComprovante(texto);
-    return {
-      nome: tentativaCaixa.nome,
-      hora: universal.hora,
-      valor: universal.valor
-    };
+  if (texto.toLowerCase().includes('dados do pagador')) {
+    const tentativaCaixa = regraCaixa(texto);
+    if (tentativaCaixa.nome && tentativaCaixa.nome !== '-') {
+      const universal = extrairResumoComprovante(texto);
+      return {
+        nome: tentativaCaixa.nome,
+        hora: universal.hora,
+        valor: universal.valor
+      };
+    }
   }
-}
 
   switch (banco) {
     case 'Banco do Brasil':
@@ -938,52 +987,13 @@ case 'Mercado Pago': {
 }
 
 
-
-// ================= STORAGE =================
-function salvarEstado() {
-  if (CARREGANDO_ESTADO) return;
-
-  const itens = document.querySelectorAll('.file-item');
-  const registros = [];
-
-  itens.forEach(item => {
-    const linha = item.querySelector('.ocr-row');
-    if (!linha) return;
-
-    registros.push({
-      nomeArquivo: linha.querySelector('.col.arquivo')?.getAttribute('title') || '',
-      banco: '',
-      arquivoId: item.dataset.arquivoId || '',
-      arquivoTipo: item.dataset.arquivoTipo || '',
-      resumo: {
-        nome: linha.querySelector('.col.nome')?.textContent || '-',
-        hora: linha.querySelector('.col.hora')?.textContent || '-',
-        valor: linha.querySelector('.col.valor')?.textContent || '-',
-        taxa: linha.querySelector('.col.taxa')?.textContent || ''
-      },
-      texto: item.querySelector('.ocr-detalhe')?.textContent || ''
-    });
-  });
-
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(registros));
-}
-const STORAGE_AGENTE  = 'ocr_nome_agente';
-const STORAGE_AGENCIA = 'ocr_nome_agencia';
-const STORAGE_KEY = 'ocr_registros';
-
-function carregarRegistros() {
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-  } catch {
-    return [];
-  }
-}
-
-function criarItemOCR({ nomeArquivo, banco, resumo, texto, arquivoId, arquivoTipo }) {
+// ================= UI ITEM =================
+function criarItemOCR({ nomeArquivo, banco, resumo, texto, docId, arquivoId, arquivoTipo }) {
   const item = document.createElement('div');
   item.className = 'file-item';
 
-  item.dataset.arquivoId = arquivoId || '';
+  item.dataset.docId = docId || '';
+  item.dataset.arquivoId = arquivoId || ''; // ✅ ID local (IndexedDB)
   item.dataset.arquivoTipo = arquivoTipo || '';
 
   const linha = document.createElement('div');
@@ -991,162 +1001,173 @@ function criarItemOCR({ nomeArquivo, banco, resumo, texto, arquivoId, arquivoTip
 
   linha.innerHTML = `
     <span class="col arquivo" title="${nomeArquivo}">
-  ${limitarTexto(nomeArquivo, 10)}
-</span>    <span class="col nome" contenteditable="false">${resumo.nome}</span>
+      ${limitarTexto(nomeArquivo, 10)}
+    </span>
+    <span class="col nome" contenteditable="false">${resumo.nome}</span>
     <span class="col hora" contenteditable="false">${resumo.hora}</span>
     <span class="col valor" contenteditable="false">${resumo.valor}</span>
     <span class="col taxa">${resumo.taxa || ''}</span>
 
     <span class="row-actions">
-  <button class="pill primary btn-copy">📋 Copiar</button>
-  <button class="pill btn-ver">👁 Ver</button>
-  <button class="pill btn-edit">✏️ Editar</button>
-  <button class="pill btn-taxa">💰 Taxa</button>
-  <button class="pill btn-add">➕ Adicionar</button>
-  <button class="pill danger btn-remove">🗑 Remover</button>
-</span>
+      <button class="pill primary btn-copy">📋 Copiar</button>
+      <button class="pill btn-ver">👁 Ver</button>
+      <button class="pill btn-edit">✏️ Editar</button>
+      <button class="pill btn-taxa">💰 Taxa</button>
+      <button class="pill danger btn-remove">🗑 Remover</button>
+    </span>
   `;
-const nomeArquivoEl = linha.querySelector('.col.arquivo');
 
-function setEditMode(on) {
-  nomeEl.contentEditable  = on;
-  horaEl.contentEditable  = on;
-  valorEl.contentEditable = on;
+  const nomeArquivoEl = linha.querySelector('.col.arquivo');
 
-  if (on) nomeEl.focus();
-}
-
-function sairEdicao() {
-  // força blur nos 3 e desativa edição
-  [nomeEl, horaEl, valorEl].forEach(el => {
-    el.contentEditable = false;
-    el.blur();
-  });
-}
-
-
-nomeArquivoEl.addEventListener('click', e => {
-  e.stopPropagation();
-  item.classList.toggle('expanded');
-});
-  // TEXTO OCR COMPLETO
   const detalhe = document.createElement('div');
   detalhe.className = 'ocr-detalhe';
   detalhe.textContent = numerarLinhasTexto(texto);
 
-  // ================= AÇÕES =================
-
-  const nomeEl  = linha.querySelector('.col.nome');
-  const horaEl  = linha.querySelector('.col.hora');
+  const taxaEl = linha.querySelector('.col.taxa');
+  const nomeEl = linha.querySelector('.col.nome');
+  const horaEl = linha.querySelector('.col.hora');
   const valorEl = linha.querySelector('.col.valor');
-function bindSalvarAoEditar(el, tipo = 'text') {
-  if (!el) return;
 
-  el.addEventListener('blur', () => {
-    if (tipo === 'valor') {
-      const v = parseBRL(el.textContent);
-      el.textContent = formatBRL(v);
-      el.dataset.original = v;
-    }
-    atualizarResumo();
-    salvarEstado();
+  function setEditMode(on) {
+    nomeEl.contentEditable = on;
+    horaEl.contentEditable = on;
+    valorEl.contentEditable = on;
+    if (on) nomeEl.focus();
+  }
+
+  function sairEdicao() {
+    [nomeEl, horaEl, valorEl].forEach(el => {
+      el.contentEditable = false;
+      el.blur();
+    });
+  }
+
+  nomeArquivoEl?.addEventListener('click', e => {
+    e.stopPropagation();
+    item.classList.toggle('expanded');
   });
 
-  el.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      sairEdicao();        // ✅ fecha TUDO
-    }
+  function bindSalvarAoEditar(el, tipo = 'text') {
+    if (!el) return;
 
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      sairEdicao();        // ✅ fecha TUDO
-    }
-  });
-}
+    el.addEventListener('blur', async () => {
+      if (tipo === 'valor') {
+        const v = parseBRL(el.textContent);
+        el.textContent = formatBRL(v);
+        el.dataset.original = v;
+      }
 
-bindSalvarAoEditar(nomeEl);
-bindSalvarAoEditar(horaEl);
-bindSalvarAoEditar(valorEl, 'valor');
-// 🔒 salva o valor original apenas uma vez
-if (!valorEl.dataset.original) {
-  valorEl.dataset.original = parseBRL(valorEl.textContent);
-}
+      atualizarResumo();
 
-valorEl.addEventListener('blur', () => {
-  atualizarResumo();
-  salvarEstado();
-});
-  const taxaEl  = linha.querySelector('.col.taxa');
+      const did = item.dataset.docId;
+      if (did) {
+        const patch = {
+          resumo: {
+            nome: nomeEl.textContent || '-',
+            hora: horaEl.textContent || '-',
+            valor: valorEl.textContent || '-',
+            taxa: taxaEl.textContent || ''
+          }
+        };
+        await atualizarRegistroNoFirestore(did, patch);
+      }
+    });
+
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === 'Escape') {
+        e.preventDefault();
+        sairEdicao();
+      }
+    });
+  }
+
+  bindSalvarAoEditar(nomeEl);
+  bindSalvarAoEditar(horaEl);
+  bindSalvarAoEditar(valorEl, 'valor');
+
+  if (!valorEl.dataset.original) {
+    valorEl.dataset.original = parseBRL(valorEl.textContent);
+  }
 
   /* 📋 COPIAR */
- const btnCopy = linha.querySelector('.btn-copy');
-const textoOriginal = btnCopy.textContent;
+  const btnCopy = linha.querySelector('.btn-copy');
+  const textoOriginal = btnCopy?.textContent || '📋 Copiar';
 
-btnCopy.addEventListener('click', e => {
-  e.stopPropagation();
+  btnCopy?.addEventListener('click', e => {
+    e.stopPropagation();
+    const textoCopiar = `${nomeEl.textContent} ${valorEl.textContent} ${horaEl.textContent}`;
+    navigator.clipboard.writeText(textoCopiar).catch(() => { });
 
-  const textoCopiar = `${nomeEl.textContent} ${valorEl.textContent} ${horaEl.textContent}`;
-  navigator.clipboard.writeText(textoCopiar).catch(() => {});
+    btnCopy.textContent = '✅ Copiado';
+    btnCopy.classList.add('copied');
 
-  btnCopy.textContent = '✅ Copiado';
-  btnCopy.classList.add('copied');
-
-  setTimeout(() => {
-    btnCopy.textContent = textoOriginal;
-    btnCopy.classList.remove('copied');
-  }, 1000);
-});
+    setTimeout(() => {
+      btnCopy.textContent = textoOriginal;
+      btnCopy.classList.remove('copied');
+    }, 1000);
+  });
 
   /* ✏️ EDITAR */
-linha.querySelector('.btn-edit').addEventListener('click', e => {
-  e.stopPropagation();
-
-  const editando = nomeEl.isContentEditable;
-  setEditMode(!editando);
-});
+  linha.querySelector('.btn-edit')?.addEventListener('click', e => {
+    e.stopPropagation();
+    const editando = nomeEl.isContentEditable;
+    setEditMode(!editando);
+  });
 
   /* 💰 TAXA */
-/* 💰 TAXA */
-linha.querySelector('.btn-taxa').addEventListener('click', e => {
+  linha.querySelector('.btn-taxa')?.addEventListener('click', e => {
   e.stopPropagation();
-  abrirModalTaxa({ valorEl, taxaEl, resumo });
+  abrirModalTaxa({
+    valorEl,
+    taxaEl,
+    resumo,
+    docId: item.dataset.docId
+  });
 });
+  /* 👁 VER (abre arquivo local do IndexedDB) */
+  linha.querySelector('.btn-ver')?.addEventListener('click', async e => {
+    e.stopPropagation();
+    const arquivoId = item.dataset.arquivoId;
+    if (!arquivoId) return alert('Arquivo local não encontrado (sem ID).');
 
-/* 👁 VER ARQUIVO */
-linha.querySelector('.btn-ver')?.addEventListener('click', async e => {
-  e.stopPropagation();
+    const reg = await obterArquivoDoDB(arquivoId);
+    if (!reg?.file) {
+      return alert('Esse arquivo não está mais salvo no navegador (IndexedDB). Reenvie o arquivo.');
+    }
 
-  const id = item.dataset.arquivoId;
-  if (!id) return alert('Arquivo não salvo.');
-
-  const reg = await lerArquivoDoDB(id);
-  if (!reg?.file) return alert('Arquivo não encontrado.');
-
-  const url = URL.createObjectURL(reg.file);
-  window.open(url, '_blank');
-  setTimeout(() => URL.revokeObjectURL(url), 60000);
-});
+    const url = URL.createObjectURL(reg.file);
+    window.open(url, '_blank');
+    // revoga depois (sem quebrar o open)
+    setTimeout(() => URL.revokeObjectURL(url), 60_000);
+  });
 
   /* 🗑 REMOVER */
-linha.querySelector('.btn-remove').addEventListener('click', e => {
-  e.stopPropagation();
-  item.remove();
-  salvarEstado();
-  atualizarResumo(); 
-});
+  linha.querySelector('.btn-remove')?.addEventListener('click', async e => {
+    e.stopPropagation();
 
-  
+    const docIdLocal = item.dataset.docId;
+    const arquivoId = item.dataset.arquivoId;
+
+    // apaga do Firestore
+    if (docIdLocal) await deletarRegistroNoFirestore(docIdLocal);
+
+    // apaga do IndexedDB
+    if (arquivoId) await deletarArquivoDoDB(arquivoId);
+
+    item.remove();
+    atualizarResumo();
+  });
 
   item.append(linha, detalhe);
   return item;
 }
+
+// ================= CALCULADORA =================
 function bindCalculadora(input, resultado) {
   if (!input || !resultado) return;
 
   function calcular() {
     const valor = parseBRL(input.value);
-
     if (!valor || valor <= 0) {
       resultado.innerHTML = '';
       return;
@@ -1172,19 +1193,20 @@ function bindCalculadora(input, resultado) {
     if (e.key === 'Enter') calcular();
   });
 }
+
 function horaParaMinutos(hora) {
   if (!hora || hora === '-') return 9999;
   const [h, m] = hora.split(':').map(Number);
   return h * 60 + m;
 }
 
+// ================= EXCEL =================
 function gerarRelatorioExcel() {
   const dados = [];
 
-  const agente  = document.getElementById('nome-agente')?.value || 'SEM NOME';
+  const agente = document.getElementById('nome-agente')?.value || 'SEM NOME';
   const agencia = document.getElementById('nome-agencia')?.value || '';
 
-  // ===== LINHA 1 =====
   dados.push([
     `AGENTE: ${agente.toUpperCase()}`,
     new Date().toLocaleDateString('pt-BR'),
@@ -1193,29 +1215,22 @@ function gerarRelatorioExcel() {
     agencia
   ]);
 
-  // ===== CABEÇALHO =====
   dados.push(['NOME', 'HORA', 'PIX', 'TAXA', 'PIX TOTAL']);
 
-  // ===== COLETA =====
   const itens = Array.from(document.querySelectorAll('.file-item'));
-
   const registros = itens.map(item => ({
-    nome:  item.querySelector('.col.nome')?.textContent || '',
-    hora:  item.querySelector('.col.hora')?.textContent || '',
+    nome: item.querySelector('.col.nome')?.textContent || '',
+    hora: item.querySelector('.col.hora')?.textContent || '',
     valor: item.querySelector('.col.valor')?.textContent || '',
-    taxa:  item.querySelector('.col.taxa')?.textContent || ''
+    taxa: item.querySelector('.col.taxa')?.textContent || ''
   }));
 
-  // ===== ORDENA =====
-  registros.sort((a, b) =>
-    horaParaMinutos(a.hora) - horaParaMinutos(b.hora)
-  );
+  registros.sort((a, b) => horaParaMinutos(a.hora) - horaParaMinutos(b.hora));
 
-  // ===== LINHAS =====
   registros.forEach(item => {
     if (!item.nome && !item.valor) return;
 
-    const pix  = parseBRL(item.valor);
+    const pix = parseBRL(item.valor);
     const taxa = parseBRL(item.taxa);
 
     const linhaExcel = dados.length + 1;
@@ -1229,29 +1244,25 @@ function gerarRelatorioExcel() {
     ]);
   });
 
-  // 🚫 validação vem DEPOIS
   if (dados.length <= 2) {
     alert('Nenhum dado válido para gerar Excel.');
     return;
   }
 
-  // ===== TOTAIS =====
   const primeiraLinhaDados = 3;
-  const ultimaLinhaDados   = dados.length;
+  const ultimaLinhaDados = dados.length;
 
   dados.push(['', '', '', '', '']);
 
   dados.push([
-  'TOTAL PIX',
-  '',
-  { f: `SUM(C${primeiraLinhaDados}:C${ultimaLinhaDados})` },
-  '',
-  { f: `SUM(E${primeiraLinhaDados}:E${ultimaLinhaDados})` }
-]);
+    'TOTAL PIX',
+    '',
+    { f: `SUM(C${primeiraLinhaDados}:C${ultimaLinhaDados})` },
+    '',
+    { f: `SUM(E${primeiraLinhaDados}:E${ultimaLinhaDados})` }
+  ]);
 
-  // ===== PLANILHA =====
   const ws = XLSX.utils.aoa_to_sheet(dados);
-
   ws['!cols'] = [
     { wch: 40 },
     { wch: 10 },
@@ -1262,136 +1273,200 @@ function gerarRelatorioExcel() {
 
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, 'Relatório OCR');
-
   XLSX.writeFile(wb, 'relatorio_ocr.xlsx');
 }
+
+// ================= ZIP (SEM STORAGE) =================
 async function baixarTodosArquivosZip() {
   const zip = new JSZip();
   const pasta = zip.folder("COMPROVANTES");
 
-  const itensVisiveis = document.querySelectorAll('.file-item');
-
-  if (!itensVisiveis.length) {
+  const itens = document.querySelectorAll('.file-item');
+  if (!itens.length) {
     alert('Nenhum arquivo visível para baixar.');
     return;
   }
 
-  for (const item of itensVisiveis) {
-    const id = item.dataset.arquivoId;
-    if (!id) continue;
+  for (const item of itens) {
+    const arquivoId = item.dataset.arquivoId;
+    const nomeArquivo = item.querySelector('.col.arquivo')?.getAttribute('title') || 'arquivo';
 
-    const reg = await lerArquivoDoDB(id);
-    if (reg?.file) {
-      pasta.file(reg.name, reg.file);
-    }
+    if (!arquivoId) continue;
+
+    const reg = await obterArquivoDoDB(arquivoId);
+    if (!reg?.file) continue;
+
+    pasta.file(nomeArquivo, reg.file);
   }
 
-  const blob = await zip.generateAsync({ type: 'blob' });
+  const blobZip = await zip.generateAsync({ type: 'blob' });
 
-  const url = URL.createObjectURL(blob);
+  const urlZip = URL.createObjectURL(blobZip);
   const a = document.createElement('a');
-  a.href = url;
+  a.href = urlZip;
   a.download = 'arquivos_ocr.zip';
   document.body.appendChild(a);
   a.click();
   a.remove();
-
-  URL.revokeObjectURL(url);
+  URL.revokeObjectURL(urlZip);
 }
-// ================= DOM =================
 
-document.addEventListener('DOMContentLoaded', () => {
+// ================= FIRESTORE LOAD =================
+async function carregarRegistrosDoFirestore() {
+  const { getDocs, query, orderBy } = window.firebaseFns;
+
+  const q = query(registrosColRef(), orderBy("createdAt", "desc"));
+  const snap = await getDocs(q);
+
+  return snap.docs.map(d => ({
+    docId: d.id,
+    ...d.data()
+  }));
+}
+
+// ================= DOM READY =================
+document.addEventListener('DOMContentLoaded', async () => {
+  const ready = await waitFirebaseReady();
+  if (!ready) {
+    console.error("Firebase não inicializou.");
+    alert("Firebase não carregou. Veja o Console (F12).");
+    return;
+  }
+
+  const { fb, fns } = ready;
+  ({ auth, db } = fb);
+
+  const { onAuthStateChanged, signInWithEmailAndPassword, signOut } = fns;
+  const btnLogout = document.getElementById('btn-logout');
+
+  btnLogout?.addEventListener('click', async () => {
+    try {
+      await signOut(auth);
+      console.log("🚪 Logout OK");
+    } catch (e) {
+      console.error("Erro ao sair:", e);
+      alert("Não consegui sair. Veja o console.");
+    }
+  });
+
+  const list = document.getElementById('fileList');
+
+  onAuthStateChanged(auth, async (user) => {
+    console.log("👤 auth state:", user?.uid, user?.email);
+
+    if (user) {
+      hideLogin();
+      btnLogout?.classList.remove('hidden');
+
+      // carrega profile
+      const prof = await carregarProfileDoCloud();
+      const inputAgente = document.getElementById('nome-agente');
+      const selectAgencia = document.getElementById('nome-agencia');
+      if (inputAgente) inputAgente.value = prof.agente || "";
+      if (selectAgencia) selectAgencia.value = prof.agencia || selectAgencia.value;
+
+      // carrega registros
+      if (list) list.innerHTML = "";
+      CARREGANDO_ESTADO = true;
+
+      const regs = await carregarRegistrosDoFirestore();
+      regs.forEach(r => {
+        list?.appendChild(criarItemOCR({
+          nomeArquivo: r.nomeArquivo,
+          banco: r.banco || "",
+          resumo: r.resumo,
+          texto: r.texto,
+          docId: r.docId,
+          arquivoId: r.arquivoId,      // ✅ vem do Firestore
+          arquivoTipo: r.arquivoTipo
+        }));
+      });
+
+      CARREGANDO_ESTADO = false;
+      atualizarResumo();
+
+    } else {
+      showLogin();
+      btnLogout?.classList.add('hidden');
+      if (list) list.innerHTML = "";
+      atualizarResumo();
+    }
+  });
+
+  // ===== LOGIN UI =====
+  const modalLogin = document.getElementById('modal-login');
+  const inputEmail = document.getElementById('login-email');
+  const inputSenha = document.getElementById('login-senha');
+  const btnLogin = document.getElementById('btn-login');
+  const loginErro = document.getElementById('login-erro');
+
+  function showLogin(msg = '') {
+    modalLogin?.classList.remove('hidden');
+    if (msg) {
+      loginErro.textContent = msg;
+      loginErro.classList.remove('hidden');
+    } else {
+      loginErro.classList.add('hidden');
+    }
+  }
+
+  function hideLogin() {
+    modalLogin?.classList.add('hidden');
+    loginErro?.classList.add('hidden');
+  }
+
+  btnLogin?.addEventListener('click', async () => {
+    const email = inputEmail?.value.trim();
+    const senha = inputSenha?.value.trim();
+    if (!email || !senha) return showLogin("Preencha email e senha.");
+
+    try {
+      await signInWithEmailAndPassword(auth, email, senha);
+      console.log("✅ Login OK");
+    } catch (e) {
+      const code = e?.code || '';
+      let msg = "Não foi possível entrar. Tente novamente.";
+
+      if (
+        code === "auth/invalid-credential" ||
+        code === "auth/user-not-found" ||
+        code === "auth/wrong-password" ||
+        code === "auth/invalid-login-credentials"
+      ) {
+        msg = "Usuário não existe ou dados inválidos.";
+      } else if (code === "auth/invalid-email") {
+        msg = "E-mail inválido.";
+      } else if (code === "auth/too-many-requests") {
+        msg = "Muitas tentativas. Aguarde e tente novamente.";
+      } else if (code === "auth/network-request-failed") {
+        msg = "Falha de rede. Verifique sua internet.";
+      }
+
+      console.error("❌ ERRO LOGIN:", code, e?.message, e);
+      showLogin(msg);
+    }
+  });
+
+  // ===== ELEMENTOS OCR =====
   const input = document.getElementById('fileInput');
-  const list  = document.getElementById('fileList');
-  const btnClear = document.getElementById('btnClear');
   const uploadBox = document.getElementById('uploadBox');
+  const btnClear = document.getElementById('btnClear');
 
   if (!input || !list || !uploadBox) return;
 
-  /* ================= CALCULADORA ================= */
-
-bindCalculadora(
-  document.getElementById('calc-valor'),
-  document.getElementById('calc-resultado')
-);
-
-bindCalculadora(
-  document.getElementById('calc-valor-modal'),
-  document.getElementById('calc-resultado-modal')
-);
-  
-
-  /* ============== FIM CALCULADORA ============== */
-let rodoviarias = [];
-
-async function carregarRodoviarias() {
-  try {
-    const res = await fetch('./rodoviarias.json');
-    rodoviarias = await res.json();
-    renderizarRodoviarias(rodoviarias);
-  } catch (e) {
-    console.error('Erro ao carregar rodoviarias.json', e);
-  }
-}
-
-function renderizarRodoviarias(lista) {
-  const container = document.getElementById('rod-lista');
-  if (!container) return;
-
-  container.innerHTML = '';
-
-  lista.forEach(r => {
-    const horario = r.Horario
-      ? `
-        <div class="horario">
-          🕒 <b>Seg–Sex:</b> ${r.Horario.SegSex || '-'}
-          ${r.Horario.Sab ? `<br>🕒 <b>Sáb:</b> ${r.Horario.Sab}` : ''}
-          ${r.Horario.Dom ? `<br>🕒 <b>Dom:</b> ${r.Horario.Dom}` : ''}
-        </div>
-      `
-      : '';
-
-    const div = document.createElement('div');
-    div.className = 'rod-item';
-
-    // 🔑 endereço completo para o Maps
-    const endereco = `${r.Descricao}, ${r['CIDADE - UF']}`;
-
-    div.dataset.endereco = endereco;
-
-    div.innerHTML = `
-      <div class="titulo">${r.Nome}</div>
-      <div class="cidade">${r['CIDADE - UF']}</div>
-      <div class="desc">${r.Descricao}</div>
-      ${horario}
-
-      <!-- preview do mapa -->
-      <div class="rod-map hidden"></div>
-    `;
-
-    container.appendChild(div);
-  });
-}
-
-
-document.getElementById('rod-pesquisa')?.addEventListener('input', e => {
-  const termo = e.target.value.toLowerCase();
-
-  const filtrado = rodoviarias.filter(r =>
-    r.Nome?.toLowerCase().includes(termo) ||
-    r['CIDADE - UF']?.toLowerCase().includes(termo) ||
-    r.Descricao?.toLowerCase().includes(termo)
+  // ===== Calculadora =====
+  bindCalculadora(
+    document.getElementById('calc-valor'),
+    document.getElementById('calc-resultado')
   );
 
-  renderizarRodoviarias(filtrado);
-});
+  bindCalculadora(
+    document.getElementById('calc-valor-modal'),
+    document.getElementById('calc-resultado-modal')
+  );
 
-/* carrega quando a página abre */
-carregarRodoviarias();
-
-
-  // ===== DRAG & DROP =====
-  ['dragenter','dragover','dragleave','drop'].forEach(event => {
+  // ===== Drag & Drop =====
+  ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(event => {
     uploadBox.addEventListener(event, e => e.preventDefault());
   });
 
@@ -1405,262 +1480,169 @@ carregarRodoviarias();
 
   uploadBox.addEventListener('drop', e => {
     uploadBox.classList.remove('dragover');
-
     const files = e.dataTransfer.files;
     if (!files.length) return;
-
     input.files = files;
     input.dispatchEvent(new Event('change'));
   });
 
-  /* ===== CAMPOS AGENTE / AGENCIA (STORAGE) ===== */
-  const inputAgente   = document.getElementById('nome-agente');
+  // ===== Profile (Firestore) =====
+  const inputAgente = document.getElementById('nome-agente');
   const selectAgencia = document.getElementById('nome-agencia');
 
-  // 🔁 RESTAURA AO CARREGAR
-  if (inputAgente) {
-    inputAgente.value = localStorage.getItem(STORAGE_AGENTE) || '';
-  }
-
-  if (selectAgencia) {
-    selectAgencia.value =
-      localStorage.getItem(STORAGE_AGENCIA) || selectAgencia.value;
-  }
-
-  // 💾 SALVA EM TEMPO REAL
   inputAgente?.addEventListener('input', () => {
-    localStorage.setItem(STORAGE_AGENTE, inputAgente.value.trim());
+    salvarProfileNoCloud({
+      agente: inputAgente.value.trim(),
+      agencia: selectAgencia?.value || ""
+    }).catch(console.error);
   });
 
   selectAgencia?.addEventListener('change', () => {
-    localStorage.setItem(STORAGE_AGENCIA, selectAgencia.value);
+    salvarProfileNoCloud({
+      agente: inputAgente?.value.trim() || "",
+      agencia: selectAgencia.value
+    }).catch(console.error);
   });
 
-CARREGANDO_ESTADO = true;
-
-const registrosSalvos = carregarRegistros();
-registrosSalvos.forEach(r => {
-  list.appendChild(criarItemOCR(r));
-});
-
-CARREGANDO_ESTADO = false;
-
-atualizarResumo(); 
+  atualizarResumo();
 
   // 🗑 Limpar histórico
-  btnClear?.addEventListener('click', () => {
+  btnClear?.addEventListener('click', async () => {
     if (!confirm('Deseja apagar todo o histórico de OCR?')) return;
-    localStorage.removeItem(STORAGE_KEY);
+
+    const regs = await carregarRegistrosDoFirestore();
+    for (const r of regs) {
+      if (r.docId) await deletarRegistroNoFirestore(r.docId);
+    }
+
+    await limparTodosArquivosDoDB();
+
     list.innerHTML = '';
-     atualizarResumo();
+    atualizarResumo();
   });
 
+  // ===== Upload/Processo OCR (SEM STORAGE) =====
+  input.addEventListener('change', async () => {
+    const files = Array.from(input.files || []);
+    if (!files.length) return;
 
-const sidebarButtons = document.querySelectorAll('.sidebar button[data-page]');
-const pages = Array.from(document.querySelectorAll('.page'));
+    for (const file of files) {
+      try {
+        const arquivoId = `${Date.now()}_${Math.random().toString(16).slice(2)}`;
 
-/* ordem lógica das páginas */
-const pageOrder = [
-  'page-ocr',
-  'page-calculadora',
-  'page-rodoviarias'
-];
+        // 1) salva arquivo LOCAL (IndexedDB)
+        await salvarArquivoNoDB(file, arquivoId);
 
-function getPageIndex(id) {
-  return pageOrder.indexOf(id);
-}
+        // 2) OCR no navegador
+        const worker = await getOCRWorker();
+        let imagemOCR = file;
+        if (file.type === 'application/pdf') imagemOCR = await pdfParaImagem(file);
 
-sidebarButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const targetId = btn.dataset.page;
-    const novaPagina = document.getElementById(targetId);
-    if (!novaPagina) return;
+        const res = await worker.recognize(imagemOCR);
+        const textoExtraido = res.data.text.trim() || '';
 
-    // botão ativo
-    sidebarButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+        const banco = identificarBanco(textoExtraido);
+        const resumo = extrairResumoPorBanco(textoExtraido, banco);
 
-    const atual = document.querySelector('.page.active');
+        // 3) salva SOMENTE dados no Firestore (sem url, sem storagePath)
+        const docId = await salvarRegistroNoFirestore({
+          nomeArquivo: file.name,
+          banco,
+          arquivoTipo: file.type || '',
+          arquivoId,          // ✅ ID do arquivo local
+          resumo,
+          texto: textoExtraido
+        });
 
-    let direction = 'enter-down';
+        // 4) mostra na tela
+        const novoItem = criarItemOCR({
+          nomeArquivo: file.name,
+          banco,
+          resumo,
+          texto: textoExtraido,
+          docId,
+          arquivoId,
+          arquivoTipo: file.type
+        });
 
-    if (atual) {
-      const atualIndex = getPageIndex(atual.id);
-      const novaIndex  = getPageIndex(targetId);
+        novoItem.dataset.addedIndex = String(document.querySelectorAll('#fileList .file-item').length);
+        list.appendChild(novoItem);
 
-      // se voltou na ordem → sobe
-      if (novaIndex < atualIndex) {
-        direction = 'enter-up';
+        atualizarResumo();
+      } catch (err) {
+        console.error(err);
+        alert("Erro ao processar arquivo. Veja o console (F12).");
       }
-
-      atual.classList.remove('active');
     }
 
-    // limpa estados anteriores
-    pages.forEach(p => {
-      p.classList.remove('enter-up', 'enter-down');
-      p.style.display = 'none';
-    });
-
-    // prepara nova página
-    novaPagina.style.display = 'block';
-    novaPagina.classList.add(direction);
-
-    // força repaint antes de ativar
-    requestAnimationFrame(() => {
-      novaPagina.classList.add('active');
-      novaPagina.classList.remove('enter-up', 'enter-down');
-    });
+    input.value = "";
   });
-});
 
-
-
-  // 📂 OCR
-// 📂 OCR
-input.addEventListener('change', async () => {
-  const files = Array.from(input.files);
-
-  for (const file of files) {
-    try {
-      // ✅ salva o arquivo no IndexedDB
-      const saved = await salvarArquivoNoDB(file);
-
-      // ✅ OCR
-      const worker = await getOCRWorker();
-      let imagemOCR = file;
-
-      if (file.type === 'application/pdf') {
-        imagemOCR = await pdfParaImagem(file);
-      }
-
-      const res = await worker.recognize(imagemOCR);
-      const textoExtraido = res.data.text.trim() || '';
-
-      const banco = identificarBanco(textoExtraido);
-      const resumo = extrairResumoPorBanco(textoExtraido, banco);
-
-      const novoItem = criarItemOCR({
-        nomeArquivo: file.name,
-        banco,
-        resumo,
-        texto: textoExtraido,
-        arquivoId: saved.id,
-        arquivoTipo: file.type
-      });
-novoItem.dataset.addedIndex = String(document.querySelectorAll('#fileList .file-item').length);
-list.appendChild(novoItem);
-      salvarEstado();
-      atualizarResumo();
-    } catch (err) {
-      console.error(err);
-      const erroItem = document.createElement('div');
-      erroItem.className = 'file-item';
-      erroItem.textContent = `Erro ao processar ${file.name}`;
-      list.appendChild(erroItem);
-    }
-  }
-});
-document.addEventListener('click', e => {
-const item = e.target.closest('.rod-item');
-if (!item || e.target.closest('iframe')) return;
-
-  const mapBox = item.querySelector('.rod-map');
-  const endereco = item.dataset.endereco;
-  if (!mapBox || !endereco) return;
-
-  // fecha outros mapas
-  document.querySelectorAll('.rod-map').forEach(m => {
-    if (m !== mapBox) {
-      m.classList.add('hidden');
-      m.innerHTML = '';
+  // 🧹 Finaliza OCR worker
+  window.addEventListener('beforeunload', async () => {
+    if (ocrWorker) {
+      await ocrWorker.terminate();
+      ocrWorker = null;
     }
   });
 
-  // toggle
-  if (!mapBox.classList.contains('hidden')) {
-    mapBox.classList.add('hidden');
-    mapBox.innerHTML = '';
-    return;
-  }
+  // ===== Ordenação (mantive seu filtro) =====
+  const btnFiltro = document.getElementById('btnFiltro');
+  const menuFiltro = document.getElementById('menuFiltro');
+  const fileListEl = document.getElementById('fileList');
 
-  const url = `https://www.google.com/maps?q=${encodeURIComponent(endereco)}&output=embed`;
+  btnFiltro?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!menuFiltro) return;
+    menuFiltro.classList.toggle('hidden');
+  });
 
-  mapBox.innerHTML = `
-    <iframe
-      loading="lazy"
-referrerpolicy="no-referrer-when-downgrade"
-      src="${url}">
-    </iframe>
-  `;
-
-  mapBox.classList.remove('hidden');
-});
-/* ================= ORDENAÇÃO (FILTRO) ================= */
-
-const btnFiltro = document.getElementById('btnFiltro');
-const menuFiltro = document.getElementById('menuFiltro');
-const fileListEl = document.getElementById('fileList');
-
-btnFiltro?.addEventListener('click', (e) => {
-  e.stopPropagation();
-  if (!menuFiltro) return;
-  menuFiltro.classList.toggle('hidden');
-});
-
-document.addEventListener('click', () => {
-  if (!menuFiltro) return;
-  menuFiltro.classList.add('hidden');
-});
-
-menuFiltro?.addEventListener('click', (e) => e.stopPropagation());
-
-menuFiltro?.querySelectorAll('.filter-item').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const modo = btn.dataset.sort;
-    ordenarLista(modo);
+  document.addEventListener('click', () => {
+    if (!menuFiltro) return;
     menuFiltro.classList.add('hidden');
   });
-});
 
-function ordenarLista(modo) {
-  if (!fileListEl) return;
+  menuFiltro?.addEventListener('click', (e) => e.stopPropagation());
 
-  const items = Array.from(fileListEl.querySelectorAll('.file-item'));
-
-  const getHoraMin = (el) => {
-    const txt = el.querySelector('.col.hora')?.textContent?.trim() || '-';
-    if (!txt || txt === '-') return 999999;
-    const [h, m] = txt.split(':').map(Number);
-    if (Number.isNaN(h) || Number.isNaN(m)) return 999999;
-    return h * 60 + m;
-  };
-
-  items.forEach((el, idx) => {
-    if (!el.dataset.addedIndex) el.dataset.addedIndex = String(idx);
+  menuFiltro?.querySelectorAll('.filter-item').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const modo = btn.dataset.sort;
+      ordenarLista(modo);
+      menuFiltro.classList.add('hidden');
+    });
   });
 
-  items.sort((a, b) => {
-    if (modo === 'hora-asc')  return getHoraMin(a) - getHoraMin(b);
-    if (modo === 'hora-desc') return getHoraMin(b) - getHoraMin(a);
+  function ordenarLista(modo) {
+    if (!fileListEl) return;
 
-    const ia = parseInt(a.dataset.addedIndex || '0', 10);
-    const ib = parseInt(b.dataset.addedIndex || '0', 10);
+    const items = Array.from(fileListEl.querySelectorAll('.file-item'));
 
-    if (modo === 'added-asc')  return ia - ib;
-    if (modo === 'added-desc') return ib - ia;
+    const getHoraMin = (el) => {
+      const txt = el.querySelector('.col.hora')?.textContent?.trim() || '-';
+      if (!txt || txt === '-') return 999999;
+      const [h, m] = txt.split(':').map(Number);
+      if (Number.isNaN(h) || Number.isNaN(m)) return 999999;
+      return h * 60 + m;
+    };
 
-    return 0;
-  });
+    items.forEach((el, idx) => {
+      if (!el.dataset.addedIndex) el.dataset.addedIndex = String(idx);
+    });
 
-  items.forEach(el => fileListEl.appendChild(el));
-  atualizarResumo();
-}
-// 🧹 Finaliza o worker OCR ao sair da página
-window.addEventListener('beforeunload', async () => {
-  if (ocrWorker) {
-    await ocrWorker.terminate();
-    ocrWorker = null;
+    items.sort((a, b) => {
+      if (modo === 'hora-asc') return getHoraMin(a) - getHoraMin(b);
+      if (modo === 'hora-desc') return getHoraMin(b) - getHoraMin(a);
+
+      const ia = parseInt(a.dataset.addedIndex || '0', 10);
+      const ib = parseInt(b.dataset.addedIndex || '0', 10);
+
+      if (modo === 'added-asc') return ia - ib;
+      if (modo === 'added-desc') return ib - ia;
+
+      return 0;
+    });
+
+    items.forEach(el => fileListEl.appendChild(el));
+    atualizarResumo();
   }
-});
 });
